@@ -1,0 +1,16 @@
+Package: rfordummies
+Title: Code examples to accompany the book "R for Dummies"
+Version: 0.0-01
+Authors@R: "Andrie de Vries <apdevries@gmail.com> [aut, cre]"
+Description: Code examples to accompany the book "R for Dummies"
+Depends:
+    R (>= 3.0.2)
+License: GPL2|GPL3
+LazyData: true
+depends: fortunes,
+    stringr,
+    sos,
+    XLConnect,
+    reshape2,
+    ggplot2,
+    foreign
