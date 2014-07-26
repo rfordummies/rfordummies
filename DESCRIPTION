@@ -1,11 +1,13 @@
 Package: rfordummies
 Title: Code examples to accompany the book "R for Dummies"
 Version: 0.0-01
-Authors@R: "Andrie de Vries <apdevries@gmail.com> [aut, cre]"
+Authors@R: c(person("Andrie", "de Vries", role=c("aut", "cre"),
+    email="apdevries@gmail.com"), person("Joris", "Meys", role =
+    c("aut")))
 Description: Code examples to accompany the book "R for Dummies"
 Depends:
     R (>= 3.0.2)
-License: GPL2|GPL3
+License: GPL-2|GPL-3
 LazyData: true
 depends: fortunes,
     stringr,
@@ -13,4 +15,5 @@ depends: fortunes,
     XLConnect,
     reshape2,
     ggplot2,
-    foreign
+    foreign,
+    reshape2
