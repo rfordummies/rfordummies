@@ -10,6 +10,7 @@ before_install:
   - ./travis-tool.sh aptget_install default-jdk
 
 install:
+  - sudo R CMD javareconf
   - ./travis-tool.sh install_deps
 
 script: ./travis-tool.sh run_tests
