@@ -16,6 +16,11 @@ matrix(1:12, ncol=4, byrow=TRUE)
 str(first.matrix)
 dim(first.matrix)
 length(first.matrix)
+my.array <- array(1:24, dim=c(3,4,2))
+baskets.of.Granny <- c(12,4,5,6,9,3)
+baskets.of.Geraldine <- c(5,4,2,4,12,9)
+baskets.team <- rbind(baskets.of.Granny, baskets.of.Geraldine)
+
 attributes(my.array)
 attr(baskets.team,'season') <- '2010-2011'
 attr(baskets.team,'season')

@@ -82,5 +82,5 @@ ggplot(mtcars, aes(x=hp, y=mpg)) +
 ggplot(mtcars, aes(x=hp, y=mpg)) + geom_point(color="red") +
    xlab("Performance (horse power") +
    ylab("Fuel consumption (mpg)") +
-   opts(title = "Motor car comparison")
+   ggtitle("Motor car comparison")
 

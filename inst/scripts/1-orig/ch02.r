@@ -10,11 +10,10 @@
 ### Issuing a simple command
 
 24+7+11
-24+7+11
 
 ### Closing the console
 
-q()
+quit()
 
 
 ## Dressing up with RStudio
@@ -24,7 +23,6 @@ q()
 
 ## Saying hello to the world
 
-print("Hello world!")
 print("Hello world!")
 
 ## Doing simple math

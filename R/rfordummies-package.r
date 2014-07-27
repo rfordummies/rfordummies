@@ -6,9 +6,10 @@
 #' @docType package
 NULL
 
-#' Periodic table of elements
+#' Periodic table of elements.
 #' 
 #' @name elements
 #' @docType data
 #' @references \url{http://en.wikipedia.org/wiki/Periodic_table}
 #' @keywords data
+NULL

@@ -1,17 +1,28 @@
 # Identify functions that should not be tested, including quit(), q() and install.packages().
 # Replace all occurences with commented function
 clean_script <- function(file, message=FALSE){
-  #   noRunFunctions <- c("quit", "q", "readClipboard", "install.packages", "update.packages")
-  noRunFunctions <- c("quit", "q", "readClipboard", "RSiteSearch", "install.packages", "update.packages")
+  noRunFunctions <- c("quit", "readClipboard", "RSiteSearch", "install.packages", "update.packages", "savehistory", "loadhistory")
   ptn <- sprintf("^!( *#* *).*%s", paste0("(", noRunFunctions, "\\(", ")", collapse="|"))
+  
+  ptn <- sprintf("^[^ #]*.*(%s)\\(", paste(noRunFunctions, collapse="|"))
   if(!file.exists(file)) stop("file doesn't exist")
-  txt <- scan(file, what="character", sep="\n", quiet=TRUE)
+  txt <- scan(file, what="character", sep="\n", quiet=TRUE, blank.lines.skip = FALSE)
   
   # Remove fancy quotes
   txt <- gsub("â€™", "'", txt, useBytes=TRUE)  ## fancy single quote
+  txt <- gsub("’", "'", txt, useBytes=FALSE)  ## fancy single quote
+  
   
   # Remove hard space
-  txt <- gsub("ï»¿", "", txt, useBytes=TRUE)  ## fancy single quote
+  txt <- gsub("ï»¿", "", txt, useBytes=TRUE)  ## weird hard space
+  
+  nonAsciiSpace <- "\xef\xbb\xbf"
+  Encoding(nonAsciiSpace) <- "latin1"
+  Encoding(txt) <- "latin1"
+  txt <- gsub(nonAsciiSpace, " ", txt)
+  Encoding(txt) <- "ASCII"
+  
+  
   
   
   # Comment lines containing noRunFunctions
@@ -29,7 +40,6 @@ clean_script <- function(file, message=FALSE){
   txt
 }
 
-# clean_script("rfordummies/inst/scripts/1-orig/ch19.r")[1:3]
 
 
 # Run clean_script for all scripts in inst/scripts, putting cleaned version in inst/cleanscripts
@@ -51,18 +61,3 @@ clean_all_scripts(scriptPath = "rfordummies/inst/scripts/1-orig", outPath = "rfo
 
 
 
-stitch_dummies <- function(scriptPath, htmlPath){
-  require(knitr)
-  if(!file.exists(scriptPath)) stop("script path doesn't exist")
-  if(!file.exists(htmlPath)) stop("html path doesn't exist")
-  scripts <- normalizePath(list.files(scriptPath, pattern=".r$", full.names = TRUE))
-  wd <- getwd()
-  on.exit(setwd(wd))
-  setwd(htmlPath)
-  for (scr in scripts){
-    message(scr)
-    stitch_rhtml(scr)
-  }
-}
-
-stitch_dummies(scriptPath = "rfordummies/inst/scripts/2-clean", htmlPath="rfordummies/inst/scripts/3-html")

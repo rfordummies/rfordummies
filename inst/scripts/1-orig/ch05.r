@@ -79,7 +79,7 @@ sort(words)
 
 ### Searching for individual words
 
-head(state.names)
+head(state.name)
 
 ### Searching by position
 
