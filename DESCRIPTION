@@ -4,7 +4,10 @@ Version: 0.0-01
 Authors@R: c(person("Andrie", "de Vries", role=c("aut", "cre"),
     email="apdevries@gmail.com"), person("Joris", "Meys", role =
     c("aut")))
-Description: Code examples to accompany the book "R for Dummies"
+Description: This package contains all the code examples in the book "R for
+    Dummies" (1st edition)
+Date: 2014-08-16
+URL: http://rfordummies.com
 Suggests:
     fortunes,
     stringr,

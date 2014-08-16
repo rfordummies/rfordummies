@@ -3,11 +3,25 @@
 \name{elements}
 \alias{elements}
 \title{Periodic table of elements.}
-\description{
-Periodic table of elements.
-}
-\references{
+\format{A data frame with 118 rows and 9 variables}
+\source{
 \url{http://en.wikipedia.org/wiki/Periodic_table}
+}
+\description{
+A data set containing properties of the periodic table of elements.
+}
+\details{
+\itemize{
+  \item Atomic.no
+  \item Name
+  \item Symbol
+  \item Group
+  \item Period
+  \item Block
+  \item State.at.STP
+  \item Occurrence
+  \item Description
+}
 }
 \keyword{data}
 
