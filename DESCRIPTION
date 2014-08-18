@@ -1,6 +1,6 @@
 Package: rfordummies
 Title: Code examples to accompany the book "R for Dummies"
-Version: 0.0-01
+Version: 0.0-2
 Authors@R: c(person("Andrie", "de Vries", role=c("aut", "cre"),
     email="apdevries@gmail.com"), person("Joris", "Meys", role =
     c("aut")))
