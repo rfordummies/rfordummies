@@ -6,7 +6,7 @@ Authors@R: c(person("Andrie", "de Vries", role=c("aut", "cre"),
     c("aut")))
 Description: This package contains all the code examples in the book "R for
     Dummies" (1st edition)
-Date: 2014-08-16
+Date: 2014-08-18
 URL: http://rfordummies.com
 BugReports: https://github.com/andrie/rfordummies/issues
 Suggests:
