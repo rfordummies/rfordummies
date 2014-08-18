@@ -39,8 +39,12 @@ print(digits=4, x = 11/7)
 
 # Making history
 
-## savehistory(file = "Chapter3.Rhistory")
-## loadhistory("Chapter3.Rhistory")
+\dontrun{
+savehistory(file = "Chapter3.Rhistory")
+}
+\dontrun{
+loadhistory("Chapter3.Rhistory")
+}
 
 # Keeping Your Code Readable
 
@@ -87,7 +91,9 @@ sum(baskets.of.Granny) # total number of points
 
 ## Installing packages
 
-## install.packages("fortunes")
+\dontrun{
+install.packages("fortunes")
+}
 
 library("fortunes")
 fortune("This is R")

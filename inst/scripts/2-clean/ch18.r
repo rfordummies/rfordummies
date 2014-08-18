@@ -2,7 +2,9 @@
 
 # Installing and Loading ggplot2
 
-## install.packages("ggplot2")
+\dontrun{
+install.packages("ggplot2")
+}
 library("ggplot2")
 
 # Looking At Layers

@@ -109,7 +109,9 @@ gsub(".csv", "", y)
 
 #### Extending text functionality with stringr
 
-## install.packages("stringr")
+\dontrun{
+install.packages("stringr")
+}
 library(stringr)
 
 

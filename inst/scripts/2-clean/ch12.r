@@ -17,9 +17,13 @@ elements <- data.frame()
 ## Using the Clipboard to copy and paste
 # Reminder : This only works on Windows
 
-## # x <- readClipboard()
+\dontrun{
+# x <- readClipboard()
+}
 # x
-## # x <- readClipboard()
+\dontrun{
+# x <- readClipboard()
+}
 # x
 # x <- read.table(file = "clipboard", sep = "\t", header=TRUE)
 # x
@@ -36,7 +40,9 @@ elements <- data.frame()
 ### Using read.table() to import tabular data in text files
 
 ## Reading data from Excel
-## # install.packages("XLConnect")
+\dontrun{
+# install.packages("XLConnect")
+}
 # library("XLConnect")
 # excel.file <- file.path("~/Elements.xlsx")
 

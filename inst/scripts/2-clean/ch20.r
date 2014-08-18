@@ -8,7 +8,9 @@ options("repos" = c(CRAN = "http://cran.ma.imperial.ac.uk/"))
 
 ## Installing Packages
 
-## install.packages("fortunes")
+\dontrun{
+install.packages("fortunes")
+}
 
 ## Loading Packages
 
@@ -17,11 +19,15 @@ library("fortunes")
 ## Reading the Package Manual and Vignette
 
 library(help=fortunes)
+\dontrun{
 vignette("fortunes")
+}
 
 ## Updating Packages
 
-## update.packages()
+\dontrun{
+update.packages()
+}
 
 ## Unloading Packages
 
@@ -30,7 +36,9 @@ detach(package:fortunes, unload=TRUE)
 
 ## Forging Ahead with R-Forge
 
-## install.packages("data.table", repos="http://R-Forge.R-project.org")
+\dontrun{
+install.packages("data.table", repos="http://R-Forge.R-project.org")
+}
 
 ## Conducting Installations from BioConductor
 

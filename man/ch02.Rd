@@ -27,7 +27,9 @@ To print a listing of all examples of a chapter, use \code{ch2()}. To run all th
 
 ### Closing the console
 
-## quit()
+\dontrun{
+quit()
+}
 
 
 ## Dressing up with RStudio
@@ -100,13 +102,17 @@ ls()
 ##Saving your work
 
 getwd()
+\dontrun{
 save(yourname, file="yourname.rda")
+}
 
 ## Retrieving your work
 
 
 rm(yourname)
+\dontrun{
 load("yourname.rda")
+}
 
 }
 \seealso{

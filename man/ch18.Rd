@@ -13,7 +13,9 @@ To print a listing of all examples of a chapter, use \code{ch18()}. To run all t
 
 # Installing and Loading ggplot2
 
-## install.packages("ggplot2")
+\dontrun{
+install.packages("ggplot2")
+}
 library("ggplot2")
 
 # Looking At Layers

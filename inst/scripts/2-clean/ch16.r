@@ -103,7 +103,11 @@ par(old.par)
 
 setwd("~/")
 getwd()
+\dontrun{
 png(filename="faithful.png")
+}
 plot(faithful)
+\dontrun{
 dev.off()
+}
 

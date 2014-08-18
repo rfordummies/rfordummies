@@ -243,7 +243,9 @@ xyplot(mpg ~ gear + am, data=cars)
 
 ## Getting started with the reshape2 package
 
-## install.packages("reshape2")
+\dontrun{
+install.packages("reshape2")
+}
 library("reshape2")
 
 goals <- data.frame(

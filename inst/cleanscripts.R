@@ -1,7 +1,8 @@
 # Identify functions that should not be tested, including quit(), q() and install.packages().
 # Replace all occurences with commented function
-clean_script <- function(file, message=FALSE){
-  noRunFunctions <- c("quit", "readClipboard", "RSiteSearch", "install.packages", "update.packages", "savehistory", "loadhistory")
+clean_script <- function(file, message=FALSE, target=c("rmd", "html")){
+  target <- match.arg(target)
+  noRunFunctions <- c("quit", "readClipboard", "RSiteSearch", "install.packages", "update.packages", "savehistory", "loadhistory", "findFn", "vignette", "png", "trellis.device", "dev.off", "save", "load")
   ptn <- sprintf("^!( *#* *).*%s", paste0("(", noRunFunctions, "\\(", ")", collapse="|"))
   
   ptn <- sprintf("^[^ #]*.*(%s)\\(", paste(noRunFunctions, collapse="|"))
@@ -28,7 +29,11 @@ clean_script <- function(file, message=FALSE){
   # Comment lines containing noRunFunctions
   idx <- grep(ptn, txt, perl=TRUE)
   if(length(idx) > 0) {
-    txt[idx] <- paste("##", txt[idx], sep=" ")
+    if(target == "html"){
+      txt[idx] <- paste("##", txt[idx], sep=" ")
+    } else {
+      txt[idx] <- paste("\\dontrun{", txt[idx], "}", sep="\n")
+    }
     if(message){
       cat(txt[idx], sep="\n")
       cat(txt[idx], sep="\n")

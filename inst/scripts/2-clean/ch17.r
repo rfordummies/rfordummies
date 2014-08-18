@@ -136,7 +136,11 @@ print(my.plot)
 ## Saving a lattice plot to file
 
 setwd("~/")
+\dontrun{
 trellis.device(device="png", filename="xyplot.png")
+}
 print(my.plot)
+\dontrun{
 dev.off()
+}
 

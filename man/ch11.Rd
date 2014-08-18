@@ -25,11 +25,17 @@ To print a listing of all examples of a chapter, use \code{ch11()}. To run all t
 
 # Searching the Web for Help with R
 
-## RSiteSearch("cluster analysis")
+\dontrun{
+RSiteSearch("cluster analysis")
+}
 
-## install.packages("sos")
+\dontrun{
+install.packages("sos")
+}
 library("sos")
+\dontrun{
 findFn("cluster")
+}
 
 # Getting Involved in the R Community
 

@@ -13,7 +13,9 @@
 
 ### Closing the console
 
-## quit()
+\dontrun{
+quit()
+}
 
 
 ## Dressing up with RStudio
@@ -86,11 +88,15 @@ ls()
 ##Saving your work
 
 getwd()
+\dontrun{
 save(yourname, file="yourname.rda")
+}
 
 ## Retrieving your work
 
 
 rm(yourname)
+\dontrun{
 load("yourname.rda")
+}
 
