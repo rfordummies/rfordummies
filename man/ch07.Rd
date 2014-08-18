@@ -360,15 +360,19 @@ str(baskets.list)
 ## Seeing the forest through the trees
 }
 \seealso{
-toc
+\code{\link{toc}}
 
-Other Chapters: \code{\link{ch01}}, \code{\link{ch1}};
+Other Chapters: \code{\link{ch01}}, \code{\link{ch01}},
+  \code{\link{ch1}}; \code{\link{ch02}},
   \code{\link{ch02}}, \code{\link{ch2}};
-  \code{\link{ch03}}, \code{\link{ch3}};
+  \code{\link{ch03}}, \code{\link{ch03}},
+  \code{\link{ch3}}; \code{\link{ch04}},
   \code{\link{ch04}}, \code{\link{ch4}};
-  \code{\link{ch05}}, \code{\link{ch5}};
+  \code{\link{ch05}}, \code{\link{ch05}},
+  \code{\link{ch5}}; \code{\link{ch06}},
   \code{\link{ch06}}, \code{\link{ch6}};
-  \code{\link{ch08}}, \code{\link{ch8}};
+  \code{\link{ch08}}, \code{\link{ch08}},
+  \code{\link{ch8}}; \code{\link{ch09}},
   \code{\link{ch09}}, \code{\link{ch9}};
   \code{\link{ch10}}; \code{\link{ch11}};
   \code{\link{ch12}}; \code{\link{ch13}};

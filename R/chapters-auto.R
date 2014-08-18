@@ -4,7 +4,7 @@
 #' @export
 #' @rdname ch01
 #' @family Chapters
-#' @seealso toc
+#' @seealso \code{\link{toc}}
 #' @example /inst/scripts/2-clean/ch01.R
 ch01 <- function(){
   text <- .readExampleFile("ch01.R")
@@ -15,6 +15,7 @@ ch01 <- function(){
 
 
 #' @export
+#' @aliases ch01
 #' @rdname ch01
 ch1 <- ch01
 
@@ -25,7 +26,7 @@ ch1 <- ch01
 #' @export
 #' @rdname ch02
 #' @family Chapters
-#' @seealso toc
+#' @seealso \code{\link{toc}}
 #' @example /inst/scripts/2-clean/ch02.R
 ch02 <- function(){
   text <- .readExampleFile("ch02.R")
@@ -36,6 +37,7 @@ ch02 <- function(){
 
 
 #' @export
+#' @aliases ch02
 #' @rdname ch02
 ch2 <- ch02
 
@@ -46,7 +48,7 @@ ch2 <- ch02
 #' @export
 #' @rdname ch03
 #' @family Chapters
-#' @seealso toc
+#' @seealso \code{\link{toc}}
 #' @example /inst/scripts/2-clean/ch03.R
 ch03 <- function(){
   text <- .readExampleFile("ch03.R")
@@ -57,6 +59,7 @@ ch03 <- function(){
 
 
 #' @export
+#' @aliases ch03
 #' @rdname ch03
 ch3 <- ch03
 
@@ -67,7 +70,7 @@ ch3 <- ch03
 #' @export
 #' @rdname ch04
 #' @family Chapters
-#' @seealso toc
+#' @seealso \code{\link{toc}}
 #' @example /inst/scripts/2-clean/ch04.R
 ch04 <- function(){
   text <- .readExampleFile("ch04.R")
@@ -78,6 +81,7 @@ ch04 <- function(){
 
 
 #' @export
+#' @aliases ch04
 #' @rdname ch04
 ch4 <- ch04
 
@@ -88,7 +92,7 @@ ch4 <- ch04
 #' @export
 #' @rdname ch05
 #' @family Chapters
-#' @seealso toc
+#' @seealso \code{\link{toc}}
 #' @example /inst/scripts/2-clean/ch05.R
 ch05 <- function(){
   text <- .readExampleFile("ch05.R")
@@ -99,6 +103,7 @@ ch05 <- function(){
 
 
 #' @export
+#' @aliases ch05
 #' @rdname ch05
 ch5 <- ch05
 
@@ -109,7 +114,7 @@ ch5 <- ch05
 #' @export
 #' @rdname ch06
 #' @family Chapters
-#' @seealso toc
+#' @seealso \code{\link{toc}}
 #' @example /inst/scripts/2-clean/ch06.R
 ch06 <- function(){
   text <- .readExampleFile("ch06.R")
@@ -120,6 +125,7 @@ ch06 <- function(){
 
 
 #' @export
+#' @aliases ch06
 #' @rdname ch06
 ch6 <- ch06
 
@@ -130,7 +136,7 @@ ch6 <- ch06
 #' @export
 #' @rdname ch07
 #' @family Chapters
-#' @seealso toc
+#' @seealso \code{\link{toc}}
 #' @example /inst/scripts/2-clean/ch07.R
 ch07 <- function(){
   text <- .readExampleFile("ch07.R")
@@ -141,6 +147,7 @@ ch07 <- function(){
 
 
 #' @export
+#' @aliases ch07
 #' @rdname ch07
 ch7 <- ch07
 
@@ -151,7 +158,7 @@ ch7 <- ch07
 #' @export
 #' @rdname ch08
 #' @family Chapters
-#' @seealso toc
+#' @seealso \code{\link{toc}}
 #' @example /inst/scripts/2-clean/ch08.R
 ch08 <- function(){
   text <- .readExampleFile("ch08.R")
@@ -162,6 +169,7 @@ ch08 <- function(){
 
 
 #' @export
+#' @aliases ch08
 #' @rdname ch08
 ch8 <- ch08
 
@@ -172,7 +180,7 @@ ch8 <- ch08
 #' @export
 #' @rdname ch09
 #' @family Chapters
-#' @seealso toc
+#' @seealso \code{\link{toc}}
 #' @example /inst/scripts/2-clean/ch09.R
 ch09 <- function(){
   text <- .readExampleFile("ch09.R")
@@ -183,6 +191,7 @@ ch09 <- function(){
 
 
 #' @export
+#' @aliases ch09
 #' @rdname ch09
 ch9 <- ch09
 
@@ -193,7 +202,7 @@ ch9 <- ch09
 #' @export
 #' @rdname ch10
 #' @family Chapters
-#' @seealso toc
+#' @seealso \code{\link{toc}}
 #' @example /inst/scripts/2-clean/ch10.R
 ch10 <- function(){
   text <- .readExampleFile("ch10.R")
@@ -210,7 +219,7 @@ ch10 <- function(){
 #' @export
 #' @rdname ch11
 #' @family Chapters
-#' @seealso toc
+#' @seealso \code{\link{toc}}
 #' @example /inst/scripts/2-clean/ch11.R
 ch11 <- function(){
   text <- .readExampleFile("ch11.R")
@@ -227,7 +236,7 @@ ch11 <- function(){
 #' @export
 #' @rdname ch12
 #' @family Chapters
-#' @seealso toc
+#' @seealso \code{\link{toc}}
 #' @example /inst/scripts/2-clean/ch12.R
 ch12 <- function(){
   text <- .readExampleFile("ch12.R")
@@ -244,7 +253,7 @@ ch12 <- function(){
 #' @export
 #' @rdname ch13
 #' @family Chapters
-#' @seealso toc
+#' @seealso \code{\link{toc}}
 #' @example /inst/scripts/2-clean/ch13.R
 ch13 <- function(){
   text <- .readExampleFile("ch13.R")
@@ -261,7 +270,7 @@ ch13 <- function(){
 #' @export
 #' @rdname ch14
 #' @family Chapters
-#' @seealso toc
+#' @seealso \code{\link{toc}}
 #' @example /inst/scripts/2-clean/ch14.R
 ch14 <- function(){
   text <- .readExampleFile("ch14.R")
@@ -278,7 +287,7 @@ ch14 <- function(){
 #' @export
 #' @rdname ch15
 #' @family Chapters
-#' @seealso toc
+#' @seealso \code{\link{toc}}
 #' @example /inst/scripts/2-clean/ch15.R
 ch15 <- function(){
   text <- .readExampleFile("ch15.R")
@@ -295,7 +304,7 @@ ch15 <- function(){
 #' @export
 #' @rdname ch16
 #' @family Chapters
-#' @seealso toc
+#' @seealso \code{\link{toc}}
 #' @example /inst/scripts/2-clean/ch16.R
 ch16 <- function(){
   text <- .readExampleFile("ch16.R")
@@ -312,7 +321,7 @@ ch16 <- function(){
 #' @export
 #' @rdname ch17
 #' @family Chapters
-#' @seealso toc
+#' @seealso \code{\link{toc}}
 #' @example /inst/scripts/2-clean/ch17.R
 ch17 <- function(){
   text <- .readExampleFile("ch17.R")
@@ -329,7 +338,7 @@ ch17 <- function(){
 #' @export
 #' @rdname ch18
 #' @family Chapters
-#' @seealso toc
+#' @seealso \code{\link{toc}}
 #' @example /inst/scripts/2-clean/ch18.R
 ch18 <- function(){
   text <- .readExampleFile("ch18.R")
@@ -346,7 +355,7 @@ ch18 <- function(){
 #' @export
 #' @rdname ch19
 #' @family Chapters
-#' @seealso toc
+#' @seealso \code{\link{toc}}
 #' @example /inst/scripts/2-clean/ch19.R
 ch19 <- function(){
   text <- .readExampleFile("ch19.R")
@@ -363,7 +372,7 @@ ch19 <- function(){
 #' @export
 #' @rdname ch20
 #' @family Chapters
-#' @seealso toc
+#' @seealso \code{\link{toc}}
 #' @example /inst/scripts/2-clean/ch20.R
 ch20 <- function(){
   text <- .readExampleFile("ch20.R")

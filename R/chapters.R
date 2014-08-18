@@ -22,7 +22,7 @@
 #' @export
 #' @rdname ch<<xx>>
 #' @family Chapters
-#' @seealso toc
+#' @seealso \\code{\\link{toc}}
 #' @example /inst/scripts/2-clean/ch<<xx>>.R
 ch<<xx>> <- function(){
   text <- .readExampleFile(\"ch<<xx>>.R\")
@@ -32,6 +32,7 @@ ch<<xx>> <- function(){
 "
 chapterExtra <- "
 #' @export
+#' @aliases ch<<xx>>
 #' @rdname ch<<xx>>
 ch<<x>> <- ch<<xx>>
 "
@@ -40,8 +41,8 @@ ch<<x>> <- ch<<xx>>
   out1 <- gsub("<<xx>>", sprintf("%02d", ch), chapter)
   
   if(ch < 10){
-    chapter <- gsub("<<x>>", sprintf("%s", ch), chapterExtra)
-    out2 <- gsub("<<xx>>", sprintf("%02d", ch), chapter)
+    chapterExtra <- gsub("<<x>>", sprintf("%s", ch), chapterExtra)
+    out2 <- gsub("<<xx>>", sprintf("%02d", ch), chapterExtra)
   } else {
     out2 <- ""
   }
