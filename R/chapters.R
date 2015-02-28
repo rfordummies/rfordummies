@@ -5,7 +5,7 @@
 # @param ch Chapter number
 # @keywords Internal
 .readExampleFile <- function(ch){
-  text <- system.file(paste0("inst/scripts/2-clean/", ch), package = "rfordummies")
+  text <- system.file(paste0("scripts/2-clean/", ch), package = "rfordummies")
   readLines(text)
 }
 

@@ -1,12 +1,12 @@
 Package: rfordummies
 Title: Code examples to accompany the book "R for Dummies"
-Version: 0.0-2
+Version: 0.0-3
 Authors@R: c(person("Andrie", "de Vries", role=c("aut", "cre"),
     email="apdevries@gmail.com"), person("Joris", "Meys", role =
     c("aut")))
 Description: This package contains all the code examples in the book "R for
     Dummies" (1st edition)
-Date: 2014-08-18
+Date: 2015-02-28
 URL: http://rfordummies.com
 BugReports: https://github.com/andrie/rfordummies/issues
 Suggests:
