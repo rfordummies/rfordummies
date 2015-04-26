@@ -47,10 +47,10 @@ clean_script <- function(file, message=FALSE, target=c("rmd", "html")){
 
 
 
-# Run clean_script for all scripts in inst/scripts, putting cleaned version in inst/cleanscripts
+# Run clean_script for all scripts in inst/scripts/1-orig, putting cleaned version in inst/scripts/2-clean
 clean_all_scripts <- function(scriptPath, outPath, comment=TRUE, message=TRUE){
   if(!file.exists(scriptPath)) stop("script path doesn't exist")
-  scripts <- normalizePath(list.files(scriptPath, pattern=".r$", full.names = TRUE))
+  scripts <- normalizePath(list.files(scriptPath, pattern="\\.R$", full.names = TRUE))
   clean <- lapply(scripts, clean_script, message=message)
   ret <- sapply(seq_along(scripts), function(i){
     newFile <- file.path(outPath, basename(scripts[i]))
