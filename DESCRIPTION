@@ -1,12 +1,13 @@
 Package: rfordummies
 Title: Code Examples to Accompany the Book "R for Dummies"
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(person("Andrie", "de Vries", role=c("aut", "cre"),
     email="apdevries@gmail.com"), person("Joris", "Meys", role =
     c("aut")))
-Description: Contains all the code examples in the book "R for
-    Dummies" (1st edition). You can view the table of contents as well as the sample code for each chapter.
-Date: 2015-04-24
+Description: Contains all the code examples in the book "R for Dummies" (1st
+    edition). You can view the table of contents as well as the sample code for each
+    chapter.
+Date: 2016-11-30
 URL: http://rfordummies.com
 BugReports: https://github.com/andrie/rfordummies/issues
 Suggests:
@@ -20,3 +21,4 @@ Suggests:
     lattice
 License: GPL-2|GPL-3
 LazyData: true
+RoxygenNote: 5.0.1
