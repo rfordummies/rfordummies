@@ -86,7 +86,10 @@ ls()
 ##Saving your work
 
 getwd()
-save(yourname, file="yourname.rda")
+
+filename <- file.path(tempdir(), "yourname.rda")
+save(yourname, file=filename)
+list.files(tempdir(), pattern = ".rda")
 
 ## Retrieving your work
 

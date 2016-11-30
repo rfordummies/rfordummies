@@ -88,9 +88,12 @@ ls()
 ##Saving your work
 
 getwd()
+
+filename <- file.path(tempdir(), "yourname.rda")
 \dontrun{
-save(yourname, file="yourname.rda")
+save(yourname, file=filename)
 }
+list.files(tempdir(), pattern = ".rda")
 
 ## Retrieving your work
 

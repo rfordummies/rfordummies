@@ -25,8 +25,10 @@ print(digits=4, x = 11/7)
 
 # Making history
 
-savehistory(file = "Chapter3.Rhistory")
-loadhistory("Chapter3.Rhistory")
+filename <- file.path(tempdir(), "Chapter3.Rhistory")
+savehistory(file = filename)
+list.files(tempdir(), pattern = ".Rhistory")
+loadhistory(file.path(tempdir(), "Chapter3.Rhistory"))
 
 # Keeping Your Code Readable
 
