@@ -4,6 +4,8 @@
 #' @param outfile File name
 #' @param type Either excel or csv
 #' 
+#' @importFrom utils data write.csv
+#' 
 #' @export
 #' 
 #' @examples 

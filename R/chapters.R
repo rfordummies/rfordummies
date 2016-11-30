@@ -2,8 +2,7 @@
 
 # Read cleaned chapter code from /inst/scripts/2-clean
 # 
-# @param ch Chapter number
-# @keywords Internal
+#  ch Chapter number
 .readExampleFile <- function(ch){
   text <- system.file(paste0("scripts/2-clean/", ch), package = "rfordummies")
   readLines(text)
@@ -12,24 +11,28 @@
 
 # Generate code and example for single chapter.
 # 
-# @param ch Chapter number
-# @keywords Internal
-# @rdname genChapter
+#  ch Chapter number
 .genChapter <- function(ch){
-  chapter <- "#' Print examples of chapter <<x>> of 'R for Dummies'.
-#' 
-#' To print a listing of all examples of a chapter, use \\code{ch<<x>>()}. To run all the examples of \\code{ch<<x>>()}, use \\code{example(ch<<x>>)}.
-#' @export
-#' @rdname ch<<xx>>
-#' @family Chapters
-#' @seealso \\code{\\link{toc}}
-#' @example /inst/scripts/2-clean/ch<<xx>>.R
-ch<<xx>> <- function(){
-  text <- .readExampleFile(\"ch<<xx>>.R\")
-  cat(text, sep=\"\n\")
-  invisible(text)
-}
-"
+  chapter <- c(
+    "Print examples of chapter <<x>> of 'R for Dummies'.",
+    "",
+    "To print a listing of all examples of a chapter, use \\code{ch<<x>>()}. ",
+    "To run all the examples of \\code{ch<<x>>()}, use \\code{example(ch<<x>>)}.",
+    "@export",
+    "@rdname ch<<xx>>",
+    "@family Chapters",
+    "@seealso \\code{\\link{toc}}",
+    "@example inst/scripts/2-clean/ch<<xx>>.R"
+  )
+  
+  chapter <- paste0(
+    paste0("#' ", chapter, collapse ="\n"),
+    "ch<<xx>> <- function(){
+    text <- .readExampleFile(\"ch<<xx>>.R\")
+    cat(text, sep=\"\n\")
+    invisible(text)
+}"
+  )
 chapterExtra <- "
 #' @export
 #' @aliases ch<<xx>>
