@@ -15,9 +15,11 @@ saveElements(outfile, type = c("excel", "csv"))
 Saves a copy of the periodic table of elements as excel or csv file.
 }
 \examples{
-saveElements(file.path(tempdir(), "elements.xlsx"))
-saveElements(file.path(tempdir(), "elements.csv"), type = "csv")
-list.files(tempdir(), pattern = "xlsx|csv", full.names = TRUE)
+if(require("XLConnect")){
+    saveElements(file.path(tempdir(), "elements.xlsx"))
+    saveElements(file.path(tempdir(), "elements.csv"), type = "csv")
+    list.files(tempdir(), pattern = "xlsx|csv", full.names = TRUE)
+}
 
 }
 

@@ -9,9 +9,11 @@
 #' @export
 #' 
 #' @examples 
-#' saveElements(file.path(tempdir(), "elements.xlsx"))
-#' saveElements(file.path(tempdir(), "elements.csv"), type = "csv")
-#' list.files(tempdir(), pattern = "xlsx|csv", full.names = TRUE)
+#' if(require("XLConnect")){
+#'     saveElements(file.path(tempdir(), "elements.xlsx"))
+#'     saveElements(file.path(tempdir(), "elements.csv"), type = "csv")
+#'     list.files(tempdir(), pattern = "xlsx|csv", full.names = TRUE)
+#' }
 #' 
 saveElements <- function(outfile, type = c("excel", "csv")){
   elements <- NA
