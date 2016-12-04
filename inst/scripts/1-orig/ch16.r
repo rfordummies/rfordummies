@@ -101,9 +101,8 @@ par(old.par)
 
 # Saving Graphics to Image Files
 
-setwd("~/")
-getwd()
-png(filename="faithful.png")
+filename <- file.path(tempdir(), "faithful.png")
+png(filename=filename)
 plot(faithful)
 dev.off()
 
