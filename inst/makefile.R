@@ -14,13 +14,14 @@ local({
 list.files("rfordummies/inst/")
 source("rfordummies/inst/cleanscripts.R", local=TRUE)
 devtools::load_all("rfordummies"); .generateChapters(path="rfordummies")
-
 devtools::document("rfordummies")
 devtools::check_man("rfordummies")
 devtools::check("rfordummies")
+devtools::run_examples("rfordummies")
 
 
-help(package=rfordummies)
+
+# help(package=rfordummies)
 
 # Run all examples --------------------------------------------------------
 
@@ -30,7 +31,11 @@ help(package=rfordummies)
 # Run all the examples
 library(foreach)
 oldwd <- getwd()
-foreach(ch = paste0("ch", 1:20), .errorhandling="pass") %do% system.time(devtools::dev_example(ch))
+foreach(ch = paste0("ch", 1:20), 
+        .errorhandling="pass", 
+        .combine = c) %do% {
+          system.time(devtools::dev_example(ch))[[3]]
+        }
 sapply(paste0("ch", 1:20), 
        function(ch){
          system.time(devtools::dev_example(ch))[[3]]

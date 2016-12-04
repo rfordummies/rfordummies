@@ -135,9 +135,9 @@ print(my.plot)
 
 ## Saving a lattice plot to file
 
-setwd("~/")
+filename <- file.path(tempdir(), "xyplot")
 \dontrun{
-trellis.device(device="png", filename="xyplot.png")
+trellis.device(device="png", filename=filename)
 }
 print(my.plot)
 \dontrun{
