@@ -22,16 +22,17 @@
     "@rdname ch<<xx>>",
     "@family Chapters",
     "@seealso \\code{\\link{toc}}",
-    "@example inst/scripts/2-clean/ch<<xx>>.R"
+    "@example inst/scripts/2-clean/ch<<xx>>.R",
+    ""
   )
   
-  chapter <- paste0(
-    paste0("#' ", chapter, collapse ="\n"),
+  chapter <- paste0("#' ", chapter, collapse ="\n")
+  chapter <- sprintf("%s\n%s", chapter, 
     "ch<<xx>> <- function(){
-    text <- .readExampleFile(\"ch<<xx>>.R\")
-    cat(text, sep=\"\n\")
-    invisible(text)
-}"
+      text <- .readExampleFile(\"ch<<xx>>.R\")
+      cat(text, sep='\n')
+      invisible(text)
+    }"
   )
 chapterExtra <- "
 #' @export

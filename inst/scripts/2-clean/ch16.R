@@ -101,10 +101,9 @@ par(old.par)
 
 # Saving Graphics to Image Files
 
-setwd("~/")
-getwd()
+filename <- file.path(tempdir(), "faithful.png")
 \dontrun{
-png(filename="faithful.png")
+png(filename=filename)
 }
 plot(faithful)
 \dontrun{

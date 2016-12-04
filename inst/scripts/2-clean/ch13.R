@@ -271,4 +271,4 @@ dcast(mgoals,  Venue ~ variable , sum)
 dcast(mgoals,  Venue + variable ~ Game , sum)
 
 library(ggplot2)
-ggplot(mgoals, aes(x=variable, y=value, fill=Game)) + geom_bar()
+ggplot(mgoals, aes(x=variable, y=value, fill=Game)) + geom_bar(stat="identity")

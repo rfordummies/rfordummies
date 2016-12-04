@@ -23,6 +23,7 @@ ggplot(faithful, aes(x=eruptions, y=waiting)) + geom_point() + stat_smooth()
 
 ggplot(quakes, aes(x=depth)) + geom_bar()
 ggplot(quakes, aes(x=depth)) + geom_bar(binwidth=50)
+ggplot(quakes, aes(x=depth)) + geom_histogram(binwidth=50)
 
 quakes.agg <- aggregate(mag ~ round(depth, -1), data=quakes, FUN=length)
 names(quakes.agg) <- c("depth", "mag")
