@@ -1,2 +1,2 @@
 *.html linguist-vendored
-inst/scripts/3-html/*.html linguist-vendored
+inst/scripts/3-html linguist-documentation
