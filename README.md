@@ -1,33 +1,55 @@
-rfordummies
-===========
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-master: [<img src="https://travis-ci.org/andrie/rfordummies.svg" alt="Build Status" />](https://travis-ci.org/andrie/rfordummies)
-dev: [<img src="https://travis-ci.org/andrie/rfordummies.svg?branch=dev" alt="Build Status" />](https://travis-ci.org/andrie/rfordummies) 
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rfordummies)](http://cran.r-project.org/package=rfordummies)
-[![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/rfordummies)](http://www.r-pkg.org/pkg/rfordummies)
+# rfordummies <img src="man/figures/logo.png" align="right" width="120" />
+
+<!-- badges: start -->
+
+[![Project Status: Active - The project has reached a stable, usable
+state and is being actively
+developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+[<img src="https://travis-ci.org/andrie/rfordummies.svg" alt="Build Status" />](https://travis-ci.org/andrie/rfordummies)
+dev:
+[<img src="https://travis-ci.org/andrie/rfordummies.svg?branch=dev" alt="Build Status" />](https://travis-ci.org/andrie/rfordummies)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/rfordummies)](https://cran.r-project.org/package=rfordummies)
+[![CRAN RStudio mirror
+downloads](http://cranlogs.r-pkg.org/badges/rfordummies)](http://www.r-pkg.org/pkg/rfordummies)
+
+<!-- badges: end -->
 
 # Overview
 
-`rfordummies` is an R package to accompany the book "R for Dummies"
+`rfordummies` is an R package to accompany the book “R for Dummies”, by
+Andrie de Vries and Joris Meys. The package contains functions to print
+the table of contents as well as all the code samples for every chapter.
 
-The package contains the following functions:
+To print the table of contents, use:
 
-* `toc()` - prints table of contents of the book
-* `ch1()` - prints all code examples of ch1
-* `ch2()` - prints all code examples of ch2
-*  ...
-* `ch20()` - prints all code examples of ch20
+``` r
+toc()
+```
 
-Since each of the functions `ch1()` to `ch20()` also contains the code examples as function examples, you can do the following to run all examples of a given chapter:
+To print the code of example for the chapters, use:
 
-    example("ch20", "rfordummies")
+  - `ch1()` - prints all code examples of ch1
+  - `ch2()` - prints all code examples of ch2
+  - …
+  - `ch20()` - prints all code examples of ch20
 
+Since each of the functions `ch1()` to `ch20()` also contains the code
+examples as function examples, you can do the following to run all
+examples of a given chapter:
+
+``` r
+example("ch20", "rfordummies")
+```
 
 # Installation
 
 You can install `rfordummies` using:
 
-    library("devtools")
-    install_github("rfordummies", "andrie")
+``` r
+library("devtools")
+install_github("rfordummies", "andrie")
+```

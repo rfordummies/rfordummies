@@ -10,7 +10,9 @@ percent <- round(x * 100, digits = 1)
 result <- paste(percent, "%", sep = "")
 print(result)
 
+\dontrun{
 # source('pastePercent.R') # Only after saving
+}
 
 ## Transforming the script
 

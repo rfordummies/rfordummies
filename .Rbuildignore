@@ -1,2 +1,8 @@
+^pkgdown$
+^_pkgdown\.yml$
+^docs$
+^README\.Rmd$
 ^\.travis\.yml$
 README.md
+^.*\.Rproj$
+^\.Rproj\.user$

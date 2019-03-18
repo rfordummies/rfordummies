@@ -59,7 +59,7 @@ ch<<x>> <- ch<<xx>>
 # @param path Path to package
 # @param file Name of file containing ch() functions
 # @keywords Internal
-.generateChapters <- function(chapters=1:20, path, file="R/chapters-auto.R"){
+.generateChapters <- function(chapters=1:20, path = ".", file="R/chapters-auto.R"){
   sink(file.path(path, file))
   on.exit(sink())  
   for(i in chapters)cat(.genChapter(i))

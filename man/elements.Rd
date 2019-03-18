@@ -25,4 +25,3 @@ A data set containing properties of the periodic table of elements.
 }
 }
 \keyword{data}
-
