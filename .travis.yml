@@ -1,13 +1,9 @@
-language: r
+# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
+
+language: R
+cache: packages
+
 
 r:
   - release
   - devel
-
-sudo: false
-cache: packages
-
-notifications:
-  email:
-    on_success: change
-    on_failure: change

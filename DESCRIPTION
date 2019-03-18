@@ -1,14 +1,14 @@
 Package: rfordummies
 Title: Code Examples to Accompany the Book "R for Dummies"
-Version: 0.1.3
+Version: 0.1.4
 Authors@R: c(person("Andrie", "de Vries", role=c("aut", "cre"),
     email="apdevries@gmail.com"), person("Joris", "Meys", role =
     c("aut")))
 Description: Contains all the code examples in the book "R for Dummies" (1st
     edition). You can view the table of contents as well as the sample code for each
     chapter.
-Date: 2016-12-01
-URL: http://rfordummies.com
+Date: 2019-03-18
+URL: https://rfordummies.com, http://andrie.github.io/rfordummies/
 BugReports: https://github.com/andrie/rfordummies/issues
 Suggests:
     fortunes,
@@ -18,7 +18,8 @@ Suggests:
     reshape2,
     ggplot2,
     foreign,
-    lattice
+    lattice,
+    covr
 License: GPL-2|GPL-3
 LazyData: true
 RoxygenNote: 6.1.1

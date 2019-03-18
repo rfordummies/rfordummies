@@ -8,14 +8,12 @@
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
 developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[<img src="https://travis-ci.org/andrie/rfordummies.svg" alt="Build Status" />](https://travis-ci.org/andrie/rfordummies)
-dev:
-[<img src="https://travis-ci.org/andrie/rfordummies.svg?branch=dev" alt="Build Status" />](https://travis-ci.org/andrie/rfordummies)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/rfordummies)](https://cran.r-project.org/package=rfordummies)
 [![CRAN RStudio mirror
 downloads](http://cranlogs.r-pkg.org/badges/rfordummies)](http://www.r-pkg.org/pkg/rfordummies)
-
+[![Travis build
+status](https://travis-ci.org/andrie/rfordummies.svg?branch=master)](https://travis-ci.org/andrie/rfordummies)
 <!-- badges: end -->
 
 # Overview
