@@ -42,7 +42,9 @@ install.packages("data.table", repos="http://R-Forge.R-project.org")
 
 ## Conducting Installations from BioConductor
 
+\dontrun{
 source("http://bioconductor.org/biocLite.R")
+}
 
 ## Reading the R Manual
 

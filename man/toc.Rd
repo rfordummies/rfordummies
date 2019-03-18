@@ -12,4 +12,3 @@ Print table of contents.
 \examples{
 toc()
 }
-
