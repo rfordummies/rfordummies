@@ -6,8 +6,8 @@
 \alias{rfordummies-package}
 \title{A package to accompany the book "R for Dummies".}
 \description{
-This package contains all the code examples in the book 'R for Dummies' (1st edition)
+This package contains all the code examples in the book 'R for Dummies' (2nd edition)
 }
 \references{
-de Vries, A. , & Meys, J. (2012). <i>R for dummies</i>. Chichester: Wiley. \url{http://rfordummies.com/}, ISBN-13: 978-1119962847.
+de Vries, A. , & Meys, J. (2012). <i>R for dummies</i>. Chichester: Wiley. \url{https://rfordummies.com/}, ISBN-13: 978-1119962847.
 }
