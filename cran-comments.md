@@ -5,6 +5,6 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
+0 errors | 0 warnings | no notes (other than package was archived)
 
 * This release fixes problems that caused the package to be archived on 2019-03-11. Specifically, the previous version contained a reference to `source("http://bioconductor.org/biocLite.R")`, which I removed.

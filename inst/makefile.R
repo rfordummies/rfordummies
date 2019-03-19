@@ -23,10 +23,11 @@ local({
 
 list.files(here::here("inst"))
 
-source(here::here("inst/cleanscripts.R"), local = TRUE)
-source(here::here("inst/chapters.R"), local = TRUE)
-
-.generateChapters()
+local({
+  source(here::here("inst/cleanscripts.R"), local = TRUE)
+  source(here::here("inst/chapters.R"), local = TRUE)
+  .generateChapters()
+})
 devtools::load_all()
 devtools::document()
 devtools::check_man()
