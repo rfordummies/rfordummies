@@ -1,13 +1,11 @@
 test_that("ch() functions return strings", {
   for (i in 1:20) {
-    withr::with_dir(tempdir(), {
-      expect_is(
-        z <- capture_output(
-          eval(parse(text = sprintf("ch%02d()", i)))
-        ), 
-        "character")
-      expect_true(length(z) > 0)
-    })
+    expect_is(
+      z <- capture_output(
+        eval(parse(text = sprintf("ch%02d()", i)))
+      ), 
+      "character")
+    expect_true(length(z) > 0)
   }
 })
 
