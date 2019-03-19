@@ -10,7 +10,7 @@ ch03()
 ch3()
 }
 \description{
-To print a listing of all examples of a chapter, use \code{ch3()}. 
+To print a listing of all examples of a chapter, use \code{ch3()}.
 To run all the examples of \code{ch3()}, use \code{example(ch3)}.
 }
 \examples{

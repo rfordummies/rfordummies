@@ -1,6 +1,6 @@
 ## Test environments
 
-* local Windows install, R 3.5.2
+* local Windows install, R 3.5.3
 * ubuntu 14.04 (on travis-ci), using R-devel and R-release
 
 ## R CMD check results

@@ -13,15 +13,15 @@ A data set containing properties of the periodic table of elements.
 }
 \details{
 \itemize{
-  \item Atomic.no
-  \item Name  
-  \item Symbol
-  \item Group
-  \item Period
-  \item Block
-  \item State.at.STP
-  \item Occurrence
-  \item Description
+\item Atomic.no
+\item Name
+\item Symbol
+\item Group
+\item Period
+\item Block
+\item State.at.STP
+\item Occurrence
+\item Description
 }
 }
 \keyword{data}

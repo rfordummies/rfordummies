@@ -10,7 +10,7 @@ ch09()
 ch9()
 }
 \description{
-To print a listing of all examples of a chapter, use \code{ch9()}. 
+To print a listing of all examples of a chapter, use \code{ch9()}.
 To run all the examples of \code{ch9()}, use \code{example(ch9)}.
 }
 \examples{

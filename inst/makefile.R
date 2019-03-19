@@ -24,12 +24,16 @@ local({
 list.files(here::here("inst"))
 
 source(here::here("inst/cleanscripts.R"), local = TRUE)
-devtools::load_all()
+source(here::here("inst/chapters.R"), local = TRUE)
+
 .generateChapters()
+devtools::load_all()
 devtools::document()
 devtools::check_man()
+devtools::test()
+devtools::run_examples(run = FALSE)
 devtools::check()
-devtools::run_examples()
+covr::package_coverage()
 
 
 

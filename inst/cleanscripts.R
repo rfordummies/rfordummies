@@ -75,12 +75,13 @@ clean_script <- function(file, message = FALSE, target = c("rmd", "html")) {
 
 
 # Run clean_script for all scripts in inst/scripts/1-orig, putting cleaned version in inst/scripts/2-clean
-clean_all_scripts <- function(scriptPath = ".", outPath, comment = TRUE, message = TRUE) {
+clean_all_scripts <- function(scriptPath = here::here("inst/scripts/1-orig"), 
+                              outPath, comment = TRUE, message = TRUE) {
   if (!file.exists(scriptPath)) {
     stop("script path doesn't exist")
   }
   scripts <- normalizePath(list.files(scriptPath,
-                                      pattern = "\\.R$",
+                                      pattern = "\\.[Rr]$",
                                       full.names = TRUE
   ))
   clean <- lapply(scripts, clean_script, message = message)

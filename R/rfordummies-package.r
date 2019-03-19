@@ -1,6 +1,21 @@
 #' A package to accompany the book "R for Dummies".
 #' 
-#' This package contains all the code examples in the book 'R for Dummies' (2nd edition)
+#' This package contains all the code examples in the book 'R for Dummies' (2nd edition) by Andrie de Vries and Joris Meys.
+#' 
+#' To print the sample code for every chapter:
+#' 
+#' * [ch1()]
+#' * [ch2()]
+#' * etc.
+#' 
+#' To print the table of contents:
+#' 
+#' * [toc()]
+#' 
+#' To save the `elements` data frame to either excel or csv format, use:
+#' 
+#' * [saveElements()]
+#'  
 #'
 #' @name rfordummies
 #' @docType package

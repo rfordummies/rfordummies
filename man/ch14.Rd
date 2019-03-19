@@ -7,7 +7,7 @@
 ch14()
 }
 \description{
-To print a listing of all examples of a chapter, use \code{ch14()}. 
+To print a listing of all examples of a chapter, use \code{ch14()}.
 To run all the examples of \code{ch14()}, use \code{example(ch14)}.
 }
 \examples{

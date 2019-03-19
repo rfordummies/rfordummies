@@ -63,7 +63,11 @@ paste("Hello", "world!")
 ## Talking back to the user
 
 h <- "Hello"
+if(interactive()){
 yourname <- readline("What is your name?")
+} else {
+  yourname <- "Joris"
+}
 paste(h, yourname)
 
 # Sourcing a Script

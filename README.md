@@ -14,6 +14,8 @@ status](https://www.r-pkg.org/badges/version/rfordummies)](https://cran.r-projec
 downloads](http://cranlogs.r-pkg.org/badges/rfordummies)](http://www.r-pkg.org/pkg/rfordummies)
 [![Travis build
 status](https://travis-ci.org/andrie/rfordummies.svg?branch=master)](https://travis-ci.org/andrie/rfordummies)
+[![Codecov test
+coverage](https://codecov.io/gh/andrie/rfordummies/branch/master/graph/badge.svg)](https://codecov.io/gh/andrie/rfordummies?branch=master)
 <!-- badges: end -->
 
 # Overview
