@@ -4,7 +4,9 @@
 \name{elements}
 \alias{elements}
 \title{Periodic table of elements.}
-\format{A data frame with 118 rows and 9 variables}
+\format{
+A data frame with 118 rows and 9 variables
+}
 \source{
 \url{http://en.wikipedia.org/wiki/Periodic_table}
 }

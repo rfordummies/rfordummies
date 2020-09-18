@@ -153,15 +153,25 @@ as.numeric(levels(cyl.factor))[cyl.factor]
 \seealso{
 \code{\link{toc}}
 
-Other Chapters: \code{\link{ch01}}, \code{\link{ch02}},
-  \code{\link{ch03}}, \code{\link{ch04}},
-  \code{\link{ch05}}, \code{\link{ch06}},
-  \code{\link{ch07}}, \code{\link{ch08}},
-  \code{\link{ch09}}, \code{\link{ch11}},
-  \code{\link{ch12}}, \code{\link{ch13}},
-  \code{\link{ch14}}, \code{\link{ch15}},
-  \code{\link{ch16}}, \code{\link{ch17}},
-  \code{\link{ch18}}, \code{\link{ch19}},
-  \code{\link{ch20}}
+Other Chapters: 
+\code{\link{ch01}()},
+\code{\link{ch02}()},
+\code{\link{ch03}()},
+\code{\link{ch04}()},
+\code{\link{ch05}()},
+\code{\link{ch06}()},
+\code{\link{ch07}()},
+\code{\link{ch08}()},
+\code{\link{ch09}()},
+\code{\link{ch11}()},
+\code{\link{ch12}()},
+\code{\link{ch13}()},
+\code{\link{ch14}()},
+\code{\link{ch15}()},
+\code{\link{ch16}()},
+\code{\link{ch17}()},
+\code{\link{ch18}()},
+\code{\link{ch19}()},
+\code{\link{ch20}()}
 }
 \concept{Chapters}

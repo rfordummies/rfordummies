@@ -159,9 +159,9 @@ addPercent(profits / sum(profits))
 
 x <- 1:5
 test <- function(x){
-  cat("This is x:", x, "\\n")
+  cat("This is x:", x, "\n")
   rm(x)
-  cat("This is x after removing it:",x,"\\n")
+  cat("This is x after removing it:",x,"\n")
 }
 
 test(5:1)
@@ -225,21 +225,31 @@ addPercent(letters[1:6])
 #  no applicable method for 'addPercent' applied to an object of class "data.frame"
 
 addPercent.default <- function(x){
-  cat('You should try a numeric or character vector.\\n')
+  cat('You should try a numeric or character vector.\n')
 }
 }
 \seealso{
 \code{\link{toc}}
 
-Other Chapters: \code{\link{ch01}}, \code{\link{ch02}},
-  \code{\link{ch03}}, \code{\link{ch04}},
-  \code{\link{ch05}}, \code{\link{ch06}},
-  \code{\link{ch07}}, \code{\link{ch09}},
-  \code{\link{ch10}}, \code{\link{ch11}},
-  \code{\link{ch12}}, \code{\link{ch13}},
-  \code{\link{ch14}}, \code{\link{ch15}},
-  \code{\link{ch16}}, \code{\link{ch17}},
-  \code{\link{ch18}}, \code{\link{ch19}},
-  \code{\link{ch20}}
+Other Chapters: 
+\code{\link{ch01}()},
+\code{\link{ch02}()},
+\code{\link{ch03}()},
+\code{\link{ch04}()},
+\code{\link{ch05}()},
+\code{\link{ch06}()},
+\code{\link{ch07}()},
+\code{\link{ch09}()},
+\code{\link{ch10}()},
+\code{\link{ch11}()},
+\code{\link{ch12}()},
+\code{\link{ch13}()},
+\code{\link{ch14}()},
+\code{\link{ch15}()},
+\code{\link{ch16}()},
+\code{\link{ch17}()},
+\code{\link{ch18}()},
+\code{\link{ch19}()},
+\code{\link{ch20}()}
 }
 \concept{Chapters}

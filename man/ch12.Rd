@@ -38,7 +38,7 @@ elements <- data.frame()
 # x <- readClipboard()
 }
 # x
-# x <- read.table(file = "clipboard", sep = "\\t", header=TRUE)
+# x <- read.table(file = "clipboard", sep = "\t", header=TRUE)
 # x
 
 ## Reading data in CSV files
@@ -72,7 +72,7 @@ elements <- data.frame()
 
 # writeClipboard(names(iris))
 
-# write.table(head(iris), file="clipboard", sep="\\t", row.names=FALSE)
+# write.table(head(iris), file="clipboard", sep="\t", row.names=FALSE)
 
 # Working with Files and Folders
 
@@ -81,7 +81,7 @@ getwd()
 
 # setwd("F:/git/roxygen2")
 # getwd()
-# setwd("F:\\\\git\\\\stringr")
+# setwd("F:\\git\\stringr")
 # getwd()
 
 file.path("f:", "git", "surveyor")
@@ -109,15 +109,25 @@ list.files(tempdir())
 \seealso{
 \code{\link{toc}}
 
-Other Chapters: \code{\link{ch01}}, \code{\link{ch02}},
-  \code{\link{ch03}}, \code{\link{ch04}},
-  \code{\link{ch05}}, \code{\link{ch06}},
-  \code{\link{ch07}}, \code{\link{ch08}},
-  \code{\link{ch09}}, \code{\link{ch10}},
-  \code{\link{ch11}}, \code{\link{ch13}},
-  \code{\link{ch14}}, \code{\link{ch15}},
-  \code{\link{ch16}}, \code{\link{ch17}},
-  \code{\link{ch18}}, \code{\link{ch19}},
-  \code{\link{ch20}}
+Other Chapters: 
+\code{\link{ch01}()},
+\code{\link{ch02}()},
+\code{\link{ch03}()},
+\code{\link{ch04}()},
+\code{\link{ch05}()},
+\code{\link{ch06}()},
+\code{\link{ch07}()},
+\code{\link{ch08}()},
+\code{\link{ch09}()},
+\code{\link{ch10}()},
+\code{\link{ch11}()},
+\code{\link{ch13}()},
+\code{\link{ch14}()},
+\code{\link{ch15}()},
+\code{\link{ch16}()},
+\code{\link{ch17}()},
+\code{\link{ch18}()},
+\code{\link{ch19}()},
+\code{\link{ch20}()}
 }
 \concept{Chapters}
