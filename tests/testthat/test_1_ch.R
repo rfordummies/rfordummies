@@ -1,6 +1,6 @@
 test_that("ch() functions return strings", {
   for (i in 1:20) {
-    expect_is(
+    expect_type(
       z <- capture_output(
         eval(parse(text = sprintf("ch%02d()", i)))
       ), 
@@ -10,7 +10,7 @@ test_that("ch() functions return strings", {
 })
 
 test_that("ch() functions return strings", {
-  expect_is(
+  expect_type(
     z <- capture_output(
       toc()
     ), 

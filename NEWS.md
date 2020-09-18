@@ -1,3 +1,8 @@
+# rfordummies 0.1.4.9000
+
+* Updated unit tests to comply with `testthat_3.0.0`
+
+
 # rfordummies 0.1.4
 
 * Fixed issue that caused CRAN to archive the package
