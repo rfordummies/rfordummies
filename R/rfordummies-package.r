@@ -43,6 +43,6 @@ NULL
 #' 
 #' @name elements
 #' @docType data
-#' @source \url{http://en.wikipedia.org/wiki/Periodic_table}
+#' @source \url{https://en.wikipedia.org/wiki/Periodic_table}
 #' @keywords data
 NULL

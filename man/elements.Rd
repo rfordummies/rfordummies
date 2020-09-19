@@ -8,7 +8,7 @@
 A data frame with 118 rows and 9 variables
 }
 \source{
-\url{http://en.wikipedia.org/wiki/Periodic_table}
+\url{https://en.wikipedia.org/wiki/Periodic_table}
 }
 \description{
 A data set containing properties of the periodic table of elements.
