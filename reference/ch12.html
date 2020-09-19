@@ -81,7 +81,7 @@ To run all the examples of ch12(), use example(ch12)." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rfordummies</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.4.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
       </span>
     </div>
 
@@ -225,7 +225,7 @@ To run all the examples of <code>ch12()</code>, use <code><a href='https://rdrr.
 
 <span class='co'>## Understanding the working directory</span>
 <span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>getwd</a></span>()
-</div><div class='output co'>#&gt; [1] "/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpYLZWVV/filecf179bb5912/reference"</div><div class='input'>
+</div><div class='output co'>#&gt; [1] "/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpuOsDmm/filee7d6a7c6241/reference"</div><div class='input'>
 <span class='co'># setwd("F:/git/roxygen2")</span>
 <span class='co'># getwd()</span>
 <span class='co'># setwd("F:\git\stringr")</span>
@@ -243,15 +243,15 @@ To run all the examples of <code>ch12()</code>, use <code><a href='https://rdrr.
 <span class='co'># list.files(file.path("F:", "git", "roxygen2"))</span>
 <span class='kw'>my.file</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span>()
 <span class='kw'>my.file</span>
-</div><div class='output co'>#&gt; [1] "/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpYLZWVV/filecf14b3945aa"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/write.table.html'>write.csv</a></span>(<span class='kw'>iris</span>, file=<span class='kw'>my.file</span>)
+</div><div class='output co'>#&gt; [1] "/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpuOsDmm/filee7d31143447"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/write.table.html'>write.csv</a></span>(<span class='kw'>iris</span>, file=<span class='kw'>my.file</span>)
 <span class='fu'><a href='https://rdrr.io/r/base/list.files.html'>list.files</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>())
-</div><div class='output co'>#&gt; [1] "callr-env-cf17ad4eb2d" "downlit"               "filecf14b3945aa"      
-#&gt; [4] "filecf179bb5912"      </div><div class='input'>
+</div><div class='output co'>#&gt; [1] "callr-env-e7dc16d005" "downlit"              "filee7d31143447"     
+#&gt; [4] "filee7d6a7c6241"     </div><div class='input'>
 <span class='kw'>file.iris</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/utils/read.table.html'>read.csv</a></span>(<span class='kw'>my.file</span>)
 
 <span class='fu'><a href='https://rdrr.io/r/base/files.html'>file.remove</a></span>(<span class='kw'>my.file</span>)
 </div><div class='output co'>#&gt; [1] TRUE</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/list.files.html'>list.files</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>())
-</div><div class='output co'>#&gt; [1] "callr-env-cf17ad4eb2d" "downlit"               "filecf179bb5912"      </div><div class='input'>
+</div><div class='output co'>#&gt; [1] "callr-env-e7dc16d005" "downlit"              "filee7d6a7c6241"     </div><div class='input'>
 
 </div></pre>
   </div>
