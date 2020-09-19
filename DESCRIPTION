@@ -1,13 +1,13 @@
 Package: rfordummies
 Title: Code Examples to Accompany the Book "R for Dummies"
-Version: 0.1.4.9000
+Version: 0.1.5
 Authors@R: c(person("Andrie", "de Vries", role=c("aut", "cre"),
     email="apdevries@gmail.com"), person("Joris", "Meys", role =
     c("aut")))
 Description: Contains all the code examples in the book "R for Dummies" (2nd
     edition) by Andrie de Vries and Joris Meys. You can view the table of 
     contents as well as the sample code for each chapter.
-Language: en-GB
+Language: en-US
 URL: https://rfordummies.com, http://andrie.github.io/rfordummies/
 BugReports: https://github.com/andrie/rfordummies/issues
 Imports:
@@ -22,7 +22,8 @@ Suggests:
     foreign,
     lattice,
     covr,
-    testthat
+    testthat,
+    spelling
 License: GPL-2|GPL-3
 LazyData: true
 RoxygenNote: 7.1.1

@@ -1,4 +1,4 @@
-# rfordummies 0.1.4.9000
+# rfordummies 0.1.5 (Release date 2020-09-19)
 
 * Updated unit tests to comply with `testthat_3.0.0`
 
