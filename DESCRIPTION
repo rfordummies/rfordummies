@@ -10,13 +10,10 @@ Description: Contains all the code examples in the book "R for Dummies" (2nd
 Language: en-US
 URL: https://rfordummies.com, http://andrie.github.io/rfordummies/
 BugReports: https://github.com/andrie/rfordummies/issues
-Imports:
-    openxlsx
 Suggests:
     fortunes,
     stringr,
     sos,
-    XLConnect,
     reshape2,
     ggplot2,
     foreign,

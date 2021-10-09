@@ -6,7 +6,7 @@ local({
     "fortunes", 
     "stringr", 
     "sos", 
-    "XLConnect", 
+    # "XLConnect", 
     "reshape2", 
     "ggplot2", 
     "foreign"

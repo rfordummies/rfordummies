@@ -6,7 +6,7 @@
 #' @param type Either excel or csv
 #' 
 #' @importFrom utils data write.csv
-#' @importFrom openxlsx write.xlsx
+# @importFrom openxlsx write.xlsx
 #' 
 #' @export
 #' 
@@ -15,16 +15,16 @@
 #' saveElements(file.path(tempdir(), "elements.csv"), type = "csv")
 #' list.files(tempdir(), pattern = "xlsx|csv", full.names = TRUE)
 #' 
-saveElements <- function(outfile, type = c("excel", "csv")){
+saveElements <- function(outfile, type = c("csv")){
   type <- match.arg(type)
   dummies_env <- new.env()
   data(elements, package = "rfordummies", envir = dummies_env)
   elements <- dummies_env[["elements"]]
   switch(
     type, 
-    excel = {
-      openxlsx::write.xlsx(elements, file = outfile)
-    },
+    # excel = {
+    #   openxlsx::write.xlsx(elements, file = outfile)
+    # },
     csv = {
       utils::write.csv(elements, file = outfile, row.names = FALSE)
     })
