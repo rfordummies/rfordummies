@@ -81,7 +81,7 @@ To run all the examples of ch17(), use example(ch17)." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rfordummies</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5.9000</span>
       </span>
     </div>
 
@@ -89,7 +89,7 @@ To run all the examples of ch17(), use example(ch17)." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -103,7 +103,7 @@ To run all the examples of ch17(), use example(ch17)." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/andrie/rfordummies/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -130,7 +130,7 @@ To run all the examples of ch17(), use example(ch17)." />
 To run all the examples of <code>ch17()</code>, use <code><a href='https://rdrr.io/r/utils/example.html'>example(ch17)</a></code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>ch17</span>()</pre>
+    <pre class="usage"><span class='fu'>ch17</span><span class='op'>(</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
@@ -163,7 +163,7 @@ To run all the examples of <code>ch17()</code>, use <code><a href='https://rdrr.
 
 <span class='co'># Creating a Lattice Plot</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='kw'>mtcars</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>mtcars</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; 'data.frame':	32 obs. of  11 variables:
 #&gt;  $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
 #&gt;  $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
@@ -178,83 +178,83 @@ To run all the examples of <code>ch17()</code>, use <code><a href='https://rdrr.
 #&gt;  $ carb: num  4 4 1 1 2 1 4 2 2 4 ...</div><div class='input'>
 <span class='co'>## Loading the lattice package</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='st'><a href='http://lattice.r-forge.r-project.org'>"lattice"</a></span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'><a href='http://lattice.r-forge.r-project.org/'>"lattice"</a></span><span class='op'>)</span>
 
 <span class='co'>## Making a lattice scatterplot</span>
 
-<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span>(<span class='kw'>mpg</span> <span class='op'>~</span> <span class='kw'>hp</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='kw'>cyl</span>), data=<span class='kw'>mtcars</span>)
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>mpg</span> <span class='op'>~</span> <span class='va'>hp</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>cyl</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>mtcars</span><span class='op'>)</span>
 </div><div class='img'><img src='ch17-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>## Adding trend lines</span>
 
-<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span>(<span class='kw'>mpg</span> <span class='op'>~</span> <span class='kw'>hp</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='kw'>cyl</span>), data=<span class='kw'>mtcars</span>,
-   type=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"p"</span>, <span class='st'>"r"</span>))
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>mpg</span> <span class='op'>~</span> <span class='va'>hp</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>cyl</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>mtcars</span>,
+   type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"p"</span>, <span class='st'>"r"</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='img'><img src='ch17-2.png' alt='' width='700' height='433' /></div><div class='input'>
 
 <span class='co'># Changing Plot Options</span>
 
 <span class='co'>## Adding titles and labels</span>
 
-<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span>(<span class='kw'>mpg</span> <span class='op'>~</span> <span class='kw'>hp</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='kw'>cyl</span>), data=<span class='kw'>mtcars</span>,
-   type=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"p"</span>, <span class='st'>"r"</span>),
-   main=<span class='st'>"Fuel economy vs. Performance"</span>,
-   xlab=<span class='st'>"Performance (horse power)"</span>,
-   ylab=<span class='st'>"Fuel economy (miles per gallon)"</span>,
-)
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>mpg</span> <span class='op'>~</span> <span class='va'>hp</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>cyl</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>mtcars</span>,
+   type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"p"</span>, <span class='st'>"r"</span><span class='op'>)</span>,
+   main<span class='op'>=</span><span class='st'>"Fuel economy vs. Performance"</span>,
+   xlab<span class='op'>=</span><span class='st'>"Performance (horse power)"</span>,
+   ylab<span class='op'>=</span><span class='st'>"Fuel economy (miles per gallon)"</span>,
+<span class='op'>)</span>
 </div><div class='img'><img src='ch17-3.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span>(<span class='kw'>mpg</span> <span class='op'>~</span> <span class='kw'>hp</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='kw'>cyl</span>), data=<span class='kw'>mtcars</span>,
-   type=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"p"</span>, <span class='st'>"r"</span>),
-   main=<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(
-       label=<span class='st'>"Fuel economy vs. Performance given Number of Cylinders"</span>,
-       cex=<span class='fl'>0.75</span>)
-)
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>mpg</span> <span class='op'>~</span> <span class='va'>hp</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>cyl</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>mtcars</span>,
+   type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"p"</span>, <span class='st'>"r"</span><span class='op'>)</span>,
+   main<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+       label<span class='op'>=</span><span class='st'>"Fuel economy vs. Performance given Number of Cylinders"</span>,
+       cex<span class='op'>=</span><span class='fl'>0.75</span><span class='op'>)</span>
+<span class='op'>)</span>
 </div><div class='img'><img src='ch17-4.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>## Changing the font size of titles and labels</span>
 
-<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span>(<span class='kw'>mpg</span> <span class='op'>~</span> <span class='kw'>hp</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='kw'>cyl</span>), data=<span class='kw'>mtcars</span>,
-   type=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"p"</span>, <span class='st'>"r"</span>),
-   main=<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(
-       label=<span class='st'>"Fuel economy vs. Performance given Number of Cylinders"</span>,
-       cex=<span class='fl'>0.75</span>),
-   xlab=<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(
-       label=<span class='st'>"Performance (horse power)"</span>,
-       cex=<span class='fl'>0.75</span>),
-   ylab=<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(
-       label=<span class='st'>"Fuel economy (miles per gallon)"</span>,
-       cex=<span class='fl'>0.75</span>),
-   scales=<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(cex=<span class='fl'>0.5</span>)
-)
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>mpg</span> <span class='op'>~</span> <span class='va'>hp</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>cyl</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>mtcars</span>,
+   type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"p"</span>, <span class='st'>"r"</span><span class='op'>)</span>,
+   main<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+       label<span class='op'>=</span><span class='st'>"Fuel economy vs. Performance given Number of Cylinders"</span>,
+       cex<span class='op'>=</span><span class='fl'>0.75</span><span class='op'>)</span>,
+   xlab<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+       label<span class='op'>=</span><span class='st'>"Performance (horse power)"</span>,
+       cex<span class='op'>=</span><span class='fl'>0.75</span><span class='op'>)</span>,
+   ylab<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+       label<span class='op'>=</span><span class='st'>"Fuel economy (miles per gallon)"</span>,
+       cex<span class='op'>=</span><span class='fl'>0.75</span><span class='op'>)</span>,
+   scales<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>cex<span class='op'>=</span><span class='fl'>0.5</span><span class='op'>)</span>
+<span class='op'>)</span>
 </div><div class='img'><img src='ch17-5.png' alt='' width='700' height='433' /></div><div class='input'>
 
 <span class='co'>## Using themes to modify plot options</span>
 
-<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span>(<span class='kw'>mpg</span> <span class='op'>~</span> <span class='kw'>hp</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='kw'>cyl</span>), data=<span class='kw'>mtcars</span>,
-   type=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"p"</span>, <span class='st'>"r"</span>),
-   par.settings=<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/simpleTheme.html'>simpleTheme</a></span>(col=<span class='st'>"red"</span>, col.line=<span class='st'>"blue"</span>)
-)
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>mpg</span> <span class='op'>~</span> <span class='va'>hp</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>cyl</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>mtcars</span>,
+   type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"p"</span>, <span class='st'>"r"</span><span class='op'>)</span>,
+   par.settings<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/simpleTheme.html'>simpleTheme</a></span><span class='op'>(</span>col<span class='op'>=</span><span class='st'>"red"</span>, col.line<span class='op'>=</span><span class='st'>"blue"</span><span class='op'>)</span>
+<span class='op'>)</span>
 </div><div class='img'><img src='ch17-6.png' alt='' width='700' height='433' /></div><div class='input'>
 
 <span class='co'># Plotting Different Types</span>
 
 <span class='co'>## Making a bar chart</span>
 
-<span class='kw'>mtcars</span><span class='op'>$</span><span class='kw'>cars</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='kw'>mtcars</span>)
+<span class='va'>mtcars</span><span class='op'>$</span><span class='va'>cars</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>mtcars</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>barchart</a></span>(<span class='kw'>cars</span> <span class='op'>~</span> <span class='kw'>mpg</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='kw'>cyl</span>), data=<span class='kw'>mtcars</span>,
-   main=<span class='st'>"barchart"</span>,
-   scales=<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(cex=<span class='fl'>0.5</span>),
-   layout=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>3</span>, <span class='fl'>1</span>)
-)
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>barchart</a></span><span class='op'>(</span><span class='va'>cars</span> <span class='op'>~</span> <span class='va'>mpg</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>cyl</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>mtcars</span>,
+   main<span class='op'>=</span><span class='st'>"barchart"</span>,
+   scales<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>cex<span class='op'>=</span><span class='fl'>0.5</span><span class='op'>)</span>,
+   layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>3</span>, <span class='fl'>1</span><span class='op'>)</span>
+<span class='op'>)</span>
 </div><div class='img'><img src='ch17-7.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>## Making a box-and-whisker plot</span>
 
-<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>bwplot</a></span>(<span class='op'>~</span> <span class='kw'>hp</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='kw'>cyl</span>), data=<span class='kw'>mtcars</span>, main=<span class='st'>"bwplot"</span>)
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>bwplot</a></span><span class='op'>(</span><span class='op'>~</span> <span class='va'>hp</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>cyl</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>mtcars</span>, main<span class='op'>=</span><span class='st'>"bwplot"</span><span class='op'>)</span>
 </div><div class='img'><img src='ch17-8.png' alt='' width='700' height='433' /></div><div class='input'>
 
 <span class='co'># Plotting Data in Groups</span>
 
 <span class='co'>## Using data in tall format</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='kw'>longley</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>longley</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; 'data.frame':	16 obs. of  7 variables:
 #&gt;  $ GNP.deflator: num  83 88.5 88.2 89.5 96.2 ...
 #&gt;  $ GNP         : num  234 259 258 285 329 ...
@@ -262,68 +262,68 @@ To run all the examples of <code>ch17()</code>, use <code><a href='https://rdrr.
 #&gt;  $ Armed.Forces: num  159 146 162 165 310 ...
 #&gt;  $ Population  : num  108 109 110 111 112 ...
 #&gt;  $ Year        : int  1947 1948 1949 1950 1951 1952 1953 1954 1955 1956 ...
-#&gt;  $ Employed    : num  60.3 61.1 60.2 61.2 63.2 ...</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='st'><a href='https://github.com/hadley/reshape'>"reshape2"</a></span>)
-<span class='kw'>mlongley</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/melt.html'>melt</a></span>(<span class='kw'>longley</span>, id.vars=<span class='st'>"Year"</span>)
+#&gt;  $ Employed    : num  60.3 61.1 60.2 61.2 63.2 ...</div><div class='input'><span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'><a href='https://github.com/hadley/reshape'>"reshape2"</a></span><span class='op'>)</span>
+<span class='va'>mlongley</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/melt.html'>melt</a></span><span class='op'>(</span><span class='va'>longley</span>, id.vars<span class='op'>=</span><span class='st'>"Year"</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='kw'>mlongley</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>mlongley</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; 'data.frame':	96 obs. of  3 variables:
 #&gt;  $ Year    : int  1947 1948 1949 1950 1951 1952 1953 1954 1955 1956 ...
 #&gt;  $ variable: Factor w/ 6 levels "GNP.deflator",..: 1 1 1 1 1 1 1 1 1 1 ...
 #&gt;  $ value   : num  83 88.5 88.2 89.5 96.2 ...</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span>(<span class='kw'>value</span> <span class='op'>~</span> <span class='kw'>Year</span> <span class='op'>|</span> <span class='kw'>variable</span>, data=<span class='kw'>mlongley</span>,
-   layout=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>6</span>, <span class='fl'>1</span>),
-   par.strip.text=<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(cex=<span class='fl'>0.7</span>),
-   scales=<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(cex=<span class='fl'>0.7</span>)
-)
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>value</span> <span class='op'>~</span> <span class='va'>Year</span> <span class='op'>|</span> <span class='va'>variable</span>, data<span class='op'>=</span><span class='va'>mlongley</span>,
+   layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>6</span>, <span class='fl'>1</span><span class='op'>)</span>,
+   par.strip.text<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>cex<span class='op'>=</span><span class='fl'>0.7</span><span class='op'>)</span>,
+   scales<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>cex<span class='op'>=</span><span class='fl'>0.7</span><span class='op'>)</span>
+<span class='op'>)</span>
 </div><div class='img'><img src='ch17-9.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>## Creating a chart with groups</span>
 
-<span class='kw'>mtcars</span><span class='op'>$</span><span class='kw'>cars</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='kw'>mtcars</span>)
-<span class='kw'>mtcars</span><span class='op'>$</span><span class='kw'>am</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='kw'>mtcars</span>, <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='kw'>am</span><span class='op'>==</span><span class='fl'>0</span>, <span class='st'>"Automatic"</span>, <span class='st'>"Manual"</span>))
+<span class='va'>mtcars</span><span class='op'>$</span><span class='va'>cars</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>mtcars</span><span class='op'>)</span>
+<span class='va'>mtcars</span><span class='op'>$</span><span class='va'>am</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>mtcars</span>, <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>am</span><span class='op'>==</span><span class='fl'>0</span>, <span class='st'>"Automatic"</span>, <span class='st'>"Manual"</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>barchart</a></span>(<span class='kw'>cars</span> <span class='op'>~</span> <span class='kw'>mpg</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='kw'>cyl</span>), data=<span class='kw'>mtcars</span>,
-   group=<span class='kw'>am</span>,
-   scales=<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(cex=<span class='fl'>0.5</span>),
-   layout=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>3</span>, <span class='fl'>1</span>),
-)
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>barchart</a></span><span class='op'>(</span><span class='va'>cars</span> <span class='op'>~</span> <span class='va'>mpg</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>cyl</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>mtcars</span>,
+   group<span class='op'>=</span><span class='va'>am</span>,
+   scales<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>cex<span class='op'>=</span><span class='fl'>0.5</span><span class='op'>)</span>,
+   layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>3</span>, <span class='fl'>1</span><span class='op'>)</span>,
+<span class='op'>)</span>
 </div><div class='img'><img src='ch17-10.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>## Adding a key</span>
 
-<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>barchart</a></span>(<span class='kw'>cars</span> <span class='op'>~</span> <span class='kw'>mpg</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='kw'>cyl</span>), data=<span class='kw'>mtcars</span>,
-   main=<span class='st'>"barchart with groups"</span>,
-   group=<span class='kw'>am</span>,
-   auto.key=<span class='fl'>TRUE</span>,
-   par.settings = <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/simpleTheme.html'>simpleTheme</a></span>(col=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"grey80"</span>, <span class='st'>"grey20"</span>)),
-   scales=<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(cex=<span class='fl'>0.5</span>),
-   layout=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>3</span>, <span class='fl'>1</span>)
-)
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>barchart</a></span><span class='op'>(</span><span class='va'>cars</span> <span class='op'>~</span> <span class='va'>mpg</span> <span class='op'>|</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>cyl</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>mtcars</span>,
+   main<span class='op'>=</span><span class='st'>"barchart with groups"</span>,
+   group<span class='op'>=</span><span class='va'>am</span>,
+   auto.key<span class='op'>=</span><span class='cn'>TRUE</span>,
+   par.settings <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/simpleTheme.html'>simpleTheme</a></span><span class='op'>(</span>col<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"grey80"</span>, <span class='st'>"grey20"</span><span class='op'>)</span><span class='op'>)</span>,
+   scales<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>cex<span class='op'>=</span><span class='fl'>0.5</span><span class='op'>)</span>,
+   layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>3</span>, <span class='fl'>1</span><span class='op'>)</span>
+<span class='op'>)</span>
 </div><div class='img'><img src='ch17-11.png' alt='' width='700' height='433' /></div><div class='input'>
 
 <span class='co'># Printing and Saving a Lattice Plot</span>
 
 <span class='co'>## Assigning a lattice plot to an object</span>
 
-<span class='kw'>my.plot</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span>(<span class='kw'>mpg</span> <span class='op'>~</span> <span class='kw'>hp</span> <span class='op'>|</span> <span class='kw'>cyl</span>, data=<span class='kw'>mtcars</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='kw'>my.plot</span>)
+<span class='va'>my.plot</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>mpg</span> <span class='op'>~</span> <span class='va'>hp</span> <span class='op'>|</span> <span class='va'>cyl</span>, data<span class='op'>=</span><span class='va'>mtcars</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='op'>(</span><span class='va'>my.plot</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "trellis"</div><div class='input'>
 <span class='co'>## Printing a lattice plot in a script</span>
 
-<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span>(<span class='kw'>mpg</span> <span class='op'>~</span> <span class='kw'>hp</span> <span class='op'>|</span> <span class='kw'>cyl</span>, data=<span class='kw'>mtcars</span>)
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>mpg</span> <span class='op'>~</span> <span class='va'>hp</span> <span class='op'>|</span> <span class='va'>cyl</span>, data<span class='op'>=</span><span class='va'>mtcars</span><span class='op'>)</span>
 </div><div class='img'><img src='ch17-12.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='kw'>my.plot</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span>(<span class='kw'>mpg</span> <span class='op'>~</span> <span class='kw'>hp</span> <span class='op'>|</span> <span class='kw'>cyl</span>, data=<span class='kw'>mtcars</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='kw'>my.plot</span>)
+<span class='va'>my.plot</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>mpg</span> <span class='op'>~</span> <span class='va'>hp</span> <span class='op'>|</span> <span class='va'>cyl</span>, data<span class='op'>=</span><span class='va'>mtcars</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>my.plot</span><span class='op'>)</span>
 </div><div class='img'><img src='ch17-13.png' alt='' width='700' height='433' /></div><div class='input'>
 
 <span class='co'>## Saving a lattice plot to file</span>
 
-<span class='kw'>filename</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>(), <span class='st'>"xyplot"</span>)
-<span class='co'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/trellis.device.html'>trellis.device</a></span>(device=<span class='st'>"png"</span>, filename=<span class='kw'>filename</span>)
-}
-<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='kw'>my.plot</span>)
-</div><div class='img'><img src='ch17-14.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'><a href='https://rdrr.io/r/grDevices/dev.html'>dev.off</a></span>()
-}
+<span class='va'>filename</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span><span class='op'>(</span><span class='op'>)</span>, <span class='st'>"xyplot"</span><span class='op'>)</span>
+<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/trellis.device.html'>trellis.device</a></span><span class='op'>(</span>device<span class='op'>=</span><span class='st'>"png"</span>, filename<span class='op'>=</span><span class='va'>filename</span><span class='op'>)</span>
+<span class='op'>}</span>
+<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>my.plot</span><span class='op'>)</span>
+</div><div class='img'><img src='ch17-14.png' alt='' width='700' height='433' /></div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'><a href='https://rdrr.io/r/grDevices/dev.html'>dev.off</a></span><span class='op'>(</span><span class='op'>)</span>
+<span class='op'>}</span>
 
 </div></pre>
   </div>

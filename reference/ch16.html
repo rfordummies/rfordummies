@@ -81,7 +81,7 @@ To run all the examples of ch16(), use example(ch16)." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rfordummies</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5.9000</span>
       </span>
     </div>
 
@@ -89,7 +89,7 @@ To run all the examples of ch16(), use example(ch16)." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -103,7 +103,7 @@ To run all the examples of ch16(), use example(ch16)." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/andrie/rfordummies/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -130,7 +130,7 @@ To run all the examples of ch16(), use example(ch16)." />
 To run all the examples of <code>ch16()</code>, use <code><a href='https://rdrr.io/r/utils/example.html'>example(ch16)</a></code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>ch16</span>()</pre>
+    <pre class="usage"><span class='fu'>ch16</span><span class='op'>(</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
@@ -165,112 +165,112 @@ To run all the examples of <code>ch16()</code>, use <code><a href='https://rdrr.
 
 <span class='co'>## Getting an overview of plot</span>
 
-<span class='kw'>large.islands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span>(<span class='kw'>islands</span>, decreasing=<span class='fl'>TRUE</span>), <span class='fl'>10</span>)
+<span class='va'>large.islands</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span><span class='op'>(</span><span class='va'>islands</span>, decreasing<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>, <span class='fl'>10</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='kw'>large.islands</span>, main=<span class='st'>"Land area of continents and islands"</span>,
-   ylab=<span class='st'>"Land area in square miles"</span>)
-</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span>(<span class='kw'>large.islands</span>, labels=<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='kw'>large.islands</span>), adj=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0.5</span>, <span class='fl'>1</span>))
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>large.islands</span>, main<span class='op'>=</span><span class='st'>"Land area of continents and islands"</span>,
+   ylab<span class='op'>=</span><span class='st'>"Land area in square miles"</span><span class='op'>)</span>
+</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span><span class='op'>(</span><span class='va'>large.islands</span>, labels<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>large.islands</span><span class='op'>)</span>, adj<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0.5</span>, <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='img'><img src='ch16-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
 <span class='co'>## Adding points and lines to a plot</span>
 
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='kw'>faithful</span>)
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>faithful</span><span class='op'>)</span>
 </div><div class='input'>
 <span class='co'>## Adding points</span>
 
-<span class='kw'>short.eruptions</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='kw'>faithful</span>, <span class='kw'>faithful</span>[<span class='kw'>eruptions</span> <span class='op'>&lt;</span> <span class='fl'>3</span>, ])
+<span class='va'>short.eruptions</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>faithful</span>, <span class='va'>faithful</span><span class='op'>[</span><span class='va'>eruptions</span> <span class='op'>&lt;</span> <span class='fl'>3</span>, <span class='op'>]</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='kw'>faithful</span>)
-</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/points.html'>points</a></span>(<span class='kw'>short.eruptions</span>, col=<span class='st'>"red"</span>, pch=<span class='fl'>19</span>)
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>faithful</span><span class='op'>)</span>
+</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/points.html'>points</a></span><span class='op'>(</span><span class='va'>short.eruptions</span>, col<span class='op'>=</span><span class='st'>"red"</span>, pch<span class='op'>=</span><span class='fl'>19</span><span class='op'>)</span>
 </div><div class='img'><img src='ch16-2.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>## Changing the shape of points</span>
 
 <span class='co'>## Changing the color</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='fu'><a href='https://rdrr.io/r/grDevices/colors.html'>colors</a></span>(), <span class='fl'>10</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/grDevices/colors.html'>colors</a></span><span class='op'>(</span><span class='op'>)</span>, <span class='fl'>10</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;  [1] "white"         "aliceblue"     "antiquewhite"  "antiquewhite1"
 #&gt;  [5] "antiquewhite2" "antiquewhite3" "antiquewhite4" "aquamarine"   
 #&gt;  [9] "aquamarine1"   "aquamarine2"  </div><div class='input'>
 <span class='co'>## Adding lines to a plot</span>
 
-<span class='kw'>fit</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='kw'>waiting</span><span class='op'>~</span><span class='kw'>eruptions</span>, data=<span class='kw'>faithful</span>)
+<span class='va'>fit</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>waiting</span><span class='op'>~</span><span class='va'>eruptions</span>, data<span class='op'>=</span><span class='va'>faithful</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='kw'>faithful</span>)
-</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/lines.html'>lines</a></span>(<span class='kw'>faithful</span><span class='op'>$</span><span class='kw'>eruptions</span>, <span class='fu'><a href='https://rdrr.io/r/stats/fitted.values.html'>fitted</a></span>(<span class='kw'>fit</span>), col=<span class='st'>"blue"</span>)
-</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span>(v=<span class='fl'>3</span>, col=<span class='st'>"purple"</span>)
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>faithful</span><span class='op'>)</span>
+</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/lines.html'>lines</a></span><span class='op'>(</span><span class='va'>faithful</span><span class='op'>$</span><span class='va'>eruptions</span>, <span class='fu'><a href='https://rdrr.io/r/stats/fitted.values.html'>fitted</a></span><span class='op'>(</span><span class='va'>fit</span><span class='op'>)</span>, col<span class='op'>=</span><span class='st'>"blue"</span><span class='op'>)</span>
+</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span><span class='op'>(</span>v<span class='op'>=</span><span class='fl'>3</span>, col<span class='op'>=</span><span class='st'>"purple"</span><span class='op'>)</span>
 </div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span>(h=<span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='kw'>faithful</span><span class='op'>$</span><span class='kw'>waiting</span>))
-</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span>(a=<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='kw'>fit</span>)[<span class='fl'>1</span>], b=<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='kw'>fit</span>)[<span class='fl'>2</span>])
-</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span>(<span class='kw'>fit</span>, col = <span class='st'>"red"</span>)
+<span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span><span class='op'>(</span>h<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>faithful</span><span class='op'>$</span><span class='va'>waiting</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span><span class='op'>(</span>a<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>fit</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, b<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>fit</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>)</span>
+</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span><span class='op'>(</span><span class='va'>fit</span>, col <span class='op'>=</span> <span class='st'>"red"</span><span class='op'>)</span>
 </div><div class='img'><img src='ch16-3.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Different plot types</span>
 
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='kw'>LakeHuron</span>, type=<span class='st'>"l"</span>, main=<span class='st'>'type="l"'</span>)
-</div><div class='img'><img src='ch16-4.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='kw'>LakeHuron</span>, type=<span class='st'>"p"</span>, main=<span class='st'>'type=p"'</span>)
-</div><div class='img'><img src='ch16-5.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='kw'>LakeHuron</span>, type=<span class='st'>"b"</span>, main=<span class='st'>'type="b"'</span>)
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>LakeHuron</span>, type<span class='op'>=</span><span class='st'>"l"</span>, main<span class='op'>=</span><span class='st'>'type="l"'</span><span class='op'>)</span>
+</div><div class='img'><img src='ch16-4.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>LakeHuron</span>, type<span class='op'>=</span><span class='st'>"p"</span>, main<span class='op'>=</span><span class='st'>'type=p"'</span><span class='op'>)</span>
+</div><div class='img'><img src='ch16-5.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>LakeHuron</span>, type<span class='op'>=</span><span class='st'>"b"</span>, main<span class='op'>=</span><span class='st'>'type="b"'</span><span class='op'>)</span>
 </div><div class='img'><img src='ch16-6.png' alt='' width='700' height='433' /></div><div class='input'>
 
-<span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span>(<span class='fl'>0.5</span>, <span class='fl'>1.5</span>, <span class='fl'>0.25</span>)
-<span class='kw'>y</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='fl'>1</span>, <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='kw'>x</span>))
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='kw'>x</span>, <span class='kw'>y</span>, type=<span class='st'>"n"</span>)
-</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/points.html'>points</a></span>(<span class='kw'>x</span>, <span class='kw'>y</span>)
+<span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>0.5</span>, <span class='fl'>1.5</span>, <span class='fl'>0.25</span><span class='op'>)</span>
+<span class='va'>y</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>y</span>, type<span class='op'>=</span><span class='st'>"n"</span><span class='op'>)</span>
+</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/points.html'>points</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>y</span><span class='op'>)</span>
 </div><div class='img'><img src='ch16-7.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='kw'>mtcars</span>, <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='kw'>mpg</span>, <span class='kw'>disp</span>))
-</div><div class='img'><img src='ch16-8.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='kw'>mtcars</span>, <span class='fu'><a href='https://rdrr.io/r/graphics/boxplot.html'>boxplot</a></span>(<span class='kw'>disp</span>, <span class='kw'>mpg</span>))
-</div><div class='img'><img src='ch16-9.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='kw'>mtcars</span>, <span class='fu'><a href='https://rdrr.io/r/graphics/hist.html'>hist</a></span>(<span class='kw'>mpg</span>))
+<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>mtcars</span>, <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>mpg</span>, <span class='va'>disp</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='ch16-8.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>mtcars</span>, <span class='fu'><a href='https://rdrr.io/r/graphics/boxplot.html'>boxplot</a></span><span class='op'>(</span><span class='va'>disp</span>, <span class='va'>mpg</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='ch16-9.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>mtcars</span>, <span class='fu'><a href='https://rdrr.io/r/graphics/hist.html'>hist</a></span><span class='op'>(</span><span class='va'>mpg</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='img'><img src='ch16-10.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Controlling Plot Options and Arguments</span>
 
 <span class='co'>## Adding titles and axis labels</span>
 
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='kw'>faithful</span>,
-   main = <span class='st'>"Eruptions of Old Faithful"</span>,
-   xlab = <span class='st'>"Eruption time (min)"</span>,
-   ylab = <span class='st'>"Waiting time to next eruption (min)"</span>)
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>faithful</span>,
+   main <span class='op'>=</span> <span class='st'>"Eruptions of Old Faithful"</span>,
+   xlab <span class='op'>=</span> <span class='st'>"Eruption time (min)"</span>,
+   ylab <span class='op'>=</span> <span class='st'>"Waiting time to next eruption (min)"</span><span class='op'>)</span>
 </div><div class='img'><img src='ch16-11.png' alt='' width='700' height='433' /></div><div class='input'>
 
 <span class='co'>## Changing plot options</span>
 
 <span class='co'>### The axes label style</span>
 
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='kw'>faithful</span>, las=<span class='fl'>1</span>)
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>faithful</span>, las<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>
 </div><div class='img'><img src='ch16-12.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>### The box type</span>
 
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='kw'>faithful</span>, bty=<span class='st'>"n"</span>)
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>faithful</span>, bty<span class='op'>=</span><span class='st'>"n"</span><span class='op'>)</span>
 </div><div class='img'><img src='ch16-13.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>### More than one option</span>
 
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='kw'>faithful</span>, las=<span class='fl'>1</span>, bty=<span class='st'>"l"</span>, col=<span class='st'>"red"</span>, pch=<span class='fl'>19</span>)
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>faithful</span>, las<span class='op'>=</span><span class='fl'>1</span>, bty<span class='op'>=</span><span class='st'>"l"</span>, col<span class='op'>=</span><span class='st'>"red"</span>, pch<span class='op'>=</span><span class='fl'>19</span><span class='op'>)</span>
 </div><div class='img'><img src='ch16-14.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>### Font size of text and axes</span>
 
-<span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span>(<span class='fl'>0.5</span>, <span class='fl'>1.5</span>, <span class='fl'>0.25</span>)
-<span class='kw'>y</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='fl'>1</span>, <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='kw'>x</span>))
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='kw'>x</span>, <span class='kw'>y</span>, main=<span class='st'>"Effect of cex on text size"</span>)
-</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span>(<span class='kw'>x</span>, <span class='kw'>y</span><span class='op'>+</span><span class='fl'>0.1</span>, labels=<span class='kw'>x</span>, cex=<span class='kw'>x</span>)
+<span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>0.5</span>, <span class='fl'>1.5</span>, <span class='fl'>0.25</span><span class='op'>)</span>
+<span class='va'>y</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>y</span>, main<span class='op'>=</span><span class='st'>"Effect of cex on text size"</span><span class='op'>)</span>
+</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>y</span><span class='op'>+</span><span class='fl'>0.1</span>, labels<span class='op'>=</span><span class='va'>x</span>, cex<span class='op'>=</span><span class='va'>x</span><span class='op'>)</span>
 </div><div class='img'><img src='ch16-15.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='kw'>x</span>, <span class='kw'>y</span>, main=<span class='st'>"Effect of cex.main, cex.lab and cex.axis"</span>,
-  cex.main=<span class='fl'>1.25</span>, cex.lab=<span class='fl'>1.5</span>, cex.axis=<span class='fl'>0.75</span>)
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>y</span>, main<span class='op'>=</span><span class='st'>"Effect of cex.main, cex.lab and cex.axis"</span>,
+  cex.main<span class='op'>=</span><span class='fl'>1.25</span>, cex.lab<span class='op'>=</span><span class='fl'>1.5</span>, cex.axis<span class='op'>=</span><span class='fl'>0.75</span><span class='op'>)</span>
 </div><div class='img'><img src='ch16-16.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'>## Putting multiple plots on a single page</span>
 
-<span class='kw'>old.par</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span>(mfrow=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>, <span class='fl'>2</span>))
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='kw'>faithful</span>, main=<span class='st'>"Faithful eruptions"</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='kw'>large.islands</span>, main=<span class='st'>"Islands"</span>, ylab=<span class='st'>"Area"</span>)
-</div><div class='img'><img src='ch16-17.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span>(<span class='kw'>old.par</span>)
+<span class='va'>old.par</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mfrow<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>faithful</span>, main<span class='op'>=</span><span class='st'>"Faithful eruptions"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>large.islands</span>, main<span class='op'>=</span><span class='st'>"Islands"</span>, ylab<span class='op'>=</span><span class='st'>"Area"</span><span class='op'>)</span>
+</div><div class='img'><img src='ch16-17.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span><span class='va'>old.par</span><span class='op'>)</span>
 
 
 <span class='co'># Saving Graphics to Image Files</span>
 
-<span class='kw'>filename</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>(), <span class='st'>"faithful.png"</span>)
-<span class='co'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'><a href='https://rdrr.io/r/grDevices/png.html'>png</a></span>(filename=<span class='kw'>filename</span>)
-}
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='kw'>faithful</span>)
-</div><div class='img'><img src='ch16-18.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'><a href='https://rdrr.io/r/grDevices/dev.html'>dev.off</a></span>()
-}
+<span class='va'>filename</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span><span class='op'>(</span><span class='op'>)</span>, <span class='st'>"faithful.png"</span><span class='op'>)</span>
+<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'><a href='https://rdrr.io/r/grDevices/png.html'>png</a></span><span class='op'>(</span>filename<span class='op'>=</span><span class='va'>filename</span><span class='op'>)</span>
+<span class='op'>}</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>faithful</span><span class='op'>)</span>
+</div><div class='img'><img src='ch16-18.png' alt='' width='700' height='433' /></div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'><a href='https://rdrr.io/r/grDevices/dev.html'>dev.off</a></span><span class='op'>(</span><span class='op'>)</span>
+<span class='op'>}</span>
 
 </div></pre>
   </div>

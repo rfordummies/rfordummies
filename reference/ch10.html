@@ -81,7 +81,7 @@ To run all the examples of ch10(), use example(ch10)." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rfordummies</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5.9000</span>
       </span>
     </div>
 
@@ -89,7 +89,7 @@ To run all the examples of ch10(), use example(ch10)." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -103,7 +103,7 @@ To run all the examples of ch10(), use example(ch10)." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/andrie/rfordummies/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -130,7 +130,7 @@ To run all the examples of ch10(), use example(ch10)." />
 To run all the examples of <code>ch10()</code>, use <code><a href='https://rdrr.io/r/utils/example.html'>example(ch10)</a></code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>ch10</span>()</pre>
+    <pre class="usage"><span class='fu'>ch10</span><span class='op'>(</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
@@ -179,13 +179,13 @@ To run all the examples of <code>ch10()</code>, use <code><a href='https://rdrr.
 
 <span class='co'>## Caring about warnings (or not)</span>
 
-<span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span>
-<span class='kw'>y</span> <span class='op'>&lt;-</span> <span class='co'>if</span> (<span class='kw'>x</span> <span class='op'>&lt;</span> <span class='fl'>5</span> ) <span class='fl'>0</span> <span class='co'>else</span> <span class='fl'>1</span>
+<span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span>
+<span class='va'>y</span> <span class='op'>&lt;-</span> <span class='kw'>if</span> <span class='op'>(</span><span class='va'>x</span> <span class='op'>&lt;</span> <span class='fl'>5</span> <span class='op'>)</span> <span class='fl'>0</span> <span class='kw'>else</span> <span class='fl'>1</span>
 </div><div class='output co'>#&gt; <span class='warning'>Warning: the condition has length &gt; 1 and only the first element will be used</span></div><div class='input'>
-<span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='fl'>4</span>
-<span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span>(<span class='kw'>x</span> <span class='op'>-</span> <span class='fl'>5</span>)
+<span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fl'>4</span>
+<span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>-</span> <span class='fl'>5</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; <span class='warning'>Warning: NaNs produced</span></div><div class='output co'>#&gt; [1] NaN</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span>(<span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span>, <span class='fl'>10</span><span class='op'>:</span><span class='fl'>1</span>, color=<span class='st'>'green'</span>)
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span>, <span class='fl'>10</span><span class='op'>:</span><span class='fl'>1</span>, color<span class='op'>=</span><span class='st'>'green'</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; <span class='warning'>Warning: "color" is not a graphical parameter</span></div><div class='output co'>#&gt; <span class='warning'>Warning: "color" is not a graphical parameter</span></div><div class='output co'>#&gt; <span class='warning'>Warning: "color" is not a graphical parameter</span></div><div class='output co'>#&gt; <span class='warning'>Warning: "color" is not a graphical parameter</span></div><div class='output co'>#&gt; <span class='warning'>Warning: "color" is not a graphical parameter</span></div><div class='output co'>#&gt; <span class='warning'>Warning: "color" is not a graphical parameter</span></div><div class='img'><img src='ch10-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
 <span class='co'># Going Bug Hunting</span>
@@ -193,15 +193,15 @@ To run all the examples of <code>ch10()</code>, use <code><a href='https://rdrr.
 <span class='co'>## Calculating the logit</span>
 
 <span class='co'># checks input and does logit calculation</span>
-<span class='kw'>logit</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>){
-  <span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='kw'>x</span> <span class='op'>&lt;</span> <span class='fl'>0</span> <span class='op'>|</span> <span class='kw'>x</span> <span class='op'>&gt;</span> <span class='fl'>1</span>, <span class='st'>"NA"</span>, <span class='kw'>x</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span>(<span class='kw'>x</span> <span class='op'>/</span> (<span class='fl'>1</span> <span class='op'>-</span> <span class='kw'>x</span>) )
-}
+<span class='va'>logit</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>&lt;</span> <span class='fl'>0</span> <span class='op'>|</span> <span class='va'>x</span> <span class='op'>&gt;</span> <span class='fl'>1</span>, <span class='st'>"NA"</span>, <span class='va'>x</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>/</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>-</span> <span class='va'>x</span><span class='op'>)</span> <span class='op'>)</span>
+<span class='op'>}</span>
 <span class='co'># transforms percentage to number and calls logit</span>
-<span class='kw'>logitpercent</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>){
-  <span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>gsub</a></span>(<span class='st'>"%"</span>, <span class='st'>""</span>, <span class='kw'>x</span>)
-  <span class='fu'>logit</span>(<span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span>(<span class='kw'>x</span>))
-}
+<span class='va'>logitpercent</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>gsub</a></span><span class='op'>(</span><span class='st'>"%"</span>, <span class='st'>""</span>, <span class='va'>x</span><span class='op'>)</span>
+  <span class='fu'>logit</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>)</span>
+<span class='op'>}</span>
 
 
 
@@ -224,11 +224,11 @@ To run all the examples of <code>ch10()</code>, use <code><a href='https://rdrr.
 
 <span class='co'>### Start browsing from within the function</span>
 
-<span class='kw'>logit</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>){
-  <span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='kw'>x</span> <span class='op'>&lt;</span> <span class='fl'>0</span> <span class='op'>|</span> <span class='kw'>x</span> <span class='op'>&gt;</span> <span class='fl'>1</span>, <span class='st'>"NA"</span>, <span class='kw'>x</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/browser.html'>browser</a></span>()
-  <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span>(<span class='kw'>x</span> <span class='op'>/</span> (<span class='fl'>1</span> <span class='op'>-</span> <span class='kw'>x</span>) )
-}
+<span class='va'>logit</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>&lt;</span> <span class='fl'>0</span> <span class='op'>|</span> <span class='va'>x</span> <span class='op'>&gt;</span> <span class='fl'>1</span>, <span class='st'>"NA"</span>, <span class='va'>x</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/browser.html'>browser</a></span><span class='op'>(</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>/</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>-</span> <span class='va'>x</span><span class='op'>)</span> <span class='op'>)</span>
+<span class='op'>}</span>
 
 <span class='co'># logit(50)</span>
 
@@ -236,10 +236,10 @@ To run all the examples of <code>ch10()</code>, use <code><a href='https://rdrr.
 
 <span class='co'>## Creating errors</span>
 
-<span class='kw'>logit</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>){
-  <span class='co'>if</span>( <span class='fu'><a href='https://rdrr.io/r/base/any.html'>any</a></span>(<span class='kw'>x</span> <span class='op'>&lt;</span> <span class='fl'>0</span> <span class='op'>|</span> <span class='kw'>x</span> <span class='op'>&gt;</span> <span class='fl'>1</span>) ) <span class='fu'><a href='https://rdrr.io/r/base/stop.html'>stop</a></span>(<span class='st'>'x not between 0 and 1'</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span>(<span class='kw'>x</span> <span class='op'>/</span> (<span class='fl'>1</span> <span class='op'>-</span> <span class='kw'>x</span>) )
-}
+<span class='va'>logit</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='kw'>if</span><span class='op'>(</span> <span class='fu'><a href='https://rdrr.io/r/base/any.html'>any</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>&lt;</span> <span class='fl'>0</span> <span class='op'>|</span> <span class='va'>x</span> <span class='op'>&gt;</span> <span class='fl'>1</span><span class='op'>)</span> <span class='op'>)</span> <span class='kw'><a href='https://rdrr.io/r/base/stop.html'>stop</a></span><span class='op'>(</span><span class='st'>'x not between 0 and 1'</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>/</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>-</span> <span class='va'>x</span><span class='op'>)</span> <span class='op'>)</span>
+<span class='op'>}</span>
 
 
 <span class='co'># logitpercent(c('50%','150%'))</span>
@@ -248,13 +248,13 @@ To run all the examples of <code>ch10()</code>, use <code><a href='https://rdrr.
 <span class='co'>## Creating warnings</span>
 <span class='co'># Function wrapped around for illustrative purposes</span>
 <span class='co'># In book only body is given</span>
-<span class='kw'>logit</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>){
-  <span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='kw'>x</span> <span class='op'>&lt;</span> <span class='fl'>0</span> <span class='op'>|</span> <span class='kw'>x</span> <span class='op'>&gt;</span> <span class='fl'>1</span>, <span class='fl'>NA</span>, <span class='kw'>x</span> )
-  <span class='co'>if</span>( <span class='fu'><a href='https://rdrr.io/r/base/any.html'>any</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span>(<span class='kw'>x</span>)) ) <span class='fu'><a href='https://rdrr.io/r/base/warning.html'>warning</a></span>(<span class='st'>'x not between 0 and 1'</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span>(<span class='kw'>x</span> <span class='op'>/</span> (<span class='fl'>1</span> <span class='op'>-</span> <span class='kw'>x</span>) )
-}
+<span class='va'>logit</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>&lt;</span> <span class='fl'>0</span> <span class='op'>|</span> <span class='va'>x</span> <span class='op'>&gt;</span> <span class='fl'>1</span>, <span class='cn'>NA</span>, <span class='va'>x</span> <span class='op'>)</span>
+  <span class='kw'>if</span><span class='op'>(</span> <span class='fu'><a href='https://rdrr.io/r/base/any.html'>any</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>)</span> <span class='kw'><a href='https://rdrr.io/r/base/warning.html'>warning</a></span><span class='op'>(</span><span class='st'>'x not between 0 and 1'</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>/</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>-</span> <span class='va'>x</span><span class='op'>)</span> <span class='op'>)</span>
+<span class='op'>}</span>
 
-<span class='fu'>logitpercent</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'50%'</span>,<span class='st'>'150%'</span>))
+<span class='fu'>logitpercent</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'50%'</span>,<span class='st'>'150%'</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; <span class='warning'>Warning: x not between 0 and 1</span></div><div class='output co'>#&gt; [1] NA NA</div><div class='input'>
 <span class='co'># Recognizing the Mistakes You're Sure to Make</span>
 
@@ -266,40 +266,40 @@ To run all the examples of <code>ch10()</code>, use <code><a href='https://rdrr.
 
 <span class='co'>### Dropping dimensions when you don't expect it</span>
 
-<span class='kw'>rowsum.df</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>){
-  <span class='kw'>id</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span>(<span class='kw'>x</span>,<span class='kw'>is.numeric</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>rowSums</a></span>(<span class='kw'>x</span>[, <span class='kw'>id</span>])
-}
+<span class='va'>rowsum.df</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='va'>id</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span><span class='op'>(</span><span class='va'>x</span>,<span class='va'>is.numeric</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>rowSums</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>[</span>, <span class='va'>id</span><span class='op'>]</span><span class='op'>)</span>
+<span class='op'>}</span>
 
 <span class='co'># rowsum.df(sleep)</span>
 
 <span class='co'>### Messing up with lists</span>
-<span class='fu'><a href='https://rdrr.io/r/base/strsplit.html'>strsplit</a></span>(<span class='st'>'this is a sentence'</span>,<span class='st'>' '</span>)[<span class='fl'>2</span>]
+<span class='fu'><a href='https://rdrr.io/r/base/strsplit.html'>strsplit</a></span><span class='op'>(</span><span class='st'>'this is a sentence'</span>,<span class='st'>' '</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span>
 </div><div class='output co'>#&gt; [[1]]
 #&gt; NULL
 #&gt; </div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/strsplit.html'>strsplit</a></span>(<span class='st'>'this is a sentence'</span>,<span class='st'>' '</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/strsplit.html'>strsplit</a></span><span class='op'>(</span><span class='st'>'this is a sentence'</span>,<span class='st'>' '</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [[1]]
 #&gt; [1] "this"     "is"       "a"        "sentence"
 #&gt; </div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/strsplit.html'>strsplit</a></span>(<span class='st'>'this is a sentence'</span>,<span class='st'>' '</span>)[[<span class='fl'>1</span>]][<span class='fl'>2</span>]
+<span class='fu'><a href='https://rdrr.io/r/base/strsplit.html'>strsplit</a></span><span class='op'>(</span><span class='st'>'this is a sentence'</span>,<span class='st'>' '</span><span class='op'>)</span><span class='op'>[[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>]</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span>
 </div><div class='output co'>#&gt; [1] "is"</div><div class='input'>
-<span class='kw'>customer</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'Johan Delong'</span>,<span class='st'>'Marie Petit'</span>)
-<span class='kw'>namesplit</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/strsplit.html'>strsplit</a></span>(<span class='kw'>customer</span>,<span class='st'>' '</span>)
+<span class='va'>customer</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'Johan Delong'</span>,<span class='st'>'Marie Petit'</span><span class='op'>)</span>
+<span class='va'>namesplit</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/strsplit.html'>strsplit</a></span><span class='op'>(</span><span class='va'>customer</span>,<span class='st'>' '</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='kw'>namesplit</span>[<span class='fl'>2</span>],collapse=<span class='st'>'.'</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>namesplit</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span>,collapse<span class='op'>=</span><span class='st'>'.'</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "c(\"Marie\", \"Petit\")"</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='kw'>namesplit</span>[[<span class='fl'>2</span>]],collapse=<span class='st'>'.'</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>namesplit</span><span class='op'>[[</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>]</span>,collapse<span class='op'>=</span><span class='st'>'.'</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "Marie.Petit"</div><div class='input'>
 
 
 <span class='co'>### Mixing up factors and numeric vectors</span>
 
-<span class='kw'>cyl.factor</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span>(<span class='kw'>mtcars</span><span class='op'>$</span><span class='kw'>cyl</span>)
+<span class='va'>cyl.factor</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>mtcars</span><span class='op'>$</span><span class='va'>cyl</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/stats/median.html'>median</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span>(<span class='kw'>cyl.factor</span>))
+<span class='fu'><a href='https://rdrr.io/r/stats/median.html'>median</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='va'>cyl.factor</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] 2</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span>(<span class='kw'>cyl.factor</span>))[<span class='kw'>cyl.factor</span>]
+<span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span><span class='op'>(</span><span class='va'>cyl.factor</span><span class='op'>)</span><span class='op'>)</span><span class='op'>[</span><span class='va'>cyl.factor</span><span class='op'>]</span>
 </div><div class='output co'>#&gt;  [1] 6 6 4 6 8 6 8 4 4 6 6 8 8 8 8 8 8 4 4 4 4 8 8 8 8 4 4 4 8 6 8 4</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

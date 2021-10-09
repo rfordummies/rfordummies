@@ -81,7 +81,7 @@ To run all the examples of ch7(), use example(ch7)." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rfordummies</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5.9000</span>
       </span>
     </div>
 
@@ -89,7 +89,7 @@ To run all the examples of ch7(), use example(ch7)." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -103,7 +103,7 @@ To run all the examples of ch7(), use example(ch7)." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/andrie/rfordummies/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -130,9 +130,9 @@ To run all the examples of ch7(), use example(ch7)." />
 To run all the examples of <code>ch7()</code>, use <code><a href='https://rdrr.io/r/utils/example.html'>example(ch7)</a></code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>ch07</span>()
+    <pre class="usage"><span class='fu'>ch07</span><span class='op'>(</span><span class='op'>)</span>
 
-<span class='fu'>ch7</span>()</pre>
+<span class='fu'>ch7</span><span class='op'>(</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
@@ -169,44 +169,44 @@ To run all the examples of <code>ch7()</code>, use <code><a href='https://rdrr.i
 
 <span class='co'>### Creating your first matrix</span>
 
-<span class='kw'>first.matrix</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fl'>1</span><span class='op'>:</span><span class='fl'>12</span>, ncol=<span class='fl'>4</span>)
-<span class='kw'>first.matrix</span>
+<span class='va'>first.matrix</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>12</span>, ncol<span class='op'>=</span><span class='fl'>4</span><span class='op'>)</span>
+<span class='va'>first.matrix</span>
 </div><div class='output co'>#&gt;      [,1] [,2] [,3] [,4]
 #&gt; [1,]    1    4    7   10
 #&gt; [2,]    2    5    8   11
-#&gt; [3,]    3    6    9   12</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fl'>1</span><span class='op'>:</span><span class='fl'>12</span>, ncol=<span class='fl'>4</span>, byrow=<span class='fl'>TRUE</span>)
+#&gt; [3,]    3    6    9   12</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>12</span>, ncol<span class='op'>=</span><span class='fl'>4</span>, byrow<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;      [,1] [,2] [,3] [,4]
 #&gt; [1,]    1    2    3    4
 #&gt; [2,]    5    6    7    8
 #&gt; [3,]    9   10   11   12</div><div class='input'>
 <span class='co'>### Looking at the properties</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='kw'>first.matrix</span>)
-</div><div class='output co'>#&gt;  int [1:3, 1:4] 1 2 3 4 5 6 7 8 9 10 ...</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span>(<span class='kw'>first.matrix</span>)
-</div><div class='output co'>#&gt; [1] 3 4</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='kw'>first.matrix</span>)
-</div><div class='output co'>#&gt; [1] 12</div><div class='input'><span class='kw'>my.array</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span>(<span class='fl'>1</span><span class='op'>:</span><span class='fl'>24</span>, dim=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>3</span>,<span class='fl'>4</span>,<span class='fl'>2</span>))
-<span class='kw'>baskets.of.Granny</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>12</span>,<span class='fl'>4</span>,<span class='fl'>5</span>,<span class='fl'>6</span>,<span class='fl'>9</span>,<span class='fl'>3</span>)
-<span class='kw'>baskets.of.Geraldine</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>5</span>,<span class='fl'>4</span>,<span class='fl'>2</span>,<span class='fl'>4</span>,<span class='fl'>12</span>,<span class='fl'>9</span>)
-<span class='kw'>baskets.team</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span>(<span class='kw'>baskets.of.Granny</span>, <span class='kw'>baskets.of.Geraldine</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>first.matrix</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;  int [1:3, 1:4] 1 2 3 4 5 6 7 8 9 10 ...</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span><span class='op'>(</span><span class='va'>first.matrix</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 3 4</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>first.matrix</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 12</div><div class='input'><span class='va'>my.array</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>24</span>, dim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>3</span>,<span class='fl'>4</span>,<span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>baskets.of.Granny</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>12</span>,<span class='fl'>4</span>,<span class='fl'>5</span>,<span class='fl'>6</span>,<span class='fl'>9</span>,<span class='fl'>3</span><span class='op'>)</span>
+<span class='va'>baskets.of.Geraldine</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>,<span class='fl'>4</span>,<span class='fl'>2</span>,<span class='fl'>4</span>,<span class='fl'>12</span>,<span class='fl'>9</span><span class='op'>)</span>
+<span class='va'>baskets.team</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span><span class='op'>(</span><span class='va'>baskets.of.Granny</span>, <span class='va'>baskets.of.Geraldine</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/attributes.html'>attributes</a></span>(<span class='kw'>my.array</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/attributes.html'>attributes</a></span><span class='op'>(</span><span class='va'>my.array</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; $dim
 #&gt; [1] 3 4 2
-#&gt; </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/attr.html'>attr</a></span>(<span class='kw'>baskets.team</span>,<span class='st'>'season'</span>) <span class='op'>&lt;-</span> <span class='st'>'2010-2011'</span>
-<span class='fu'><a href='https://rdrr.io/r/base/attr.html'>attr</a></span>(<span class='kw'>baskets.team</span>,<span class='st'>'season'</span>)
-</div><div class='output co'>#&gt; [1] "2010-2011"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/attr.html'>attr</a></span>(<span class='kw'>baskets.team</span>,<span class='st'>'season'</span>) <span class='op'>&lt;-</span> <span class='kw'>NULL</span>
+#&gt; </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/attr.html'>attr</a></span><span class='op'>(</span><span class='va'>baskets.team</span>,<span class='st'>'season'</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='st'>'2010-2011'</span>
+<span class='fu'><a href='https://rdrr.io/r/base/attr.html'>attr</a></span><span class='op'>(</span><span class='va'>baskets.team</span>,<span class='st'>'season'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "2010-2011"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/attr.html'>attr</a></span><span class='op'>(</span><span class='va'>baskets.team</span>,<span class='st'>'season'</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='cn'>NULL</span>
 
 <span class='co'>## Combining vectors into a matrix</span>
 
-<span class='kw'>baskets.of.Granny</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>12</span>,<span class='fl'>4</span>,<span class='fl'>5</span>,<span class='fl'>6</span>,<span class='fl'>9</span>,<span class='fl'>3</span>)
-<span class='kw'>baskets.of.Geraldine</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>5</span>,<span class='fl'>4</span>,<span class='fl'>2</span>,<span class='fl'>4</span>,<span class='fl'>12</span>,<span class='fl'>9</span>)
-<span class='kw'>baskets.team</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span>(<span class='kw'>baskets.of.Granny</span>, <span class='kw'>baskets.of.Geraldine</span>)
+<span class='va'>baskets.of.Granny</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>12</span>,<span class='fl'>4</span>,<span class='fl'>5</span>,<span class='fl'>6</span>,<span class='fl'>9</span>,<span class='fl'>3</span><span class='op'>)</span>
+<span class='va'>baskets.of.Geraldine</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>,<span class='fl'>4</span>,<span class='fl'>2</span>,<span class='fl'>4</span>,<span class='fl'>12</span>,<span class='fl'>9</span><span class='op'>)</span>
+<span class='va'>baskets.team</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span><span class='op'>(</span><span class='va'>baskets.of.Granny</span>, <span class='va'>baskets.of.Geraldine</span><span class='op'>)</span>
 
-<span class='kw'>baskets.team</span>
+<span class='va'>baskets.team</span>
 </div><div class='output co'>#&gt;                      [,1] [,2] [,3] [,4] [,5] [,6]
 #&gt; baskets.of.Granny      12    4    5    6    9    3
 #&gt; baskets.of.Geraldine    5    4    2    4   12    9</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span>, <span class='fl'>4</span><span class='op'>:</span><span class='fl'>6</span>, <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fl'>7</span><span class='op'>:</span><span class='fl'>12</span>, ncol=<span class='fl'>2</span>))
+<span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span>, <span class='fl'>4</span><span class='op'>:</span><span class='fl'>6</span>, <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fl'>7</span><span class='op'>:</span><span class='fl'>12</span>, ncol<span class='op'>=</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;      [,1] [,2] [,3] [,4]
 #&gt; [1,]    1    4    7   10
 #&gt; [2,]    2    5    8   11
@@ -217,48 +217,48 @@ To run all the examples of <code>ch7()</code>, use <code><a href='https://rdrr.i
 
 <span class='co'>### Using numeric indices</span>
 
-<span class='kw'>first.matrix</span>[<span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span>, <span class='fl'>2</span><span class='op'>:</span><span class='fl'>3</span>]
+<span class='va'>first.matrix</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span>, <span class='fl'>2</span><span class='op'>:</span><span class='fl'>3</span><span class='op'>]</span>
 </div><div class='output co'>#&gt;      [,1] [,2]
 #&gt; [1,]    4    7
-#&gt; [2,]    5    8</div><div class='input'><span class='kw'>first.matrix</span>[<span class='fl'>2</span><span class='op'>:</span><span class='fl'>3</span>,]
+#&gt; [2,]    5    8</div><div class='input'><span class='va'>first.matrix</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>:</span><span class='fl'>3</span>,<span class='op'>]</span>
 </div><div class='output co'>#&gt;      [,1] [,2] [,3] [,4]
 #&gt; [1,]    2    5    8   11
 #&gt; [2,]    3    6    9   12</div><div class='input'>
 <span class='co'>### Dropping values using negative indices</span>
 
-<span class='kw'>first.matrix</span>[<span class='op'>-</span><span class='fl'>2</span>,<span class='op'>-</span><span class='fl'>3</span>]
+<span class='va'>first.matrix</span><span class='op'>[</span><span class='op'>-</span><span class='fl'>2</span>,<span class='op'>-</span><span class='fl'>3</span><span class='op'>]</span>
 </div><div class='output co'>#&gt;      [,1] [,2] [,3]
 #&gt; [1,]    1    4   10
 #&gt; [2,]    3    6   12</div><div class='input'>
-<span class='kw'>nr</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='kw'>first.matrix</span>)
-<span class='kw'>id</span> <span class='op'>&lt;-</span> <span class='kw'>nr</span><span class='op'>*</span><span class='fl'>2</span><span class='op'>+</span><span class='fl'>2</span>
-<span class='kw'>first.matrix</span>[<span class='op'>-</span><span class='kw'>id</span>]
+<span class='va'>nr</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>first.matrix</span><span class='op'>)</span>
+<span class='va'>id</span> <span class='op'>&lt;-</span> <span class='va'>nr</span><span class='op'>*</span><span class='fl'>2</span><span class='op'>+</span><span class='fl'>2</span>
+<span class='va'>first.matrix</span><span class='op'>[</span><span class='op'>-</span><span class='va'>id</span><span class='op'>]</span>
 </div><div class='output co'>#&gt;  [1]  1  2  3  4  5  6  7  9 10 11 12</div><div class='input'>
-<span class='kw'>first.matrix</span>[<span class='op'>-</span>(<span class='fl'>2</span> <span class='op'>*</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='kw'>first.matrix</span>) <span class='op'>+</span> <span class='fl'>2</span>)]
+<span class='va'>first.matrix</span><span class='op'>[</span><span class='op'>-</span><span class='op'>(</span><span class='fl'>2</span> <span class='op'>*</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>first.matrix</span><span class='op'>)</span> <span class='op'>+</span> <span class='fl'>2</span><span class='op'>)</span><span class='op'>]</span>
 </div><div class='output co'>#&gt;  [1]  1  2  3  4  5  6  7  9 10 11 12</div><div class='input'>
 
 <span class='co'>### Juggling dimensions</span>
 
-<span class='kw'>first.matrix</span>[<span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>, <span class='fl'>3</span>), ]
-</div><div class='output co'>#&gt; [1]  2  5  8 11</div><div class='input'><span class='kw'>first.matrix</span>[<span class='fl'>2</span>, , drop=<span class='fl'>FALSE</span>]
+<span class='va'>first.matrix</span><span class='op'>[</span><span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>3</span><span class='op'>)</span>, <span class='op'>]</span>
+</div><div class='output co'>#&gt; [1]  2  5  8 11</div><div class='input'><span class='va'>first.matrix</span><span class='op'>[</span><span class='fl'>2</span>, , drop<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>]</span>
 </div><div class='output co'>#&gt;      [,1] [,2] [,3] [,4]
 #&gt; [1,]    2    5    8   11</div><div class='input'>
 <span class='co'>## Replacing values in a matrix</span>
 
-<span class='kw'>first.matrix</span>[<span class='fl'>3</span>, <span class='fl'>2</span>] <span class='op'>&lt;-</span> <span class='fl'>4</span>
-<span class='kw'>first.matrix</span>
+<span class='va'>first.matrix</span><span class='op'>[</span><span class='fl'>3</span>, <span class='fl'>2</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fl'>4</span>
+<span class='va'>first.matrix</span>
 </div><div class='output co'>#&gt;      [,1] [,2] [,3] [,4]
 #&gt; [1,]    1    4    7   10
 #&gt; [2,]    2    5    8   11
 #&gt; [3,]    3    4    9   12</div><div class='input'>
-<span class='kw'>first.matrix</span>[<span class='fl'>2</span>, ] <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>3</span>)
-<span class='kw'>first.matrix</span>
+<span class='va'>first.matrix</span><span class='op'>[</span><span class='fl'>2</span>, <span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>3</span><span class='op'>)</span>
+<span class='va'>first.matrix</span>
 </div><div class='output co'>#&gt;      [,1] [,2] [,3] [,4]
 #&gt; [1,]    1    4    7   10
 #&gt; [2,]    1    3    1    3
 #&gt; [3,]    3    4    9   12</div><div class='input'>
-<span class='kw'>first.matrix</span>[<span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span>, <span class='fl'>3</span><span class='op'>:</span><span class='fl'>4</span>] <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>8</span>,<span class='fl'>4</span>,<span class='fl'>2</span>,<span class='fl'>1</span>)
-<span class='kw'>first.matrix</span>
+<span class='va'>first.matrix</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span>, <span class='fl'>3</span><span class='op'>:</span><span class='fl'>4</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>8</span>,<span class='fl'>4</span>,<span class='fl'>2</span>,<span class='fl'>1</span><span class='op'>)</span>
+<span class='va'>first.matrix</span>
 </div><div class='output co'>#&gt;      [,1] [,2] [,3] [,4]
 #&gt; [1,]    1    4    8    2
 #&gt; [2,]    1    3    4    1
@@ -267,41 +267,41 @@ To run all the examples of <code>ch7()</code>, use <code><a href='https://rdrr.i
 
 <span class='co'>## Changing the row and column names</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='kw'>baskets.team</span>) <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'Granny'</span>,<span class='st'>'Geraldine'</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='kw'>baskets.team</span>)
-</div><div class='output co'>#&gt; [1] "Granny"    "Geraldine"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span>(<span class='kw'>baskets.team</span>) <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'1st'</span>,<span class='st'>'2nd'</span>,<span class='st'>'3th'</span>,<span class='st'>'4th'</span>,<span class='st'>'5th'</span>,<span class='st'>'6th'</span>)
-<span class='kw'>baskets.team</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>baskets.team</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'Granny'</span>,<span class='st'>'Geraldine'</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>baskets.team</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "Granny"    "Geraldine"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>baskets.team</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'1st'</span>,<span class='st'>'2nd'</span>,<span class='st'>'3th'</span>,<span class='st'>'4th'</span>,<span class='st'>'5th'</span>,<span class='st'>'6th'</span><span class='op'>)</span>
+<span class='va'>baskets.team</span>
 </div><div class='output co'>#&gt;           1st 2nd 3th 4th 5th 6th
 #&gt; Granny     12   4   5   6   9   3
 #&gt; Geraldine   5   4   2   4  12   9</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span>(<span class='kw'>baskets.team</span>)[<span class='fl'>3</span>] <span class='op'>&lt;-</span> <span class='st'>'3rd'</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>baskets.team</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>3</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='st'>'3rd'</span>
 
-<span class='kw'>baskets.copy</span> <span class='op'>&lt;-</span> <span class='kw'>baskets.team</span>
-<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span>(<span class='kw'>baskets.copy</span>) <span class='op'>&lt;-</span> <span class='kw'>NULL</span>
-<span class='kw'>baskets.copy</span>
+<span class='va'>baskets.copy</span> <span class='op'>&lt;-</span> <span class='va'>baskets.team</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>baskets.copy</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='cn'>NULL</span>
+<span class='va'>baskets.copy</span>
 </div><div class='output co'>#&gt;           [,1] [,2] [,3] [,4] [,5] [,6]
 #&gt; Granny      12    4    5    6    9    3
 #&gt; Geraldine    5    4    2    4   12    9</div><div class='input'>
 <span class='co'>## Using names as indices</span>
 
-<span class='kw'>baskets.team</span>[, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"2nd"</span>,<span class='st'>"5th"</span>)]
+<span class='va'>baskets.team</span><span class='op'>[</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"2nd"</span>,<span class='st'>"5th"</span><span class='op'>)</span><span class='op'>]</span>
 </div><div class='output co'>#&gt;           2nd 5th
 #&gt; Granny      4   9
 #&gt; Geraldine   4  12</div><div class='input'>
-<span class='kw'>baskets.team</span>[<span class='st'>"Granny"</span>,]
+<span class='va'>baskets.team</span><span class='op'>[</span><span class='st'>"Granny"</span>,<span class='op'>]</span>
 </div><div class='output co'>#&gt; 1st 2nd 3rd 4th 5th 6th 
 #&gt;  12   4   5   6   9   3 </div><div class='input'>
 <span class='co'># Calculating with Matrices</span>
 
 <span class='co'>## Using standard operations with matrices</span>
-<span class='kw'>first.matrix</span> <span class='op'>+</span> <span class='fl'>4</span>
+<span class='va'>first.matrix</span> <span class='op'>+</span> <span class='fl'>4</span>
 </div><div class='output co'>#&gt;      [,1] [,2] [,3] [,4]
 #&gt; [1,]    5    8   12    6
 #&gt; [2,]    5    7    8    5
 #&gt; [3,]    7    8   13   16</div><div class='input'>
-<span class='kw'>second.matrix</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span>, nrow=<span class='fl'>3</span>, ncol=<span class='fl'>4</span>)
+<span class='va'>second.matrix</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span>, nrow<span class='op'>=</span><span class='fl'>3</span>, ncol<span class='op'>=</span><span class='fl'>4</span><span class='op'>)</span>
 
-<span class='kw'>first.matrix</span> <span class='op'>+</span> <span class='kw'>second.matrix</span>
+<span class='va'>first.matrix</span> <span class='op'>+</span> <span class='va'>second.matrix</span>
 </div><div class='output co'>#&gt;      [,1] [,2] [,3] [,4]
 #&gt; [1,]    2    5    9    3
 #&gt; [2,]    3    5    6    3
@@ -309,52 +309,52 @@ To run all the examples of <code>ch7()</code>, use <code><a href='https://rdrr.i
 <span class='co'># first.matrix + second.matrix[,1:3] # gives error for illustration</span>
 <span class='co'># Error in first.matrix + second.matrix[, 1:3] : non-conformable arrays</span>
 
-<span class='kw'>first.matrix</span> <span class='op'>+</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span>
+<span class='va'>first.matrix</span> <span class='op'>+</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span>
 </div><div class='output co'>#&gt;      [,1] [,2] [,3] [,4]
 #&gt; [1,]    2    5    9    3
 #&gt; [2,]    3    5    6    3
 #&gt; [3,]    6    7   12   15</div><div class='input'>
 <span class='co'>## Calculating row and column summaries</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>rowSums</a></span>(<span class='kw'>baskets.team</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>rowSums</a></span><span class='op'>(</span><span class='va'>baskets.team</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;    Granny Geraldine 
 #&gt;        39        36 </div><div class='input'>
 <span class='co'>## Doing matrix arithmetic</span>
 
 <span class='co'>### Transposing a matrix</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span>(<span class='kw'>first.matrix</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='va'>first.matrix</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;      [,1] [,2] [,3]
 #&gt; [1,]    1    1    3
 #&gt; [2,]    4    3    4
 #&gt; [3,]    8    4    9
 #&gt; [4,]    2    1   12</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span>(<span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;      [,1] [,2] [,3] [,4] [,5] [,6] [,7] [,8] [,9] [,10]
 #&gt; [1,]    1    2    3    4    5    6    7    8    9    10</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span>(<span class='kw'>first.matrix</span>[<span class='fl'>2</span>,])
+<span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='va'>first.matrix</span><span class='op'>[</span><span class='fl'>2</span>,<span class='op'>]</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;      [,1] [,2] [,3] [,4]
 #&gt; [1,]    1    3    4    1</div><div class='input'>
 <span class='co'>### Inverting a matrix</span>
 
-<span class='kw'>square.matrix</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>0</span>,<span class='fl'>3</span>,<span class='fl'>2</span>,<span class='fl'>2</span>,<span class='fl'>4</span>,<span class='fl'>3</span>,<span class='fl'>2</span>,<span class='fl'>1</span>),ncol=<span class='fl'>3</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/solve.html'>solve</a></span>(<span class='kw'>square.matrix</span>)
+<span class='va'>square.matrix</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>0</span>,<span class='fl'>3</span>,<span class='fl'>2</span>,<span class='fl'>2</span>,<span class='fl'>4</span>,<span class='fl'>3</span>,<span class='fl'>2</span>,<span class='fl'>1</span><span class='op'>)</span>,ncol<span class='op'>=</span><span class='fl'>3</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/solve.html'>solve</a></span><span class='op'>(</span><span class='va'>square.matrix</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;      [,1]       [,2]       [,3]
 #&gt; [1,]  0.5 -0.8333333  0.1666667
 #&gt; [2,] -0.5  0.6666667  0.1666667
 #&gt; [3,]  0.5 -0.1666667 -0.1666667</div><div class='input'>
 <span class='co'>### Multiplying two matrices</span>
 
-<span class='kw'>first.matrix</span> <span class='op'>%*%</span> <span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span>(<span class='kw'>second.matrix</span>)
+<span class='va'>first.matrix</span> <span class='op'>%*%</span> <span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='va'>second.matrix</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;      [,1] [,2] [,3]
 #&gt; [1,]   15   30   45
 #&gt; [2,]    9   18   27
 #&gt; [3,]   28   56   84</div><div class='input'>
-<span class='kw'>first.matrix</span> <span class='op'>%*%</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>4</span>
+<span class='va'>first.matrix</span> <span class='op'>%*%</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>4</span>
 </div><div class='output co'>#&gt;      [,1]
 #&gt; [1,]   41
 #&gt; [2,]   23
-#&gt; [3,]   86</div><div class='input'><span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span> <span class='op'>%*%</span> <span class='kw'>first.matrix</span>
+#&gt; [3,]   86</div><div class='input'><span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span> <span class='op'>%*%</span> <span class='va'>first.matrix</span>
 </div><div class='output co'>#&gt;      [,1] [,2] [,3] [,4]
 #&gt; [1,]   12   22   43   40</div><div class='input'>
 <span class='co'># Adding More Dimensions</span>
@@ -363,8 +363,8 @@ To run all the examples of <code>ch7()</code>, use <code><a href='https://rdrr.i
 
 <span class='co'>### Using the creator functions</span>
 
-<span class='kw'>my.array</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span>(<span class='fl'>1</span><span class='op'>:</span><span class='fl'>24</span>, dim=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>3</span>,<span class='fl'>4</span>,<span class='fl'>2</span>))
-<span class='kw'>my.array</span>
+<span class='va'>my.array</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/array.html'>array</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>24</span>, dim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>3</span>,<span class='fl'>4</span>,<span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>my.array</span>
 </div><div class='output co'>#&gt; , , 1
 #&gt; 
 #&gt;      [,1] [,2] [,3] [,4]
@@ -382,15 +382,15 @@ To run all the examples of <code>ch7()</code>, use <code><a href='https://rdrr.i
 <span class='co'>### Changing the dimensions of a vector</span>
 
 
-<span class='kw'>my.vector</span> <span class='op'>&lt;-</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>24</span>
-<span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span>(<span class='kw'>my.vector</span>) <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>3</span>,<span class='fl'>4</span>,<span class='fl'>2</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/identical.html'>identical</a></span>(<span class='kw'>my.array</span>, <span class='kw'>my.vector</span>)
+<span class='va'>my.vector</span> <span class='op'>&lt;-</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>24</span>
+<span class='fu'><a href='https://rdrr.io/r/base/dim.html'>dim</a></span><span class='op'>(</span><span class='va'>my.vector</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>3</span>,<span class='fl'>4</span>,<span class='fl'>2</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/identical.html'>identical</a></span><span class='op'>(</span><span class='va'>my.array</span>, <span class='va'>my.vector</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] TRUE</div><div class='input'>
 <span class='co'>## Using dimensions to extract values</span>
 
-<span class='kw'>my.array</span>[<span class='fl'>2</span>,<span class='fl'>3</span>,<span class='fl'>1</span>]
+<span class='va'>my.array</span><span class='op'>[</span><span class='fl'>2</span>,<span class='fl'>3</span>,<span class='fl'>1</span><span class='op'>]</span>
 </div><div class='output co'>#&gt; [1] 8</div><div class='input'>
-<span class='kw'>my.array</span>[, <span class='fl'>3</span>, <span class='fl'>2</span>, drop=<span class='fl'>FALSE</span>]
+<span class='va'>my.array</span><span class='op'>[</span>, <span class='fl'>3</span>, <span class='fl'>2</span>, drop<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>]</span>
 </div><div class='output co'>#&gt; , , 1
 #&gt; 
 #&gt;      [,1]
@@ -399,7 +399,7 @@ To run all the examples of <code>ch7()</code>, use <code><a href='https://rdrr.i
 #&gt; [3,]   21
 #&gt; </div><div class='input'>
 
-<span class='kw'>my.array</span>[<span class='fl'>2</span>, , ]
+<span class='va'>my.array</span><span class='op'>[</span><span class='fl'>2</span>, , <span class='op'>]</span>
 </div><div class='output co'>#&gt;      [,1] [,2]
 #&gt; [1,]    2   14
 #&gt; [2,]    5   17
@@ -412,45 +412,45 @@ To run all the examples of <code>ch7()</code>, use <code><a href='https://rdrr.i
 
 <span class='co'>### Using the function as.data.frame</span>
 
-<span class='kw'>baskets.df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span>(<span class='kw'>baskets.team</span>))
+<span class='va'>baskets.df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='va'>baskets.team</span><span class='op'>)</span><span class='op'>)</span>
 
 <span class='co'>### Looking at the structure of a data frame</span>
 
-<span class='kw'>baskets.df</span>
+<span class='va'>baskets.df</span>
 </div><div class='output co'>#&gt;     Granny Geraldine
 #&gt; 1st     12         5
 #&gt; 2nd      4         4
 #&gt; 3rd      5         2
 #&gt; 4th      6         4
 #&gt; 5th      9        12
-#&gt; 6th      3         9</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='kw'>baskets.df</span>)
+#&gt; 6th      3         9</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>baskets.df</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; 'data.frame':	6 obs. of  2 variables:
 #&gt;  $ Granny   : num  12 4 5 6 9 3
 #&gt;  $ Geraldine: num  5 4 2 4 12 9</div><div class='input'>
 <span class='co'>### Counting values and variables</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='kw'>baskets.df</span>)
-</div><div class='output co'>#&gt; [1] 6</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='kw'>baskets.df</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>baskets.df</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 6</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>baskets.df</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] 2</div><div class='input'>
 <span class='co'>## Creating a data frame from scratch</span>
 
 <span class='co'>### Making a data frame from vectors</span>
 
-<span class='kw'>employee</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'John Doe'</span>,<span class='st'>'Peter Gynn'</span>,<span class='st'>'Jolie Hope'</span>)
-<span class='kw'>salary</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>21000</span>, <span class='fl'>23400</span>, <span class='fl'>26800</span>)
-<span class='kw'>startdate</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'2010-11-1'</span>,<span class='st'>'2008-3-25'</span>,<span class='st'>'2007-3-14'</span>))
+<span class='va'>employee</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'John Doe'</span>,<span class='st'>'Peter Gynn'</span>,<span class='st'>'Jolie Hope'</span><span class='op'>)</span>
+<span class='va'>salary</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>21000</span>, <span class='fl'>23400</span>, <span class='fl'>26800</span><span class='op'>)</span>
+<span class='va'>startdate</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'2010-11-1'</span>,<span class='st'>'2008-3-25'</span>,<span class='st'>'2007-3-14'</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='kw'>employ.data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='kw'>employee</span>, <span class='kw'>salary</span>, <span class='kw'>startdate</span>)
+<span class='va'>employ.data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>employee</span>, <span class='va'>salary</span>, <span class='va'>startdate</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='kw'>employ.data</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>employ.data</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; 'data.frame':	3 obs. of  3 variables:
 #&gt;  $ employee : chr  "John Doe" "Peter Gynn" "Jolie Hope"
 #&gt;  $ salary   : num  21000 23400 26800
 #&gt;  $ startdate: Date, format: "2010-11-01" "2008-03-25" ...</div><div class='input'>
 <span class='co'>### Keeping characters as characters</span>
 
-<span class='kw'>employ.data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='kw'>employee</span>, <span class='kw'>salary</span>, <span class='kw'>startdate</span>, stringsAsFactors=<span class='fl'>FALSE</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='kw'>employ.data</span>)
+<span class='va'>employ.data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>employee</span>, <span class='va'>salary</span>, <span class='va'>startdate</span>, stringsAsFactors<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>employ.data</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; 'data.frame':	3 obs. of  3 variables:
 #&gt;  $ employee : chr  "John Doe" "Peter Gynn" "Jolie Hope"
 #&gt;  $ salary   : num  21000 23400 26800
@@ -459,17 +459,17 @@ To run all the examples of <code>ch7()</code>, use <code><a href='https://rdrr.i
 
 <span class='co'>### Working with variable names</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span>(<span class='kw'>employ.data</span>)
-</div><div class='output co'>#&gt; [1] "employee"  "salary"    "startdate"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='kw'>employ.data</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>employ.data</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "employee"  "salary"    "startdate"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>employ.data</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "employee"  "salary"    "startdate"</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='kw'>employ.data</span>)[<span class='fl'>3</span>] <span class='op'>&lt;-</span> <span class='st'>'firstday'</span>
-<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='kw'>employ.data</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>employ.data</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>3</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='st'>'firstday'</span>
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>employ.data</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "employee" "salary"   "firstday"</div><div class='input'>
 <span class='co'>### Naming observations</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='kw'>employ.data</span>)
-</div><div class='output co'>#&gt; [1] "1" "2" "3"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='kw'>employ.data</span>) <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'Chef'</span>,<span class='st'>'BigChef'</span>,<span class='st'>'BiggerChef'</span>)
-<span class='kw'>employ.data</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>employ.data</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "1" "2" "3"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>employ.data</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'Chef'</span>,<span class='st'>'BigChef'</span>,<span class='st'>'BiggerChef'</span><span class='op'>)</span>
+<span class='va'>employ.data</span>
 </div><div class='output co'>#&gt;              employee salary   firstday
 #&gt; Chef         John Doe  21000 2010-11-01
 #&gt; BigChef    Peter Gynn  23400 2008-03-25
@@ -480,22 +480,22 @@ To run all the examples of <code>ch7()</code>, use <code><a href='https://rdrr.i
 
 <span class='co'>### Pretending it's a matrix</span>
 
-<span class='kw'>baskets.df</span>[<span class='st'>'3rd'</span>, <span class='st'>'Geraldine'</span>]
-</div><div class='output co'>#&gt; [1] 2</div><div class='input'><span class='kw'>baskets.df</span>[, <span class='fl'>1</span>]
+<span class='va'>baskets.df</span><span class='op'>[</span><span class='st'>'3rd'</span>, <span class='st'>'Geraldine'</span><span class='op'>]</span>
+</div><div class='output co'>#&gt; [1] 2</div><div class='input'><span class='va'>baskets.df</span><span class='op'>[</span>, <span class='fl'>1</span><span class='op'>]</span>
 </div><div class='output co'>#&gt; [1] 12  4  5  6  9  3</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='kw'>baskets.df</span>[, <span class='fl'>1</span>, drop=<span class='fl'>FALSE</span>])
+<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>baskets.df</span><span class='op'>[</span>, <span class='fl'>1</span>, drop<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>]</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; 'data.frame':	6 obs. of  1 variable:
 #&gt;  $ Granny: num  12 4 5 6 9 3</div><div class='input'>
 <span class='co'>### Putting your dollar where your data is</span>
 
-<span class='kw'>baskets.df</span><span class='op'>$</span><span class='kw'>Granny</span>
+<span class='va'>baskets.df</span><span class='op'>$</span><span class='va'>Granny</span>
 </div><div class='output co'>#&gt; [1] 12  4  5  6  9  3</div><div class='input'>
 <span class='co'>## Adding observations to a data frame</span>
 
 <span class='co'>### Adding a single observation</span>
 
-<span class='kw'>result</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span>(<span class='kw'>baskets.df</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>7</span>,<span class='fl'>4</span>))
-<span class='kw'>result</span>
+<span class='va'>result</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span><span class='op'>(</span><span class='va'>baskets.df</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>7</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>result</span>
 </div><div class='output co'>#&gt;     Granny Geraldine
 #&gt; 1st     12         5
 #&gt; 2nd      4         4
@@ -504,8 +504,8 @@ To run all the examples of <code>ch7()</code>, use <code><a href='https://rdrr.i
 #&gt; 5th      9        12
 #&gt; 6th      3         9
 #&gt; 7        7         4</div><div class='input'>
-<span class='kw'>baskets.df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span>(<span class='kw'>baskets.df</span>,<span class='st'>'7th'</span> = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>7</span>,<span class='fl'>4</span>))
-<span class='kw'>baskets.df</span>
+<span class='va'>baskets.df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span><span class='op'>(</span><span class='va'>baskets.df</span>,<span class='st'>'7th'</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>7</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>baskets.df</span>
 </div><div class='output co'>#&gt;     Granny Geraldine
 #&gt; 1st     12         5
 #&gt; 2nd      4         4
@@ -516,23 +516,23 @@ To run all the examples of <code>ch7()</code>, use <code><a href='https://rdrr.i
 #&gt; 7th      7         4</div><div class='input'>
 <span class='co'>### Adding a series of new observations using rbind</span>
 
-<span class='kw'>new.baskets</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(Granny=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>3</span>,<span class='fl'>8</span>),Geraldine=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>9</span>,<span class='fl'>4</span>))
-<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='kw'>new.baskets</span>) <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'8th'</span>,<span class='st'>'9th'</span>)
-<span class='kw'>baskets.df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span>(<span class='kw'>baskets.df</span>, <span class='kw'>new.baskets</span>)
+<span class='va'>new.baskets</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>Granny<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>3</span>,<span class='fl'>8</span><span class='op'>)</span>,Geraldine<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>9</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>new.baskets</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'8th'</span>,<span class='st'>'9th'</span><span class='op'>)</span>
+<span class='va'>baskets.df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span><span class='op'>(</span><span class='va'>baskets.df</span>, <span class='va'>new.baskets</span><span class='op'>)</span>
 
 <span class='co'>### Adding a series of values using indices</span>
 
-<span class='kw'>baskets.df</span>[<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'8th'</span>,<span class='st'>'9th'</span>), ] <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>3</span>,<span class='fl'>8</span>,<span class='fl'>9</span>,<span class='fl'>4</span>), ncol=<span class='fl'>2</span>)
-<span class='kw'>baskets.df</span>[<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'8th'</span>,<span class='st'>'9th'</span>), ] <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>3</span>,<span class='fl'>8</span>,<span class='fl'>9</span>,<span class='fl'>4</span>)
+<span class='va'>baskets.df</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'8th'</span>,<span class='st'>'9th'</span><span class='op'>)</span>, <span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>3</span>,<span class='fl'>8</span>,<span class='fl'>9</span>,<span class='fl'>4</span><span class='op'>)</span>, ncol<span class='op'>=</span><span class='fl'>2</span><span class='op'>)</span>
+<span class='va'>baskets.df</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'8th'</span>,<span class='st'>'9th'</span><span class='op'>)</span>, <span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>3</span>,<span class='fl'>8</span>,<span class='fl'>9</span>,<span class='fl'>4</span><span class='op'>)</span>
 
 <span class='co'>## Adding variables to a data frame</span>
 
 <span class='co'>### Adding a single variable</span>
 
-<span class='kw'>baskets.of.Gabrielle</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>11</span>,<span class='fl'>5</span>,<span class='fl'>6</span>,<span class='fl'>7</span>,<span class='fl'>3</span>,<span class='fl'>12</span>,<span class='fl'>4</span>,<span class='fl'>5</span>,<span class='fl'>9</span>)
-<span class='kw'>baskets.df</span><span class='op'>$</span><span class='kw'>Gabrielle</span> <span class='op'>&lt;-</span> <span class='kw'>baskets.of.Gabrielle</span>
+<span class='va'>baskets.of.Gabrielle</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>11</span>,<span class='fl'>5</span>,<span class='fl'>6</span>,<span class='fl'>7</span>,<span class='fl'>3</span>,<span class='fl'>12</span>,<span class='fl'>4</span>,<span class='fl'>5</span>,<span class='fl'>9</span><span class='op'>)</span>
+<span class='va'>baskets.df</span><span class='op'>$</span><span class='va'>Gabrielle</span> <span class='op'>&lt;-</span> <span class='va'>baskets.of.Gabrielle</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='kw'>baskets.df</span>, <span class='fl'>4</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>baskets.df</span>, <span class='fl'>4</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;     Granny Geraldine Gabrielle
 #&gt; 1st     12         5        11
 #&gt; 2nd      4         4         5
@@ -540,12 +540,12 @@ To run all the examples of <code>ch7()</code>, use <code><a href='https://rdrr.i
 #&gt; 4th      6         4         7</div><div class='input'>
 <span class='co'>### Adding multiple variables using cbind</span>
 
-<span class='kw'>new.df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(
-   Gertrude  =  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>3</span>,<span class='fl'>5</span>,<span class='fl'>2</span>,<span class='fl'>1</span>,<span class='fl'>NA</span>,<span class='fl'>3</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>4</span>),
-   Guinevere =  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>6</span>,<span class='fl'>9</span>,<span class='fl'>7</span>,<span class='fl'>3</span>,<span class='fl'>3</span>,<span class='fl'>6</span>,<span class='fl'>2</span>,<span class='fl'>10</span>,<span class='fl'>6</span>)
-)
+<span class='va'>new.df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>
+   Gertrude  <span class='op'>=</span>  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>3</span>,<span class='fl'>5</span>,<span class='fl'>2</span>,<span class='fl'>1</span>,<span class='cn'>NA</span>,<span class='fl'>3</span>,<span class='fl'>1</span>,<span class='fl'>1</span>,<span class='fl'>4</span><span class='op'>)</span>,
+   Guinevere <span class='op'>=</span>  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>6</span>,<span class='fl'>9</span>,<span class='fl'>7</span>,<span class='fl'>3</span>,<span class='fl'>3</span>,<span class='fl'>6</span>,<span class='fl'>2</span>,<span class='fl'>10</span>,<span class='fl'>6</span><span class='op'>)</span>
+<span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='kw'>baskets.df</span>, <span class='kw'>new.df</span>), <span class='fl'>4</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>baskets.df</span>, <span class='va'>new.df</span><span class='op'>)</span>, <span class='fl'>4</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;     Granny Geraldine Gabrielle Gertrude Guinevere
 #&gt; 1st     12         5        11        3         6
 #&gt; 2nd      4         4         5        5         9
@@ -557,8 +557,8 @@ To run all the examples of <code>ch7()</code>, use <code><a href='https://rdrr.i
 
 <span class='co'>### Creating an unnamed list</span>
 
-<span class='kw'>baskets.list</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>baskets.team</span>, <span class='st'>'2010-2011'</span>)
-<span class='kw'>baskets.list</span>
+<span class='va'>baskets.list</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>baskets.team</span>, <span class='st'>'2010-2011'</span><span class='op'>)</span>
+<span class='va'>baskets.list</span>
 </div><div class='output co'>#&gt; [[1]]
 #&gt;           1st 2nd 3rd 4th 5th 6th
 #&gt; Granny     12   4   5   6   9   3
@@ -569,8 +569,8 @@ To run all the examples of <code>ch7()</code>, use <code><a href='https://rdrr.i
 #&gt; </div><div class='input'>
 <span class='co'>### Creating a named list</span>
 
-<span class='kw'>baskets.nlist</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(scores=<span class='kw'>baskets.team</span>, season=<span class='st'>'2010-2011'</span>)
-<span class='kw'>baskets.nlist</span>
+<span class='va'>baskets.nlist</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>scores<span class='op'>=</span><span class='va'>baskets.team</span>, season<span class='op'>=</span><span class='st'>'2010-2011'</span><span class='op'>)</span>
+<span class='va'>baskets.nlist</span>
 </div><div class='output co'>#&gt; $scores
 #&gt;           1st 2nd 3rd 4th 5th 6th
 #&gt; Granny     12   4   5   6   9   3
@@ -582,29 +582,29 @@ To run all the examples of <code>ch7()</code>, use <code><a href='https://rdrr.i
 
 <span class='co'>### Playing with the names of elements</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='kw'>baskets.nlist</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>baskets.nlist</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "scores" "season"</div><div class='input'>
 <span class='co'>### Getting the number of elements</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='kw'>baskets.list</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>baskets.list</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] 2</div><div class='input'>
 <span class='co'>## Extracting elements from lists</span>
 
 <span class='co'>### Using [[]]</span>
 
-<span class='kw'>baskets.list</span>[[<span class='fl'>1</span>]]
+<span class='va'>baskets.list</span><span class='op'>[[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>]</span>
 </div><div class='output co'>#&gt;           1st 2nd 3rd 4th 5th 6th
 #&gt; Granny     12   4   5   6   9   3
-#&gt; Geraldine   5   4   2   4  12   9</div><div class='input'><span class='kw'>baskets.nlist</span>[[<span class='st'>'scores'</span>]]
+#&gt; Geraldine   5   4   2   4  12   9</div><div class='input'><span class='va'>baskets.nlist</span><span class='op'>[[</span><span class='st'>'scores'</span><span class='op'>]</span><span class='op'>]</span>
 </div><div class='output co'>#&gt;           1st 2nd 3rd 4th 5th 6th
 #&gt; Granny     12   4   5   6   9   3
 #&gt; Geraldine   5   4   2   4  12   9</div><div class='input'>
 <span class='co'>### Using []</span>
 
-<span class='kw'>baskets.list</span>[<span class='op'>-</span><span class='fl'>1</span>]
+<span class='va'>baskets.list</span><span class='op'>[</span><span class='op'>-</span><span class='fl'>1</span><span class='op'>]</span>
 </div><div class='output co'>#&gt; [[1]]
 #&gt; [1] "2010-2011"
-#&gt; </div><div class='input'><span class='kw'>baskets.nlist</span>[<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='kw'>baskets.nlist</span>)<span class='op'>==</span><span class='st'>'season'</span>]
+#&gt; </div><div class='input'><span class='va'>baskets.nlist</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>baskets.nlist</span><span class='op'>)</span><span class='op'>==</span><span class='st'>'season'</span><span class='op'>]</span>
 </div><div class='output co'>#&gt; $season
 #&gt; [1] "2010-2011"
 #&gt; </div><div class='input'>
@@ -612,23 +612,23 @@ To run all the examples of <code>ch7()</code>, use <code><a href='https://rdrr.i
 
 <span class='co'>### Changing the value of elements</span>
 
-<span class='kw'>baskets.nlist</span>[[<span class='fl'>1</span>]] <span class='op'>&lt;-</span> <span class='kw'>baskets.df</span>
-<span class='kw'>baskets.nlist</span>[[<span class='st'>'scores'</span>]] <span class='op'>&lt;-</span> <span class='kw'>baskets.df</span>
-<span class='kw'>baskets.nlist</span><span class='op'>$</span><span class='kw'>scores</span> <span class='op'>&lt;-</span> <span class='kw'>baskets.df</span>
+<span class='va'>baskets.nlist</span><span class='op'>[[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>baskets.df</span>
+<span class='va'>baskets.nlist</span><span class='op'>[[</span><span class='st'>'scores'</span><span class='op'>]</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>baskets.df</span>
+<span class='va'>baskets.nlist</span><span class='op'>$</span><span class='va'>scores</span> <span class='op'>&lt;-</span> <span class='va'>baskets.df</span>
 
-<span class='kw'>baskets.nlist</span>[<span class='fl'>1</span>] <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>baskets.df</span>)
+<span class='va'>baskets.nlist</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>baskets.df</span><span class='op'>)</span>
 
-<span class='kw'>baskets.list</span>[<span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span>] <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>baskets.df</span>, <span class='st'>'2009-2010'</span>)
+<span class='va'>baskets.list</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>baskets.df</span>, <span class='st'>'2009-2010'</span><span class='op'>)</span>
 
 <span class='co'>### Removing elements</span>
 
-<span class='kw'>baskets.nlist</span>[[<span class='fl'>1</span>]] <span class='op'>&lt;-</span> <span class='kw'>NULL</span>
-<span class='kw'>baskets.nlist</span><span class='op'>$</span><span class='kw'>scores</span> <span class='op'>&lt;-</span> <span class='kw'>NULL</span>
-<span class='kw'>baskets.nlist</span>[<span class='st'>'scores'</span>] <span class='op'>&lt;-</span> <span class='kw'>NULL</span>
+<span class='va'>baskets.nlist</span><span class='op'>[[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='cn'>NULL</span>
+<span class='va'>baskets.nlist</span><span class='op'>$</span><span class='va'>scores</span> <span class='op'>&lt;-</span> <span class='cn'>NULL</span>
+<span class='va'>baskets.nlist</span><span class='op'>[</span><span class='st'>'scores'</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='cn'>NULL</span>
 
-<span class='kw'>baskets.nlist</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(scores=<span class='kw'>baskets.df</span>, season=<span class='st'>'2010-2011'</span>)
-<span class='kw'>baskets.nlist</span>[<span class='st'>'scores'</span>] <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>NULL</span>)
-<span class='kw'>baskets.nlist</span>
+<span class='va'>baskets.nlist</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>scores<span class='op'>=</span><span class='va'>baskets.df</span>, season<span class='op'>=</span><span class='st'>'2010-2011'</span><span class='op'>)</span>
+<span class='va'>baskets.nlist</span><span class='op'>[</span><span class='st'>'scores'</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='cn'>NULL</span><span class='op'>)</span>
+<span class='va'>baskets.nlist</span>
 </div><div class='output co'>#&gt; $scores
 #&gt; NULL
 #&gt; 
@@ -637,21 +637,21 @@ To run all the examples of <code>ch7()</code>, use <code><a href='https://rdrr.i
 #&gt; </div><div class='input'>
 <span class='co'>### Adding extra elements using indices</span>
 
-<span class='kw'>baskets.nlist</span><span class='op'>$</span><span class='kw'>players</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'Granny'</span>,<span class='st'>'Geraldine'</span>)
-<span class='kw'>baskets.nlist</span>[[<span class='st'>'players'</span>]] <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'Granny'</span>,<span class='st'>'Geraldine'</span>)
-<span class='kw'>baskets.nlist</span>[<span class='st'>'players'</span>] <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'Granny'</span>,<span class='st'>'Geraldine'</span>))
+<span class='va'>baskets.nlist</span><span class='op'>$</span><span class='va'>players</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'Granny'</span>,<span class='st'>'Geraldine'</span><span class='op'>)</span>
+<span class='va'>baskets.nlist</span><span class='op'>[[</span><span class='st'>'players'</span><span class='op'>]</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'Granny'</span>,<span class='st'>'Geraldine'</span><span class='op'>)</span>
+<span class='va'>baskets.nlist</span><span class='op'>[</span><span class='st'>'players'</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'Granny'</span>,<span class='st'>'Geraldine'</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='kw'>baskets.list</span>[[<span class='fl'>3</span>]] <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'Granny'</span>,<span class='st'>'Geraldine'</span>)
-<span class='kw'>baskets.list</span>[<span class='fl'>3</span>] <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'Granny'</span>,<span class='st'>'Geraldine'</span>))
+<span class='va'>baskets.list</span><span class='op'>[[</span><span class='fl'>3</span><span class='op'>]</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'Granny'</span>,<span class='st'>'Geraldine'</span><span class='op'>)</span>
+<span class='va'>baskets.list</span><span class='op'>[</span><span class='fl'>3</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'Granny'</span>,<span class='st'>'Geraldine'</span><span class='op'>)</span><span class='op'>)</span>
 
 <span class='co'>### Combining lists</span>
 
 
 
-<span class='kw'>baskets.list</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>baskets.team</span>,<span class='st'>'2010-2011'</span>)
-<span class='kw'>players</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='kw'>baskets.team</span>))
+<span class='va'>baskets.list</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>baskets.team</span>,<span class='st'>'2010-2011'</span><span class='op'>)</span>
+<span class='va'>players</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>baskets.team</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='kw'>baskets.list</span>, <span class='kw'>players</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>baskets.list</span>, <span class='va'>players</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [[1]]
 #&gt;           1st 2nd 3rd 4th 5th 6th
 #&gt; Granny     12   4   5   6   9   3
@@ -665,7 +665,7 @@ To run all the examples of <code>ch7()</code>, use <code><a href='https://rdrr.i
 #&gt; </div><div class='input'>
 <span class='co'>## Reading the output of str() for lists</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='kw'>baskets.list</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>baskets.list</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; List of 2
 #&gt;  $ : num [1:2, 1:6] 12 5 4 4 5 2 6 4 9 12 ...
 #&gt;   ..- attr(*, "dimnames")=List of 2

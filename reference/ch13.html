@@ -81,7 +81,7 @@ To run all the examples of ch13(), use example(ch13)." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rfordummies</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5.9000</span>
       </span>
     </div>
 
@@ -89,7 +89,7 @@ To run all the examples of ch13(), use example(ch13)." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -103,7 +103,7 @@ To run all the examples of ch13(), use example(ch13)." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/andrie/rfordummies/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -130,7 +130,7 @@ To run all the examples of ch13(), use example(ch13)." />
 To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.io/r/utils/example.html'>example(ch13)</a></code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>ch13</span>()</pre>
+    <pre class="usage"><span class='fu'>ch13</span><span class='op'>(</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
@@ -167,9 +167,9 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 <span class='co'>## Understanding the three subset operators</span>
 <span class='co'>## Understanding the five ways of specifying the subset</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='kw'>islands</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>islands</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;  Named num [1:48] 11506 5500 16988 2968 16 ...
-#&gt;  - attr(*, "names")= chr [1:48] "Africa" "Antarctica" "Asia" "Australia" ...</div><div class='input'><span class='kw'>islands</span>[]
+#&gt;  - attr(*, "names")= chr [1:48] "Africa" "Antarctica" "Asia" "Australia" ...</div><div class='input'><span class='va'>islands</span><span class='op'>[</span><span class='op'>]</span>
 </div><div class='output co'>#&gt;           Africa       Antarctica             Asia        Australia 
 #&gt;            11506             5500            16988             2968 
 #&gt;     Axel Heiberg           Baffin            Banks           Borneo 
@@ -193,34 +193,34 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt;      Spitsbergen          Sumatra           Taiwan         Tasmania 
 #&gt;               15              183               14               26 
 #&gt; Tierra del Fuego            Timor        Vancouver         Victoria 
-#&gt;               19               13               12               82 </div><div class='input'><span class='kw'>islands</span>[<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>8</span>, <span class='fl'>1</span>, <span class='fl'>1</span>, <span class='fl'>42</span>)]
+#&gt;               19               13               12               82 </div><div class='input'><span class='va'>islands</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>8</span>, <span class='fl'>1</span>, <span class='fl'>1</span>, <span class='fl'>42</span><span class='op'>)</span><span class='op'>]</span>
 </div><div class='output co'>#&gt;  Borneo  Africa  Africa Sumatra 
-#&gt;     280   11506   11506     183 </div><div class='input'><span class='kw'>islands</span>[<span class='op'>-</span>(<span class='fl'>3</span><span class='op'>:</span><span class='fl'>46</span>)]
+#&gt;     280   11506   11506     183 </div><div class='input'><span class='va'>islands</span><span class='op'>[</span><span class='op'>-</span><span class='op'>(</span><span class='fl'>3</span><span class='op'>:</span><span class='fl'>46</span><span class='op'>)</span><span class='op'>]</span>
 </div><div class='output co'>#&gt;     Africa Antarctica  Vancouver   Victoria 
-#&gt;      11506       5500         12         82 </div><div class='input'><span class='kw'>islands</span>[<span class='kw'>islands</span> <span class='op'>&lt;</span> <span class='fl'>20</span>]
+#&gt;      11506       5500         12         82 </div><div class='input'><span class='va'>islands</span><span class='op'>[</span><span class='va'>islands</span> <span class='op'>&lt;</span> <span class='fl'>20</span><span class='op'>]</span>
 </div><div class='output co'>#&gt;     Axel Heiberg           Hainan           Kyushu         Melville 
 #&gt;               16               13               14               16 
 #&gt;      New Britain  Prince of Wales      Southampton      Spitsbergen 
 #&gt;               15               13               16               15 
 #&gt;           Taiwan Tierra del Fuego            Timor        Vancouver 
-#&gt;               14               19               13               12 </div><div class='input'><span class='kw'>islands</span>[<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Madagascar"</span>, <span class='st'>"Cuba"</span>)]
+#&gt;               14               19               13               12 </div><div class='input'><span class='va'>islands</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Madagascar"</span>, <span class='st'>"Cuba"</span><span class='op'>)</span><span class='op'>]</span>
 </div><div class='output co'>#&gt; Madagascar       Cuba 
 #&gt;        227         43 </div><div class='input'>
 <span class='co'>## Subsetting data frames</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='kw'>iris</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>iris</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; 'data.frame':	150 obs. of  5 variables:
 #&gt;  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...
 #&gt;  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...
 #&gt;  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...
 #&gt;  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...
-#&gt;  $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...</div><div class='input'><span class='kw'>iris</span>[<span class='fl'>1</span><span class='op'>:</span><span class='fl'>5</span>, ]
+#&gt;  $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...</div><div class='input'><span class='va'>iris</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>5</span>, <span class='op'>]</span>
 </div><div class='output co'>#&gt;   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
 #&gt; 1          5.1         3.5          1.4         0.2  setosa
 #&gt; 2          4.9         3.0          1.4         0.2  setosa
 #&gt; 3          4.7         3.2          1.3         0.2  setosa
 #&gt; 4          4.6         3.1          1.5         0.2  setosa
-#&gt; 5          5.0         3.6          1.4         0.2  setosa</div><div class='input'><span class='kw'>iris</span>[, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Sepal.Length"</span>, <span class='st'>"Sepal.Width"</span>)]
+#&gt; 5          5.0         3.6          1.4         0.2  setosa</div><div class='input'><span class='va'>iris</span><span class='op'>[</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Sepal.Length"</span>, <span class='st'>"Sepal.Width"</span><span class='op'>)</span><span class='op'>]</span>
 </div><div class='output co'>#&gt;     Sepal.Length Sepal.Width
 #&gt; 1            5.1         3.5
 #&gt; 2            4.9         3.0
@@ -371,7 +371,7 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; 147          6.3         2.5
 #&gt; 148          6.5         3.0
 #&gt; 149          6.2         3.4
-#&gt; 150          5.9         3.0</div><div class='input'><span class='kw'>iris</span>[, <span class='st'>'Sepal.Length'</span>]
+#&gt; 150          5.9         3.0</div><div class='input'><span class='va'>iris</span><span class='op'>[</span>, <span class='st'>'Sepal.Length'</span><span class='op'>]</span>
 </div><div class='output co'>#&gt;   [1] 5.1 4.9 4.7 4.6 5.0 5.4 4.6 5.0 4.4 4.9 5.4 4.8 4.8 4.3 5.8 5.7 5.4 5.1
 #&gt;  [19] 5.7 5.1 5.4 5.1 4.6 5.1 4.8 5.0 5.0 5.2 5.2 4.7 4.8 5.4 5.2 5.5 4.9 5.0
 #&gt;  [37] 5.5 4.9 4.4 5.1 5.0 4.5 4.4 5.0 5.1 4.8 5.1 4.6 5.3 5.0 7.0 6.4 6.9 5.5
@@ -380,7 +380,7 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt;  [91] 5.5 6.1 5.8 5.0 5.6 5.7 5.7 6.2 5.1 5.7 6.3 5.8 7.1 6.3 6.5 7.6 4.9 7.3
 #&gt; [109] 6.7 7.2 6.5 6.4 6.8 5.7 5.8 6.4 6.5 7.7 7.7 6.0 6.9 5.6 7.7 6.3 6.7 7.2
 #&gt; [127] 6.2 6.1 6.4 7.2 7.4 7.9 6.4 6.3 6.1 7.7 6.3 6.4 6.0 6.9 6.7 6.9 5.8 6.8
-#&gt; [145] 6.7 6.7 6.3 6.5 6.2 5.9</div><div class='input'><span class='kw'>iris</span>[, <span class='st'>'Sepal.Length'</span>, drop=<span class='fl'>FALSE</span>]
+#&gt; [145] 6.7 6.7 6.3 6.5 6.2 5.9</div><div class='input'><span class='va'>iris</span><span class='op'>[</span>, <span class='st'>'Sepal.Length'</span>, drop<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>]</span>
 </div><div class='output co'>#&gt;     Sepal.Length
 #&gt; 1            5.1
 #&gt; 2            4.9
@@ -531,7 +531,7 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; 147          6.3
 #&gt; 148          6.5
 #&gt; 149          6.2
-#&gt; 150          5.9</div><div class='input'><span class='kw'>iris</span>[<span class='st'>'Sepal.Length'</span>]
+#&gt; 150          5.9</div><div class='input'><span class='va'>iris</span><span class='op'>[</span><span class='st'>'Sepal.Length'</span><span class='op'>]</span>
 </div><div class='output co'>#&gt;     Sepal.Length
 #&gt; 1            5.1
 #&gt; 2            4.9
@@ -682,7 +682,7 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; 147          6.3
 #&gt; 148          6.5
 #&gt; 149          6.2
-#&gt; 150          5.9</div><div class='input'><span class='kw'>iris</span>[<span class='fl'>1</span><span class='op'>:</span><span class='fl'>5</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Sepal.Length"</span>, <span class='st'>"Sepal.Width"</span>)]
+#&gt; 150          5.9</div><div class='input'><span class='va'>iris</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>5</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Sepal.Length"</span>, <span class='st'>"Sepal.Width"</span><span class='op'>)</span><span class='op'>]</span>
 </div><div class='output co'>#&gt;   Sepal.Length Sepal.Width
 #&gt; 1          5.1         3.5
 #&gt; 2          4.9         3.0
@@ -691,19 +691,19 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; 5          5.0         3.6</div><div class='input'>
 <span class='co'>### Taking samples from data</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span>(<span class='fl'>1</span><span class='op'>:</span><span class='fl'>6</span>, <span class='fl'>10</span>, replace=<span class='fl'>TRUE</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>6</span>, <span class='fl'>10</span>, replace<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;  [1] 4 1 5 6 4 2 2 3 1 1</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>1</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span>(<span class='fl'>1</span><span class='op'>:</span><span class='fl'>6</span>, <span class='fl'>10</span>, replace=<span class='fl'>TRUE</span>)
-</div><div class='output co'>#&gt;  [1] 1 4 1 2 5 3 6 2 3 3</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span>(<span class='fl'>1</span><span class='op'>:</span><span class='fl'>6</span>, <span class='fl'>10</span>, replace=<span class='fl'>TRUE</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>6</span>, <span class='fl'>10</span>, replace<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;  [1] 1 4 1 2 5 3 6 2 3 3</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>6</span>, <span class='fl'>10</span>, replace<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;  [1] 1 5 5 2 6 6 2 1 5 5</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>1</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span>(<span class='fl'>1</span><span class='op'>:</span><span class='fl'>6</span>, <span class='fl'>10</span>, replace=<span class='fl'>TRUE</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>6</span>, <span class='fl'>10</span>, replace<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;  [1] 1 4 1 2 5 3 6 2 3 3</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>123</span>)
-<span class='kw'>index</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span>(<span class='fl'>1</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='kw'>iris</span>), <span class='fl'>5</span>)
-<span class='kw'>index</span>
-</div><div class='output co'>#&gt; [1]  14  50 118  43 150</div><div class='input'><span class='kw'>iris</span>[<span class='kw'>index</span>, ]
+<span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>123</span><span class='op'>)</span>
+<span class='va'>index</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>iris</span><span class='op'>)</span>, <span class='fl'>5</span><span class='op'>)</span>
+<span class='va'>index</span>
+</div><div class='output co'>#&gt; [1]  14  50 118  43 150</div><div class='input'><span class='va'>iris</span><span class='op'>[</span><span class='va'>index</span>, <span class='op'>]</span>
 </div><div class='output co'>#&gt;     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
 #&gt; 14           4.3         3.0          1.1         0.1    setosa
 #&gt; 50           5.0         3.3          1.4         0.2    setosa
@@ -712,8 +712,8 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; 150          5.9         3.0          5.1         1.8 virginica</div><div class='input'>
 <span class='co'>### Removing duplicate data</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/duplicated.html'>duplicated</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>2</span>,<span class='fl'>1</span>,<span class='fl'>3</span>,<span class='fl'>1</span>,<span class='fl'>4</span>))
-</div><div class='output co'>#&gt; [1] FALSE FALSE  TRUE FALSE  TRUE FALSE</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/duplicated.html'>duplicated</a></span>(<span class='kw'>iris</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/duplicated.html'>duplicated</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>2</span>,<span class='fl'>1</span>,<span class='fl'>3</span>,<span class='fl'>1</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] FALSE FALSE  TRUE FALSE  TRUE FALSE</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/duplicated.html'>duplicated</a></span><span class='op'>(</span><span class='va'>iris</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;   [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
 #&gt;  [13] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
 #&gt;  [25] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
@@ -726,8 +726,8 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; [109] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
 #&gt; [121] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE
 #&gt; [133] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE
-#&gt; [145] FALSE FALSE FALSE FALSE FALSE FALSE</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/duplicated.html'>duplicated</a></span>(<span class='kw'>iris</span>))
-</div><div class='output co'>#&gt; [1] 143</div><div class='input'><span class='kw'>iris</span>[<span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/duplicated.html'>duplicated</a></span>(<span class='kw'>iris</span>), ]
+#&gt; [145] FALSE FALSE FALSE FALSE FALSE FALSE</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/duplicated.html'>duplicated</a></span><span class='op'>(</span><span class='va'>iris</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 143</div><div class='input'><span class='va'>iris</span><span class='op'>[</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/duplicated.html'>duplicated</a></span><span class='op'>(</span><span class='va'>iris</span><span class='op'>)</span>, <span class='op'>]</span>
 </div><div class='output co'>#&gt;     Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
 #&gt; 1            5.1         3.5          1.4         0.2     setosa
 #&gt; 2            4.9         3.0          1.4         0.2     setosa
@@ -878,8 +878,8 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; 148          6.5         3.0          5.2         2.0  virginica
 #&gt; 149          6.2         3.4          5.4         2.3  virginica
 #&gt; 150          5.9         3.0          5.1         1.8  virginica</div><div class='input'>
-<span class='kw'>index</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/duplicated.html'>duplicated</a></span>(<span class='kw'>iris</span>))
-<span class='kw'>iris</span>[<span class='op'>-</span><span class='kw'>index</span>, ]
+<span class='va'>index</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/which.html'>which</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/duplicated.html'>duplicated</a></span><span class='op'>(</span><span class='va'>iris</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>iris</span><span class='op'>[</span><span class='op'>-</span><span class='va'>index</span>, <span class='op'>]</span>
 </div><div class='output co'>#&gt;     Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
 #&gt; 1            5.1         3.5          1.4         0.2     setosa
 #&gt; 2            4.9         3.0          1.4         0.2     setosa
@@ -1032,14 +1032,14 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; 150          5.9         3.0          5.1         1.8  virginica</div><div class='input'>
 <span class='co'>### Removing rows with missing data</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='kw'>airquality</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>airquality</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; 'data.frame':	153 obs. of  6 variables:
 #&gt;  $ Ozone  : int  41 36 12 18 NA 28 23 19 8 NA ...
 #&gt;  $ Solar.R: int  190 118 149 313 NA NA 299 99 19 194 ...
 #&gt;  $ Wind   : num  7.4 8 12.6 11.5 14.3 14.9 8.6 13.8 20.1 8.6 ...
 #&gt;  $ Temp   : int  67 72 74 62 56 66 65 59 61 69 ...
 #&gt;  $ Month  : int  5 5 5 5 5 5 5 5 5 5 ...
-#&gt;  $ Day    : int  1 2 3 4 5 6 7 8 9 10 ...</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/complete.cases.html'>complete.cases</a></span>(<span class='kw'>airquality</span>)
+#&gt;  $ Day    : int  1 2 3 4 5 6 7 8 9 10 ...</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/complete.cases.html'>complete.cases</a></span><span class='op'>(</span><span class='va'>airquality</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;   [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE  TRUE  TRUE  TRUE FALSE FALSE  TRUE
 #&gt;  [13]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
 #&gt;  [25] FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE
@@ -1053,15 +1053,15 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; [121]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
 #&gt; [133]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE
 #&gt; [145]  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE</div><div class='input'>
-<span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='kw'>airquality</span>[<span class='fu'><a href='https://rdrr.io/r/stats/complete.cases.html'>complete.cases</a></span>(<span class='kw'>airquality</span>), ]
-<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='kw'>x</span>)
+<span class='va'>x</span> <span class='op'>&lt;-</span> <span class='va'>airquality</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/stats/complete.cases.html'>complete.cases</a></span><span class='op'>(</span><span class='va'>airquality</span><span class='op'>)</span>, <span class='op'>]</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; 'data.frame':	111 obs. of  6 variables:
 #&gt;  $ Ozone  : int  41 36 12 18 23 19 8 16 11 14 ...
 #&gt;  $ Solar.R: int  190 118 149 313 299 99 19 256 290 274 ...
 #&gt;  $ Wind   : num  7.4 8 12.6 11.5 8.6 13.8 20.1 9.7 9.2 10.9 ...
 #&gt;  $ Temp   : int  67 72 74 62 65 59 61 69 66 68 ...
 #&gt;  $ Month  : int  5 5 5 5 5 5 5 5 5 5 ...
-#&gt;  $ Day    : int  1 2 3 4 7 8 9 12 13 14 ...</div><div class='input'><span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/na.fail.html'>na.omit</a></span>(<span class='kw'>airquality</span>)
+#&gt;  $ Day    : int  1 2 3 4 7 8 9 12 13 14 ...</div><div class='input'><span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/na.fail.html'>na.omit</a></span><span class='op'>(</span><span class='va'>airquality</span><span class='op'>)</span>
 
 
 
@@ -1069,34 +1069,34 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 
 <span class='co'>## Doing arithmetic on columns of a data frame</span>
 
-<span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='kw'>iris</span><span class='op'>$</span><span class='kw'>Sepal.Length</span> <span class='op'>/</span> <span class='kw'>iris</span><span class='op'>$</span><span class='kw'>Sepal.Width</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='kw'>x</span>)
+<span class='va'>x</span> <span class='op'>&lt;-</span> <span class='va'>iris</span><span class='op'>$</span><span class='va'>Sepal.Length</span> <span class='op'>/</span> <span class='va'>iris</span><span class='op'>$</span><span class='va'>Sepal.Width</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] 1.457143 1.633333 1.468750 1.483871 1.388889 1.384615</div><div class='input'>
 <span class='co'>## Using with and within to improve code readability</span>
 
-<span class='kw'>y</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='kw'>iris</span>, <span class='kw'>Sepal.Length</span> <span class='op'>/</span> <span class='kw'>Sepal.Width</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='kw'>y</span>)
-</div><div class='output co'>#&gt; [1] 1.457143 1.633333 1.468750 1.483871 1.388889 1.384615</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/identical.html'>identical</a></span>(<span class='kw'>x</span>, <span class='kw'>y</span>)
+<span class='va'>y</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>iris</span>, <span class='va'>Sepal.Length</span> <span class='op'>/</span> <span class='va'>Sepal.Width</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>y</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 1.457143 1.633333 1.468750 1.483871 1.388889 1.384615</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/identical.html'>identical</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>y</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] TRUE</div><div class='input'>
-<span class='kw'>iris</span><span class='op'>$</span><span class='kw'>ratio</span> <span class='op'>&lt;-</span> <span class='kw'>iris</span><span class='op'>$</span><span class='kw'>Sepal.Length</span> <span class='op'>/</span> <span class='kw'>iris</span><span class='op'>$</span><span class='kw'>Sepal.Width</span>
-<span class='kw'>iris</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>within</a></span>(<span class='kw'>iris</span>, <span class='kw'>ratio</span> <span class='op'>&lt;-</span> <span class='kw'>Sepal.Length</span> <span class='op'>/</span> <span class='kw'>Sepal.Width</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='kw'>iris</span><span class='op'>$</span><span class='kw'>ratio</span>)
+<span class='va'>iris</span><span class='op'>$</span><span class='va'>ratio</span> <span class='op'>&lt;-</span> <span class='va'>iris</span><span class='op'>$</span><span class='va'>Sepal.Length</span> <span class='op'>/</span> <span class='va'>iris</span><span class='op'>$</span><span class='va'>Sepal.Width</span>
+<span class='va'>iris</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>within</a></span><span class='op'>(</span><span class='va'>iris</span>, <span class='va'>ratio</span> <span class='op'>&lt;-</span> <span class='va'>Sepal.Length</span> <span class='op'>/</span> <span class='va'>Sepal.Width</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>iris</span><span class='op'>$</span><span class='va'>ratio</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] 1.457143 1.633333 1.468750 1.483871 1.388889 1.384615</div><div class='input'>
 <span class='co'>## Creating subgroups or bins of data</span>
 
 <span class='co'>### Using cut to create a fixed number of subgroups</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='kw'>state.x77</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>state.x77</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;            Population Income Illiteracy Life Exp Murder HS Grad Frost   Area
 #&gt; Alabama          3615   3624        2.1    69.05   15.1    41.3    20  50708
 #&gt; Alaska            365   6315        1.5    69.31   11.3    66.7   152 566432
 #&gt; Arizona          2212   4530        1.8    70.55    7.8    58.1    15 113417
 #&gt; Arkansas         2110   3378        1.9    70.66   10.1    39.9    65  51945
 #&gt; California      21198   5114        1.1    71.71   10.3    62.6    20 156361
-#&gt; Colorado         2541   4884        0.7    72.06    6.8    63.9   166 103766</div><div class='input'><span class='kw'>frost</span> <span class='op'>&lt;-</span> <span class='kw'>state.x77</span>[, <span class='st'>"Frost"</span>]
-<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='kw'>frost</span>, <span class='fl'>5</span>)
+#&gt; Colorado         2541   4884        0.7    72.06    6.8    63.9   166 103766</div><div class='input'><span class='va'>frost</span> <span class='op'>&lt;-</span> <span class='va'>state.x77</span><span class='op'>[</span>, <span class='st'>"Frost"</span><span class='op'>]</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>frost</span>, <span class='fl'>5</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;    Alabama     Alaska    Arizona   Arkansas California 
-#&gt;         20        152         15         65         20 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/cut.html'>cut</a></span>(<span class='kw'>frost</span>, <span class='fl'>3</span>, include.lowest=<span class='fl'>TRUE</span>)
+#&gt;         20        152         15         65         20 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/cut.html'>cut</a></span><span class='op'>(</span><span class='va'>frost</span>, <span class='fl'>3</span>, include.lowest<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;  [1] [-0.188,62.7] (125,188]     [-0.188,62.7] (62.7,125]    [-0.188,62.7]
 #&gt;  [6] (125,188]     (125,188]     (62.7,125]    [-0.188,62.7] [-0.188,62.7]
 #&gt; [11] [-0.188,62.7] (125,188]     (125,188]     (62.7,125]    (125,188]    
@@ -1110,7 +1110,7 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; Levels: [-0.188,62.7] (62.7,125] (125,188]</div><div class='input'>
 <span class='co'>### Adding labels to cut</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/cut.html'>cut</a></span>(<span class='kw'>frost</span>, <span class='fl'>3</span>, include.lowest=<span class='fl'>TRUE</span>, labels=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Low"</span>, <span class='st'>"Med"</span>, <span class='st'>"High"</span>))
+<span class='fu'><a href='https://rdrr.io/r/base/cut.html'>cut</a></span><span class='op'>(</span><span class='va'>frost</span>, <span class='fl'>3</span>, include.lowest<span class='op'>=</span><span class='cn'>TRUE</span>, labels<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Low"</span>, <span class='st'>"Med"</span>, <span class='st'>"High"</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;  [1] Low  High Low  Med  Low  High High Med  Low  Low  Low  High High Med  High
 #&gt; [16] Med  Med  Low  High Med  Med  Med  High Low  Med  High High High High Med 
 #&gt; [31] Med  Med  Med  High Med  Med  Low  High High Med  High Med  Low  High High
@@ -1118,11 +1118,11 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; Levels: Low Med High</div><div class='input'>
 <span class='co'>### Using table to count the number of observations</span>
 
-<span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cut.html'>cut</a></span>(<span class='kw'>frost</span>, <span class='fl'>3</span>, include.lowest=<span class='fl'>TRUE</span>, labels=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Low"</span>, <span class='st'>"Med"</span>, <span class='st'>"High"</span>))
-<span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span>(<span class='kw'>x</span>)
+<span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cut.html'>cut</a></span><span class='op'>(</span><span class='va'>frost</span>, <span class='fl'>3</span>, include.lowest<span class='op'>=</span><span class='cn'>TRUE</span>, labels<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Low"</span>, <span class='st'>"Med"</span>, <span class='st'>"High"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; x
 #&gt;  Low  Med High 
-#&gt;   11   19   20 </div><div class='input'><span class='kw'>x</span>
+#&gt;   11   19   20 </div><div class='input'><span class='va'>x</span>
 </div><div class='output co'>#&gt;  [1] Low  High Low  Med  Low  High High Med  Low  Low  Low  High High Med  High
 #&gt; [16] Med  Med  Low  High Med  Med  Med  High Low  Med  High High High High Med 
 #&gt; [31] Med  Med  Med  High Med  Med  Low  High High Med  High Med  Low  High High
@@ -1133,10 +1133,10 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 
 <span class='co'>## Creating sample data to illustrate merging</span>
 
-<span class='kw'>all.states</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span>(<span class='kw'>state.x77</span>)
-<span class='kw'>all.states</span><span class='op'>$</span><span class='kw'>Name</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='kw'>state.x77</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='kw'>all.states</span>) <span class='op'>&lt;-</span> <span class='kw'>NULL</span>
-<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='kw'>all.states</span>)
+<span class='va'>all.states</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='va'>state.x77</span><span class='op'>)</span>
+<span class='va'>all.states</span><span class='op'>$</span><span class='va'>Name</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>state.x77</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>all.states</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='cn'>NULL</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>all.states</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; 'data.frame':	50 obs. of  9 variables:
 #&gt;  $ Population: num  3615 365 2212 2110 21198 ...
 #&gt;  $ Income    : num  3624 6315 4530 3378 5114 ...
@@ -1149,8 +1149,8 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt;  $ Name      : chr  "Alabama" "Alaska" "Arizona" "Arkansas" ...</div><div class='input'>
 <span class='co'>### Creating a subset of cold states</span>
 
-<span class='kw'>cold.states</span> <span class='op'>&lt;-</span> <span class='kw'>all.states</span>[<span class='kw'>all.states</span><span class='op'>$</span><span class='kw'>Frost</span><span class='op'>&gt;</span><span class='fl'>150</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Name"</span>, <span class='st'>"Frost"</span>)]
-<span class='kw'>cold.states</span>
+<span class='va'>cold.states</span> <span class='op'>&lt;-</span> <span class='va'>all.states</span><span class='op'>[</span><span class='va'>all.states</span><span class='op'>$</span><span class='va'>Frost</span><span class='op'>&gt;</span><span class='fl'>150</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Name"</span>, <span class='st'>"Frost"</span><span class='op'>)</span><span class='op'>]</span>
+<span class='va'>cold.states</span>
 </div><div class='output co'>#&gt;             Name Frost
 #&gt; 2         Alaska   152
 #&gt; 6       Colorado   166
@@ -1165,8 +1165,8 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; 50       Wyoming   173</div><div class='input'>
 <span class='co'>### Creating a subset of large states</span>
 
-<span class='kw'>large.states</span> <span class='op'>&lt;-</span> <span class='kw'>all.states</span>[<span class='kw'>all.states</span><span class='op'>$</span><span class='kw'>Area</span><span class='op'>&gt;=</span><span class='fl'>100000</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Name"</span>, <span class='st'>"Area"</span>)]
-<span class='kw'>large.states</span>
+<span class='va'>large.states</span> <span class='op'>&lt;-</span> <span class='va'>all.states</span><span class='op'>[</span><span class='va'>all.states</span><span class='op'>$</span><span class='va'>Area</span><span class='op'>&gt;=</span><span class='fl'>100000</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Name"</span>, <span class='st'>"Area"</span><span class='op'>)</span><span class='op'>]</span>
+<span class='va'>large.states</span>
 </div><div class='output co'>#&gt;          Name   Area
 #&gt; 2      Alaska 566432
 #&gt; 3     Arizona 113417
@@ -1180,7 +1180,7 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 
 <span class='co'>### Using merge to find the intersection of data</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/merge.html'>merge</a></span>(<span class='kw'>cold.states</span>, <span class='kw'>large.states</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/merge.html'>merge</a></span><span class='op'>(</span><span class='va'>cold.states</span>, <span class='va'>large.states</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;       Name Frost   Area
 #&gt; 1   Alaska   152 566432
 #&gt; 2 Colorado   166 103766
@@ -1188,7 +1188,7 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; 4   Nevada   188 109889</div><div class='input'>
 <span class='co'>### Understanding the different types of merge</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/merge.html'>merge</a></span>(<span class='kw'>cold.states</span>, <span class='kw'>large.states</span>, all=<span class='fl'>TRUE</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/merge.html'>merge</a></span><span class='op'>(</span><span class='va'>cold.states</span>, <span class='va'>large.states</span>, all<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;             Name Frost   Area
 #&gt; 1         Alaska   152 566432
 #&gt; 2        Arizona    NA 113417
@@ -1210,10 +1210,10 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 
 <span class='co'>### Finding a match</span>
 
-<span class='kw'>index</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span>(<span class='kw'>cold.states</span><span class='op'>$</span><span class='kw'>Name</span>, <span class='kw'>large.states</span><span class='op'>$</span><span class='kw'>Name</span>)
-<span class='kw'>index</span>
+<span class='va'>index</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span><span class='op'>(</span><span class='va'>cold.states</span><span class='op'>$</span><span class='va'>Name</span>, <span class='va'>large.states</span><span class='op'>$</span><span class='va'>Name</span><span class='op'>)</span>
+<span class='va'>index</span>
 </div><div class='output co'>#&gt;  [1]  1  4 NA NA  5  6 NA NA NA NA NA</div><div class='input'>
-<span class='kw'>large.states</span>[<span class='fu'><a href='https://rdrr.io/r/stats/na.fail.html'>na.omit</a></span>(<span class='kw'>index</span>), ]
+<span class='va'>large.states</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/stats/na.fail.html'>na.omit</a></span><span class='op'>(</span><span class='va'>index</span><span class='op'>)</span>, <span class='op'>]</span>
 </div><div class='output co'>#&gt;        Name   Area
 #&gt; 2    Alaska 566432
 #&gt; 6  Colorado 103766
@@ -1221,10 +1221,10 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; 28   Nevada 109889</div><div class='input'>
 <span class='co'>### Making sense of %in%</span>
 
-<span class='kw'>index</span> <span class='op'>&lt;-</span> <span class='kw'>cold.states</span><span class='op'>$</span><span class='kw'>Name</span> <span class='op'>%in%</span> <span class='kw'>large.states</span><span class='op'>$</span><span class='kw'>Name</span>
-<span class='kw'>index</span>
-</div><div class='output co'>#&gt;  [1]  TRUE  TRUE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE</div><div class='input'><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span>(<span class='kw'>cold.states</span><span class='op'>$</span><span class='kw'>Name</span>,<span class='kw'>large.states</span><span class='op'>$</span><span class='kw'>Name</span>))
-</div><div class='output co'>#&gt;  [1]  TRUE  TRUE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE</div><div class='input'><span class='kw'>cold.states</span>[<span class='kw'>index</span>, ]
+<span class='va'>index</span> <span class='op'>&lt;-</span> <span class='va'>cold.states</span><span class='op'>$</span><span class='va'>Name</span> <span class='op'>%in%</span> <span class='va'>large.states</span><span class='op'>$</span><span class='va'>Name</span>
+<span class='va'>index</span>
+</div><div class='output co'>#&gt;  [1]  TRUE  TRUE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE</div><div class='input'><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span><span class='op'>(</span><span class='va'>cold.states</span><span class='op'>$</span><span class='va'>Name</span>,<span class='va'>large.states</span><span class='op'>$</span><span class='va'>Name</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;  [1]  TRUE  TRUE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE</div><div class='input'><span class='va'>cold.states</span><span class='op'>[</span><span class='va'>index</span>, <span class='op'>]</span>
 </div><div class='output co'>#&gt;        Name Frost
 #&gt; 2    Alaska   152
 #&gt; 6  Colorado   166
@@ -1232,12 +1232,12 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; 28   Nevada   188</div><div class='input'>
 <span class='co'># Sorting and Ordering Data</span>
 
-<span class='kw'>some.states</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(
-     Region = <span class='kw'>state.region</span>,
-     <span class='kw'>state.x77</span>)
+<span class='va'>some.states</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>
+     Region <span class='op'>=</span> <span class='va'>state.region</span>,
+     <span class='va'>state.x77</span><span class='op'>)</span>
 
-<span class='kw'>some.states</span> <span class='op'>&lt;-</span> <span class='kw'>some.states</span>[<span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span>, <span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span>]
-<span class='kw'>some.states</span>
+<span class='va'>some.states</span> <span class='op'>&lt;-</span> <span class='va'>some.states</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>10</span>, <span class='fl'>1</span><span class='op'>:</span><span class='fl'>3</span><span class='op'>]</span>
+<span class='va'>some.states</span>
 </div><div class='output co'>#&gt;                Region Population Income
 #&gt; Alabama         South       3615   3624
 #&gt; Alaska           West        365   6315
@@ -1253,24 +1253,24 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 
 <span class='co'>### Sorting a vector in ascending order</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span>(<span class='kw'>some.states</span><span class='op'>$</span><span class='kw'>Population</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span><span class='op'>(</span><span class='va'>some.states</span><span class='op'>$</span><span class='va'>Population</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;  [1]   365   579  2110  2212  2541  3100  3615  4931  8277 21198</div><div class='input'>
 <span class='co'>### Sorting a vector in decreasing order</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span>(<span class='kw'>some.states</span><span class='op'>$</span><span class='kw'>Population</span>, decreasing=<span class='fl'>TRUE</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span><span class='op'>(</span><span class='va'>some.states</span><span class='op'>$</span><span class='va'>Population</span>, decreasing<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;  [1] 21198  8277  4931  3615  3100  2541  2212  2110   579   365</div><div class='input'>
 <span class='co'>## Sorting data frames</span>
 
 <span class='co'>### Getting the order</span>
 
-<span class='kw'>order.pop</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='kw'>some.states</span><span class='op'>$</span><span class='kw'>Population</span>)
-<span class='kw'>order.pop</span>
+<span class='va'>order.pop</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>some.states</span><span class='op'>$</span><span class='va'>Population</span><span class='op'>)</span>
+<span class='va'>order.pop</span>
 </div><div class='output co'>#&gt;  [1]  2  8  4  3  6  7  1 10  9  5</div><div class='input'>
-<span class='kw'>some.states</span><span class='op'>$</span><span class='kw'>Population</span>[<span class='kw'>order.pop</span>]
+<span class='va'>some.states</span><span class='op'>$</span><span class='va'>Population</span><span class='op'>[</span><span class='va'>order.pop</span><span class='op'>]</span>
 </div><div class='output co'>#&gt;  [1]   365   579  2110  2212  2541  3100  3615  4931  8277 21198</div><div class='input'>
 <span class='co'>## Sorting a data frame in ascending order</span>
 
-<span class='kw'>some.states</span>[<span class='kw'>order.pop</span>, ]
+<span class='va'>some.states</span><span class='op'>[</span><span class='va'>order.pop</span>, <span class='op'>]</span>
 </div><div class='output co'>#&gt;                Region Population Income
 #&gt; Alaska           West        365   6315
 #&gt; Delaware        South        579   4809
@@ -1281,10 +1281,10 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; Alabama         South       3615   3624
 #&gt; Georgia         South       4931   4091
 #&gt; Florida         South       8277   4815
-#&gt; California       West      21198   5114</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='kw'>some.states</span><span class='op'>$</span><span class='kw'>Population</span>)
-</div><div class='output co'>#&gt;  [1]  2  8  4  3  6  7  1 10  9  5</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='kw'>some.states</span><span class='op'>$</span><span class='kw'>Population</span>, decreasing=<span class='fl'>TRUE</span>)
+#&gt; California       West      21198   5114</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>some.states</span><span class='op'>$</span><span class='va'>Population</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;  [1]  2  8  4  3  6  7  1 10  9  5</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>some.states</span><span class='op'>$</span><span class='va'>Population</span>, decreasing<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;  [1]  5  9 10  1  7  6  3  4  8  2</div><div class='input'>
-<span class='kw'>some.states</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='kw'>some.states</span><span class='op'>$</span><span class='kw'>Population</span>, decreasing=<span class='fl'>TRUE</span>), ]
+<span class='va'>some.states</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>some.states</span><span class='op'>$</span><span class='va'>Population</span>, decreasing<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>, <span class='op'>]</span>
 </div><div class='output co'>#&gt;                Region Population Income
 #&gt; California       West      21198   5114
 #&gt; Florida         South       8277   4815
@@ -1298,8 +1298,8 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; Alaska           West        365   6315</div><div class='input'>
 <span class='co'>### Sorting on more than one column</span>
 
-<span class='kw'>index</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='kw'>some.states</span>, <span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='kw'>Region</span>, <span class='kw'>Population</span>))
-<span class='kw'>some.states</span>[<span class='kw'>index</span>, ]
+<span class='va'>index</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>some.states</span>, <span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>Region</span>, <span class='va'>Population</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>some.states</span><span class='op'>[</span><span class='va'>index</span>, <span class='op'>]</span>
 </div><div class='output co'>#&gt;                Region Population Income
 #&gt; Connecticut Northeast       3100   5348
 #&gt; Delaware        South        579   4809
@@ -1312,8 +1312,8 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; Colorado         West       2541   4884
 #&gt; California       West      21198   5114</div><div class='input'>
 <span class='co'>### Sorting multiple columns in mixed order</span>
-<span class='kw'>index</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/base/xtfrm.html'>xtfrm</a></span>(<span class='kw'>some.states</span><span class='op'>$</span><span class='kw'>Region</span>), <span class='kw'>some.states</span><span class='op'>$</span><span class='kw'>Population</span>)
-<span class='kw'>some.states</span>[<span class='kw'>index</span>, ]
+<span class='va'>index</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/base/xtfrm.html'>xtfrm</a></span><span class='op'>(</span><span class='va'>some.states</span><span class='op'>$</span><span class='va'>Region</span><span class='op'>)</span>, <span class='va'>some.states</span><span class='op'>$</span><span class='va'>Population</span><span class='op'>)</span>
+<span class='va'>some.states</span><span class='op'>[</span><span class='va'>index</span>, <span class='op'>]</span>
 </div><div class='output co'>#&gt;                Region Population Income
 #&gt; Alaska           West        365   6315
 #&gt; Arizona          West       2212   4530
@@ -1329,24 +1329,24 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 
 <span class='co'>## Using the apply() function to summarize arrays</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='kw'>Titanic</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>Titanic</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;  'table' num [1:4, 1:2, 1:2, 1:2] 0 0 35 0 0 0 17 0 118 154 ...
 #&gt;  - attr(*, "dimnames")=List of 4
 #&gt;   ..$ Class   : chr [1:4] "1st" "2nd" "3rd" "Crew"
 #&gt;   ..$ Sex     : chr [1:2] "Male" "Female"
 #&gt;   ..$ Age     : chr [1:2] "Child" "Adult"
-#&gt;   ..$ Survived: chr [1:2] "No" "Yes"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='kw'>Titanic</span>, <span class='fl'>1</span>, <span class='kw'>sum</span>)
+#&gt;   ..$ Survived: chr [1:2] "No" "Yes"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>Titanic</span>, <span class='fl'>1</span>, <span class='va'>sum</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;  1st  2nd  3rd Crew 
-#&gt;  325  285  706  885 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='kw'>Titanic</span>, <span class='fl'>3</span>, <span class='kw'>sum</span>)
+#&gt;  325  285  706  885 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>Titanic</span>, <span class='fl'>3</span>, <span class='va'>sum</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; Child Adult 
-#&gt;   109  2092 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='kw'>Titanic</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>3</span>, <span class='fl'>4</span>), <span class='kw'>sum</span>)
+#&gt;   109  2092 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>Titanic</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>3</span>, <span class='fl'>4</span><span class='op'>)</span>, <span class='va'>sum</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;        Survived
 #&gt; Age       No Yes
 #&gt;   Child   52  57
 #&gt;   Adult 1438 654</div><div class='input'>
 <span class='co'>## Using lapply() and sapply() to traverse a list or data frame</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='kw'>iris</span>, <span class='kw'>class</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span><span class='op'>(</span><span class='va'>iris</span>, <span class='va'>class</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; $Sepal.Length
 #&gt; [1] "numeric"
 #&gt; 
@@ -1364,23 +1364,23 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; 
 #&gt; $ratio
 #&gt; [1] "numeric"
-#&gt; </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span>(<span class='kw'>iris</span>, <span class='kw'>class</span>)
+#&gt; </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span><span class='op'>(</span><span class='va'>iris</span>, <span class='va'>class</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; Sepal.Length  Sepal.Width Petal.Length  Petal.Width      Species        ratio 
-#&gt;    "numeric"    "numeric"    "numeric"    "numeric"     "factor"    "numeric" </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span>(<span class='kw'>iris</span>, <span class='kw'>mean</span>)
+#&gt;    "numeric"    "numeric"    "numeric"    "numeric"     "factor"    "numeric" </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span><span class='op'>(</span><span class='va'>iris</span>, <span class='va'>mean</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; <span class='warning'>Warning: argument is not numeric or logical: returning NA</span></div><div class='output co'>#&gt; Sepal.Length  Sepal.Width Petal.Length  Petal.Width      Species        ratio 
-#&gt;     5.843333     3.057333     3.758000     1.199333           NA     1.953681 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span>(<span class='kw'>iris</span>, <span class='fu'>function</span>(<span class='kw'>x</span>) <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>is.numeric</a></span>(<span class='kw'>x</span>), <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='kw'>x</span>), <span class='fl'>NA</span>))
+#&gt;     5.843333     3.057333     3.758000     1.199333           NA     1.953681 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span><span class='op'>(</span><span class='va'>iris</span>, <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>is.numeric</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>, <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>, <span class='cn'>NA</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; Sepal.Length  Sepal.Width Petal.Length  Petal.Width      Species        ratio 
 #&gt;     5.843333     3.057333     3.758000     1.199333           NA     1.953681 </div><div class='input'>
 <span class='co'>## Using tapply() to create tabular summaries</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/tapply.html'>tapply</a></span>(<span class='kw'>iris</span><span class='op'>$</span><span class='kw'>Sepal.Length</span>, <span class='kw'>iris</span><span class='op'>$</span><span class='kw'>Species</span>, <span class='kw'>mean</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/tapply.html'>tapply</a></span><span class='op'>(</span><span class='va'>iris</span><span class='op'>$</span><span class='va'>Sepal.Length</span>, <span class='va'>iris</span><span class='op'>$</span><span class='va'>Species</span>, <span class='va'>mean</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;     setosa versicolor  virginica 
-#&gt;      5.006      5.936      6.588 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='kw'>iris</span>, <span class='fu'><a href='https://rdrr.io/r/base/tapply.html'>tapply</a></span>(<span class='kw'>Sepal.Length</span>, <span class='kw'>Species</span>, <span class='kw'>mean</span>))
+#&gt;      5.006      5.936      6.588 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>iris</span>, <span class='fu'><a href='https://rdrr.io/r/base/tapply.html'>tapply</a></span><span class='op'>(</span><span class='va'>Sepal.Length</span>, <span class='va'>Species</span>, <span class='va'>mean</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;     setosa versicolor  virginica 
 #&gt;      5.006      5.936      6.588 </div><div class='input'>
 <span class='co'>### Using tapply() to create higher-dimensional tables</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span>(<span class='kw'>mtcars</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>mtcars</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; 'data.frame':	32 obs. of  11 variables:
 #&gt;  $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...
 #&gt;  $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...
@@ -1392,20 +1392,20 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt;  $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...
 #&gt;  $ am  : num  1 1 1 0 0 0 0 0 0 0 ...
 #&gt;  $ gear: num  4 4 4 3 3 3 3 4 4 4 ...
-#&gt;  $ carb: num  4 4 1 1 2 1 4 2 2 4 ...</div><div class='input'><span class='kw'>cars</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>within</a></span>(<span class='kw'>mtcars</span>,
-    <span class='kw'>am</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='kw'>am</span>, levels=<span class='fl'>0</span><span class='op'>:</span><span class='fl'>1</span>, labels=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Automatic"</span>, <span class='st'>"Manual"</span>))
-)
+#&gt;  $ carb: num  4 4 1 1 2 1 4 2 2 4 ...</div><div class='input'><span class='va'>cars</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>within</a></span><span class='op'>(</span><span class='va'>mtcars</span>,
+    <span class='va'>am</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>am</span>, levels<span class='op'>=</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>1</span>, labels<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Automatic"</span>, <span class='st'>"Manual"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='kw'>cars</span>, <span class='fu'><a href='https://rdrr.io/r/base/tapply.html'>tapply</a></span>(<span class='kw'>mpg</span>, <span class='kw'>am</span>, <span class='kw'>mean</span>))
+<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>cars</span>, <span class='fu'><a href='https://rdrr.io/r/base/tapply.html'>tapply</a></span><span class='op'>(</span><span class='va'>mpg</span>, <span class='va'>am</span>, <span class='va'>mean</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; Automatic    Manual 
-#&gt;  17.14737  24.39231 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='kw'>cars</span>, <span class='fu'><a href='https://rdrr.io/r/base/tapply.html'>tapply</a></span>(<span class='kw'>mpg</span>, <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>gear</span>, <span class='kw'>am</span>), <span class='kw'>mean</span>))
+#&gt;  17.14737  24.39231 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>cars</span>, <span class='fu'><a href='https://rdrr.io/r/base/tapply.html'>tapply</a></span><span class='op'>(</span><span class='va'>mpg</span>, <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='va'>gear</span>, <span class='va'>am</span><span class='op'>)</span>, <span class='va'>mean</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;   Automatic Manual
 #&gt; 3  16.10667     NA
 #&gt; 4  21.05000 26.275
 #&gt; 5        NA 21.380</div><div class='input'>
 <span class='co'>### Using aggregate()</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='kw'>cars</span>, <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span>(<span class='kw'>mpg</span>, <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(gear=<span class='kw'>gear</span>, am=<span class='kw'>am</span>), <span class='kw'>mean</span>))
+<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>cars</span>, <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span><span class='op'>(</span><span class='va'>mpg</span>, <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>gear<span class='op'>=</span><span class='va'>gear</span>, am<span class='op'>=</span><span class='va'>am</span><span class='op'>)</span>, <span class='va'>mean</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;   gear        am        x
 #&gt; 1    3 Automatic 16.10667
 #&gt; 2    4 Automatic 21.05000
@@ -1414,13 +1414,13 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 <span class='co'># Getting to Know the Formula Interface</span>
 
 
-<span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span>(<span class='kw'>mpg</span> <span class='op'>~</span> <span class='kw'>gear</span> <span class='op'>+</span> <span class='kw'>am</span>, data=<span class='kw'>cars</span>, <span class='kw'>mean</span>)
+<span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span><span class='op'>(</span><span class='va'>mpg</span> <span class='op'>~</span> <span class='va'>gear</span> <span class='op'>+</span> <span class='va'>am</span>, data<span class='op'>=</span><span class='va'>cars</span>, <span class='va'>mean</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;   gear        am      mpg
 #&gt; 1    3 Automatic 16.10667
 #&gt; 2    4 Automatic 21.05000
 #&gt; 3    4    Manual 26.27500
 #&gt; 4    5    Manual 21.38000</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='kw'>mpg</span> <span class='op'>~</span> <span class='kw'>gear</span> <span class='op'>+</span> <span class='kw'>am</span>, data=<span class='kw'>cars</span>)
+<span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span><span class='va'>mpg</span> <span class='op'>~</span> <span class='va'>gear</span> <span class='op'>+</span> <span class='va'>am</span>, data<span class='op'>=</span><span class='va'>cars</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; Call:
 #&gt;    aov(formula = mpg ~ gear + am, data = cars)
 #&gt; 
@@ -1431,8 +1431,8 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; 
 #&gt; Residual standard error: 4.985663
 #&gt; Estimated effects may be unbalanced</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://lattice.r-forge.r-project.org'>lattice</a></span>)
-<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span>(<span class='kw'>mpg</span> <span class='op'>~</span> <span class='kw'>gear</span> <span class='op'>+</span> <span class='kw'>am</span>, data=<span class='kw'>cars</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://lattice.r-forge.r-project.org/'>lattice</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>mpg</span> <span class='op'>~</span> <span class='va'>gear</span> <span class='op'>+</span> <span class='va'>am</span>, data<span class='op'>=</span><span class='va'>cars</span><span class='op'>)</span>
 </div><div class='img'><img src='ch13-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
 <span class='co'># Whipping Your Data into Shape</span>
@@ -1443,24 +1443,24 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 
 <span class='co'>## Getting started with the reshape2 package</span>
 
-<span class='co'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span>(<span class='st'>"reshape2"</span>)
-}
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='st'><a href='https://github.com/hadley/reshape'>"reshape2"</a></span>)
+<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"reshape2"</span><span class='op'>)</span>
+<span class='op'>}</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'><a href='https://github.com/hadley/reshape'>"reshape2"</a></span><span class='op'>)</span>
 
-<span class='kw'>goals</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(
-    Game = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"1st"</span>, <span class='st'>"2nd"</span>, <span class='st'>"3rd"</span>, <span class='st'>"4th"</span>),
-    Venue = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Bruges"</span>, <span class='st'>"Ghent"</span>, <span class='st'>"Ghent"</span>, <span class='st'>"Bruges"</span>),
-    Granny = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>12</span>, <span class='fl'>4</span>, <span class='fl'>5</span>, <span class='fl'>6</span>),
-    Geraldine = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>5</span>, <span class='fl'>4</span>, <span class='fl'>2</span>, <span class='fl'>4</span>),
-    Gertrude = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>11</span>, <span class='fl'>5</span>, <span class='fl'>6</span>, <span class='fl'>7</span>)
-)
+<span class='va'>goals</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>
+    Game <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"1st"</span>, <span class='st'>"2nd"</span>, <span class='st'>"3rd"</span>, <span class='st'>"4th"</span><span class='op'>)</span>,
+    Venue <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Bruges"</span>, <span class='st'>"Ghent"</span>, <span class='st'>"Ghent"</span>, <span class='st'>"Bruges"</span><span class='op'>)</span>,
+    Granny <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>12</span>, <span class='fl'>4</span>, <span class='fl'>5</span>, <span class='fl'>6</span><span class='op'>)</span>,
+    Geraldine <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>, <span class='fl'>4</span>, <span class='fl'>2</span>, <span class='fl'>4</span><span class='op'>)</span>,
+    Gertrude <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>11</span>, <span class='fl'>5</span>, <span class='fl'>6</span>, <span class='fl'>7</span><span class='op'>)</span>
+<span class='op'>)</span>
 
 <span class='co'>## Melting data to long format</span>
 
-<span class='kw'>mgoals</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/melt.html'>melt</a></span>(<span class='kw'>goals</span>)
-</div><div class='output co'>#&gt; <span class='message'>Using Game, Venue as id variables</span></div><div class='input'><span class='kw'>mgoals</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/melt.html'>melt</a></span>(<span class='kw'>goals</span>, id.vars=<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Game"</span>, <span class='st'>"Venue"</span>))
-<span class='kw'>mgoals</span>
+<span class='va'>mgoals</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/melt.html'>melt</a></span><span class='op'>(</span><span class='va'>goals</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>Using Game, Venue as id variables</span></div><div class='input'><span class='va'>mgoals</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/melt.html'>melt</a></span><span class='op'>(</span><span class='va'>goals</span>, id.vars<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Game"</span>, <span class='st'>"Venue"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>mgoals</span>
 </div><div class='output co'>#&gt;    Game  Venue  variable value
 #&gt; 1   1st Bruges    Granny    12
 #&gt; 2   2nd  Ghent    Granny     4
@@ -1476,20 +1476,20 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; 12  4th Bruges  Gertrude     7</div><div class='input'>
 <span class='co'>## Casting data to wide format</span>
 
-<span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/cast.html'>dcast</a></span>(<span class='kw'>mgoals</span>,  <span class='kw'>Venue</span> <span class='op'>+</span> <span class='kw'>Game</span> <span class='op'>~</span> <span class='kw'>variable</span>, <span class='kw'>sum</span>)
+<span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/cast.html'>dcast</a></span><span class='op'>(</span><span class='va'>mgoals</span>,  <span class='va'>Venue</span> <span class='op'>+</span> <span class='va'>Game</span> <span class='op'>~</span> <span class='va'>variable</span>, <span class='va'>sum</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;    Venue Game Granny Geraldine Gertrude
 #&gt; 1 Bruges  1st     12         5       11
 #&gt; 2 Bruges  4th      6         4        7
 #&gt; 3  Ghent  2nd      4         4        5
-#&gt; 4  Ghent  3rd      5         2        6</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/cast.html'>dcast</a></span>(<span class='kw'>mgoals</span>, <span class='kw'>variable</span> <span class='op'>~</span> <span class='kw'>Venue</span> , <span class='kw'>sum</span>)
+#&gt; 4  Ghent  3rd      5         2        6</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/cast.html'>dcast</a></span><span class='op'>(</span><span class='va'>mgoals</span>, <span class='va'>variable</span> <span class='op'>~</span> <span class='va'>Venue</span> , <span class='va'>sum</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;    variable Bruges Ghent
 #&gt; 1    Granny     18     9
 #&gt; 2 Geraldine      9     6
-#&gt; 3  Gertrude     18    11</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/cast.html'>dcast</a></span>(<span class='kw'>mgoals</span>,  <span class='kw'>Venue</span> <span class='op'>~</span> <span class='kw'>variable</span> , <span class='kw'>sum</span>)
+#&gt; 3  Gertrude     18    11</div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/cast.html'>dcast</a></span><span class='op'>(</span><span class='va'>mgoals</span>,  <span class='va'>Venue</span> <span class='op'>~</span> <span class='va'>variable</span> , <span class='va'>sum</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;    Venue Granny Geraldine Gertrude
 #&gt; 1 Bruges     18         9       18
 #&gt; 2  Ghent      9         6       11</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/cast.html'>dcast</a></span>(<span class='kw'>mgoals</span>,  <span class='kw'>Venue</span> <span class='op'>+</span> <span class='kw'>variable</span> <span class='op'>~</span> <span class='kw'>Game</span> , <span class='kw'>sum</span>)
+<span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/cast.html'>dcast</a></span><span class='op'>(</span><span class='va'>mgoals</span>,  <span class='va'>Venue</span> <span class='op'>+</span> <span class='va'>variable</span> <span class='op'>~</span> <span class='va'>Game</span> , <span class='va'>sum</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;    Venue  variable 1st 2nd 3rd 4th
 #&gt; 1 Bruges    Granny  12   0   0   6
 #&gt; 2 Bruges Geraldine   5   0   0   4
@@ -1497,8 +1497,8 @@ To run all the examples of <code>ch13()</code>, use <code><a href='https://rdrr.
 #&gt; 4  Ghent    Granny   0   4   5   0
 #&gt; 5  Ghent Geraldine   0   4   2   0
 #&gt; 6  Ghent  Gertrude   0   5   6   0</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='kw'><a href='http://ggplot2.tidyverse.org'>ggplot2</a></span>)
-<span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span>(<span class='kw'>mgoals</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span>(x=<span class='kw'>variable</span>, y=<span class='kw'>value</span>, fill=<span class='kw'>Game</span>)) <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_bar</a></span>(stat=<span class='st'>"identity"</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://ggplot2.tidyverse.org'>ggplot2</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='va'>mgoals</span>, <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>variable</span>, y<span class='op'>=</span><span class='va'>value</span>, fill<span class='op'>=</span><span class='va'>Game</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_bar.html'>geom_bar</a></span><span class='op'>(</span>stat<span class='op'>=</span><span class='st'>"identity"</span><span class='op'>)</span>
 </div><div class='img'><img src='ch13-2.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

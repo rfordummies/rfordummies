@@ -81,7 +81,7 @@ To run all the examples of ch9(), use example(ch9)." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rfordummies</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5.9000</span>
       </span>
     </div>
 
@@ -89,7 +89,7 @@ To run all the examples of ch9(), use example(ch9)." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -103,7 +103,7 @@ To run all the examples of ch9(), use example(ch9)." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/andrie/rfordummies/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -130,9 +130,9 @@ To run all the examples of ch9(), use example(ch9)." />
 To run all the examples of <code>ch9()</code>, use <code><a href='https://rdrr.io/r/utils/example.html'>example(ch9)</a></code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>ch09</span>()
+    <pre class="usage"><span class='fu'>ch09</span><span class='op'>(</span><span class='op'>)</span>
 
-<span class='fu'>ch9</span>()</pre>
+<span class='fu'>ch9</span><span class='op'>(</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
@@ -165,97 +165,97 @@ To run all the examples of <code>ch9()</code>, use <code><a href='https://rdrr.i
 
 <span class='co'>#Making Choices with if Statements</span>
 
-<span class='kw'>priceCalculator</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>hours</span>, <span class='kw'>pph</span>=<span class='fl'>40</span>){
-    <span class='kw'>net.price</span> <span class='op'>&lt;-</span> <span class='kw'>hours</span> <span class='op'>*</span> <span class='kw'>pph</span>
-    <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>net.price</span>)
-}
+<span class='va'>priceCalculator</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>hours</span>, <span class='va'>pph</span><span class='op'>=</span><span class='fl'>40</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='va'>net.price</span> <span class='op'>&lt;-</span> <span class='va'>hours</span> <span class='op'>*</span> <span class='va'>pph</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>net.price</span><span class='op'>)</span>
+<span class='op'>}</span>
 
-<span class='kw'>priceCalculator</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>hours</span>, <span class='kw'>pph</span>=<span class='fl'>40</span>){
-    <span class='kw'>net.price</span> <span class='op'>&lt;-</span> <span class='kw'>hours</span> <span class='op'>*</span> <span class='kw'>pph</span>
-    <span class='co'>if</span>(<span class='kw'>hours</span> <span class='op'>&gt;</span> <span class='fl'>100</span>) {
-      <span class='kw'>net.price</span> <span class='op'>&lt;-</span> <span class='kw'>net.price</span> <span class='op'>*</span> <span class='fl'>0.9</span>
-    }
-    <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>net.price</span>)
-}
+<span class='va'>priceCalculator</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>hours</span>, <span class='va'>pph</span><span class='op'>=</span><span class='fl'>40</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='va'>net.price</span> <span class='op'>&lt;-</span> <span class='va'>hours</span> <span class='op'>*</span> <span class='va'>pph</span>
+    <span class='kw'>if</span><span class='op'>(</span><span class='va'>hours</span> <span class='op'>&gt;</span> <span class='fl'>100</span><span class='op'>)</span> <span class='op'>{</span>
+      <span class='va'>net.price</span> <span class='op'>&lt;-</span> <span class='va'>net.price</span> <span class='op'>*</span> <span class='fl'>0.9</span>
+    <span class='op'>}</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>net.price</span><span class='op'>)</span>
+<span class='op'>}</span>
 
-<span class='fu'>priceCalculator</span>(hours = <span class='fl'>55</span>)
-</div><div class='output co'>#&gt; [1] 2200</div><div class='input'><span class='fu'>priceCalculator</span>(hours = <span class='fl'>110</span>)
+<span class='fu'>priceCalculator</span><span class='op'>(</span>hours <span class='op'>=</span> <span class='fl'>55</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 2200</div><div class='input'><span class='fu'>priceCalculator</span><span class='op'>(</span>hours <span class='op'>=</span> <span class='fl'>110</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] 3960</div><div class='input'>
-<span class='kw'>priceCalculator</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>hours</span>, <span class='kw'>pph</span>=<span class='fl'>40</span>){
-    <span class='kw'>net.price</span> <span class='op'>&lt;-</span> <span class='kw'>hours</span> <span class='op'>*</span> <span class='kw'>pph</span>
-    <span class='co'>if</span>(<span class='kw'>hours</span> <span class='op'>&gt;</span> <span class='fl'>100</span>) <span class='kw'>net.price</span> <span class='op'>&lt;-</span> <span class='kw'>net.price</span> <span class='op'>*</span> <span class='fl'>0.9</span>
-    <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>net.price</span>)
-}
+<span class='va'>priceCalculator</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>hours</span>, <span class='va'>pph</span><span class='op'>=</span><span class='fl'>40</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='va'>net.price</span> <span class='op'>&lt;-</span> <span class='va'>hours</span> <span class='op'>*</span> <span class='va'>pph</span>
+    <span class='kw'>if</span><span class='op'>(</span><span class='va'>hours</span> <span class='op'>&gt;</span> <span class='fl'>100</span><span class='op'>)</span> <span class='va'>net.price</span> <span class='op'>&lt;-</span> <span class='va'>net.price</span> <span class='op'>*</span> <span class='fl'>0.9</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>net.price</span><span class='op'>)</span>
+<span class='op'>}</span>
 
 <span class='op'>?</span><span class='st'>'if'</span>
 <span class='op'>?</span><span class='st'>"if"</span>
-<span class='op'>?</span><span class='kw'>`if`</span>
+<span class='op'>?</span><span class='va'>`if`</span>
 
 <span class='co'>## Doing Something Else with an if...else Statement</span>
 
-<span class='kw'>priceCalculator</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>hours</span>, <span class='kw'>pph</span>=<span class='fl'>40</span>, <span class='kw'>public</span>=<span class='fl'>TRUE</span>){
-    <span class='kw'>net.price</span> <span class='op'>&lt;-</span> <span class='kw'>hours</span> <span class='op'>*</span> <span class='kw'>pph</span>
-    <span class='co'>if</span>(<span class='kw'>hours</span> <span class='op'>&gt;</span> <span class='fl'>100</span>) <span class='kw'>net.price</span> <span class='op'>&lt;-</span> <span class='kw'>net.price</span> <span class='op'>*</span> <span class='fl'>0.9</span>
-    <span class='co'>if</span>(<span class='kw'>public</span>) {
-      <span class='kw'>tot.price</span> <span class='op'>&lt;-</span> <span class='kw'>net.price</span> <span class='op'>*</span> <span class='fl'>1.06</span>
-    } <span class='co'>else</span> {
-      <span class='kw'>tot.price</span> <span class='op'>&lt;-</span> <span class='kw'>net.price</span> <span class='op'>*</span> <span class='fl'>1.12</span>
-    }
-    <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>tot.price</span>)
-}
+<span class='va'>priceCalculator</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>hours</span>, <span class='va'>pph</span><span class='op'>=</span><span class='fl'>40</span>, <span class='va'>public</span><span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='va'>net.price</span> <span class='op'>&lt;-</span> <span class='va'>hours</span> <span class='op'>*</span> <span class='va'>pph</span>
+    <span class='kw'>if</span><span class='op'>(</span><span class='va'>hours</span> <span class='op'>&gt;</span> <span class='fl'>100</span><span class='op'>)</span> <span class='va'>net.price</span> <span class='op'>&lt;-</span> <span class='va'>net.price</span> <span class='op'>*</span> <span class='fl'>0.9</span>
+    <span class='kw'>if</span><span class='op'>(</span><span class='va'>public</span><span class='op'>)</span> <span class='op'>{</span>
+      <span class='va'>tot.price</span> <span class='op'>&lt;-</span> <span class='va'>net.price</span> <span class='op'>*</span> <span class='fl'>1.06</span>
+    <span class='op'>}</span> <span class='kw'>else</span> <span class='op'>{</span>
+      <span class='va'>tot.price</span> <span class='op'>&lt;-</span> <span class='va'>net.price</span> <span class='op'>*</span> <span class='fl'>1.12</span>
+    <span class='op'>}</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>tot.price</span><span class='op'>)</span>
+<span class='op'>}</span>
 
-<span class='fu'>priceCalculator</span>(<span class='fl'>25</span>,public=<span class='fl'>TRUE</span>)
-</div><div class='output co'>#&gt; [1] 1060</div><div class='input'><span class='fu'>priceCalculator</span>(<span class='fl'>25</span>,public=<span class='fl'>FALSE</span>)
+<span class='fu'>priceCalculator</span><span class='op'>(</span><span class='fl'>25</span>,public<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 1060</div><div class='input'><span class='fu'>priceCalculator</span><span class='op'>(</span><span class='fl'>25</span>,public<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] 1120</div><div class='input'>
-<span class='kw'>priceCalculator</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>hours</span>, <span class='kw'>pph</span>=<span class='fl'>40</span>, <span class='kw'>public</span>=<span class='fl'>TRUE</span>){
-    <span class='kw'>net.price</span> <span class='op'>&lt;-</span> <span class='kw'>hours</span> <span class='op'>*</span> <span class='kw'>pph</span>
-    <span class='co'>if</span>(<span class='kw'>hours</span> <span class='op'>&gt;</span> <span class='fl'>100</span>) <span class='kw'>net.price</span> <span class='op'>&lt;-</span> <span class='kw'>net.price</span> <span class='op'>*</span> <span class='fl'>0.9</span>
-    <span class='co'>if</span>(<span class='kw'>public</span>) <span class='kw'>tot.price</span> <span class='op'>&lt;-</span> <span class='kw'>net.price</span> <span class='op'>*</span> <span class='fl'>1.06</span> <span class='co'>else</span>
-               <span class='kw'>tot.price</span> <span class='op'>&lt;-</span> <span class='kw'>net.price</span> <span class='op'>*</span> <span class='fl'>1.12</span>
-    <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>tot.price</span>)
-}
+<span class='va'>priceCalculator</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>hours</span>, <span class='va'>pph</span><span class='op'>=</span><span class='fl'>40</span>, <span class='va'>public</span><span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='va'>net.price</span> <span class='op'>&lt;-</span> <span class='va'>hours</span> <span class='op'>*</span> <span class='va'>pph</span>
+    <span class='kw'>if</span><span class='op'>(</span><span class='va'>hours</span> <span class='op'>&gt;</span> <span class='fl'>100</span><span class='op'>)</span> <span class='va'>net.price</span> <span class='op'>&lt;-</span> <span class='va'>net.price</span> <span class='op'>*</span> <span class='fl'>0.9</span>
+    <span class='kw'>if</span><span class='op'>(</span><span class='va'>public</span><span class='op'>)</span> <span class='va'>tot.price</span> <span class='op'>&lt;-</span> <span class='va'>net.price</span> <span class='op'>*</span> <span class='fl'>1.06</span> <span class='kw'>else</span>
+               <span class='va'>tot.price</span> <span class='op'>&lt;-</span> <span class='va'>net.price</span> <span class='op'>*</span> <span class='fl'>1.12</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>tot.price</span><span class='op'>)</span>
+<span class='op'>}</span>
 
-<span class='kw'>priceCalculator</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>hours</span>, <span class='kw'>pph</span>=<span class='fl'>40</span>, <span class='kw'>public</span>=<span class='fl'>TRUE</span>){
-    <span class='kw'>net.price</span> <span class='op'>&lt;-</span> <span class='kw'>hours</span> <span class='op'>*</span> <span class='kw'>pph</span>
-    <span class='co'>if</span>(<span class='kw'>hours</span> <span class='op'>&gt;</span> <span class='fl'>100</span>) <span class='kw'>net.price</span> <span class='op'>&lt;-</span> <span class='kw'>net.price</span> <span class='op'>*</span> <span class='fl'>0.9</span>
-    <span class='kw'>tot.price</span> <span class='op'>&lt;-</span> <span class='kw'>net.price</span> <span class='op'>*</span> <span class='co'>if</span>(<span class='kw'>public</span>) <span class='fl'>1.06</span> <span class='co'>else</span> <span class='fl'>1.12</span>
-    <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>tot.price</span>)
-}
+<span class='va'>priceCalculator</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>hours</span>, <span class='va'>pph</span><span class='op'>=</span><span class='fl'>40</span>, <span class='va'>public</span><span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='va'>net.price</span> <span class='op'>&lt;-</span> <span class='va'>hours</span> <span class='op'>*</span> <span class='va'>pph</span>
+    <span class='kw'>if</span><span class='op'>(</span><span class='va'>hours</span> <span class='op'>&gt;</span> <span class='fl'>100</span><span class='op'>)</span> <span class='va'>net.price</span> <span class='op'>&lt;-</span> <span class='va'>net.price</span> <span class='op'>*</span> <span class='fl'>0.9</span>
+    <span class='va'>tot.price</span> <span class='op'>&lt;-</span> <span class='va'>net.price</span> <span class='op'>*</span> <span class='kw'>if</span><span class='op'>(</span><span class='va'>public</span><span class='op'>)</span> <span class='fl'>1.06</span> <span class='kw'>else</span> <span class='fl'>1.12</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>tot.price</span><span class='op'>)</span>
+<span class='op'>}</span>
 
 <span class='co'># Vectorizing Choices</span>
 
 <span class='co'>## Looking at the problem</span>
 
-<span class='fu'>priceCalculator</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>25</span>,<span class='fl'>110</span>))
-</div><div class='output co'>#&gt; <span class='warning'>Warning: the condition has length &gt; 1 and only the first element will be used</span></div><div class='output co'>#&gt; [1] 1060 4664</div><div class='input'><span class='fu'>priceCalculator</span>(<span class='fl'>110</span>)
-</div><div class='output co'>#&gt; [1] 4198</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>25</span>, <span class='fl'>110</span>) <span class='op'>&gt;</span> <span class='fl'>100</span>
+<span class='fu'>priceCalculator</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>25</span>,<span class='fl'>110</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='warning'>Warning: the condition has length &gt; 1 and only the first element will be used</span></div><div class='output co'>#&gt; [1] 1060 4664</div><div class='input'><span class='fu'>priceCalculator</span><span class='op'>(</span><span class='fl'>110</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 4198</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>25</span>, <span class='fl'>110</span><span class='op'>)</span> <span class='op'>&gt;</span> <span class='fl'>100</span>
 </div><div class='output co'>#&gt; [1] FALSE  TRUE</div><div class='input'>
 <span class='co'>## Choosing based on a logical vector</span>
 
 <span class='co'>### Understanding how it works</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>3</span>) <span class='op'>&lt;</span> <span class='fl'>2.5</span> , <span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span> , <span class='fl'>3</span><span class='op'>:</span><span class='fl'>4</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>3</span><span class='op'>)</span> <span class='op'>&lt;</span> <span class='fl'>2.5</span> , <span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span> , <span class='fl'>3</span><span class='op'>:</span><span class='fl'>4</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] 1 4</div><div class='input'>
 <span class='co'>### Trying it out</span>
 
-<span class='kw'>my.hours</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>25</span>,<span class='fl'>110</span>)
-<span class='kw'>my.hours</span> <span class='op'>*</span> <span class='fl'>40</span> <span class='op'>*</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='kw'>my.hours</span> <span class='op'>&gt;</span> <span class='fl'>100</span>, <span class='fl'>0.9</span>, <span class='fl'>1</span>)
+<span class='va'>my.hours</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>25</span>,<span class='fl'>110</span><span class='op'>)</span>
+<span class='va'>my.hours</span> <span class='op'>*</span> <span class='fl'>40</span> <span class='op'>*</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>my.hours</span> <span class='op'>&gt;</span> <span class='fl'>100</span>, <span class='fl'>0.9</span>, <span class='fl'>1</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] 1000 3960</div><div class='input'>
 <span class='co'>### Adapting the function</span>
 
-<span class='kw'>priceCalculator</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>hours</span>,<span class='kw'>pph</span>=<span class='fl'>40</span>,<span class='kw'>public</span>){
-    <span class='kw'>net.price</span> <span class='op'>&lt;-</span> <span class='kw'>hours</span> <span class='op'>*</span> <span class='kw'>pph</span>
-    <span class='kw'>net.price</span> <span class='op'>&lt;-</span> <span class='kw'>net.price</span> <span class='op'>*</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='kw'>hours</span> <span class='op'>&gt;</span> <span class='fl'>100</span> , <span class='fl'>0.9</span>, <span class='fl'>1</span>)
-    <span class='kw'>tot.price</span> <span class='op'>&lt;-</span> <span class='kw'>net.price</span> <span class='op'>*</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='kw'>public</span>, <span class='fl'>1.06</span>, <span class='fl'>1.12</span>)
-    <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>tot.price</span>)
-}
+<span class='va'>priceCalculator</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>hours</span>,<span class='va'>pph</span><span class='op'>=</span><span class='fl'>40</span>,<span class='va'>public</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='va'>net.price</span> <span class='op'>&lt;-</span> <span class='va'>hours</span> <span class='op'>*</span> <span class='va'>pph</span>
+    <span class='va'>net.price</span> <span class='op'>&lt;-</span> <span class='va'>net.price</span> <span class='op'>*</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>hours</span> <span class='op'>&gt;</span> <span class='fl'>100</span> , <span class='fl'>0.9</span>, <span class='fl'>1</span><span class='op'>)</span>
+    <span class='va'>tot.price</span> <span class='op'>&lt;-</span> <span class='va'>net.price</span> <span class='op'>*</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>public</span>, <span class='fl'>1.06</span>, <span class='fl'>1.12</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>tot.price</span><span class='op'>)</span>
+<span class='op'>}</span>
 
-<span class='kw'>clients</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(
-  hours = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>25</span>, <span class='fl'>110</span>, <span class='fl'>125</span>, <span class='fl'>40</span>),
-  public = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>TRUE</span>,<span class='fl'>TRUE</span>,<span class='fl'>FALSE</span>,<span class='fl'>FALSE</span>)
-)
+<span class='va'>clients</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>
+  hours <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>25</span>, <span class='fl'>110</span>, <span class='fl'>125</span>, <span class='fl'>40</span><span class='op'>)</span>,
+  public <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='cn'>TRUE</span>,<span class='cn'>TRUE</span>,<span class='cn'>FALSE</span>,<span class='cn'>FALSE</span><span class='op'>)</span>
+<span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='kw'>clients</span>, <span class='fu'>priceCalculator</span>(<span class='kw'>hours</span>, public = <span class='kw'>public</span>))
+<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>clients</span>, <span class='fu'>priceCalculator</span><span class='op'>(</span><span class='va'>hours</span>, public <span class='op'>=</span> <span class='va'>public</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] 1060 4198 5040 1792</div><div class='input'>
 <span class='co'># Making Multiple Choices</span>
 
@@ -303,8 +303,8 @@ To run all the examples of <code>ch9()</code>, use <code><a href='https://rdrr.i
 <span class='co'># Code example # NOT run</span>
 <span class='co'># VAT &lt;- switch(client, private=1.12, public=1.06, 1)</span>
 
-<span class='kw'>client</span> <span class='op'>&lt;-</span> <span class='st'>'other'</span>
-<span class='fu'><a href='https://rdrr.io/r/base/switch.html'>switch</a></span>(<span class='kw'>client</span>, private=<span class='fl'>1.12</span>, public=<span class='fl'>1.06</span>, <span class='fl'>1</span>)
+<span class='va'>client</span> <span class='op'>&lt;-</span> <span class='st'>'other'</span>
+<span class='kw'><a href='https://rdrr.io/r/base/switch.html'>switch</a></span><span class='op'>(</span><span class='va'>client</span>, private<span class='op'>=</span><span class='fl'>1.12</span>, public<span class='op'>=</span><span class='fl'>1.06</span>, <span class='fl'>1</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] 1</div><div class='input'>
 
 <span class='co'># Looping Through Values</span>
@@ -315,42 +315,42 @@ To run all the examples of <code>ch9()</code>, use <code><a href='https://rdrr.i
 
 <span class='co'>### Using the values of the vector</span>
 
-<span class='kw'>priceCalculator</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>hours</span>, <span class='kw'>pph</span>=<span class='fl'>40</span>, <span class='kw'>client</span>){
-    <span class='kw'>net.price</span> <span class='op'>&lt;-</span> <span class='kw'>hours</span> <span class='op'>*</span> <span class='kw'>pph</span> <span class='op'>*</span>
-                   <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='kw'>hours</span> <span class='op'>&gt;</span> <span class='fl'>100</span>, <span class='fl'>0.9</span>, <span class='fl'>1</span>)
+<span class='va'>priceCalculator</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>hours</span>, <span class='va'>pph</span><span class='op'>=</span><span class='fl'>40</span>, <span class='va'>client</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='va'>net.price</span> <span class='op'>&lt;-</span> <span class='va'>hours</span> <span class='op'>*</span> <span class='va'>pph</span> <span class='op'>*</span>
+                   <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>hours</span> <span class='op'>&gt;</span> <span class='fl'>100</span>, <span class='fl'>0.9</span>, <span class='fl'>1</span><span class='op'>)</span>
 
-    <span class='kw'>VAT</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></span>(<span class='fl'>0</span>)
-    <span class='co'>for</span>(<span class='kw'>i</span> <span class='co'>in</span> <span class='kw'>client</span>){
-      <span class='kw'>VAT</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='kw'>VAT</span>,<span class='fu'><a href='https://rdrr.io/r/base/switch.html'>switch</a></span>(<span class='kw'>i</span>, private=<span class='fl'>1.12</span>, public=<span class='fl'>1.06</span>, <span class='fl'>1</span>))
-    }
+    <span class='va'>VAT</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></span><span class='op'>(</span><span class='fl'>0</span><span class='op'>)</span>
+    <span class='kw'>for</span><span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='va'>client</span><span class='op'>)</span><span class='op'>{</span>
+      <span class='va'>VAT</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>VAT</span>,<span class='kw'><a href='https://rdrr.io/r/base/switch.html'>switch</a></span><span class='op'>(</span><span class='va'>i</span>, private<span class='op'>=</span><span class='fl'>1.12</span>, public<span class='op'>=</span><span class='fl'>1.06</span>, <span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='op'>}</span>
 
-    <span class='kw'>tot.price</span> <span class='op'>&lt;-</span> <span class='kw'>net.price</span> <span class='op'>*</span> <span class='kw'>VAT</span>
-    <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>tot.price</span>)
-}
+    <span class='va'>tot.price</span> <span class='op'>&lt;-</span> <span class='va'>net.price</span> <span class='op'>*</span> <span class='va'>VAT</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>tot.price</span><span class='op'>)</span>
+<span class='op'>}</span>
 
 
-<span class='kw'>clients</span><span class='op'>$</span><span class='kw'>type</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'public'</span>,<span class='st'>'abroad'</span>,<span class='st'>'private'</span>,<span class='st'>'abroad'</span>)
-<span class='fu'>priceCalculator</span>(<span class='kw'>clients</span><span class='op'>$</span><span class='kw'>hours</span>, client=<span class='kw'>clients</span><span class='op'>$</span><span class='kw'>type</span>)
+<span class='va'>clients</span><span class='op'>$</span><span class='va'>type</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'public'</span>,<span class='st'>'abroad'</span>,<span class='st'>'private'</span>,<span class='st'>'abroad'</span><span class='op'>)</span>
+<span class='fu'>priceCalculator</span><span class='op'>(</span><span class='va'>clients</span><span class='op'>$</span><span class='va'>hours</span>, client<span class='op'>=</span><span class='va'>clients</span><span class='op'>$</span><span class='va'>type</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] 1060 3960 5040 1600</div><div class='input'>
 <span class='co'>### Using loops and indices</span>
 
-<span class='kw'>nclient</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='kw'>client</span>)
-<span class='kw'>VAT</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></span>(<span class='kw'>nclient</span>)
-<span class='co'>for</span>(<span class='kw'>i</span> <span class='co'>in</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq_along</a></span>(<span class='kw'>client</span>)){
-  <span class='kw'>VAT</span>[<span class='kw'>i</span>] <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/switch.html'>switch</a></span>(<span class='kw'>client</span>[<span class='kw'>i</span>], private=<span class='fl'>1.12</span>, public=<span class='fl'>1.06</span>, <span class='fl'>1</span>)
-}
-<span class='kw'>VAT</span>
+<span class='va'>nclient</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>client</span><span class='op'>)</span>
+<span class='va'>VAT</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>numeric</a></span><span class='op'>(</span><span class='va'>nclient</span><span class='op'>)</span>
+<span class='kw'>for</span><span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq_along</a></span><span class='op'>(</span><span class='va'>client</span><span class='op'>)</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='va'>VAT</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='kw'><a href='https://rdrr.io/r/base/switch.html'>switch</a></span><span class='op'>(</span><span class='va'>client</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span>, private<span class='op'>=</span><span class='fl'>1.12</span>, public<span class='op'>=</span><span class='fl'>1.06</span>, <span class='fl'>1</span><span class='op'>)</span>
+<span class='op'>}</span>
+<span class='va'>VAT</span>
 </div><div class='output co'>#&gt; [1] 1</div><div class='input'>
 <span class='co'># Looping without Loops: Meeting the Apply Family</span>
 
-<span class='kw'>songline</span> <span class='op'>&lt;-</span> <span class='st'>'Get out of my dreams...'</span>
-<span class='co'>for</span>(<span class='kw'>songline</span> <span class='co'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>5</span>) <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='st'>'...Get into my car!'</span>)
+<span class='va'>songline</span> <span class='op'>&lt;-</span> <span class='st'>'Get out of my dreams...'</span>
+<span class='kw'>for</span><span class='op'>(</span><span class='va'>songline</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>5</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='st'>'...Get into my car!'</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "...Get into my car!"
 #&gt; [1] "...Get into my car!"
 #&gt; [1] "...Get into my car!"
 #&gt; [1] "...Get into my car!"
 #&gt; [1] "...Get into my car!"</div><div class='input'>
-<span class='kw'>songline</span>
+<span class='va'>songline</span>
 </div><div class='output co'>#&gt; [1] 5</div><div class='input'>
 <span class='co'>## Looking at the family features</span>
 
@@ -361,22 +361,22 @@ To run all the examples of <code>ch9()</code>, use <code><a href='https://rdrr.i
 
 <span class='co'>### Counting birds</span>
 
-<span class='kw'>counts</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>3</span>,<span class='fl'>2</span>,<span class='fl'>4</span>,<span class='fl'>6</span>,<span class='fl'>5</span>,<span class='fl'>1</span>,<span class='fl'>8</span>,<span class='fl'>6</span>,<span class='fl'>1</span>), ncol=<span class='fl'>3</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span>(<span class='kw'>counts</span>) <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'sparrow'</span>,<span class='st'>'dove'</span>,<span class='st'>'crow'</span>)
-<span class='kw'>counts</span>
+<span class='va'>counts</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>3</span>,<span class='fl'>2</span>,<span class='fl'>4</span>,<span class='fl'>6</span>,<span class='fl'>5</span>,<span class='fl'>1</span>,<span class='fl'>8</span>,<span class='fl'>6</span>,<span class='fl'>1</span><span class='op'>)</span>, ncol<span class='op'>=</span><span class='fl'>3</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>counts</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'sparrow'</span>,<span class='st'>'dove'</span>,<span class='st'>'crow'</span><span class='op'>)</span>
+<span class='va'>counts</span>
 </div><div class='output co'>#&gt;      sparrow dove crow
 #&gt; [1,]       3    6    8
 #&gt; [2,]       2    5    6
 #&gt; [3,]       4    1    1</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='kw'>counts</span>, <span class='fl'>2</span>, <span class='kw'>max</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>counts</span>, <span class='fl'>2</span>, <span class='va'>max</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; sparrow    dove    crow 
 #&gt;       4       6       8 </div><div class='input'>
 <span class='co'>### Adding extra arguments</span>
 
-<span class='kw'>counts</span>[<span class='fl'>2</span>, <span class='fl'>2</span>] <span class='op'>&lt;-</span> <span class='fl'>NA</span>
-<span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='kw'>counts</span>,<span class='fl'>2</span>,<span class='kw'>max</span>)
+<span class='va'>counts</span><span class='op'>[</span><span class='fl'>2</span>, <span class='fl'>2</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='cn'>NA</span>
+<span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>counts</span>,<span class='fl'>2</span>,<span class='va'>max</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; sparrow    dove    crow 
-#&gt;       4      NA       8 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='kw'>counts</span>, <span class='fl'>2</span>, <span class='kw'>max</span>, na.rm=<span class='fl'>TRUE</span>)
+#&gt;       4      NA       8 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>counts</span>, <span class='fl'>2</span>, <span class='va'>max</span>, na.rm<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; sparrow    dove    crow 
 #&gt;       4       6       8 </div><div class='input'>
 <span class='co'>## Applying functions to listlike objects</span>
@@ -385,28 +385,28 @@ To run all the examples of <code>ch9()</code>, use <code><a href='https://rdrr.i
 
 <span class='co'>#### Using switch on vectors</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'a'</span>,<span class='st'>'b'</span>), <span class='kw'>switch</span>, a=<span class='st'>'Hello'</span>, b=<span class='st'>'Goodbye'</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'a'</span>,<span class='st'>'b'</span><span class='op'>)</span>, <span class='va'>switch</span>, a<span class='op'>=</span><span class='st'>'Hello'</span>, b<span class='op'>=</span><span class='st'>'Goodbye'</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;         a         b 
 #&gt;   "Hello" "Goodbye" </div><div class='input'>
 <span class='co'>#### Replacing a complete for loop with a single statement</span>
 
-<span class='kw'>priceCalculator</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>hours</span>, <span class='kw'>pph</span>=<span class='fl'>40</span>, <span class='kw'>client</span>){
-  <span class='kw'>net.price</span> <span class='op'>&lt;-</span> <span class='kw'>hours</span> <span class='op'>*</span> <span class='kw'>pph</span> <span class='op'>*</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='kw'>hours</span> <span class='op'>&gt;</span> <span class='fl'>100</span>, <span class='fl'>0.9</span>, <span class='fl'>1</span>)
+<span class='va'>priceCalculator</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>hours</span>, <span class='va'>pph</span><span class='op'>=</span><span class='fl'>40</span>, <span class='va'>client</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='va'>net.price</span> <span class='op'>&lt;-</span> <span class='va'>hours</span> <span class='op'>*</span> <span class='va'>pph</span> <span class='op'>*</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>hours</span> <span class='op'>&gt;</span> <span class='fl'>100</span>, <span class='fl'>0.9</span>, <span class='fl'>1</span><span class='op'>)</span>
 
-  <span class='kw'>VAT</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span>(<span class='kw'>client</span>, <span class='kw'>switch</span>, private=<span class='fl'>1.12</span>, public=<span class='fl'>1.06</span>, <span class='fl'>1</span>)
+  <span class='va'>VAT</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span><span class='op'>(</span><span class='va'>client</span>, <span class='va'>switch</span>, private<span class='op'>=</span><span class='fl'>1.12</span>, public<span class='op'>=</span><span class='fl'>1.06</span>, <span class='fl'>1</span><span class='op'>)</span>
 
-  <span class='kw'>tot.price</span> <span class='op'>&lt;-</span> <span class='kw'>net.price</span> <span class='op'>*</span> <span class='kw'>VAT</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>tot.price</span>)
-}
+  <span class='va'>tot.price</span> <span class='op'>&lt;-</span> <span class='va'>net.price</span> <span class='op'>*</span> <span class='va'>VAT</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>tot.price</span><span class='op'>)</span>
+<span class='op'>}</span>
 
 <span class='co'>### Applying a function to a data frame</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span>(<span class='kw'>clients</span>,<span class='kw'>class</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span><span class='op'>(</span><span class='va'>clients</span>,<span class='va'>class</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;       hours      public        type 
 #&gt;   "numeric"   "logical" "character" </div><div class='input'>
 <span class='co'>### Simplifying results (or not) with sapply</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span>(<span class='kw'>clients</span>, <span class='kw'>unique</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span><span class='op'>(</span><span class='va'>clients</span>, <span class='va'>unique</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; $hours
 #&gt; [1]  25 110 125  40
 #&gt; 
@@ -418,11 +418,11 @@ To run all the examples of <code>ch9()</code>, use <code><a href='https://rdrr.i
 #&gt; </div><div class='input'>
 <span class='co'>### Getting lists using lapply</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span>(<span class='kw'>clients</span>[<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>3</span>), ], <span class='kw'>unique</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span><span class='op'>(</span><span class='va'>clients</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>3</span><span class='op'>)</span>, <span class='op'>]</span>, <span class='va'>unique</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;      hours public  type     
 #&gt; [1,] "25"  "TRUE"  "public" 
 #&gt; [2,] "125" "FALSE" "private"</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='kw'>clients</span>[<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>3</span>), ], <span class='kw'>unique</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span><span class='op'>(</span><span class='va'>clients</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>3</span><span class='op'>)</span>, <span class='op'>]</span>, <span class='va'>unique</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; $hours
 #&gt; [1]  25 125
 #&gt; 

@@ -81,7 +81,7 @@ To run all the examples of ch20(), use example(ch20)." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rfordummies</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5.9000</span>
       </span>
     </div>
 
@@ -89,7 +89,7 @@ To run all the examples of ch20(), use example(ch20)." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -103,7 +103,7 @@ To run all the examples of ch20(), use example(ch20)." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/andrie/rfordummies/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -130,7 +130,7 @@ To run all the examples of ch20(), use example(ch20)." />
 To run all the examples of <code>ch20()</code>, use <code><a href='https://rdrr.io/r/utils/example.html'>example(ch20)</a></code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>ch20</span>()</pre>
+    <pre class="usage"><span class='fu'>ch20</span><span class='op'>(</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
@@ -162,54 +162,54 @@ To run all the examples of <code>ch20()</code>, use <code><a href='https://rdrr.
 
 <span class='co'>## Poking Around the Nooks and Crannies of CRAN</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/options.html'>options</a></span>(<span class='st'>"repos"</span> = <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(CRAN = <span class='st'>"http://cran.ma.imperial.ac.uk/"</span>))
+<span class='fu'><a href='https://rdrr.io/r/base/options.html'>options</a></span><span class='op'>(</span><span class='st'>"repos"</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span>CRAN <span class='op'>=</span> <span class='st'>"http://cran.ma.imperial.ac.uk/"</span><span class='op'>)</span><span class='op'>)</span>
 
 <span class='co'>## Finding Interesting Packages</span>
 
 <span class='co'>## Installing Packages</span>
 
-<span class='co'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span>(<span class='st'>"fortunes"</span>)
-}
+<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"fortunes"</span><span class='op'>)</span>
+<span class='op'>}</span>
 
 <span class='co'>## Loading Packages</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='st'>"fortunes"</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'>"fortunes"</span><span class='op'>)</span>
 
 <span class='co'>## Reading the Package Manual and Vignette</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(help=<span class='kw'>fortunes</span>)
-<span class='co'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'><a href='https://rdrr.io/r/utils/vignette.html'>vignette</a></span>(<span class='st'>"fortunes"</span>)
-}
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span>help<span class='op'>=</span><span class='va'>fortunes</span><span class='op'>)</span>
+<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/vignette.html'>vignette</a></span><span class='op'>(</span><span class='st'>"fortunes"</span><span class='op'>)</span>
+<span class='op'>}</span>
 
 <span class='co'>## Updating Packages</span>
 
-<span class='co'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'><a href='https://rdrr.io/r/utils/update.packages.html'>update.packages</a></span>()
-}
+<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/update.packages.html'>update.packages</a></span><span class='op'>(</span><span class='op'>)</span>
+<span class='op'>}</span>
 
 <span class='co'>## Unloading Packages</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/search.html'>search</a></span>()
+<span class='fu'><a href='https://rdrr.io/r/base/search.html'>search</a></span><span class='op'>(</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;  [1] ".GlobalEnv"          "package:fortunes"    "package:ggplot2"    
 #&gt;  [4] "package:reshape2"    "package:lattice"     "package:sos"        
 #&gt;  [7] "package:brew"        "package:stringr"     "package:rfordummies"
 #&gt; [10] "package:stats"       "package:graphics"    "package:grDevices"  
 #&gt; [13] "package:utils"       "package:datasets"    "package:methods"    
-#&gt; [16] "Autoloads"           "package:base"       </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/detach.html'>detach</a></span>(<span class='kw'>package</span><span class='op'>:</span><span class='kw'>fortunes</span>, unload=<span class='fl'>TRUE</span>)
+#&gt; [16] "Autoloads"           "package:base"       </div><div class='input'><span class='kw'><a href='https://rdrr.io/r/base/detach.html'>detach</a></span><span class='op'>(</span><span class='va'>package</span><span class='op'>:</span><span class='va'>fortunes</span>, unload<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
 
 <span class='co'>## Forging Ahead with R-Forge</span>
 
-<span class='co'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span>(<span class='st'>"data.table"</span>, repos=<span class='st'>"http://R-Forge.R-project.org"</span>)
-}
+<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"data.table"</span>, repos<span class='op'>=</span><span class='st'>"http://R-Forge.R-project.org"</span><span class='op'>)</span>
+<span class='op'>}</span>
 
 <span class='co'>## Conducting Installations from BioConductor</span>
 
-<span class='co'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'><a href='https://rdrr.io/r/base/source.html'>source</a></span>(<span class='st'>"http://bioconductor.org/biocLite.R"</span>)
-}
+<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='kw'><a href='https://rdrr.io/r/base/source.html'>source</a></span><span class='op'>(</span><span class='st'>"http://bioconductor.org/biocLite.R"</span><span class='op'>)</span>
+<span class='op'>}</span>
 
 <span class='co'>## Reading the R Manual</span>
 

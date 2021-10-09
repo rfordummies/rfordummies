@@ -81,7 +81,7 @@ To run all the examples of ch3(), use example(ch3)." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rfordummies</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5.9000</span>
       </span>
     </div>
 
@@ -89,7 +89,7 @@ To run all the examples of ch3(), use example(ch3)." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -103,7 +103,7 @@ To run all the examples of ch3(), use example(ch3)." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/andrie/rfordummies/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -130,9 +130,9 @@ To run all the examples of ch3(), use example(ch3)." />
 To run all the examples of <code>ch3()</code>, use <code><a href='https://rdrr.io/r/utils/example.html'>example(ch3)</a></code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>ch03</span>()
+    <pre class="usage"><span class='fu'>ch03</span><span class='op'>(</span><span class='op'>)</span>
 
-<span class='fu'>ch3</span>()</pre>
+<span class='fu'>ch3</span><span class='op'>(</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
@@ -166,35 +166,35 @@ To run all the examples of <code>ch3()</code>, use <code><a href='https://rdrr.i
 
 <span class='co'>## Vectorizing your functions</span>
 
-<span class='kw'>baskets.of.Granny</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>12</span>,<span class='fl'>4</span>,<span class='fl'>4</span>,<span class='fl'>6</span>,<span class='fl'>9</span>,<span class='fl'>3</span>)
-<span class='kw'>baskets.of.Granny</span>
-</div><div class='output co'>#&gt; [1] 12  4  4  6  9  3</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='kw'>baskets.of.Granny</span>)
+<span class='va'>baskets.of.Granny</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>12</span>,<span class='fl'>4</span>,<span class='fl'>4</span>,<span class='fl'>6</span>,<span class='fl'>9</span>,<span class='fl'>3</span><span class='op'>)</span>
+<span class='va'>baskets.of.Granny</span>
+</div><div class='output co'>#&gt; [1] 12  4  4  6  9  3</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>baskets.of.Granny</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] 38</div><div class='input'>
-<span class='kw'>firstnames</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Joris"</span>, <span class='st'>"Carolien"</span>, <span class='st'>"Koen"</span>)
-<span class='kw'>lastname</span> <span class='op'>&lt;-</span> <span class='st'>"Meys"</span>
-<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='kw'>firstnames</span>,<span class='kw'>lastname</span>)
+<span class='va'>firstnames</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Joris"</span>, <span class='st'>"Carolien"</span>, <span class='st'>"Koen"</span><span class='op'>)</span>
+<span class='va'>lastname</span> <span class='op'>&lt;-</span> <span class='st'>"Meys"</span>
+<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>firstnames</span>,<span class='va'>lastname</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "Joris Meys"    "Carolien Meys" "Koen Meys"    </div><div class='input'>
-<span class='kw'>authors</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Andrie"</span>,<span class='st'>"Joris"</span>)
-<span class='kw'>lastnames</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"de Vries"</span>,<span class='st'>"Meys"</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='kw'>authors</span>,<span class='kw'>lastnames</span>)
+<span class='va'>authors</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Andrie"</span>,<span class='st'>"Joris"</span><span class='op'>)</span>
+<span class='va'>lastnames</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"de Vries"</span>,<span class='st'>"Meys"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>authors</span>,<span class='va'>lastnames</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "Andrie de Vries" "Joris Meys"     </div><div class='input'>
 <span class='co'>## Putting the argument in a function</span>
 
 <span class='co'># print() ### This line of code leads to deliberate error for illustration</span>
-<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(x = <span class='st'>"Isn't this fun?"</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span>x <span class='op'>=</span> <span class='st'>"Isn't this fun?"</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "Isn't this fun?"</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(digits=<span class='fl'>4</span>, x = <span class='fl'>11</span><span class='op'>/</span><span class='fl'>7</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span>digits<span class='op'>=</span><span class='fl'>4</span>, x <span class='op'>=</span> <span class='fl'>11</span><span class='op'>/</span><span class='fl'>7</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] 1.571</div><div class='input'>
 <span class='co'># Making history</span>
 
-<span class='kw'>filename</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>(), <span class='st'>"Chapter3.Rhistory"</span>)
-<span class='co'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'><a href='https://rdrr.io/r/utils/savehistory.html'>savehistory</a></span>(file = <span class='kw'>filename</span>)
-}
-<span class='fu'><a href='https://rdrr.io/r/base/list.files.html'>list.files</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>(), pattern = <span class='st'>".Rhistory"</span>)
-</div><div class='output co'>#&gt; character(0)</div><div class='input'><span class='co'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'><a href='https://rdrr.io/r/utils/savehistory.html'>loadhistory</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>(), <span class='st'>"Chapter3.Rhistory"</span>))
-}
+<span class='va'>filename</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span><span class='op'>(</span><span class='op'>)</span>, <span class='st'>"Chapter3.Rhistory"</span><span class='op'>)</span>
+<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/savehistory.html'>savehistory</a></span><span class='op'>(</span>file <span class='op'>=</span> <span class='va'>filename</span><span class='op'>)</span>
+<span class='op'>}</span>
+<span class='fu'><a href='https://rdrr.io/r/base/list.files.html'>list.files</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span><span class='op'>(</span><span class='op'>)</span>, pattern <span class='op'>=</span> <span class='st'>".Rhistory"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; character(0)</div><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/savehistory.html'>loadhistory</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span><span class='op'>(</span><span class='op'>)</span>, <span class='st'>"Chapter3.Rhistory"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='op'>}</span>
 
 <span class='co'># Keeping Your Code Readable</span>
 
@@ -202,39 +202,39 @@ To run all the examples of <code>ch3()</code>, use <code><a href='https://rdrr.i
 
 <span class='co'>## Choosing a clear name</span>
 
-<span class='kw'>paste</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='st'>"This gets"</span>,<span class='st'>"confusing"</span>)
-<span class='kw'>paste</span>
-</div><div class='output co'>#&gt; [1] "This gets confusing"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='st'>"Don't"</span>,<span class='st'>"you"</span>,<span class='st'>"think?"</span>)
+<span class='va'>paste</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"This gets"</span>,<span class='st'>"confusing"</span><span class='op'>)</span>
+<span class='va'>paste</span>
+</div><div class='output co'>#&gt; [1] "This gets confusing"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"Don't"</span>,<span class='st'>"you"</span>,<span class='st'>"think?"</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "Don't you think?"</div><div class='input'>
 <span class='co'>## Choosing a naming style</span>
 
 <span class='co'>## Structuring your code</span>
 
-<span class='kw'>baskets.of.Geraldine</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>5</span>,<span class='fl'>3</span>,<span class='fl'>2</span>,<span class='fl'>2</span>,<span class='fl'>12</span>,<span class='fl'>9</span>)
-<span class='kw'>Intro</span> <span class='op'>&lt;-</span> <span class='st'>"It is amazing! The All Star Grannies scored
+<span class='va'>baskets.of.Geraldine</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>,<span class='fl'>3</span>,<span class='fl'>2</span>,<span class='fl'>2</span>,<span class='fl'>12</span>,<span class='fl'>9</span><span class='op'>)</span>
+<span class='va'>Intro</span> <span class='op'>&lt;-</span> <span class='st'>"It is amazing! The All Star Grannies scored
 a total of"</span>
 
-<span class='kw'>Outro</span> <span class='op'>&lt;-</span> <span class='st'>"baskets in the last six games!"</span>
+<span class='va'>Outro</span> <span class='op'>&lt;-</span> <span class='st'>"baskets in the last six games!"</span>
 
-<span class='kw'>Total.baskets</span> <span class='op'>&lt;-</span> <span class='kw'>baskets.of.Granny</span> <span class='op'>+</span>
-               <span class='kw'>baskets.of.Geraldine</span>
+<span class='va'>Total.baskets</span> <span class='op'>&lt;-</span> <span class='va'>baskets.of.Granny</span> <span class='op'>+</span>
+               <span class='va'>baskets.of.Geraldine</span>
 
-<span class='kw'>Text</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='kw'>Intro</span>,
-              <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='kw'>Total.baskets</span>),
-              <span class='kw'>Outro</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span>(<span class='kw'>Text</span>)
+<span class='va'>Text</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>Intro</span>,
+              <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>Total.baskets</span><span class='op'>)</span>,
+              <span class='va'>Outro</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='va'>Text</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; It is amazing! The All Star Grannies scored
-#&gt; a total of 71 baskets in the last six games!</div><div class='input'><span class='kw'>Text</span>
+#&gt; a total of 71 baskets in the last six games!</div><div class='input'><span class='va'>Text</span>
 </div><div class='output co'>#&gt; [1] "It is amazing! The All Star Grannies scored\na total of 71 baskets in the last six games!"</div><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span>(<span class='st'>'If you doubt whether it works,
-+ just try it out.'</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>'If you doubt whether it works,
++ just try it out.'</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; If you doubt whether it works,
 #&gt; + just try it out.</div><div class='input'>
 <span class='co'>## Adding comments</span>
 
 <span class='co'># The All Star Grannies do it again!</span>
-<span class='kw'>baskets.of.Granny</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>12</span>,<span class='fl'>4</span>,<span class='fl'>4</span>,<span class='fl'>6</span>,<span class='fl'>9</span>,<span class='fl'>3</span>) <span class='co'># Granny rules</span>
-<span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='kw'>baskets.of.Granny</span>) <span class='co'># total number of points</span>
+<span class='va'>baskets.of.Granny</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>12</span>,<span class='fl'>4</span>,<span class='fl'>4</span>,<span class='fl'>6</span>,<span class='fl'>9</span>,<span class='fl'>3</span><span class='op'>)</span> <span class='co'># Granny rules</span>
+<span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>baskets.of.Granny</span><span class='op'>)</span> <span class='co'># total number of points</span>
 </div><div class='output co'>#&gt; [1] 38</div><div class='input'>
 
 <span class='co'># Getting from Base R to More</span>
@@ -243,19 +243,19 @@ a total of"</span>
 
 <span class='co'>## Installing packages</span>
 
-<span class='co'>if</span> (<span class='fl'>FALSE</span>) {
-<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span>(<span class='st'>"fortunes"</span>)
-}
+<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/install.packages.html'>install.packages</a></span><span class='op'>(</span><span class='st'>"fortunes"</span><span class='op'>)</span>
+<span class='op'>}</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='st'>"fortunes"</span>)
-<span class='fu'><a href='https://rdrr.io/pkg/fortunes/man/fortunes.html'>fortune</a></span>(<span class='st'>"This is R"</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='st'>"fortunes"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/fortunes/man/fortunes.html'>fortune</a></span><span class='op'>(</span><span class='st'>"This is R"</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; 
 #&gt; Evelyn Hall: I would like to know how (if) I can extract some of the
 #&gt; information from the summary of my nlme.
 #&gt; Simon Blomberg: This is R. There is no if. Only how.
 #&gt;    -- Evelyn Hall and Simon 'Yoda' Blomberg
 #&gt;       R-help (April 2005)
-#&gt; </div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/fortunes/man/fortunes.html'>fortune</a></span>(<span class='fl'>161</span>)
+#&gt; </div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/fortunes/man/fortunes.html'>fortune</a></span><span class='op'>(</span><span class='fl'>161</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; 
 #&gt; (3 times...rrrrgh...) and why do you think the mailing list is called
 #&gt; R-*packages* ???????????
@@ -264,7 +264,7 @@ a total of"</span>
 #&gt;    -- Martin Maechler (after a newly released *package* has been called
 #&gt;       *library* three times in its announcement on R-packages)
 #&gt;       R-help (March 2006)
-#&gt; </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/detach.html'>detach</a></span>(<span class='kw'>package</span><span class='op'>:</span><span class='kw'>fortunes</span>)
+#&gt; </div><div class='input'><span class='kw'><a href='https://rdrr.io/r/base/detach.html'>detach</a></span><span class='op'>(</span><span class='va'>package</span><span class='op'>:</span><span class='va'>fortunes</span><span class='op'>)</span>
 
 </div></pre>
   </div>

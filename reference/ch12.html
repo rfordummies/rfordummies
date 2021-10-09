@@ -81,7 +81,7 @@ To run all the examples of ch12(), use example(ch12)." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rfordummies</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5.9000</span>
       </span>
     </div>
 
@@ -89,7 +89,7 @@ To run all the examples of ch12(), use example(ch12)." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -103,7 +103,7 @@ To run all the examples of ch12(), use example(ch12)." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/andrie/rfordummies/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -130,7 +130,7 @@ To run all the examples of ch12(), use example(ch12)." />
 To run all the examples of <code>ch12()</code>, use <code><a href='https://rdrr.io/r/utils/example.html'>example(ch12)</a></code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>ch12</span>()</pre>
+    <pre class="usage"><span class='fu'>ch12</span><span class='op'>(</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
@@ -169,7 +169,7 @@ To run all the examples of <code>ch12()</code>, use <code><a href='https://rdrr.
 
 <span class='co'>## Entering data in the R text editor</span>
 
-<span class='kw'>elements</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>()
+<span class='va'>elements</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='op'>)</span>
 <span class='co'># elements &lt;- edit(elements)</span>
 
 <span class='co'># print(elements)</span>
@@ -177,13 +177,13 @@ To run all the examples of <code>ch12()</code>, use <code><a href='https://rdrr.
 <span class='co'>## Using the Clipboard to copy and paste</span>
 <span class='co'># Reminder : This only works on Windows</span>
 
-<span class='co'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
 <span class='co'># x &lt;- readClipboard()</span>
-}
+<span class='op'>}</span>
 <span class='co'># x</span>
-<span class='co'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
 <span class='co'># x &lt;- readClipboard()</span>
-}
+<span class='op'>}</span>
 <span class='co'># x</span>
 <span class='co'># x &lt;- read.table(file = "clipboard", sep = "\t", header=TRUE)</span>
 <span class='co'># x</span>
@@ -200,9 +200,9 @@ To run all the examples of <code>ch12()</code>, use <code><a href='https://rdrr.
 <span class='co'>### Using read.table() to import tabular data in text files</span>
 
 <span class='co'>## Reading data from Excel</span>
-<span class='co'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
 <span class='co'># install.packages("XLConnect")</span>
-}
+<span class='op'>}</span>
 <span class='co'># library("XLConnect")</span>
 <span class='co'># excel.file &lt;- file.path("~/Elements.xlsx")</span>
 
@@ -224,34 +224,33 @@ To run all the examples of <code>ch12()</code>, use <code><a href='https://rdrr.
 <span class='co'># Working with Files and Folders</span>
 
 <span class='co'>## Understanding the working directory</span>
-<span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>getwd</a></span>()
-</div><div class='output co'>#&gt; [1] "/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpuOsDmm/filee7d6a7c6241/reference"</div><div class='input'>
+<span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>getwd</a></span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "/private/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T/RtmpPEAorB/filec044e28f3ae/reference"</div><div class='input'>
 <span class='co'># setwd("F:/git/roxygen2")</span>
 <span class='co'># getwd()</span>
 <span class='co'># setwd("F:\git\stringr")</span>
 <span class='co'># getwd()</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span>(<span class='st'>"f:"</span>, <span class='st'>"git"</span>, <span class='st'>"surveyor"</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span><span class='op'>(</span><span class='st'>"f:"</span>, <span class='st'>"git"</span>, <span class='st'>"surveyor"</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "f:/git/surveyor"</div><div class='input'>
 <span class='co'># setwd(file.path("F:", "git", "roxygen2"))</span>
 <span class='co'># getwd()</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span>(<span class='st'>"F:"</span>, <span class='st'>"git"</span>, <span class='st'>"roxygen2"</span>, <span class='st'>"roxygen2"</span>, <span class='st'>"README.md"</span> )
+<span class='fu'><a href='https://rdrr.io/r/base/file.path.html'>file.path</a></span><span class='op'>(</span><span class='st'>"F:"</span>, <span class='st'>"git"</span>, <span class='st'>"roxygen2"</span>, <span class='st'>"roxygen2"</span>, <span class='st'>"README.md"</span> <span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "F:/git/roxygen2/roxygen2/README.md"</div><div class='input'>
 <span class='co'>## Manipulating files</span>
 
 <span class='co'># list.files(file.path("F:", "git", "roxygen2"))</span>
-<span class='kw'>my.file</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span>()
-<span class='kw'>my.file</span>
-</div><div class='output co'>#&gt; [1] "/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpuOsDmm/filee7d31143447"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/write.table.html'>write.csv</a></span>(<span class='kw'>iris</span>, file=<span class='kw'>my.file</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/list.files.html'>list.files</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>())
-</div><div class='output co'>#&gt; [1] "callr-env-e7dc16d005" "downlit"              "filee7d31143447"     
-#&gt; [4] "filee7d6a7c6241"     </div><div class='input'>
-<span class='kw'>file.iris</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/utils/read.table.html'>read.csv</a></span>(<span class='kw'>my.file</span>)
+<span class='va'>my.file</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempfile</a></span><span class='op'>(</span><span class='op'>)</span>
+<span class='va'>my.file</span>
+</div><div class='output co'>#&gt; [1] "/var/folders/24/8k48jl6d249_n_qfxwsl6xvm0000gn/T//RtmpPEAorB/filec046d3bb426"</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/write.table.html'>write.csv</a></span><span class='op'>(</span><span class='va'>iris</span>, file<span class='op'>=</span><span class='va'>my.file</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/list.files.html'>list.files</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "downlit"         "filec044e28f3ae" "filec046d3bb426"</div><div class='input'>
+<span class='va'>file.iris</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/utils/read.table.html'>read.csv</a></span><span class='op'>(</span><span class='va'>my.file</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/files.html'>file.remove</a></span>(<span class='kw'>my.file</span>)
-</div><div class='output co'>#&gt; [1] TRUE</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/list.files.html'>list.files</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>())
-</div><div class='output co'>#&gt; [1] "callr-env-e7dc16d005" "downlit"              "filee7d6a7c6241"     </div><div class='input'>
+<span class='fu'><a href='https://rdrr.io/r/base/files.html'>file.remove</a></span><span class='op'>(</span><span class='va'>my.file</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] TRUE</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/list.files.html'>list.files</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "downlit"         "filec044e28f3ae"</div><div class='input'>
 
 </div></pre>
   </div>

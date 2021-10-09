@@ -81,7 +81,7 @@ To run all the examples of ch8(), use example(ch8)." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rfordummies</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.5.9000</span>
       </span>
     </div>
 
@@ -89,7 +89,7 @@ To run all the examples of ch8(), use example(ch8)." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -103,7 +103,7 @@ To run all the examples of ch8(), use example(ch8)." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/andrie/rfordummies/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -130,9 +130,9 @@ To run all the examples of ch8(), use example(ch8)." />
 To run all the examples of <code>ch8()</code>, use <code><a href='https://rdrr.io/r/utils/example.html'>example(ch8)</a></code>.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>ch08</span>()
+    <pre class="usage"><span class='fu'>ch08</span><span class='op'>(</span><span class='op'>)</span>
 
-<span class='fu'>ch8</span>()</pre>
+<span class='fu'>ch8</span><span class='op'>(</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
@@ -167,138 +167,138 @@ To run all the examples of <code>ch8()</code>, use <code><a href='https://rdrr.i
 
 <span class='co'>## Making the script</span>
 
-<span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0.458</span>, <span class='fl'>1.6653</span>, <span class='fl'>0.83112</span>)
-<span class='kw'>percent</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>x</span> <span class='op'>*</span> <span class='fl'>100</span>, digits = <span class='fl'>1</span>)
-<span class='kw'>result</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='kw'>percent</span>, <span class='st'>"%"</span>, sep = <span class='st'>""</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='kw'>result</span>)
+<span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0.458</span>, <span class='fl'>1.6653</span>, <span class='fl'>0.83112</span><span class='op'>)</span>
+<span class='va'>percent</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>*</span> <span class='fl'>100</span>, digits <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
+<span class='va'>result</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>percent</span>, <span class='st'>"%"</span>, sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>result</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "45.8%"  "166.5%" "83.1%" </div><div class='input'>
-<span class='co'>if</span> (<span class='fl'>FALSE</span>) {
+<span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>{</span>
 <span class='co'># source('pastePercent.R') # Only after saving</span>
-}
+<span class='op'>}</span>
 
 <span class='co'>## Transforming the script</span>
 
-<span class='kw'>addPercent</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>){
-  <span class='kw'>percent</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>x</span> <span class='op'>*</span> <span class='fl'>100</span>, digits = <span class='fl'>1</span>)
-  <span class='kw'>result</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='kw'>percent</span>, <span class='st'>"%"</span>, sep = <span class='st'>""</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/function.html'>return</a></span>(<span class='kw'>result</span>)
-}
+<span class='va'>addPercent</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='va'>percent</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>*</span> <span class='fl'>100</span>, digits <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
+  <span class='va'>result</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>percent</span>, <span class='st'>"%"</span>, sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='va'>result</span><span class='op'>)</span>
+<span class='op'>}</span>
 
 <span class='co'>## Using the function</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/ls.html'>ls</a></span>()
+<span class='fu'><a href='https://rdrr.io/r/base/ls.html'>ls</a></span><span class='op'>(</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "addPercent" "percent"    "result"     "x"         </div><div class='input'>
 <span class='co'>### Formatting the numbers</span>
 
-<span class='kw'>new.numbers</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0.8223</span>, <span class='fl'>0.02487</span>, <span class='fl'>1.62</span>, <span class='fl'>0.4</span>)
-<span class='fu'>addPercent</span>(<span class='kw'>new.numbers</span>)
+<span class='va'>new.numbers</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0.8223</span>, <span class='fl'>0.02487</span>, <span class='fl'>1.62</span>, <span class='fl'>0.4</span><span class='op'>)</span>
+<span class='fu'>addPercent</span><span class='op'>(</span><span class='va'>new.numbers</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "82.2%" "2.5%"  "162%"  "40%"  </div><div class='input'>
 <span class='co'>### Playing with function objects</span>
 
-<span class='kw'>ppaste</span> <span class='op'>&lt;-</span> <span class='kw'>addPercent</span>
-<span class='kw'>ppaste</span>
+<span class='va'>ppaste</span> <span class='op'>&lt;-</span> <span class='va'>addPercent</span>
+<span class='va'>ppaste</span>
 </div><div class='output co'>#&gt; function(x){
 #&gt;   percent &lt;- round(x * 100, digits = 1)
 #&gt;   result &lt;- paste(percent, "%", sep = "")
 #&gt;   return(result)
 #&gt; }
-#&gt; &lt;environment: 0x7fb015215878&gt;</div><div class='input'>
+#&gt; &lt;environment: 0x7fd32f9d2980&gt;</div><div class='input'>
 <span class='co'>## Reducing the number of lines</span>
 
 <span class='co'>### Returning values by default</span>
 
 <span class='co'># AddPercent function without last return - not written in book</span>
-<span class='kw'>addPercent</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>){
-  <span class='kw'>percent</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>x</span> <span class='op'>*</span> <span class='fl'>100</span>, digits = <span class='fl'>1</span>)
-  <span class='kw'>result</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='kw'>percent</span>, <span class='st'>"%"</span>, sep = <span class='st'>""</span>)
-}
+<span class='va'>addPercent</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='va'>percent</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>*</span> <span class='fl'>100</span>, digits <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
+  <span class='va'>result</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>percent</span>, <span class='st'>"%"</span>, sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span>
+<span class='op'>}</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>( <span class='fu'>addPercent</span>(<span class='kw'>new.numbers</span>) )
+<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span> <span class='fu'>addPercent</span><span class='op'>(</span><span class='va'>new.numbers</span><span class='op'>)</span> <span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "82.2%" "2.5%"  "162%"  "40%"  </div><div class='input'>
-<span class='kw'>addPercent</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>){
-  <span class='kw'>percent</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>x</span> <span class='op'>*</span> <span class='fl'>100</span>, digits = <span class='fl'>1</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='kw'>percent</span>, <span class='st'>"%"</span>, sep = <span class='st'>""</span>)
-}
+<span class='va'>addPercent</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='va'>percent</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>*</span> <span class='fl'>100</span>, digits <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>percent</span>, <span class='st'>"%"</span>, sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span>
+<span class='op'>}</span>
 
-<span class='kw'>addPercent</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>){
-  <span class='co'>if</span>( <span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>is.numeric</a></span>(<span class='kw'>x</span>) ) <span class='fu'><a href='https://rdrr.io/r/base/function.html'>return</a></span>(<span class='kw'>NULL</span>)
-  <span class='kw'>percent</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>x</span> <span class='op'>*</span> <span class='fl'>100</span>, digits = <span class='fl'>1</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='kw'>percent</span>, <span class='st'>"%"</span>, sep = <span class='st'>""</span>)
-}
+<span class='va'>addPercent</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='kw'>if</span><span class='op'>(</span> <span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>is.numeric</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>)</span> <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='cn'>NULL</span><span class='op'>)</span>
+  <span class='va'>percent</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>*</span> <span class='fl'>100</span>, digits <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>percent</span>, <span class='st'>"%"</span>, sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span>
+<span class='op'>}</span>
 
 <span class='co'>### Breaking the walls</span>
 
-<span class='kw'>odds</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>) <span class='kw'>x</span> <span class='op'>/</span> (<span class='fl'>1</span><span class='op'>-</span><span class='kw'>x</span>)
+<span class='va'>odds</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='va'>x</span> <span class='op'>/</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>-</span><span class='va'>x</span><span class='op'>)</span>
 
-<span class='fu'>odds</span>(<span class='fl'>0.8</span>)
+<span class='fu'>odds</span><span class='op'>(</span><span class='fl'>0.8</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] 4</div><div class='input'>
-<span class='kw'>addPercent</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>) <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>x</span> <span class='op'>*</span> <span class='fl'>100</span>, digits = <span class='fl'>1</span>), <span class='st'>"%"</span>, sep = <span class='st'>""</span>)
+<span class='va'>addPercent</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>*</span> <span class='fl'>100</span>, digits <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>, <span class='st'>"%"</span>, sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span>
 
 <span class='co'># Using Arguments the Smart Way</span>
 
 <span class='co'>## Adding more arguments</span>
 
-<span class='kw'>percentages</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>58.23</span>, <span class='fl'>120.4</span>, <span class='fl'>33</span>)
-<span class='fu'>addPercent</span>(<span class='kw'>percentages</span><span class='op'>/</span><span class='fl'>100</span>)
+<span class='va'>percentages</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>58.23</span>, <span class='fl'>120.4</span>, <span class='fl'>33</span><span class='op'>)</span>
+<span class='fu'>addPercent</span><span class='op'>(</span><span class='va'>percentages</span><span class='op'>/</span><span class='fl'>100</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "58.2%"  "120.4%" "33%"   </div><div class='input'>
 <span class='co'>### Adding the mult argument</span>
 
-<span class='kw'>addPercent</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>, <span class='kw'>mult</span>){
-  <span class='kw'>percent</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>x</span> <span class='op'>*</span> <span class='kw'>mult</span>, digits = <span class='fl'>1</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='kw'>percent</span>, <span class='st'>"%"</span>, sep = <span class='st'>""</span>)
-}
+<span class='va'>addPercent</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>mult</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='va'>percent</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>*</span> <span class='va'>mult</span>, digits <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>percent</span>, <span class='st'>"%"</span>, sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span>
+<span class='op'>}</span>
 
-<span class='fu'>addPercent</span>(<span class='kw'>percentages</span>, mult = <span class='fl'>1</span>)
+<span class='fu'>addPercent</span><span class='op'>(</span><span class='va'>percentages</span>, mult <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "58.2%"  "120.4%" "33%"   </div><div class='input'>
 <span class='co'>### Adding a default value</span>
 
 <span class='co'># addPercent(new.numbers) # Gives error for illustrative purposes</span>
 <span class='co'># Error in x * mult : 'mult' is missing</span>
 
-<span class='kw'>addPercent</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>, <span class='kw'>mult</span> = <span class='fl'>100</span>){
-  <span class='kw'>percent</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>x</span> <span class='op'>*</span> <span class='kw'>mult</span>, digits = <span class='fl'>1</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='kw'>percent</span>, <span class='st'>"%"</span>, sep = <span class='st'>""</span>)
-}
+<span class='va'>addPercent</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>mult</span> <span class='op'>=</span> <span class='fl'>100</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='va'>percent</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>*</span> <span class='va'>mult</span>, digits <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>percent</span>, <span class='st'>"%"</span>, sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span>
+<span class='op'>}</span>
 
-<span class='fu'>addPercent</span>(<span class='kw'>new.numbers</span>)
+<span class='fu'>addPercent</span><span class='op'>(</span><span class='va'>new.numbers</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "82.2%" "2.5%"  "162%"  "40%"  </div><div class='input'>
-<span class='fu'>addPercent</span>(<span class='kw'>percentages</span>, <span class='fl'>1</span>)
+<span class='fu'>addPercent</span><span class='op'>(</span><span class='va'>percentages</span>, <span class='fl'>1</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "58.2%"  "120.4%" "33%"   </div><div class='input'>
 <span class='co'>## Conjuring tricks with dots</span>
 
-<span class='kw'>addPercent</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>, <span class='kw'>mult</span> = <span class='fl'>100</span>, <span class='kw'>...</span>){
-  <span class='kw'>percent</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>x</span> <span class='op'>*</span> <span class='kw'>mult</span>, <span class='kw'>...</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='kw'>percent</span>, <span class='st'>"%"</span>, sep = <span class='st'>""</span>)
-}
+<span class='va'>addPercent</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>mult</span> <span class='op'>=</span> <span class='fl'>100</span>, <span class='va'>...</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='va'>percent</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>*</span> <span class='va'>mult</span>, <span class='va'>...</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>percent</span>, <span class='st'>"%"</span>, sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span>
+<span class='op'>}</span>
 
-<span class='fu'>addPercent</span>(<span class='kw'>new.numbers</span>, digits = <span class='fl'>2</span>)
-</div><div class='output co'>#&gt; [1] "82.23%" "2.49%"  "162%"   "40%"   </div><div class='input'><span class='fu'>addPercent</span>(<span class='kw'>new.numbers</span>)
+<span class='fu'>addPercent</span><span class='op'>(</span><span class='va'>new.numbers</span>, digits <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] "82.23%" "2.49%"  "162%"   "40%"   </div><div class='input'><span class='fu'>addPercent</span><span class='op'>(</span><span class='va'>new.numbers</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "82%"  "2%"   "162%" "40%" </div><div class='input'>
 
-<span class='kw'>addPercent</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>, <span class='kw'>mult</span> = <span class='fl'>100</span>, <span class='kw'>digits</span> = <span class='fl'>1</span>){
-  <span class='kw'>percent</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>x</span> <span class='op'>*</span> <span class='kw'>mult</span>, digits = <span class='kw'>digits</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='kw'>percent</span>, <span class='st'>"%"</span>, sep = <span class='st'>""</span>)
-}
+<span class='va'>addPercent</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>mult</span> <span class='op'>=</span> <span class='fl'>100</span>, <span class='va'>digits</span> <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='va'>percent</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>*</span> <span class='va'>mult</span>, digits <span class='op'>=</span> <span class='va'>digits</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>percent</span>, <span class='st'>"%"</span>, sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span>
+<span class='op'>}</span>
 
 <span class='co'>## Using functions as arguments</span>
 
 <span class='co'>### Applying different ways of rounding</span>
 
-<span class='kw'>addPercent</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>, <span class='kw'>mult</span> = <span class='fl'>100</span>, <span class='kw'>FUN</span> = <span class='kw'>round</span>, <span class='kw'>...</span>){
-  <span class='kw'>percent</span> <span class='op'>&lt;-</span> <span class='fu'>FUN</span>(<span class='kw'>x</span> <span class='op'>*</span> <span class='kw'>mult</span>, <span class='kw'>...</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='kw'>percent</span>, <span class='st'>"%"</span>, sep = <span class='st'>""</span>)
-}
+<span class='va'>addPercent</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>mult</span> <span class='op'>=</span> <span class='fl'>100</span>, <span class='va'>FUN</span> <span class='op'>=</span> <span class='va'>round</span>, <span class='va'>...</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='va'>percent</span> <span class='op'>&lt;-</span> <span class='fu'>FUN</span><span class='op'>(</span><span class='va'>x</span> <span class='op'>*</span> <span class='va'>mult</span>, <span class='va'>...</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>percent</span>, <span class='st'>"%"</span>, sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span>
+<span class='op'>}</span>
 
-<span class='fu'>addPercent</span>(<span class='kw'>new.numbers</span>, FUN = <span class='kw'>signif</span>, digits = <span class='fl'>3</span>)
+<span class='fu'>addPercent</span><span class='op'>(</span><span class='va'>new.numbers</span>, FUN <span class='op'>=</span> <span class='va'>signif</span>, digits <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "82.2%" "2.49%" "162%"  "40%"  </div><div class='input'>
 <span class='co'>### Using anonymous functions</span>
 
-<span class='kw'>profits</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>2100</span>, <span class='fl'>1430</span>, <span class='fl'>3580</span>, <span class='fl'>5230</span>)
-<span class='kw'>rel.profit</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>) <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>x</span> <span class='op'>/</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='kw'>x</span>) <span class='op'>*</span> <span class='fl'>100</span>)
-<span class='fu'>addPercent</span>(<span class='kw'>profits</span>,
-                FUN = <span class='fu'>function</span>(<span class='kw'>x</span>) <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='kw'>x</span> <span class='op'>/</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='kw'>x</span>) <span class='op'>*</span> <span class='fl'>100</span>) )
+<span class='va'>profits</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2100</span>, <span class='fl'>1430</span>, <span class='fl'>3580</span>, <span class='fl'>5230</span><span class='op'>)</span>
+<span class='va'>rel.profit</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>/</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>*</span> <span class='fl'>100</span><span class='op'>)</span>
+<span class='fu'>addPercent</span><span class='op'>(</span><span class='va'>profits</span>,
+                FUN <span class='op'>=</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>/</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>*</span> <span class='fl'>100</span><span class='op'>)</span> <span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "17%" "12%" "29%" "42%"</div><div class='input'>
-<span class='fu'>addPercent</span>(<span class='kw'>profits</span> <span class='op'>/</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='kw'>profits</span>))
+<span class='fu'>addPercent</span><span class='op'>(</span><span class='va'>profits</span> <span class='op'>/</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>profits</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "17%" "12%" "29%" "42%"</div><div class='input'>
 <span class='co'># Coping with Scoping</span>
 
@@ -308,50 +308,50 @@ To run all the examples of <code>ch8()</code>, use <code><a href='https://rdrr.i
 
 <span class='co'>### Creating a test case</span>
 
-<span class='kw'>x</span> <span class='op'>&lt;-</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>5</span>
-<span class='kw'>test</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>){
-  <span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span>(<span class='st'>"This is x:"</span>, <span class='kw'>x</span>, <span class='st'>"\n"</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/rm.html'>rm</a></span>(<span class='kw'>x</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span>(<span class='st'>"This is x after removing it:"</span>,<span class='kw'>x</span>,<span class='st'>"\n"</span>)
-}
+<span class='va'>x</span> <span class='op'>&lt;-</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>5</span>
+<span class='va'>test</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"This is x:"</span>, <span class='va'>x</span>, <span class='st'>"\n"</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/rm.html'>rm</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"This is x after removing it:"</span>,<span class='va'>x</span>,<span class='st'>"\n"</span><span class='op'>)</span>
+<span class='op'>}</span>
 
-<span class='fu'>test</span>(<span class='fl'>5</span><span class='op'>:</span><span class='fl'>1</span>)
+<span class='fu'>test</span><span class='op'>(</span><span class='fl'>5</span><span class='op'>:</span><span class='fl'>1</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; This is x: 5 4 3 2 1 
 #&gt; This is x after removing it: 1 2 3 4 5 </div><div class='input'>
 <span class='co'>### Searching the path</span>
 
 <span class='co'>## Using internal functions</span>
 
-<span class='kw'>calculate.eff</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>, <span class='kw'>y</span>, <span class='kw'>control</span>){
-  <span class='kw'>min.base</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>z</span>) <span class='kw'>z</span> <span class='op'>-</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='kw'>control</span>)
-  <span class='fu'>min.base</span>(<span class='kw'>x</span>) <span class='op'>/</span> <span class='fu'>min.base</span>(<span class='kw'>y</span>)
-}
+<span class='va'>calculate.eff</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>y</span>, <span class='va'>control</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='va'>min.base</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>z</span><span class='op'>)</span> <span class='va'>z</span> <span class='op'>-</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>control</span><span class='op'>)</span>
+  <span class='fu'>min.base</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>/</span> <span class='fu'>min.base</span><span class='op'>(</span><span class='va'>y</span><span class='op'>)</span>
+<span class='op'>}</span>
 
 
-<span class='kw'>half</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>2.23</span>, <span class='fl'>3.23</span>, <span class='fl'>1.48</span>)
-<span class='kw'>full</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>4.85</span>, <span class='fl'>4.95</span>, <span class='fl'>4.12</span>)
-<span class='kw'>nothing</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0.14</span>, <span class='fl'>0.18</span>, <span class='fl'>0.56</span>, <span class='fl'>0.23</span>)
-<span class='fu'>calculate.eff</span>(<span class='kw'>half</span>, <span class='kw'>full</span>, <span class='kw'>nothing</span>)
+<span class='va'>half</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2.23</span>, <span class='fl'>3.23</span>, <span class='fl'>1.48</span><span class='op'>)</span>
+<span class='va'>full</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>4.85</span>, <span class='fl'>4.95</span>, <span class='fl'>4.12</span><span class='op'>)</span>
+<span class='va'>nothing</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0.14</span>, <span class='fl'>0.18</span>, <span class='fl'>0.56</span>, <span class='fl'>0.23</span><span class='op'>)</span>
+<span class='fu'>calculate.eff</span><span class='op'>(</span><span class='va'>half</span>, <span class='va'>full</span>, <span class='va'>nothing</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] 0.4270093 0.6318887 0.3129473</div><div class='input'>
 <span class='co'># Dispatching to a Method</span>
 
 <span class='co'>## Finding the methods behind the function</span>
 
-<span class='kw'>print</span>
+<span class='va'>print</span>
 </div><div class='output co'>#&gt; function (x, ...) 
 #&gt; UseMethod("print")
-#&gt; &lt;bytecode: 0x7fb01373e7b0&gt;
+#&gt; &lt;bytecode: 0x7fd32e899678&gt;
 #&gt; &lt;environment: namespace:base&gt;</div><div class='input'>
 <span class='co'>### Using methods with UseMethod</span>
 
-<span class='kw'>small.one</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(a = <span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span>, b = <span class='fl'>2</span><span class='op'>:</span><span class='fl'>1</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/print.dataframe.html'>print.data.frame</a></span>(<span class='kw'>small.one</span>)
+<span class='va'>small.one</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>a <span class='op'>=</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span>, b <span class='op'>=</span> <span class='fl'>2</span><span class='op'>:</span><span class='fl'>1</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/print.dataframe.html'>print.data.frame</a></span><span class='op'>(</span><span class='va'>small.one</span><span class='op'>)</span>
 </div><div class='output co'>#&gt;   a b
 #&gt; 1 1 2
 #&gt; 2 2 1</div><div class='input'>
 <span class='co'>### Using default methods</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/print.default.html'>print.default</a></span>(<span class='kw'>small.one</span>)
+<span class='fu'><a href='https://rdrr.io/r/base/print.default.html'>print.default</a></span><span class='op'>(</span><span class='va'>small.one</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; $a
 #&gt; [1] 1 2
 #&gt; 
@@ -364,23 +364,23 @@ To run all the examples of <code>ch8()</code>, use <code><a href='https://rdrr.i
 
 <span class='co'>### Adapting the addPercent function</span>
 
-<span class='kw'>addPercent.character</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>){
-  <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='kw'>x</span>,<span class='st'>"%"</span>,sep=<span class='st'>""</span>)
-}
+<span class='va'>addPercent.character</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>x</span>,<span class='st'>"%"</span>,sep<span class='op'>=</span><span class='st'>""</span><span class='op'>)</span>
+<span class='op'>}</span>
 
 <span class='co'># Not written out in the book - needed for rest code # </span>
-<span class='kw'>addPercent.numeric</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>, <span class='kw'>mult</span> = <span class='fl'>100</span>, <span class='kw'>FUN</span> = <span class='kw'>round</span>, <span class='kw'>...</span>){
-  <span class='kw'>percent</span> <span class='op'>&lt;-</span> <span class='fu'>FUN</span>(<span class='kw'>x</span> <span class='op'>*</span> <span class='kw'>mult</span>, <span class='kw'>...</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='kw'>percent</span>, <span class='st'>"%"</span>, sep = <span class='st'>""</span>)
-}
+<span class='va'>addPercent.numeric</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>mult</span> <span class='op'>=</span> <span class='fl'>100</span>, <span class='va'>FUN</span> <span class='op'>=</span> <span class='va'>round</span>, <span class='va'>...</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='va'>percent</span> <span class='op'>&lt;-</span> <span class='fu'>FUN</span><span class='op'>(</span><span class='va'>x</span> <span class='op'>*</span> <span class='va'>mult</span>, <span class='va'>...</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>percent</span>, <span class='st'>"%"</span>, sep <span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span>
+<span class='op'>}</span>
 
-<span class='kw'>addPercent</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>,<span class='kw'>...</span>){
-  <span class='fu'><a href='https://rdrr.io/r/base/UseMethod.html'>UseMethod</a></span>(<span class='st'>"addPercent"</span>)
-}
+<span class='va'>addPercent</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span>,<span class='va'>...</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/UseMethod.html'>UseMethod</a></span><span class='op'>(</span><span class='st'>"addPercent"</span><span class='op'>)</span>
+<span class='op'>}</span>
 
-<span class='fu'>addPercent</span>(<span class='kw'>new.numbers</span>, FUN = <span class='kw'>floor</span>)
+<span class='fu'>addPercent</span><span class='op'>(</span><span class='va'>new.numbers</span>, FUN <span class='op'>=</span> <span class='va'>floor</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "82%"  "2%"   "162%" "40%" </div><div class='input'>
-<span class='fu'>addPercent</span>(<span class='kw'>letters</span>[<span class='fl'>1</span><span class='op'>:</span><span class='fl'>6</span>])
+<span class='fu'>addPercent</span><span class='op'>(</span><span class='va'>letters</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>6</span><span class='op'>]</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; [1] "a%" "b%" "c%" "d%" "e%" "f%"</div><div class='input'>
 <span class='co'># Adding a default function</span>
 
@@ -388,9 +388,9 @@ To run all the examples of <code>ch8()</code>, use <code><a href='https://rdrr.i
 <span class='co'># Error in UseMethod("addPercent") :</span>
 <span class='co'>#  no applicable method for 'addPercent' applied to an object of class "data.frame"</span>
 
-<span class='kw'>addPercent.default</span> <span class='op'>&lt;-</span> <span class='fu'>function</span>(<span class='kw'>x</span>){
-  <span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span>(<span class='st'>'You should try a numeric or character vector.\n'</span>)
-}
+<span class='va'>addPercent.default</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>'You should try a numeric or character vector.\n'</span><span class='op'>)</span>
+<span class='op'>}</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
