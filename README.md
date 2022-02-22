@@ -12,14 +12,14 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 status](https://www.r-pkg.org/badges/version/rfordummies)](https://cran.r-project.org/package=rfordummies)
 [![R-CMD-check](https://github.com/rfordummies/rfordummies/workflows/R-CMD-check/badge.svg)](https://github.com/rfordummies/rfordummies/actions)
 [![Codecov test
-coverage](https://codecov.io/gh/rfordummies/rfordummies/branch/master/graph/badge.svg)](https://app.codecov.io/gh/rfordummies/rfordummies?branch=master)
+coverage](https://codecov.io/gh/rfordummies/rfordummies/branch/main/graph/badge.svg)](https://app.codecov.io/gh/rfordummies/rfordummies?branch=main)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/rfordummies)](https://CRAN.R-project.org/package=rfordummies)
 [![CRAN RStudio mirror
 downloads](https://cranlogs.r-pkg.org/badges/last-month/rfordummies?color=blue)](https://r-pkg.org/pkg/rfordummies)
 <!-- badges: end -->
 
-# Overview
+## Overview
 
 `rfordummies` is an R package to accompany the book “R for Dummies”, by
 Andrie de Vries and Joris Meys. The package contains functions to print
@@ -46,11 +46,14 @@ examples of a given chapter:
 example("ch20", "rfordummies")
 ```
 
-# Installation
+## Installation
 
 You can install `rfordummies` using:
 
 ``` r
-library("devtools")
-install_github("rfordummies", "andrie")
+devtools::install_github("rfordummies/rfordummies")
 ```
+
+## See also
+
+The book has a companion website at <https://rfordummies.com>

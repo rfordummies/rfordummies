@@ -1,8 +1,7 @@
 # rfordummies 0.1.6
 
-# rfordummies 0.1.5.9000
-
-* Remove references to XLConnect to remove rJava dependency
+* Remove references to `XLConnect` to remove `rJava` dependency
+* Update examples to comply with CRAN build policy
 
 
 # rfordummies 0.1.5
