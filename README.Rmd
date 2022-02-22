@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 
 [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![CRAN status](https://www.r-pkg.org/badges/version/rfordummies)](https://cran.r-project.org/package=rfordummies)
-[![R build status](https://github.com/rfordummies/rfordummies/workflows/R-CMD-check/badge.svg)](https://github.com/rfordummies/rfordummies/actions)
+[![R-CMD-check](https://github.com/rfordummies/rfordummies/workflows/R-CMD-check/badge.svg)](https://github.com/rfordummies/rfordummies/actions)
 [![Codecov test coverage](https://codecov.io/gh/rfordummies/rfordummies/branch/master/graph/badge.svg)](https://app.codecov.io/gh/rfordummies/rfordummies?branch=master)
 [![CRAN status](https://www.r-pkg.org/badges/version/rfordummies)](https://CRAN.R-project.org/package=rfordummies)
 [![CRAN RStudio mirror downloads](https://cranlogs.r-pkg.org/badges/last-month/rfordummies?color=blue)](https://r-pkg.org/pkg/rfordummies)

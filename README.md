@@ -10,8 +10,7 @@ state and is being actively
 developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/rfordummies)](https://cran.r-project.org/package=rfordummies)
-[![R build
-status](https://github.com/rfordummies/rfordummies/workflows/R-CMD-check/badge.svg)](https://github.com/rfordummies/rfordummies/actions)
+[![R-CMD-check](https://github.com/rfordummies/rfordummies/workflows/R-CMD-check/badge.svg)](https://github.com/rfordummies/rfordummies/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/rfordummies/rfordummies/branch/master/graph/badge.svg)](https://app.codecov.io/gh/rfordummies/rfordummies?branch=master)
 [![CRAN
