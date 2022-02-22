@@ -1,26 +1,26 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-rfordummies <img src="man/figures/logo.png" align="right" width="120" />
-========================================================================
+# rfordummies <img src="man/figures/logo.png" align="right" width="120" />
 
 <!-- badges: start -->
 
 [![Project Status: Active - The project has reached a stable, usable
 state and is being actively
-developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
+developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/rfordummies)](https://cran.r-project.org/package=rfordummies)
-[![CRAN RStudio mirror
-downloads](http://cranlogs.r-pkg.org/badges/rfordummies)](http://www.r-pkg.org/pkg/rfordummies)
-[![Codecov test
-coverage](https://codecov.io/gh/andrie/rfordummies/branch/master/graph/badge.svg)](https://codecov.io/gh/andrie/rfordummies?branch=master)
 [![R build
-status](https://github.com/andrie/rfordummies/workflows/R-CMD-check/badge.svg)](https://github.com/andrie/rfordummies/actions)
+status](https://github.com/rfordummies/rfordummies/workflows/R-CMD-check/badge.svg)](https://github.com/rfordummies/rfordummies/actions)
+[![Codecov test
+coverage](https://codecov.io/gh/rfordummies/rfordummies/branch/master/graph/badge.svg)](https://app.codecov.io/gh/rfordummies/rfordummies?branch=master)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/rfordummies)](https://CRAN.R-project.org/package=rfordummies)
+[![CRAN RStudio mirror
+downloads](https://cranlogs.r-pkg.org/badges/last-month/rfordummies?color=blue)](https://r-pkg.org/pkg/rfordummies)
 <!-- badges: end -->
 
-Overview
-========
+# Overview
 
 `rfordummies` is an R package to accompany the book “R for Dummies”, by
 Andrie de Vries and Joris Meys. The package contains functions to print
@@ -28,7 +28,9 @@ the table of contents as well as all the code samples for every chapter.
 
 To print the table of contents, use:
 
-    toc()
+``` r
+toc()
+```
 
 To print the code of example for the chapters, use:
 
@@ -41,12 +43,15 @@ Since each of the functions `ch1()` to `ch20()` also contains the code
 examples as function examples, you can do the following to run all
 examples of a given chapter:
 
-    example("ch20", "rfordummies")
+``` r
+example("ch20", "rfordummies")
+```
 
-Installation
-============
+# Installation
 
 You can install `rfordummies` using:
 
-    library("devtools")
-    install_github("rfordummies", "andrie")
+``` r
+library("devtools")
+install_github("rfordummies", "andrie")
+```

@@ -4,7 +4,7 @@
 \alias{saveElements}
 \title{Saves a copy of the periodic table of elements as excel or csv file.}
 \usage{
-saveElements(outfile, type = c("excel", "csv"))
+saveElements(outfile, type = c("csv"))
 }
 \arguments{
 \item{outfile}{File name}

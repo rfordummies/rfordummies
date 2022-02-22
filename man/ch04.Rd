@@ -253,11 +253,7 @@ sum(points)
 
 sum(Granny.pointers * c(2,3))
 
-
-
-round(diff(baskets.of.Granny) / baskets.of.Granny * 100 )
 round(diff(baskets.of.Granny) / baskets.of.Granny[1:5] * 100)
-
 }
 \seealso{
 \code{\link{toc}}

@@ -10,7 +10,7 @@ priceCalculator <- function(hours, pph=40){
 
 priceCalculator <- function(hours, pph=40){
     net.price <- hours * pph
-    if(hours > 100) {
+    if (hours > 100) {
       net.price <- net.price * 0.9
     }
     round(net.price)
@@ -64,7 +64,7 @@ priceCalculator <- function(hours, pph=40, public=TRUE){
 
 ## Looking at the problem
 
-priceCalculator(c(25,110))
+#priceCalculator(c(25,110))
 priceCalculator(110)
 c(25, 110) > 100
 

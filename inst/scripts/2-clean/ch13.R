@@ -202,7 +202,6 @@ apply(Titanic, c(3, 4), sum)
 
 lapply(iris, class)
 sapply(iris, class)
-sapply(iris, mean)
 sapply(iris, function(x) ifelse(is.numeric(x), mean(x), NA))
 
 ## Using tapply() to create tabular summaries

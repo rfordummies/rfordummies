@@ -27,6 +27,7 @@ as.Date("27/7/12", format="%d/%m/%y")
 apollo <- "July 20, 1969, 20:17:39"
 apollo.fmt <- "%B %d, %Y, %H:%M:%S"
 xct <- as.POSIXct(apollo, format=apollo.fmt, tz="UTC")
+xct <- as.POSIXct(apollo, format=apollo.fmt)
 xct
 
 format(xct, "%d/%m/%y")

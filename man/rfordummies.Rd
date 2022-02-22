@@ -26,5 +26,5 @@ To save the \code{elements} data frame to either excel or csv format, use:
 }
 }
 \references{
-de Vries, A. , & Meys, J. (2012). <i>R for dummies</i>. Chichester: Wiley. https://rfordummies.com/, ISBN-13: 978-1119962847.
+de Vries, A. , & Meys, J. (2012). \emph{R for dummies}. Chichester: Wiley. \url{https://rfordummies.com/}, ISBN-13: 978-1119962847.
 }

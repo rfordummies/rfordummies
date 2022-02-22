@@ -8,8 +8,8 @@ Description: Contains all the code examples in the book "R for Dummies" (2nd
     edition) by Andrie de Vries and Joris Meys. You can view the table of 
     contents as well as the sample code for each chapter.
 Language: en-US
-URL: https://rfordummies.com, http://andrie.github.io/rfordummies/
-BugReports: https://github.com/andrie/rfordummies/issues
+URL: https://rfordummies.com, https://rfordummies.github.io/rfordummies/
+BugReports: https://github.com/rfordummies/rfordummies/issues
 Suggests:
     fortunes,
     stringr,
@@ -23,7 +23,7 @@ Suggests:
     spelling
 License: GPL-2|GPL-3
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.1.2
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
 Config/testthat/edition: 3

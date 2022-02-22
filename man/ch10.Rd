@@ -33,12 +33,12 @@ To run all the examples of \code{ch10()}, use \code{example(ch10)}.
 ## Caring about warnings (or not)
 
 x <- 1:10
-y <- if (x < 5 ) 0 else 1
+#y <- if (x < 5 ) 0 else 1
 
 x <- 4
-sqrt(x - 5)
+#sqrt(x - 5)
 
-plot(1:10, 10:1, color='green')
+plot(1:10, 10:1, col='green')
 
 
 # Going Bug Hunting
@@ -107,11 +107,12 @@ logit <- function(x){
   log(x / (1 - x) )
 }
 
-logitpercent(c('50\%','150\%'))
+# logitpercent(c('50\%','150\%')) # throws error
 
 # Recognizing the Mistakes You're Sure to Make
 
 ## Starting with the wrong data
+
 
 ## Having your data in the wrong format
 

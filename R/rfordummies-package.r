@@ -19,7 +19,7 @@
 #'
 #' @name rfordummies
 #' @docType package
-#' @references de Vries, A. , & Meys, J. (2012). <i>R for dummies</i>. Chichester: Wiley. https://rfordummies.com/, ISBN-13: 978-1119962847.
+#' @references de Vries, A. , & Meys, J. (2012). *R for dummies*. Chichester: Wiley. <https://rfordummies.com/>, ISBN-13: 978-1119962847.
 #' @docType package
 NULL
 
