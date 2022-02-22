@@ -12,7 +12,7 @@ To run all the examples of ch12(), use example(ch12)."><meta property="og:image"
     
     <a class="navbar-brand me-2" href="../index.html">rfordummies</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.5.9000</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.6</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -151,7 +151,7 @@ To run all the examples of <code>ch12()</code>, use <code>example(ch12)</code>.<
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Understanding the working directory</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/getwd.html" class="external-link">getwd</a></span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "/tmp/Rtmp1ZL64K/file32dd29eeecf2/reference"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "/tmp/RtmpdqFTY9/file2d9d4797076a/reference"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># setwd("F:/git/roxygen2")</span></span>
 <span class="r-in"><span class="co"># getwd()</span></span>
@@ -172,24 +172,22 @@ To run all the examples of <code>ch12()</code>, use <code>example(ch12)</code>.<
 <span class="r-in"><span class="co"># list.files(file.path("F:", "git", "roxygen2"))</span></span>
 <span class="r-in"><span class="va">my.file</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempfile</a></span><span class="op">(</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">my.file</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "/tmp/Rtmp1ZL64K/file32dd4832d957"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "/tmp/RtmpdqFTY9/file2d9d70cad02f"</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/write.table.html" class="external-link">write.csv</a></span><span class="op">(</span><span class="va">iris</span>, file<span class="op">=</span><span class="va">my.file</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/list.files.html" class="external-link">list.files</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "bslib-da7ab7cb5d3292a4a1d07d62236b8ea8"                                                               </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2] "downlit"                                                                                              </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3] "file32dd29eeecf2"                                                                                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4] "file32dd4832d957"                                                                                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [5] "repos_https%3A%2F%2Fpackagemanager.rstudio.com%2Fall%2F__linux__%2Ffocal%2Flatest%2Fsrc%2Fcontrib.rds"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "bslib-da7ab7cb5d3292a4a1d07d62236b8ea8"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2] "downlit"                               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3] "file2d9d4797076a"                      </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [4] "file2d9d70cad02f"                      </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">file.iris</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="va">my.file</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/files.html" class="external-link">file.remove</a></span><span class="op">(</span><span class="va">my.file</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/list.files.html" class="external-link">list.files</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "bslib-da7ab7cb5d3292a4a1d07d62236b8ea8"                                                               </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2] "downlit"                                                                                              </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3] "file32dd29eeecf2"                                                                                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4] "repos_https%3A%2F%2Fpackagemanager.rstudio.com%2Fall%2F__linux__%2Ffocal%2Flatest%2Fsrc%2Fcontrib.rds"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "bslib-da7ab7cb5d3292a4a1d07d62236b8ea8"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [2] "downlit"                               </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [3] "file2d9d4797076a"                      </span>
 <span class="r-in"></span>
 <span class="r-in"></span>
 </code></pre></div>
