@@ -84,7 +84,8 @@ To run all the examples of <code>ch13()</code>, use <code>example(ch13)</code>.<
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># C hapter 13 - Manipulating and Processing Data</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span class="r-in"><span class="co"># C hapter 13 - Manipulating and Processing Data</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Deciding on the Most Appropriate Data Structure</span></span>
 <span class="r-in"></span>
@@ -94,926 +95,55 @@ To run all the examples of <code>ch13()</code>, use <code>example(ch13)</code>.<
 <span class="r-in"><span class="co">## Understanding the five ways of specifying the subset</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">islands</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Named num [1:48] 11506 5500 16988 2968 16 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  - attr(*, "names")= chr [1:48] "Africa" "Antarctica" "Asia" "Australia" ...</span>
 <span class="r-in"><span class="va">islands</span><span class="op">[</span><span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           Africa       Antarctica             Asia        Australia </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            11506             5500            16988             2968 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     Axel Heiberg           Baffin            Banks           Borneo </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               16              184               23              280 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          Britain          Celebes            Celon             Cuba </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               84               73               25               43 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            Devon        Ellesmere           Europe        Greenland </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               21               82             3745              840 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           Hainan       Hispaniola         Hokkaido           Honshu </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               13               30               30               89 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          Iceland          Ireland             Java           Kyushu </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               40               33               49               14 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            Luzon       Madagascar         Melville         Mindanao </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               42              227               16               36 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         Moluccas      New Britain       New Guinea  New Zealand (N) </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               29               15              306               44 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  New Zealand (S)     Newfoundland    North America    Novaya Zemlya </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               58               43             9390               32 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Prince of Wales         Sakhalin    South America      Southampton </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               13               29             6795               16 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      Spitsbergen          Sumatra           Taiwan         Tasmania </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               15              183               14               26 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Tierra del Fuego            Timor        Vancouver         Victoria </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               19               13               12               82 </span>
 <span class="r-in"><span class="va">islands</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">8</span>, <span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">42</span><span class="op">)</span><span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Borneo  Africa  Africa Sumatra </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     280   11506   11506     183 </span>
 <span class="r-in"><span class="va">islands</span><span class="op">[</span><span class="op">-</span><span class="op">(</span><span class="fl">3</span><span class="op">:</span><span class="fl">46</span><span class="op">)</span><span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     Africa Antarctica  Vancouver   Victoria </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      11506       5500         12         82 </span>
 <span class="r-in"><span class="va">islands</span><span class="op">[</span><span class="va">islands</span> <span class="op">&lt;</span> <span class="fl">20</span><span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     Axel Heiberg           Hainan           Kyushu         Melville </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               16               13               14               16 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      New Britain  Prince of Wales      Southampton      Spitsbergen </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               15               13               16               15 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           Taiwan Tierra del Fuego            Timor        Vancouver </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               14               19               13               12 </span>
 <span class="r-in"><span class="va">islands</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Madagascar"</span>, <span class="st">"Cuba"</span><span class="op">)</span><span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Madagascar       Cuba </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        227         43 </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Subsetting data frames</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">iris</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 'data.frame':	150 obs. of  5 variables:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Sepal.Length: num  5.1 4.9 4.7 4.6 5 5.4 4.6 5 4.4 4.9 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Sepal.Width : num  3.5 3 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Petal.Length: num  1.4 1.4 1.3 1.5 1.4 1.7 1.4 1.5 1.4 1.5 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Petal.Width : num  0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Species     : Factor w/ 3 levels "setosa","versicolor",..: 1 1 1 1 1 1 1 1 1 1 ...</span>
 <span class="r-in"><span class="va">iris</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span>, <span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Sepal.Length Sepal.Width Petal.Length Petal.Width Species</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1          5.1         3.5          1.4         0.2  setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2          4.9         3.0          1.4         0.2  setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3          4.7         3.2          1.3         0.2  setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4          4.6         3.1          1.5         0.2  setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5          5.0         3.6          1.4         0.2  setosa</span>
 <span class="r-in"><span class="va">iris</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Sepal.Length"</span>, <span class="st">"Sepal.Width"</span><span class="op">)</span><span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     Sepal.Length Sepal.Width</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1            5.1         3.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2            4.9         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3            4.7         3.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4            4.6         3.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5            5.0         3.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6            5.4         3.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7            4.6         3.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8            5.0         3.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9            4.4         2.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10           4.9         3.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11           5.4         3.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12           4.8         3.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13           4.8         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14           4.3         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15           5.8         4.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16           5.7         4.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17           5.4         3.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18           5.1         3.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19           5.7         3.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20           5.1         3.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21           5.4         3.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22           5.1         3.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23           4.6         3.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24           5.1         3.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25           4.8         3.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26           5.0         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27           5.0         3.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28           5.2         3.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29           5.2         3.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30           4.7         3.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31           4.8         3.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32           5.4         3.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33           5.2         4.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34           5.5         4.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35           4.9         3.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36           5.0         3.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37           5.5         3.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38           4.9         3.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39           4.4         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40           5.1         3.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41           5.0         3.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42           4.5         2.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43           4.4         3.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44           5.0         3.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45           5.1         3.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46           4.8         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 47           5.1         3.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 48           4.6         3.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 49           5.3         3.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 50           5.0         3.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 51           7.0         3.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 52           6.4         3.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 53           6.9         3.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 54           5.5         2.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 55           6.5         2.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 56           5.7         2.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 57           6.3         3.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 58           4.9         2.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 59           6.6         2.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 60           5.2         2.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 61           5.0         2.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 62           5.9         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 63           6.0         2.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 64           6.1         2.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 65           5.6         2.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 66           6.7         3.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 67           5.6         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 68           5.8         2.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 69           6.2         2.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 70           5.6         2.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 71           5.9         3.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 72           6.1         2.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 73           6.3         2.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 74           6.1         2.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 75           6.4         2.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 76           6.6         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 77           6.8         2.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 78           6.7         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 79           6.0         2.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 80           5.7         2.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 81           5.5         2.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 82           5.5         2.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 83           5.8         2.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 84           6.0         2.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 85           5.4         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 86           6.0         3.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 87           6.7         3.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 88           6.3         2.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 89           5.6         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 90           5.5         2.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 91           5.5         2.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 92           6.1         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 93           5.8         2.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 94           5.0         2.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 95           5.6         2.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 96           5.7         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 97           5.7         2.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 98           6.2         2.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 99           5.1         2.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 100          5.7         2.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 101          6.3         3.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 102          5.8         2.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 103          7.1         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 104          6.3         2.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 105          6.5         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 106          7.6         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 107          4.9         2.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 108          7.3         2.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 109          6.7         2.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 110          7.2         3.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 111          6.5         3.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 112          6.4         2.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 113          6.8         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 114          5.7         2.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 115          5.8         2.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 116          6.4         3.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 117          6.5         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 118          7.7         3.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 119          7.7         2.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 120          6.0         2.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 121          6.9         3.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 122          5.6         2.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 123          7.7         2.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 124          6.3         2.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 125          6.7         3.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 126          7.2         3.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 127          6.2         2.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 128          6.1         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 129          6.4         2.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 130          7.2         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 131          7.4         2.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132          7.9         3.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 133          6.4         2.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 134          6.3         2.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 135          6.1         2.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 136          7.7         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 137          6.3         3.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 138          6.4         3.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 139          6.0         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 140          6.9         3.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 141          6.7         3.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 142          6.9         3.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 143          5.8         2.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 144          6.8         3.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 145          6.7         3.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 146          6.7         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 147          6.3         2.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 148          6.5         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 149          6.2         3.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 150          5.9         3.0</span>
 <span class="r-in"><span class="va">iris</span><span class="op">[</span>, <span class="st">'Sepal.Length'</span><span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1] 5.1 4.9 4.7 4.6 5.0 5.4 4.6 5.0 4.4 4.9 5.4 4.8 4.8 4.3 5.8 5.7 5.4 5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [19] 5.7 5.1 5.4 5.1 4.6 5.1 4.8 5.0 5.0 5.2 5.2 4.7 4.8 5.4 5.2 5.5 4.9 5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [37] 5.5 4.9 4.4 5.1 5.0 4.5 4.4 5.0 5.1 4.8 5.1 4.6 5.3 5.0 7.0 6.4 6.9 5.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [55] 6.5 5.7 6.3 4.9 6.6 5.2 5.0 5.9 6.0 6.1 5.6 6.7 5.6 5.8 6.2 5.6 5.9 6.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [73] 6.3 6.1 6.4 6.6 6.8 6.7 6.0 5.7 5.5 5.5 5.8 6.0 5.4 6.0 6.7 6.3 5.6 5.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [91] 5.5 6.1 5.8 5.0 5.6 5.7 5.7 6.2 5.1 5.7 6.3 5.8 7.1 6.3 6.5 7.6 4.9 7.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [109] 6.7 7.2 6.5 6.4 6.8 5.7 5.8 6.4 6.5 7.7 7.7 6.0 6.9 5.6 7.7 6.3 6.7 7.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [127] 6.2 6.1 6.4 7.2 7.4 7.9 6.4 6.3 6.1 7.7 6.3 6.4 6.0 6.9 6.7 6.9 5.8 6.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [145] 6.7 6.7 6.3 6.5 6.2 5.9</span>
 <span class="r-in"><span class="va">iris</span><span class="op">[</span>, <span class="st">'Sepal.Length'</span>, drop<span class="op">=</span><span class="cn">FALSE</span><span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     Sepal.Length</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1            5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2            4.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3            4.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4            4.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5            5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6            5.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7            4.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8            5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9            4.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10           4.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11           5.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12           4.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13           4.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14           4.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15           5.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16           5.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17           5.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18           5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19           5.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20           5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21           5.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22           5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23           4.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24           5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25           4.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26           5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27           5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28           5.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29           5.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30           4.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31           4.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32           5.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33           5.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34           5.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35           4.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36           5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37           5.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38           4.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39           4.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40           5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41           5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42           4.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43           4.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44           5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45           5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46           4.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 47           5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 48           4.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 49           5.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 50           5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 51           7.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 52           6.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 53           6.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 54           5.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 55           6.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 56           5.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 57           6.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 58           4.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 59           6.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 60           5.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 61           5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 62           5.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 63           6.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 64           6.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 65           5.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 66           6.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 67           5.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 68           5.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 69           6.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 70           5.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 71           5.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 72           6.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 73           6.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 74           6.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 75           6.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 76           6.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 77           6.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 78           6.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 79           6.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 80           5.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 81           5.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 82           5.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 83           5.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 84           6.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 85           5.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 86           6.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 87           6.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 88           6.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 89           5.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 90           5.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 91           5.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 92           6.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 93           5.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 94           5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 95           5.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 96           5.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 97           5.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 98           6.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 99           5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 100          5.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 101          6.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 102          5.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 103          7.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 104          6.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 105          6.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 106          7.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 107          4.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 108          7.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 109          6.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 110          7.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 111          6.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 112          6.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 113          6.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 114          5.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 115          5.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 116          6.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 117          6.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 118          7.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 119          7.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 120          6.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 121          6.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 122          5.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 123          7.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 124          6.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 125          6.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 126          7.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 127          6.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 128          6.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 129          6.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 130          7.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 131          7.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132          7.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 133          6.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 134          6.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 135          6.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 136          7.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 137          6.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 138          6.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 139          6.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 140          6.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 141          6.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 142          6.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 143          5.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 144          6.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 145          6.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 146          6.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 147          6.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 148          6.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 149          6.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 150          5.9</span>
 <span class="r-in"><span class="va">iris</span><span class="op">[</span><span class="st">'Sepal.Length'</span><span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     Sepal.Length</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1            5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2            4.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3            4.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4            4.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5            5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6            5.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7            4.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8            5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9            4.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10           4.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11           5.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12           4.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13           4.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14           4.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15           5.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16           5.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17           5.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18           5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19           5.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20           5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21           5.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22           5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23           4.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24           5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25           4.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26           5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27           5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28           5.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29           5.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30           4.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31           4.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32           5.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33           5.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34           5.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35           4.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36           5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37           5.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38           4.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39           4.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40           5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41           5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42           4.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43           4.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44           5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45           5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46           4.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 47           5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 48           4.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 49           5.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 50           5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 51           7.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 52           6.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 53           6.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 54           5.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 55           6.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 56           5.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 57           6.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 58           4.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 59           6.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 60           5.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 61           5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 62           5.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 63           6.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 64           6.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 65           5.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 66           6.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 67           5.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 68           5.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 69           6.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 70           5.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 71           5.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 72           6.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 73           6.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 74           6.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 75           6.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 76           6.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 77           6.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 78           6.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 79           6.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 80           5.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 81           5.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 82           5.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 83           5.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 84           6.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 85           5.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 86           6.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 87           6.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 88           6.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 89           5.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 90           5.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 91           5.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 92           6.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 93           5.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 94           5.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 95           5.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 96           5.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 97           5.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 98           6.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 99           5.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 100          5.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 101          6.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 102          5.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 103          7.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 104          6.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 105          6.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 106          7.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 107          4.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 108          7.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 109          6.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 110          7.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 111          6.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 112          6.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 113          6.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 114          5.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 115          5.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 116          6.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 117          6.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 118          7.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 119          7.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 120          6.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 121          6.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 122          5.6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 123          7.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 124          6.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 125          6.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 126          7.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 127          6.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 128          6.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 129          6.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 130          7.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 131          7.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132          7.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 133          6.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 134          6.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 135          6.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 136          7.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 137          6.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 138          6.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 139          6.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 140          6.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 141          6.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 142          6.9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 143          5.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 144          6.8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 145          6.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 146          6.7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 147          6.3</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 148          6.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 149          6.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 150          5.9</span>
 <span class="r-in"><span class="va">iris</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Sepal.Length"</span>, <span class="st">"Sepal.Width"</span><span class="op">)</span><span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Sepal.Length Sepal.Width</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1          5.1         3.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2          4.9         3.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3          4.7         3.2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4          4.6         3.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5          5.0         3.6</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Taking samples from data</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">6</span>, <span class="fl">10</span>, replace<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 4 1 5 6 4 2 2 3 1 1</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">6</span>, <span class="fl">10</span>, replace<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 1 4 1 2 5 3 6 2 3 3</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">6</span>, <span class="fl">10</span>, replace<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 1 5 5 2 6 6 2 1 5 5</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">1</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">6</span>, <span class="fl">10</span>, replace<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 1 4 1 2 5 3 6 2 3 3</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/Random.html" class="external-link">set.seed</a></span><span class="op">(</span><span class="fl">123</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">index</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/sample.html" class="external-link">sample</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">iris</span><span class="op">)</span>, <span class="fl">5</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">index</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  14  50 118  43 150</span>
 <span class="r-in"><span class="va">iris</span><span class="op">[</span><span class="va">index</span>, <span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14           4.3         3.0          1.1         0.1    setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 50           5.0         3.3          1.4         0.2    setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 118          7.7         3.8          6.7         2.2 virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43           4.4         3.2          1.3         0.2    setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 150          5.9         3.0          5.1         1.8 virginica</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Removing duplicate data</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/duplicated.html" class="external-link">duplicated</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span>,<span class="fl">1</span>,<span class="fl">3</span>,<span class="fl">1</span>,<span class="fl">4</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE FALSE  TRUE FALSE  TRUE FALSE</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/duplicated.html" class="external-link">duplicated</a></span><span class="op">(</span><span class="va">iris</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [13] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [25] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [37] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [49] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [61] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [73] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [85] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [97] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [109] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [121] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [133] FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE  TRUE FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [145] FALSE FALSE FALSE FALSE FALSE FALSE</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/which.html" class="external-link">which</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/duplicated.html" class="external-link">duplicated</a></span><span class="op">(</span><span class="va">iris</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 143</span>
 <span class="r-in"><span class="va">iris</span><span class="op">[</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/duplicated.html" class="external-link">duplicated</a></span><span class="op">(</span><span class="va">iris</span><span class="op">)</span>, <span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     Sepal.Length Sepal.Width Petal.Length Petal.Width    Species</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1            5.1         3.5          1.4         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2            4.9         3.0          1.4         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3            4.7         3.2          1.3         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4            4.6         3.1          1.5         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5            5.0         3.6          1.4         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6            5.4         3.9          1.7         0.4     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7            4.6         3.4          1.4         0.3     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8            5.0         3.4          1.5         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9            4.4         2.9          1.4         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10           4.9         3.1          1.5         0.1     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11           5.4         3.7          1.5         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12           4.8         3.4          1.6         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13           4.8         3.0          1.4         0.1     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14           4.3         3.0          1.1         0.1     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15           5.8         4.0          1.2         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16           5.7         4.4          1.5         0.4     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17           5.4         3.9          1.3         0.4     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18           5.1         3.5          1.4         0.3     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19           5.7         3.8          1.7         0.3     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20           5.1         3.8          1.5         0.3     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21           5.4         3.4          1.7         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22           5.1         3.7          1.5         0.4     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23           4.6         3.6          1.0         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24           5.1         3.3          1.7         0.5     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25           4.8         3.4          1.9         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26           5.0         3.0          1.6         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27           5.0         3.4          1.6         0.4     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28           5.2         3.5          1.5         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29           5.2         3.4          1.4         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30           4.7         3.2          1.6         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31           4.8         3.1          1.6         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32           5.4         3.4          1.5         0.4     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33           5.2         4.1          1.5         0.1     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34           5.5         4.2          1.4         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35           4.9         3.1          1.5         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36           5.0         3.2          1.2         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37           5.5         3.5          1.3         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38           4.9         3.6          1.4         0.1     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39           4.4         3.0          1.3         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40           5.1         3.4          1.5         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41           5.0         3.5          1.3         0.3     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42           4.5         2.3          1.3         0.3     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43           4.4         3.2          1.3         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44           5.0         3.5          1.6         0.6     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45           5.1         3.8          1.9         0.4     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46           4.8         3.0          1.4         0.3     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 47           5.1         3.8          1.6         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 48           4.6         3.2          1.4         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 49           5.3         3.7          1.5         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 50           5.0         3.3          1.4         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 51           7.0         3.2          4.7         1.4 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 52           6.4         3.2          4.5         1.5 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 53           6.9         3.1          4.9         1.5 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 54           5.5         2.3          4.0         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 55           6.5         2.8          4.6         1.5 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 56           5.7         2.8          4.5         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 57           6.3         3.3          4.7         1.6 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 58           4.9         2.4          3.3         1.0 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 59           6.6         2.9          4.6         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 60           5.2         2.7          3.9         1.4 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 61           5.0         2.0          3.5         1.0 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 62           5.9         3.0          4.2         1.5 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 63           6.0         2.2          4.0         1.0 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 64           6.1         2.9          4.7         1.4 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 65           5.6         2.9          3.6         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 66           6.7         3.1          4.4         1.4 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 67           5.6         3.0          4.5         1.5 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 68           5.8         2.7          4.1         1.0 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 69           6.2         2.2          4.5         1.5 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 70           5.6         2.5          3.9         1.1 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 71           5.9         3.2          4.8         1.8 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 72           6.1         2.8          4.0         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 73           6.3         2.5          4.9         1.5 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 74           6.1         2.8          4.7         1.2 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 75           6.4         2.9          4.3         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 76           6.6         3.0          4.4         1.4 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 77           6.8         2.8          4.8         1.4 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 78           6.7         3.0          5.0         1.7 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 79           6.0         2.9          4.5         1.5 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 80           5.7         2.6          3.5         1.0 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 81           5.5         2.4          3.8         1.1 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 82           5.5         2.4          3.7         1.0 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 83           5.8         2.7          3.9         1.2 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 84           6.0         2.7          5.1         1.6 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 85           5.4         3.0          4.5         1.5 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 86           6.0         3.4          4.5         1.6 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 87           6.7         3.1          4.7         1.5 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 88           6.3         2.3          4.4         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 89           5.6         3.0          4.1         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 90           5.5         2.5          4.0         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 91           5.5         2.6          4.4         1.2 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 92           6.1         3.0          4.6         1.4 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 93           5.8         2.6          4.0         1.2 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 94           5.0         2.3          3.3         1.0 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 95           5.6         2.7          4.2         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 96           5.7         3.0          4.2         1.2 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 97           5.7         2.9          4.2         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 98           6.2         2.9          4.3         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 99           5.1         2.5          3.0         1.1 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 100          5.7         2.8          4.1         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 101          6.3         3.3          6.0         2.5  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 102          5.8         2.7          5.1         1.9  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 103          7.1         3.0          5.9         2.1  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 104          6.3         2.9          5.6         1.8  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 105          6.5         3.0          5.8         2.2  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 106          7.6         3.0          6.6         2.1  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 107          4.9         2.5          4.5         1.7  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 108          7.3         2.9          6.3         1.8  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 109          6.7         2.5          5.8         1.8  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 110          7.2         3.6          6.1         2.5  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 111          6.5         3.2          5.1         2.0  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 112          6.4         2.7          5.3         1.9  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 113          6.8         3.0          5.5         2.1  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 114          5.7         2.5          5.0         2.0  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 115          5.8         2.8          5.1         2.4  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 116          6.4         3.2          5.3         2.3  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 117          6.5         3.0          5.5         1.8  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 118          7.7         3.8          6.7         2.2  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 119          7.7         2.6          6.9         2.3  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 120          6.0         2.2          5.0         1.5  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 121          6.9         3.2          5.7         2.3  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 122          5.6         2.8          4.9         2.0  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 123          7.7         2.8          6.7         2.0  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 124          6.3         2.7          4.9         1.8  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 125          6.7         3.3          5.7         2.1  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 126          7.2         3.2          6.0         1.8  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 127          6.2         2.8          4.8         1.8  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 128          6.1         3.0          4.9         1.8  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 129          6.4         2.8          5.6         2.1  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 130          7.2         3.0          5.8         1.6  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 131          7.4         2.8          6.1         1.9  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132          7.9         3.8          6.4         2.0  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 133          6.4         2.8          5.6         2.2  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 134          6.3         2.8          5.1         1.5  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 135          6.1         2.6          5.6         1.4  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 136          7.7         3.0          6.1         2.3  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 137          6.3         3.4          5.6         2.4  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 138          6.4         3.1          5.5         1.8  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 139          6.0         3.0          4.8         1.8  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 140          6.9         3.1          5.4         2.1  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 141          6.7         3.1          5.6         2.4  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 142          6.9         3.1          5.1         2.3  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 144          6.8         3.2          5.9         2.3  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 145          6.7         3.3          5.7         2.5  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 146          6.7         3.0          5.2         2.3  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 147          6.3         2.5          5.0         1.9  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 148          6.5         3.0          5.2         2.0  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 149          6.2         3.4          5.4         2.3  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 150          5.9         3.0          5.1         1.8  virginica</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">index</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/which.html" class="external-link">which</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/duplicated.html" class="external-link">duplicated</a></span><span class="op">(</span><span class="va">iris</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">iris</span><span class="op">[</span><span class="op">-</span><span class="va">index</span>, <span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     Sepal.Length Sepal.Width Petal.Length Petal.Width    Species</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1            5.1         3.5          1.4         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2            4.9         3.0          1.4         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3            4.7         3.2          1.3         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4            4.6         3.1          1.5         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5            5.0         3.6          1.4         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6            5.4         3.9          1.7         0.4     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7            4.6         3.4          1.4         0.3     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8            5.0         3.4          1.5         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9            4.4         2.9          1.4         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10           4.9         3.1          1.5         0.1     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11           5.4         3.7          1.5         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12           4.8         3.4          1.6         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13           4.8         3.0          1.4         0.1     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14           4.3         3.0          1.1         0.1     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15           5.8         4.0          1.2         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16           5.7         4.4          1.5         0.4     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17           5.4         3.9          1.3         0.4     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18           5.1         3.5          1.4         0.3     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19           5.7         3.8          1.7         0.3     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20           5.1         3.8          1.5         0.3     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 21           5.4         3.4          1.7         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 22           5.1         3.7          1.5         0.4     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23           4.6         3.6          1.0         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 24           5.1         3.3          1.7         0.5     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 25           4.8         3.4          1.9         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26           5.0         3.0          1.6         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 27           5.0         3.4          1.6         0.4     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28           5.2         3.5          1.5         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29           5.2         3.4          1.4         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 30           4.7         3.2          1.6         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31           4.8         3.1          1.6         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 32           5.4         3.4          1.5         0.4     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 33           5.2         4.1          1.5         0.1     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34           5.5         4.2          1.4         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 35           4.9         3.1          1.5         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 36           5.0         3.2          1.2         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 37           5.5         3.5          1.3         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 38           4.9         3.6          1.4         0.1     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 39           4.4         3.0          1.3         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 40           5.1         3.4          1.5         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41           5.0         3.5          1.3         0.3     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 42           4.5         2.3          1.3         0.3     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43           4.4         3.2          1.3         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 44           5.0         3.5          1.6         0.6     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45           5.1         3.8          1.9         0.4     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 46           4.8         3.0          1.4         0.3     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 47           5.1         3.8          1.6         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 48           4.6         3.2          1.4         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 49           5.3         3.7          1.5         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 50           5.0         3.3          1.4         0.2     setosa</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 51           7.0         3.2          4.7         1.4 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 52           6.4         3.2          4.5         1.5 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 53           6.9         3.1          4.9         1.5 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 54           5.5         2.3          4.0         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 55           6.5         2.8          4.6         1.5 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 56           5.7         2.8          4.5         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 57           6.3         3.3          4.7         1.6 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 58           4.9         2.4          3.3         1.0 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 59           6.6         2.9          4.6         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 60           5.2         2.7          3.9         1.4 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 61           5.0         2.0          3.5         1.0 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 62           5.9         3.0          4.2         1.5 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 63           6.0         2.2          4.0         1.0 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 64           6.1         2.9          4.7         1.4 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 65           5.6         2.9          3.6         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 66           6.7         3.1          4.4         1.4 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 67           5.6         3.0          4.5         1.5 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 68           5.8         2.7          4.1         1.0 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 69           6.2         2.2          4.5         1.5 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 70           5.6         2.5          3.9         1.1 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 71           5.9         3.2          4.8         1.8 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 72           6.1         2.8          4.0         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 73           6.3         2.5          4.9         1.5 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 74           6.1         2.8          4.7         1.2 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 75           6.4         2.9          4.3         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 76           6.6         3.0          4.4         1.4 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 77           6.8         2.8          4.8         1.4 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 78           6.7         3.0          5.0         1.7 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 79           6.0         2.9          4.5         1.5 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 80           5.7         2.6          3.5         1.0 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 81           5.5         2.4          3.8         1.1 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 82           5.5         2.4          3.7         1.0 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 83           5.8         2.7          3.9         1.2 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 84           6.0         2.7          5.1         1.6 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 85           5.4         3.0          4.5         1.5 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 86           6.0         3.4          4.5         1.6 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 87           6.7         3.1          4.7         1.5 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 88           6.3         2.3          4.4         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 89           5.6         3.0          4.1         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 90           5.5         2.5          4.0         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 91           5.5         2.6          4.4         1.2 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 92           6.1         3.0          4.6         1.4 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 93           5.8         2.6          4.0         1.2 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 94           5.0         2.3          3.3         1.0 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 95           5.6         2.7          4.2         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 96           5.7         3.0          4.2         1.2 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 97           5.7         2.9          4.2         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 98           6.2         2.9          4.3         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 99           5.1         2.5          3.0         1.1 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 100          5.7         2.8          4.1         1.3 versicolor</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 101          6.3         3.3          6.0         2.5  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 102          5.8         2.7          5.1         1.9  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 103          7.1         3.0          5.9         2.1  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 104          6.3         2.9          5.6         1.8  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 105          6.5         3.0          5.8         2.2  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 106          7.6         3.0          6.6         2.1  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 107          4.9         2.5          4.5         1.7  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 108          7.3         2.9          6.3         1.8  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 109          6.7         2.5          5.8         1.8  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 110          7.2         3.6          6.1         2.5  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 111          6.5         3.2          5.1         2.0  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 112          6.4         2.7          5.3         1.9  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 113          6.8         3.0          5.5         2.1  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 114          5.7         2.5          5.0         2.0  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 115          5.8         2.8          5.1         2.4  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 116          6.4         3.2          5.3         2.3  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 117          6.5         3.0          5.5         1.8  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 118          7.7         3.8          6.7         2.2  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 119          7.7         2.6          6.9         2.3  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 120          6.0         2.2          5.0         1.5  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 121          6.9         3.2          5.7         2.3  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 122          5.6         2.8          4.9         2.0  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 123          7.7         2.8          6.7         2.0  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 124          6.3         2.7          4.9         1.8  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 125          6.7         3.3          5.7         2.1  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 126          7.2         3.2          6.0         1.8  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 127          6.2         2.8          4.8         1.8  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 128          6.1         3.0          4.9         1.8  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 129          6.4         2.8          5.6         2.1  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 130          7.2         3.0          5.8         1.6  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 131          7.4         2.8          6.1         1.9  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 132          7.9         3.8          6.4         2.0  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 133          6.4         2.8          5.6         2.2  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 134          6.3         2.8          5.1         1.5  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 135          6.1         2.6          5.6         1.4  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 136          7.7         3.0          6.1         2.3  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 137          6.3         3.4          5.6         2.4  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 138          6.4         3.1          5.5         1.8  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 139          6.0         3.0          4.8         1.8  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 140          6.9         3.1          5.4         2.1  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 141          6.7         3.1          5.6         2.4  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 142          6.9         3.1          5.1         2.3  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 144          6.8         3.2          5.9         2.3  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 145          6.7         3.3          5.7         2.5  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 146          6.7         3.0          5.2         2.3  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 147          6.3         2.5          5.0         1.9  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 148          6.5         3.0          5.2         2.0  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 149          6.2         3.4          5.4         2.3  virginica</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 150          5.9         3.0          5.1         1.8  virginica</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Removing rows with missing data</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">airquality</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 'data.frame':	153 obs. of  6 variables:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Ozone  : int  41 36 12 18 NA 28 23 19 8 NA ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Solar.R: int  190 118 149 313 NA NA 299 99 19 194 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Wind   : num  7.4 8 12.6 11.5 14.3 14.9 8.6 13.8 20.1 8.6 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Temp   : int  67 72 74 62 56 66 65 59 61 69 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Month  : int  5 5 5 5 5 5 5 5 5 5 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Day    : int  1 2 3 4 5 6 7 8 9 10 ...</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/stats/complete.cases.html" class="external-link">complete.cases</a></span><span class="op">(</span><span class="va">airquality</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE  TRUE  TRUE  TRUE FALSE FALSE  TRUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [13]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [25] FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [37] FALSE  TRUE FALSE  TRUE  TRUE FALSE FALSE  TRUE FALSE FALSE  TRUE  TRUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [49]  TRUE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [61] FALSE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [73]  TRUE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [85]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [97] FALSE FALSE  TRUE  TRUE  TRUE FALSE FALSE  TRUE  TRUE  TRUE FALSE  TRUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [109]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE FALSE  TRUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [121]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [133]  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE  TRUE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [145]  TRUE  TRUE  TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="va">airquality</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/stats/complete.cases.html" class="external-link">complete.cases</a></span><span class="op">(</span><span class="va">airquality</span><span class="op">)</span>, <span class="op">]</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 'data.frame':	111 obs. of  6 variables:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Ozone  : int  41 36 12 18 23 19 8 16 11 14 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Solar.R: int  190 118 149 313 299 99 19 256 290 274 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Wind   : num  7.4 8 12.6 11.5 8.6 13.8 20.1 9.7 9.2 10.9 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Temp   : int  67 72 74 62 65 59 61 69 66 68 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Month  : int  5 5 5 5 5 5 5 5 5 5 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Day    : int  1 2 3 4 7 8 9 12 13 14 ...</span>
 <span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html" class="external-link">na.omit</a></span><span class="op">(</span><span class="va">airquality</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"></span>
@@ -1024,72 +154,35 @@ To run all the examples of <code>ch13()</code>, use <code>example(ch13)</code>.<
 <span class="r-in"></span>
 <span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="va">iris</span><span class="op">$</span><span class="va">Sepal.Length</span> <span class="op">/</span> <span class="va">iris</span><span class="op">$</span><span class="va">Sepal.Width</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1.457143 1.633333 1.468750 1.483871 1.388889 1.384615</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Using with and within to improve code readability</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">iris</span>, <span class="va">Sepal.Length</span> <span class="op">/</span> <span class="va">Sepal.Width</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1.457143 1.633333 1.468750 1.483871 1.388889 1.384615</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/identical.html" class="external-link">identical</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">iris</span><span class="op">$</span><span class="va">ratio</span> <span class="op">&lt;-</span> <span class="va">iris</span><span class="op">$</span><span class="va">Sepal.Length</span> <span class="op">/</span> <span class="va">iris</span><span class="op">$</span><span class="va">Sepal.Width</span></span>
 <span class="r-in"><span class="va">iris</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">within</a></span><span class="op">(</span><span class="va">iris</span>, <span class="va">ratio</span> <span class="op">&lt;-</span> <span class="va">Sepal.Length</span> <span class="op">/</span> <span class="va">Sepal.Width</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">iris</span><span class="op">$</span><span class="va">ratio</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1.457143 1.633333 1.468750 1.483871 1.388889 1.384615</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Creating subgroups or bins of data</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Using cut to create a fixed number of subgroups</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">state.x77</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            Population Income Illiteracy Life Exp Murder HS Grad Frost   Area</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Alabama          3615   3624        2.1    69.05   15.1    41.3    20  50708</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Alaska            365   6315        1.5    69.31   11.3    66.7   152 566432</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Arizona          2212   4530        1.8    70.55    7.8    58.1    15 113417</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Arkansas         2110   3378        1.9    70.66   10.1    39.9    65  51945</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> California      21198   5114        1.1    71.71   10.3    62.6    20 156361</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Colorado         2541   4884        0.7    72.06    6.8    63.9   166 103766</span>
 <span class="r-in"><span class="va">frost</span> <span class="op">&lt;-</span> <span class="va">state.x77</span><span class="op">[</span>, <span class="st">"Frost"</span><span class="op">]</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">frost</span>, <span class="fl">5</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    Alabama     Alaska    Arizona   Arkansas California </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         20        152         15         65         20 </span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/cut.html" class="external-link">cut</a></span><span class="op">(</span><span class="va">frost</span>, <span class="fl">3</span>, include.lowest<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] [-0.188,62.7] (125,188]     [-0.188,62.7] (62.7,125]    [-0.188,62.7]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [6] (125,188]     (125,188]     (62.7,125]    [-0.188,62.7] [-0.188,62.7]</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [11] [-0.188,62.7] (125,188]     (125,188]     (62.7,125]    (125,188]    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [16] (62.7,125]    (62.7,125]    [-0.188,62.7] (125,188]     (62.7,125]   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [21] (62.7,125]    (62.7,125]    (125,188]     [-0.188,62.7] (62.7,125]   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [26] (125,188]     (125,188]     (125,188]     (125,188]     (62.7,125]   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [31] (62.7,125]    (62.7,125]    (62.7,125]    (125,188]     (62.7,125]   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [36] (62.7,125]    [-0.188,62.7] (125,188]     (125,188]     (62.7,125]   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [41] (125,188]     (62.7,125]    [-0.188,62.7] (125,188]     (125,188]    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [46] (62.7,125]    [-0.188,62.7] (62.7,125]    (125,188]     (125,188]    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Levels: [-0.188,62.7] (62.7,125] (125,188]</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Adding labels to cut</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/cut.html" class="external-link">cut</a></span><span class="op">(</span><span class="va">frost</span>, <span class="fl">3</span>, include.lowest<span class="op">=</span><span class="cn">TRUE</span>, labels<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Low"</span>, <span class="st">"Med"</span>, <span class="st">"High"</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] Low  High Low  Med  Low  High High Med  Low  Low  Low  High High Med  High</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [16] Med  Med  Low  High Med  Med  Med  High Low  Med  High High High High Med </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [31] Med  Med  Med  High Med  Med  Low  High High Med  High Med  Low  High High</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [46] Med  Low  Med  High High</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Levels: Low Med High</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Using table to count the number of observations</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cut.html" class="external-link">cut</a></span><span class="op">(</span><span class="va">frost</span>, <span class="fl">3</span>, include.lowest<span class="op">=</span><span class="cn">TRUE</span>, labels<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Low"</span>, <span class="st">"Med"</span>, <span class="st">"High"</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/table.html" class="external-link">table</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> x</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Low  Med High </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   11   19   20 </span>
 <span class="r-in"><span class="va">x</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] Low  High Low  Med  Low  High High Med  Low  Low  Low  High High Med  High</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [16] Med  Med  Low  High Med  Med  Med  High Low  Med  High High High High Med </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [31] Med  Med  Med  High Med  Med  Low  High High Med  High Med  Low  High High</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [46] Med  Low  Med  High High</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Levels: Low Med High</span>
 <span class="r-in"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Combining and Merging Data Sets</span></span>
@@ -1100,78 +193,26 @@ To run all the examples of <code>ch13()</code>, use <code>example(ch13)</code>.<
 <span class="r-in"><span class="va">all.states</span><span class="op">$</span><span class="va">Name</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">rownames</a></span><span class="op">(</span><span class="va">state.x77</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">rownames</a></span><span class="op">(</span><span class="va">all.states</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="cn">NULL</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">all.states</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 'data.frame':	50 obs. of  9 variables:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Population: num  3615 365 2212 2110 21198 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Income    : num  3624 6315 4530 3378 5114 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Illiteracy: num  2.1 1.5 1.8 1.9 1.1 0.7 1.1 0.9 1.3 2 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Life Exp  : num  69 69.3 70.5 70.7 71.7 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Murder    : num  15.1 11.3 7.8 10.1 10.3 6.8 3.1 6.2 10.7 13.9 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ HS Grad   : num  41.3 66.7 58.1 39.9 62.6 63.9 56 54.6 52.6 40.6 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Frost     : num  20 152 15 65 20 166 139 103 11 60 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Area      : num  50708 566432 113417 51945 156361 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ Name      : chr  "Alabama" "Alaska" "Arizona" "Arkansas" ...</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Creating a subset of cold states</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">cold.states</span> <span class="op">&lt;-</span> <span class="va">all.states</span><span class="op">[</span><span class="va">all.states</span><span class="op">$</span><span class="va">Frost</span><span class="op">&gt;</span><span class="fl">150</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Name"</span>, <span class="st">"Frost"</span><span class="op">)</span><span class="op">]</span></span>
 <span class="r-in"><span class="va">cold.states</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             Name Frost</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2         Alaska   152</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6       Colorado   166</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19         Maine   161</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 23     Minnesota   160</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26       Montana   155</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28        Nevada   188</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 29 New Hampshire   174</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 34  North Dakota   186</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 41  South Dakota   172</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 45       Vermont   168</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 50       Wyoming   173</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Creating a subset of large states</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">large.states</span> <span class="op">&lt;-</span> <span class="va">all.states</span><span class="op">[</span><span class="va">all.states</span><span class="op">$</span><span class="va">Area</span><span class="op">&gt;=</span><span class="fl">100000</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Name"</span>, <span class="st">"Area"</span><span class="op">)</span><span class="op">]</span></span>
 <span class="r-in"><span class="va">large.states</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>          Name   Area</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2      Alaska 566432</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3     Arizona 113417</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  California 156361</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6    Colorado 103766</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26    Montana 145587</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28     Nevada 109889</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 31 New Mexico 121412</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 43      Texas 262134</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Using the merge() function</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Using merge to find the intersection of data</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/merge.html" class="external-link">merge</a></span><span class="op">(</span><span class="va">cold.states</span>, <span class="va">large.states</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       Name Frost   Area</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1   Alaska   152 566432</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 Colorado   166 103766</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  Montana   155 145587</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4   Nevada   188 109889</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Understanding the different types of merge</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/merge.html" class="external-link">merge</a></span><span class="op">(</span><span class="va">cold.states</span>, <span class="va">large.states</span>, all<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             Name Frost   Area</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1         Alaska   152 566432</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2        Arizona    NA 113417</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3     California    NA 156361</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4       Colorado   166 103766</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5          Maine   161     NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6      Minnesota   160     NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7        Montana   155 145587</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8         Nevada   188 109889</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9  New Hampshire   174     NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10    New Mexico    NA 121412</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11  North Dakota   186     NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12  South Dakota   172     NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13         Texas    NA 262134</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14       Vermont   168     NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15       Wyoming   173     NA</span>
 <span class="r-in"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Working with lookup tables</span></span>
@@ -1180,28 +221,15 @@ To run all the examples of <code>ch13()</code>, use <code>example(ch13)</code>.<
 <span class="r-in"></span>
 <span class="r-in"><span class="va">index</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/match.html" class="external-link">match</a></span><span class="op">(</span><span class="va">cold.states</span><span class="op">$</span><span class="va">Name</span>, <span class="va">large.states</span><span class="op">$</span><span class="va">Name</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">index</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1]  1  4 NA NA  5  6 NA NA NA NA NA</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">large.states</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/stats/na.fail.html" class="external-link">na.omit</a></span><span class="op">(</span><span class="va">index</span><span class="op">)</span>, <span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        Name   Area</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2    Alaska 566432</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  Colorado 103766</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26  Montana 145587</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28   Nevada 109889</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Making sense of %in%</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">index</span> <span class="op">&lt;-</span> <span class="va">cold.states</span><span class="op">$</span><span class="va">Name</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="va">large.states</span><span class="op">$</span><span class="va">Name</span></span>
 <span class="r-in"><span class="va">index</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1]  TRUE  TRUE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE</span>
 <span class="r-in"><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html" class="external-link">is.na</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/match.html" class="external-link">match</a></span><span class="op">(</span><span class="va">cold.states</span><span class="op">$</span><span class="va">Name</span>,<span class="va">large.states</span><span class="op">$</span><span class="va">Name</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1]  TRUE  TRUE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE FALSE FALSE</span>
 <span class="r-in"><span class="va">cold.states</span><span class="op">[</span><span class="va">index</span>, <span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        Name Frost</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2    Alaska   152</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  Colorado   166</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 26  Montana   155</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 28   Nevada   188</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Sorting and Ordering Data</span></span>
 <span class="r-in"></span>
@@ -1211,29 +239,16 @@ To run all the examples of <code>ch13()</code>, use <code>example(ch13)</code>.<
 <span class="r-in"></span>
 <span class="r-in"><span class="va">some.states</span> <span class="op">&lt;-</span> <span class="va">some.states</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">10</span>, <span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">]</span></span>
 <span class="r-in"><span class="va">some.states</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                Region Population Income</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Alabama         South       3615   3624</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Alaska           West        365   6315</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Arizona          West       2212   4530</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Arkansas        South       2110   3378</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> California       West      21198   5114</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Colorado         West       2541   4884</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Connecticut Northeast       3100   5348</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Delaware        South        579   4809</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Florida         South       8277   4815</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Georgia         South       4931   4091</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Sorting vectors</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Sorting a vector in ascending order</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/sort.html" class="external-link">sort</a></span><span class="op">(</span><span class="va">some.states</span><span class="op">$</span><span class="va">Population</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1]   365   579  2110  2212  2541  3100  3615  4931  8277 21198</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Sorting a vector in decreasing order</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/sort.html" class="external-link">sort</a></span><span class="op">(</span><span class="va">some.states</span><span class="op">$</span><span class="va">Population</span>, decreasing<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] 21198  8277  4931  3615  3100  2541  2212  2110   579   365</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Sorting data frames</span></span>
 <span class="r-in"></span>
@@ -1241,196 +256,69 @@ To run all the examples of <code>ch13()</code>, use <code>example(ch13)</code>.<
 <span class="r-in"></span>
 <span class="r-in"><span class="va">order.pop</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/order.html" class="external-link">order</a></span><span class="op">(</span><span class="va">some.states</span><span class="op">$</span><span class="va">Population</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">order.pop</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1]  2  8  4  3  6  7  1 10  9  5</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">some.states</span><span class="op">$</span><span class="va">Population</span><span class="op">[</span><span class="va">order.pop</span><span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1]   365   579  2110  2212  2541  3100  3615  4931  8277 21198</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Sorting a data frame in ascending order</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">some.states</span><span class="op">[</span><span class="va">order.pop</span>, <span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                Region Population Income</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Alaska           West        365   6315</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Delaware        South        579   4809</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Arkansas        South       2110   3378</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Arizona          West       2212   4530</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Colorado         West       2541   4884</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Connecticut Northeast       3100   5348</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Alabama         South       3615   3624</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Georgia         South       4931   4091</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Florida         South       8277   4815</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> California       West      21198   5114</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/order.html" class="external-link">order</a></span><span class="op">(</span><span class="va">some.states</span><span class="op">$</span><span class="va">Population</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1]  2  8  4  3  6  7  1 10  9  5</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/order.html" class="external-link">order</a></span><span class="op">(</span><span class="va">some.states</span><span class="op">$</span><span class="va">Population</span>, decreasing<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1]  5  9 10  1  7  6  3  4  8  2</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">some.states</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/order.html" class="external-link">order</a></span><span class="op">(</span><span class="va">some.states</span><span class="op">$</span><span class="va">Population</span>, decreasing<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span>, <span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                Region Population Income</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> California       West      21198   5114</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Florida         South       8277   4815</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Georgia         South       4931   4091</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Alabama         South       3615   3624</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Connecticut Northeast       3100   5348</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Colorado         West       2541   4884</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Arizona          West       2212   4530</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Arkansas        South       2110   3378</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Delaware        South        579   4809</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Alaska           West        365   6315</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Sorting on more than one column</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">index</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">some.states</span>, <span class="fu"><a href="https://rdrr.io/r/base/order.html" class="external-link">order</a></span><span class="op">(</span><span class="va">Region</span>, <span class="va">Population</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">some.states</span><span class="op">[</span><span class="va">index</span>, <span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                Region Population Income</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Connecticut Northeast       3100   5348</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Delaware        South        579   4809</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Arkansas        South       2110   3378</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Alabama         South       3615   3624</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Georgia         South       4931   4091</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Florida         South       8277   4815</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Alaska           West        365   6315</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Arizona          West       2212   4530</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Colorado         West       2541   4884</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> California       West      21198   5114</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Sorting multiple columns in mixed order</span></span>
 <span class="r-in"><span class="va">index</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/order.html" class="external-link">order</a></span><span class="op">(</span><span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/xtfrm.html" class="external-link">xtfrm</a></span><span class="op">(</span><span class="va">some.states</span><span class="op">$</span><span class="va">Region</span><span class="op">)</span>, <span class="va">some.states</span><span class="op">$</span><span class="va">Population</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">some.states</span><span class="op">[</span><span class="va">index</span>, <span class="op">]</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                Region Population Income</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Alaska           West        365   6315</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Arizona          West       2212   4530</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Colorado         West       2541   4884</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> California       West      21198   5114</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Delaware        South        579   4809</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Arkansas        South       2110   3378</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Alabama         South       3615   3624</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Georgia         South       4931   4091</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Florida         South       8277   4815</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Connecticut Northeast       3100   5348</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Traversing Your Data with the Apply Functions</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Using the apply() function to summarize arrays</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">Titanic</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  'table' num [1:4, 1:2, 1:2, 1:2] 0 0 35 0 0 0 17 0 118 154 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  - attr(*, "dimnames")=List of 4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ..$ Class   : chr [1:4] "1st" "2nd" "3rd" "Crew"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ..$ Sex     : chr [1:2] "Male" "Female"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ..$ Age     : chr [1:2] "Child" "Adult"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   ..$ Survived: chr [1:2] "No" "Yes"</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/apply.html" class="external-link">apply</a></span><span class="op">(</span><span class="va">Titanic</span>, <span class="fl">1</span>, <span class="va">sum</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  1st  2nd  3rd Crew </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  325  285  706  885 </span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/apply.html" class="external-link">apply</a></span><span class="op">(</span><span class="va">Titanic</span>, <span class="fl">3</span>, <span class="va">sum</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Child Adult </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   109  2092 </span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/apply.html" class="external-link">apply</a></span><span class="op">(</span><span class="va">Titanic</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">4</span><span class="op">)</span>, <span class="va">sum</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        Survived</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Age       No Yes</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Child   52  57</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Adult 1438 654</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Using lapply() and sapply() to traverse a list or data frame</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">lapply</a></span><span class="op">(</span><span class="va">iris</span>, <span class="va">class</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Sepal.Length</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "numeric"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Sepal.Width</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "numeric"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Petal.Length</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "numeric"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Petal.Width</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "numeric"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $Species</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "factor"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $ratio</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "numeric"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">iris</span>, <span class="va">class</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Length  Sepal.Width Petal.Length  Petal.Width      Species        ratio </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    "numeric"    "numeric"    "numeric"    "numeric"     "factor"    "numeric" </span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">iris</span>, <span class="kw">function</span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/numeric.html" class="external-link">is.numeric</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span>, <span class="cn">NA</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sepal.Length  Sepal.Width Petal.Length  Petal.Width      Species        ratio </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     5.843333     3.057333     3.758000     1.199333           NA     1.953681 </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Using tapply() to create tabular summaries</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/tapply.html" class="external-link">tapply</a></span><span class="op">(</span><span class="va">iris</span><span class="op">$</span><span class="va">Sepal.Length</span>, <span class="va">iris</span><span class="op">$</span><span class="va">Species</span>, <span class="va">mean</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     setosa versicolor  virginica </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5.006      5.936      6.588 </span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">iris</span>, <span class="fu"><a href="https://rdrr.io/r/base/tapply.html" class="external-link">tapply</a></span><span class="op">(</span><span class="va">Sepal.Length</span>, <span class="va">Species</span>, <span class="va">mean</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     setosa versicolor  virginica </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      5.006      5.936      6.588 </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Using tapply() to create higher-dimensional tables</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">mtcars</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 'data.frame':	32 obs. of  11 variables:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ disp: num  160 160 108 258 360 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ qsec: num  16.5 17 18.6 19.4 17 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ am  : num  1 1 1 0 0 0 0 0 0 0 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ gear: num  4 4 4 3 3 3 3 4 4 4 ...</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  $ carb: num  4 4 1 1 2 1 4 2 2 4 ...</span>
 <span class="r-in"><span class="va">cars</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">within</a></span><span class="op">(</span><span class="va">mtcars</span>,</span>
 <span class="r-in">    <span class="va">am</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">am</span>, levels<span class="op">=</span><span class="fl">0</span><span class="op">:</span><span class="fl">1</span>, labels<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Automatic"</span>, <span class="st">"Manual"</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">cars</span>, <span class="fu"><a href="https://rdrr.io/r/base/tapply.html" class="external-link">tapply</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="va">am</span>, <span class="va">mean</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Automatic    Manual </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  17.14737  24.39231 </span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">cars</span>, <span class="fu"><a href="https://rdrr.io/r/base/tapply.html" class="external-link">tapply</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">gear</span>, <span class="va">am</span><span class="op">)</span>, <span class="va">mean</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   Automatic Manual</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  16.10667     NA</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  21.05000 26.275</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5        NA 21.380</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Using aggregate()</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">cars</span>, <span class="fu"><a href="https://rdrr.io/r/stats/aggregate.html" class="external-link">aggregate</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>gear<span class="op">=</span><span class="va">gear</span>, am<span class="op">=</span><span class="va">am</span><span class="op">)</span>, <span class="va">mean</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   gear        am        x</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1    3 Automatic 16.10667</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2    4 Automatic 21.05000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3    4    Manual 26.27500</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4    5    Manual 21.38000</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Getting to Know the Formula Interface</span></span>
 <span class="r-in"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/stats/aggregate.html" class="external-link">aggregate</a></span><span class="op">(</span><span class="va">mpg</span> <span class="op">~</span> <span class="va">gear</span> <span class="op">+</span> <span class="va">am</span>, data<span class="op">=</span><span class="va">cars</span>, <span class="va">mean</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   gear        am      mpg</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1    3 Automatic 16.10667</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2    4 Automatic 21.05000</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3    4    Manual 26.27500</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4    5    Manual 21.38000</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/stats/aov.html" class="external-link">aov</a></span><span class="op">(</span><span class="va">mpg</span> <span class="op">~</span> <span class="va">gear</span> <span class="op">+</span> <span class="va">am</span>, data<span class="op">=</span><span class="va">cars</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Call:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    aov(formula = mpg ~ gear + am, data = cars)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Terms:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                     gear       am Residuals</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Sum of Squares  259.7492 145.4497  720.8483</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Deg. of Freedom        1        1        29</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Residual standard error: 4.985663</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Estimated effects may be unbalanced</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="http://lattice.r-forge.r-project.org/" class="external-link">lattice</a></span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/pkg/lattice/man/xyplot.html" class="external-link">xyplot</a></span><span class="op">(</span><span class="va">mpg</span> <span class="op">~</span> <span class="va">gear</span> <span class="op">+</span> <span class="va">am</span>, data<span class="op">=</span><span class="va">cars</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="ch13-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Whipping Your Data into Shape</span></span>
@@ -1457,53 +345,20 @@ To run all the examples of <code>ch13()</code>, use <code>example(ch13)</code>.<
 <span class="r-in"><span class="co">## Melting data to long format</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">mgoals</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/reshape2/man/melt.html" class="external-link">melt</a></span><span class="op">(</span><span class="va">goals</span><span class="op">)</span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Using Game, Venue as id variables</span>
 <span class="r-in"><span class="va">mgoals</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/reshape2/man/melt.html" class="external-link">melt</a></span><span class="op">(</span><span class="va">goals</span>, id.vars<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Game"</span>, <span class="st">"Venue"</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">mgoals</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    Game  Venue  variable value</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1   1st Bruges    Granny    12</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2   2nd  Ghent    Granny     4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3   3rd  Ghent    Granny     5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4   4th Bruges    Granny     6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5   1st Bruges Geraldine     5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6   2nd  Ghent Geraldine     4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7   3rd  Ghent Geraldine     2</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8   4th Bruges Geraldine     4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9   1st Bruges  Gertrude    11</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10  2nd  Ghent  Gertrude     5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11  3rd  Ghent  Gertrude     6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12  4th Bruges  Gertrude     7</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Casting data to wide format</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/pkg/reshape2/man/cast.html" class="external-link">dcast</a></span><span class="op">(</span><span class="va">mgoals</span>,  <span class="va">Venue</span> <span class="op">+</span> <span class="va">Game</span> <span class="op">~</span> <span class="va">variable</span>, <span class="va">sum</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    Venue Game Granny Geraldine Gertrude</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Bruges  1st     12         5       11</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 Bruges  4th      6         4        7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  Ghent  2nd      4         4        5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  Ghent  3rd      5         2        6</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/pkg/reshape2/man/cast.html" class="external-link">dcast</a></span><span class="op">(</span><span class="va">mgoals</span>, <span class="va">variable</span> <span class="op">~</span> <span class="va">Venue</span> , <span class="va">sum</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    variable Bruges Ghent</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1    Granny     18     9</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 Geraldine      9     6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  Gertrude     18    11</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/pkg/reshape2/man/cast.html" class="external-link">dcast</a></span><span class="op">(</span><span class="va">mgoals</span>,  <span class="va">Venue</span> <span class="op">~</span> <span class="va">variable</span> , <span class="va">sum</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    Venue Granny Geraldine Gertrude</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Bruges     18         9       18</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2  Ghent      9         6       11</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/pkg/reshape2/man/cast.html" class="external-link">dcast</a></span><span class="op">(</span><span class="va">mgoals</span>,  <span class="va">Venue</span> <span class="op">+</span> <span class="va">variable</span> <span class="op">~</span> <span class="va">Game</span> , <span class="va">sum</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    Venue  variable 1st 2nd 3rd 4th</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1 Bruges    Granny  12   0   0   6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2 Bruges Geraldine   5   0   0   4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3 Bruges  Gertrude  11   0   0   7</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  Ghent    Granny   0   4   5   0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  Ghent Geraldine   0   4   2   0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  Ghent  Gertrude   0   5   6   0</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">mgoals</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">variable</span>, y<span class="op">=</span><span class="va">value</span>, fill<span class="op">=</span><span class="va">Game</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html" class="external-link">geom_bar</a></span><span class="op">(</span>stat<span class="op">=</span><span class="st">"identity"</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="ch13-2.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span class="op">}</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

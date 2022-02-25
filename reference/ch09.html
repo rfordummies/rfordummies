@@ -86,7 +86,8 @@ To run all the examples of <code>ch9()</code>, use <code>example(ch9)</code>.</p
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># Chapter 9</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span class="r-in"><span class="co"># Chapter 9</span></span>
 <span class="r-in"><span class="co"># Controlling the Logical Flow</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">#Making Choices with if Statements</span></span>
@@ -105,9 +106,7 @@ To run all the examples of <code>ch9()</code>, use <code>example(ch9)</code>.</p
 <span class="r-in"><span class="op">}</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu">priceCalculator</span><span class="op">(</span>hours <span class="op">=</span> <span class="fl">55</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2200</span>
 <span class="r-in"><span class="fu">priceCalculator</span><span class="op">(</span>hours <span class="op">=</span> <span class="fl">110</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3960</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">priceCalculator</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">hours</span>, <span class="va">pph</span><span class="op">=</span><span class="fl">40</span><span class="op">)</span><span class="op">{</span></span>
 <span class="r-in">    <span class="va">net.price</span> <span class="op">&lt;-</span> <span class="va">hours</span> <span class="op">*</span> <span class="va">pph</span></span>
@@ -133,9 +132,7 @@ To run all the examples of <code>ch9()</code>, use <code>example(ch9)</code>.</p
 <span class="r-in"><span class="op">}</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu">priceCalculator</span><span class="op">(</span><span class="fl">25</span>,public<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1060</span>
 <span class="r-in"><span class="fu">priceCalculator</span><span class="op">(</span><span class="fl">25</span>,public<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1120</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">priceCalculator</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">hours</span>, <span class="va">pph</span><span class="op">=</span><span class="fl">40</span>, <span class="va">public</span><span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span><span class="op">{</span></span>
 <span class="r-in">    <span class="va">net.price</span> <span class="op">&lt;-</span> <span class="va">hours</span> <span class="op">*</span> <span class="va">pph</span></span>
@@ -158,22 +155,18 @@ To run all the examples of <code>ch9()</code>, use <code>example(ch9)</code>.</p
 <span class="r-in"></span>
 <span class="r-in"><span class="co">#priceCalculator(c(25,110))</span></span>
 <span class="r-in"><span class="fu">priceCalculator</span><span class="op">(</span><span class="fl">110</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 4198</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">25</span>, <span class="fl">110</span><span class="op">)</span> <span class="op">&gt;</span> <span class="fl">100</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE  TRUE</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Choosing based on a logical vector</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Understanding how it works</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">3</span><span class="op">)</span> <span class="op">&lt;</span> <span class="fl">2.5</span> , <span class="fl">1</span><span class="op">:</span><span class="fl">2</span> , <span class="fl">3</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1 4</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Trying it out</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">my.hours</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">25</span>,<span class="fl">110</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">my.hours</span> <span class="op">*</span> <span class="fl">40</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/ifelse.html" class="external-link">ifelse</a></span><span class="op">(</span><span class="va">my.hours</span> <span class="op">&gt;</span> <span class="fl">100</span>, <span class="fl">0.9</span>, <span class="fl">1</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1000 3960</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Adapting the function</span></span>
 <span class="r-in"></span>
@@ -190,7 +183,6 @@ To run all the examples of <code>ch9()</code>, use <code>example(ch9)</code>.</p
 <span class="r-in"><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">clients</span>, <span class="fu">priceCalculator</span><span class="op">(</span><span class="va">hours</span>, public <span class="op">=</span> <span class="va">public</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1060 4198 5040 1792</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Making Multiple Choices</span></span>
 <span class="r-in"></span>
@@ -240,7 +232,6 @@ To run all the examples of <code>ch9()</code>, use <code>example(ch9)</code>.</p
 <span class="r-in"></span>
 <span class="r-in"><span class="va">client</span> <span class="op">&lt;-</span> <span class="st">'other'</span></span>
 <span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/switch.html" class="external-link">switch</a></span><span class="op">(</span><span class="va">client</span>, private<span class="op">=</span><span class="fl">1.12</span>, public<span class="op">=</span><span class="fl">1.06</span>, <span class="fl">1</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
 <span class="r-in"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Looping Through Values</span></span>
@@ -267,7 +258,6 @@ To run all the examples of <code>ch9()</code>, use <code>example(ch9)</code>.</p
 <span class="r-in"></span>
 <span class="r-in"><span class="va">clients</span><span class="op">$</span><span class="va">type</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'public'</span>,<span class="st">'abroad'</span>,<span class="st">'private'</span>,<span class="st">'abroad'</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu">priceCalculator</span><span class="op">(</span><span class="va">clients</span><span class="op">$</span><span class="va">hours</span>, client<span class="op">=</span><span class="va">clients</span><span class="op">$</span><span class="va">type</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1060 3960 5040 1600</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Using loops and indices</span></span>
 <span class="r-in"></span>
@@ -277,20 +267,13 @@ To run all the examples of <code>ch9()</code>, use <code>example(ch9)</code>.</p
 <span class="r-in">  <span class="va">VAT</span><span class="op">[</span><span class="va">i</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="kw"><a href="https://rdrr.io/r/base/switch.html" class="external-link">switch</a></span><span class="op">(</span><span class="va">client</span><span class="op">[</span><span class="va">i</span><span class="op">]</span>, private<span class="op">=</span><span class="fl">1.12</span>, public<span class="op">=</span><span class="fl">1.06</span>, <span class="fl">1</span><span class="op">)</span></span>
 <span class="r-in"><span class="op">}</span></span>
 <span class="r-in"><span class="va">VAT</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Looping without Loops: Meeting the Apply Family</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">songline</span> <span class="op">&lt;-</span> <span class="st">'Get out of my dreams...'</span></span>
 <span class="r-in"><span class="kw">for</span><span class="op">(</span><span class="va">songline</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span> <span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="st">'...Get into my car!'</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "...Get into my car!"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "...Get into my car!"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "...Get into my car!"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "...Get into my car!"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "...Get into my car!"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">songline</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 5</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Looking at the family features</span></span>
 <span class="r-in"></span>
@@ -304,24 +287,14 @@ To run all the examples of <code>ch9()</code>, use <code>example(ch9)</code>.</p
 <span class="r-in"><span class="va">counts</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>,<span class="fl">2</span>,<span class="fl">4</span>,<span class="fl">6</span>,<span class="fl">5</span>,<span class="fl">1</span>,<span class="fl">8</span>,<span class="fl">6</span>,<span class="fl">1</span><span class="op">)</span>, ncol<span class="op">=</span><span class="fl">3</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/colnames.html" class="external-link">colnames</a></span><span class="op">(</span><span class="va">counts</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'sparrow'</span>,<span class="st">'dove'</span>,<span class="st">'crow'</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">counts</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      sparrow dove crow</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,]       3    6    8</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,]       2    5    6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3,]       4    1    1</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/apply.html" class="external-link">apply</a></span><span class="op">(</span><span class="va">counts</span>, <span class="fl">2</span>, <span class="va">max</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sparrow    dove    crow </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4       6       8 </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Adding extra arguments</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">counts</span><span class="op">[</span><span class="fl">2</span>, <span class="fl">2</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="cn">NA</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/apply.html" class="external-link">apply</a></span><span class="op">(</span><span class="va">counts</span>,<span class="fl">2</span>,<span class="va">max</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sparrow    dove    crow </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4      NA       8 </span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/apply.html" class="external-link">apply</a></span><span class="op">(</span><span class="va">counts</span>, <span class="fl">2</span>, <span class="va">max</span>, na.rm<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sparrow    dove    crow </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       4       6       8 </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Applying functions to listlike objects</span></span>
 <span class="r-in"></span>
@@ -330,8 +303,6 @@ To run all the examples of <code>ch9()</code>, use <code>example(ch9)</code>.</p
 <span class="r-in"><span class="co">#### Using switch on vectors</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'a'</span>,<span class="st">'b'</span><span class="op">)</span>, <span class="va">switch</span>, a<span class="op">=</span><span class="st">'Hello'</span>, b<span class="op">=</span><span class="st">'Goodbye'</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>         a         b </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   "Hello" "Goodbye" </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">#### Replacing a complete for loop with a single statement</span></span>
 <span class="r-in"></span>
@@ -347,39 +318,17 @@ To run all the examples of <code>ch9()</code>, use <code>example(ch9)</code>.</p
 <span class="r-in"><span class="co">### Applying a function to a data frame</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">clients</span>,<span class="va">class</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       hours      public        type </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   "numeric"   "logical" "character" </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Simplifying results (or not) with sapply</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">clients</span>, <span class="va">unique</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $hours</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  25 110 125  40</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $public</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  TRUE FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $type</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "public"  "abroad"  "private"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Getting lists using lapply</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">sapply</a></span><span class="op">(</span><span class="va">clients</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">3</span><span class="op">)</span>, <span class="op">]</span>, <span class="va">unique</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      hours public  type     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1,] "25"  "TRUE"  "public" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2,] "125" "FALSE" "private"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">lapply</a></span><span class="op">(</span><span class="va">clients</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">3</span><span class="op">)</span>, <span class="op">]</span>, <span class="va">unique</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $hours</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  25 125</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $public</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1]  TRUE FALSE</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $type</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "public"  "private"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-in"><span class="op">}</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

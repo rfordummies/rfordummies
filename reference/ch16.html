@@ -84,7 +84,8 @@ To run all the examples of <code>ch16()</code>, use <code>example(ch16)</code>.<
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># Chapter 16 - Using Base Graphics</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span class="r-in"><span class="co"># Chapter 16 - Using Base Graphics</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Creating Different Types of Plots</span></span>
 <span class="r-in"></span>
@@ -96,7 +97,6 @@ To run all the examples of <code>ch16()</code>, use <code>example(ch16)</code>.<
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">large.islands</span>, main<span class="op">=</span><span class="st">"Land area of continents and islands"</span>,</span>
 <span class="r-in">   ylab<span class="op">=</span><span class="st">"Land area in square miles"</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/text.html" class="external-link">text</a></span><span class="op">(</span><span class="va">large.islands</span>, labels<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/names.html" class="external-link">names</a></span><span class="op">(</span><span class="va">large.islands</span><span class="op">)</span>, adj<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="ch16-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Adding points and lines to a plot</span></span>
@@ -109,16 +109,12 @@ To run all the examples of <code>ch16()</code>, use <code>example(ch16)</code>.<
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">faithful</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/points.html" class="external-link">points</a></span><span class="op">(</span><span class="va">short.eruptions</span>, col<span class="op">=</span><span class="st">"red"</span>, pch<span class="op">=</span><span class="fl">19</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="ch16-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Changing the shape of points</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Changing the color</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/grDevices/colors.html" class="external-link">colors</a></span><span class="op">(</span><span class="op">)</span>, <span class="fl">10</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] "white"         "aliceblue"     "antiquewhite"  "antiquewhite1"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [5] "antiquewhite2" "antiquewhite3" "antiquewhite4" "aquamarine"   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [9] "aquamarine1"   "aquamarine2"  </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Adding lines to a plot</span></span>
 <span class="r-in"></span>
@@ -131,30 +127,22 @@ To run all the examples of <code>ch16()</code>, use <code>example(ch16)</code>.<
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>h<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">faithful</span><span class="op">$</span><span class="va">waiting</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>a<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/coef.html" class="external-link">coef</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span>, b<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/coef.html" class="external-link">coef</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span><span class="va">fit</span>, col <span class="op">=</span> <span class="st">"red"</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="ch16-3.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Different plot types</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">LakeHuron</span>, type<span class="op">=</span><span class="st">"l"</span>, main<span class="op">=</span><span class="st">'type="l"'</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="ch16-4.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">LakeHuron</span>, type<span class="op">=</span><span class="st">"p"</span>, main<span class="op">=</span><span class="st">'type=p"'</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="ch16-5.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">LakeHuron</span>, type<span class="op">=</span><span class="st">"b"</span>, main<span class="op">=</span><span class="st">'type="b"'</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="ch16-6.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="fl">0.5</span>, <span class="fl">1.5</span>, <span class="fl">0.25</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, type<span class="op">=</span><span class="st">"n"</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/points.html" class="external-link">points</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="ch16-7.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">mtcars</span>, <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="va">disp</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="ch16-8.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">mtcars</span>, <span class="fu"><a href="https://rdrr.io/r/graphics/boxplot.html" class="external-link">boxplot</a></span><span class="op">(</span><span class="va">disp</span>, <span class="va">mpg</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="ch16-9.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">mtcars</span>, <span class="fu"><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="ch16-10.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Controlling Plot Options and Arguments</span></span>
 <span class="r-in"></span>
@@ -164,7 +152,6 @@ To run all the examples of <code>ch16()</code>, use <code>example(ch16)</code>.<
 <span class="r-in">   main <span class="op">=</span> <span class="st">"Eruptions of Old Faithful"</span>,</span>
 <span class="r-in">   xlab <span class="op">=</span> <span class="st">"Eruption time (min)"</span>,</span>
 <span class="r-in">   ylab <span class="op">=</span> <span class="st">"Waiting time to next eruption (min)"</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="ch16-11.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Changing plot options</span></span>
@@ -172,17 +159,14 @@ To run all the examples of <code>ch16()</code>, use <code>example(ch16)</code>.<
 <span class="r-in"><span class="co">### The axes label style</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">faithful</span>, las<span class="op">=</span><span class="fl">1</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="ch16-12.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### The box type</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">faithful</span>, bty<span class="op">=</span><span class="st">"n"</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="ch16-13.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### More than one option</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">faithful</span>, las<span class="op">=</span><span class="fl">1</span>, bty<span class="op">=</span><span class="st">"l"</span>, col<span class="op">=</span><span class="st">"red"</span>, pch<span class="op">=</span><span class="fl">19</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="ch16-14.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">### Font size of text and axes</span></span>
 <span class="r-in"></span>
@@ -190,18 +174,15 @@ To run all the examples of <code>ch16()</code>, use <code>example(ch16)</code>.<
 <span class="r-in"><span class="va">y</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rep.html" class="external-link">rep</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, main<span class="op">=</span><span class="st">"Effect of cex on text size"</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/text.html" class="external-link">text</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">+</span><span class="fl">0.1</span>, labels<span class="op">=</span><span class="va">x</span>, cex<span class="op">=</span><span class="va">x</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="ch16-15.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, main<span class="op">=</span><span class="st">"Effect of cex.main, cex.lab and cex.axis"</span>,</span>
 <span class="r-in">  cex.main<span class="op">=</span><span class="fl">1.25</span>, cex.lab<span class="op">=</span><span class="fl">1.5</span>, cex.axis<span class="op">=</span><span class="fl">0.75</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="ch16-16.png" alt="" width="700" height="433"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Putting multiple plots on a single page</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">old.par</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>mfrow<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">faithful</span>, main<span class="op">=</span><span class="st">"Faithful eruptions"</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">large.islands</span>, main<span class="op">=</span><span class="st">"Islands"</span>, ylab<span class="op">=</span><span class="st">"Area"</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="ch16-17.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span><span class="va">old.par</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"></span>
@@ -212,11 +193,11 @@ To run all the examples of <code>ch16()</code>, use <code>example(ch16)</code>.<
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/grDevices/png.html" class="external-link">png</a></span><span class="op">(</span>filename<span class="op">=</span><span class="va">filename</span><span class="op">)</span></span>
 <span class="r-in"><span class="op">}</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">faithful</span><span class="op">)</span></span>
-<span class="r-plt img"><img src="ch16-18.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/grDevices/dev.html" class="external-link">dev.off</a></span><span class="op">(</span><span class="op">)</span></span>
 <span class="r-in"><span class="op">}</span></span>
 <span class="r-in"></span>
+<span class="r-in"><span class="op">}</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

@@ -84,7 +84,8 @@ To run all the examples of <code>ch12()</code>, use <code>example(ch12)</code>.<
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># Chapter 12</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span class="r-in"><span class="co"># Chapter 12</span></span>
 <span class="r-in"><span class="co"># Getting Data into and out of R</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># NOTE : Most of the code depends on actions, directories</span></span>
@@ -151,7 +152,6 @@ To run all the examples of <code>ch12()</code>, use <code>example(ch12)</code>.<
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Understanding the working directory</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/getwd.html" class="external-link">getwd</a></span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "/tmp/RtmpdqFTY9/file2d9d4797076a/reference"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># setwd("F:/git/roxygen2")</span></span>
 <span class="r-in"><span class="co"># getwd()</span></span>
@@ -159,37 +159,27 @@ To run all the examples of <code>ch12()</code>, use <code>example(ch12)</code>.<
 <span class="r-in"><span class="co"># getwd()</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="st">"f:"</span>, <span class="st">"git"</span>, <span class="st">"surveyor"</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "f:/git/surveyor"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># setwd(file.path("F:", "git", "roxygen2"))</span></span>
 <span class="r-in"><span class="co"># getwd()</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="st">"F:"</span>, <span class="st">"git"</span>, <span class="st">"roxygen2"</span>, <span class="st">"roxygen2"</span>, <span class="st">"README.md"</span> <span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "F:/git/roxygen2/roxygen2/README.md"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Manipulating files</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># list.files(file.path("F:", "git", "roxygen2"))</span></span>
 <span class="r-in"><span class="va">my.file</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempfile</a></span><span class="op">(</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">my.file</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "/tmp/RtmpdqFTY9/file2d9d70cad02f"</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/write.table.html" class="external-link">write.csv</a></span><span class="op">(</span><span class="va">iris</span>, file<span class="op">=</span><span class="va">my.file</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/list.files.html" class="external-link">list.files</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "bslib-da7ab7cb5d3292a4a1d07d62236b8ea8"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2] "downlit"                               </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3] "file2d9d4797076a"                      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [4] "file2d9d70cad02f"                      </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">file.iris</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/utils/read.table.html" class="external-link">read.csv</a></span><span class="op">(</span><span class="va">my.file</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/files.html" class="external-link">file.remove</a></span><span class="op">(</span><span class="va">my.file</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] TRUE</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/list.files.html" class="external-link">list.files</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "bslib-da7ab7cb5d3292a4a1d07d62236b8ea8"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [2] "downlit"                               </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [3] "file2d9d4797076a"                      </span>
 <span class="r-in"></span>
 <span class="r-in"></span>
+<span class="r-in"><span class="op">}</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

@@ -84,11 +84,12 @@ To run all the examples of <code>ch20()</code>, use <code>example(ch20)</code>.<
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># Chapter 20 - Ten Tips on Working with Packages</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span class="r-in"><span class="co"># Chapter 20 - Ten Tips on Working with Packages</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Poking Around the Nooks and Crannies of CRAN</span></span>
 <span class="r-in"></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span><span class="st">"repos"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>CRAN <span class="op">=</span> <span class="st">"http://cran.ma.imperial.ac.uk/"</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span><span class="st">"repos"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>CRAN <span class="op">=</span> <span class="st">"https://cran.ma.imperial.ac.uk/"</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Finding Interesting Packages</span></span>
 <span class="r-in"></span>
@@ -118,28 +119,23 @@ To run all the examples of <code>ch20()</code>, use <code>example(ch20)</code>.<
 <span class="r-in"><span class="co">## Unloading Packages</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/search.html" class="external-link">search</a></span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [1] ".GlobalEnv"          "package:fortunes"    "package:ggplot2"    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [4] "package:reshape2"    "package:lattice"     "package:sos"        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  [7] "package:brew"        "package:stringr"     "package:rfordummies"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [10] "package:stats"       "package:graphics"    "package:grDevices"  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [13] "package:utils"       "package:datasets"    "package:methods"    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [16] "Autoloads"           "package:base"       </span>
 <span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/detach.html" class="external-link">detach</a></span><span class="op">(</span><span class="va">package</span><span class="op">:</span><span class="va">fortunes</span>, unload<span class="op">=</span><span class="cn">TRUE</span><span class="op">)</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Forging Ahead with R-Forge</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"data.table"</span>, repos<span class="op">=</span><span class="st">"http://R-Forge.R-project.org"</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"data.table"</span>, repos<span class="op">=</span><span class="st">"https://R-Forge.R-project.org"</span><span class="op">)</span></span>
 <span class="r-in"><span class="op">}</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Conducting Installations from BioConductor</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
-<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span><span class="st">"http://bioconductor.org/biocLite.R"</span><span class="op">)</span></span>
+<span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span><span class="st">"https://bioconductor.org/biocLite.R"</span><span class="op">)</span></span>
 <span class="r-in"><span class="op">}</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Reading the R Manual</span></span>
 <span class="r-in"></span>
+<span class="r-in"><span class="op">}</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

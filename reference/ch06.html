@@ -86,53 +86,30 @@ To run all the examples of <code>ch6()</code>, use <code>example(ch6)</code>.</p
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># Chapter 6 - Going on a Date with R</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span class="r-in"><span class="co"># Chapter 6 - Going on a Date with R</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Working with Dates</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">xd</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="st">"2012-07-27"</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">xd</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2012-07-27"</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">xd</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>  Date[1:1], format: "2012-07-27"</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/weekday.POSIXt.html" class="external-link">weekdays</a></span><span class="op">(</span><span class="va">xd</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Friday"</span>
 <span class="r-in"><span class="va">xd</span> <span class="op">+</span> <span class="fl">7</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2012-08-03"</span>
 <span class="r-in"><span class="va">xd</span> <span class="op">+</span> <span class="fl">0</span><span class="op">:</span><span class="fl">6</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2012-07-27" "2012-07-28" "2012-07-29" "2012-07-30" "2012-07-31"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [6] "2012-08-01" "2012-08-02"</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/weekday.POSIXt.html" class="external-link">weekdays</a></span><span class="op">(</span><span class="va">xd</span> <span class="op">+</span> <span class="fl">0</span><span class="op">:</span><span class="fl">6</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Friday"    "Saturday"  "Sunday"    "Monday"    "Tuesday"   "Wednesday"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [7] "Thursday" </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">startDate</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="st">"2012-01-01"</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">xm</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="va">startDate</span>, by<span class="op">=</span><span class="st">"2 months"</span>, length.out<span class="op">=</span><span class="fl">6</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">xm</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2012-01-01" "2012-03-01" "2012-05-01" "2012-07-01" "2012-09-01"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [6] "2012-11-01"</span>
 <span class="r-in"> <span class="fu"><a href="https://rdrr.io/r/base/weekday.POSIXt.html" class="external-link">months</a></span><span class="op">(</span><span class="va">xm</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "January"   "March"     "May"       "July"      "September" "November" </span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/weekday.POSIXt.html" class="external-link">quarters</a></span><span class="op">(</span><span class="va">xm</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Q1" "Q1" "Q2" "Q3" "Q3" "Q4"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/Sys.localeconv.html" class="external-link">Sys.localeconv</a></span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     decimal_point     thousands_sep          grouping   int_curr_symbol </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               "."                ""                ""                "" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   currency_symbol mon_decimal_point mon_thousands_sep      mon_grouping </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                ""               "."                ""                "" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     positive_sign     negative_sign   int_frac_digits       frac_digits </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                ""                ""             "127"             "127" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     p_cs_precedes    p_sep_by_space     n_cs_precedes    n_sep_by_space </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             "127"             "127"             "127"             "127" </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       p_sign_posn       n_sign_posn </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             "127"             "127" </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="st">"27 July 2012"</span>, format<span class="op">=</span><span class="st">"%d %B %Y"</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2012-07-27"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="st">"27/7/12"</span>, format<span class="op">=</span><span class="st">"%d/%m/%y"</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2012-07-27"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Adding Time Information to Dates</span></span>
 <span class="r-in"></span>
@@ -141,81 +118,37 @@ To run all the examples of <code>ch6()</code>, use <code>example(ch6)</code>.</p
 <span class="r-in"><span class="va">xct</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.POSIXlt.html" class="external-link">as.POSIXct</a></span><span class="op">(</span><span class="va">apollo</span>, format<span class="op">=</span><span class="va">apollo.fmt</span>, tz<span class="op">=</span><span class="st">"UTC"</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">xct</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.POSIXlt.html" class="external-link">as.POSIXct</a></span><span class="op">(</span><span class="va">apollo</span>, format<span class="op">=</span><span class="va">apollo.fmt</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">xct</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1969-07-20 20:17:39 UTC"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/format.html" class="external-link">format</a></span><span class="op">(</span><span class="va">xct</span>, <span class="st">"%d/%m/%y"</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "20/07/69"</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/format.html" class="external-link">format</a></span><span class="op">(</span><span class="va">xct</span>, <span class="st">"%S minutes past %I %p, on %d %B %Y"</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "39 minutes past 08 PM, on 20 July 1969"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Performing Operations on Dates and Times</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Addition and subtraction</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fl">24</span><span class="op">*</span><span class="fl">60</span><span class="op">*</span><span class="fl">60</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 86400</span>
 <span class="r-in"><span class="va">xct</span> <span class="op">+</span> <span class="fl">7</span><span class="op">*</span><span class="fl">86400</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1969-07-27 20:17:39 UTC"</span>
 <span class="r-in"><span class="va">xct</span> <span class="op">+</span> <span class="fl">3</span><span class="op">*</span><span class="fl">60</span><span class="op">*</span><span class="fl">60</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1969-07-20 23:17:39 UTC"</span>
 <span class="r-in"><span class="va">xct</span> <span class="op">-</span> <span class="fl">7</span><span class="op">*</span><span class="fl">86400</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1969-07-13 20:17:39 UTC"</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/as.Date.html" class="external-link">as.Date</a></span><span class="op">(</span><span class="va">xct</span><span class="op">)</span> <span class="op">-</span> <span class="fl">7</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1969-07-13"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Comparison of dates</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html" class="external-link">Sys.time</a></span><span class="op">(</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-02-22 15:45:35 UTC"</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/Sys.time.html" class="external-link">Sys.time</a></span><span class="op">(</span><span class="op">)</span> <span class="op">&lt;</span> <span class="va">xct</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">dec.start</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.POSIXlt.html" class="external-link">as.POSIXct</a></span><span class="op">(</span><span class="st">"1950-01-01"</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">dec</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span><span class="va">dec.start</span>, by<span class="op">=</span><span class="st">"10 years"</span>, length.out<span class="op">=</span><span class="fl">4</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">dec</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1950-01-01 UTC" "1960-01-01 UTC" "1970-01-01 UTC" "1980-01-01 UTC"</span>
 <span class="r-in"><span class="va">dec</span> <span class="op">&gt;</span> <span class="va">xct</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] FALSE FALSE  TRUE  TRUE</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Extraction</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">xlt</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/as.POSIXlt.html" class="external-link">as.POSIXlt</a></span><span class="op">(</span><span class="va">xct</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">xlt</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1969-07-20 20:17:39 UTC"</span>
 <span class="r-in"><span class="va">xlt</span><span class="op">$</span><span class="va">year</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 69</span>
 <span class="r-in"><span class="va">xlt</span><span class="op">$</span><span class="va">mon</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 6</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/class.html" class="external-link">unclass</a></span><span class="op">(</span><span class="va">xlt</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $sec</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 39</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $min</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 17</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $hour</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 20</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $mday</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 20</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $mon</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 6</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $year</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 69</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $wday</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $yday</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 200</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> $isdst</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> attr(,"tzone")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "UTC"</span>
 <span class="r-in"></span>
 <span class="r-in"></span>
 <span class="r-in"></span>
@@ -225,6 +158,7 @@ To run all the examples of <code>ch6()</code>, use <code>example(ch6)</code>.</p
 <span class="r-in"></span>
 <span class="r-in"></span>
 <span class="r-in"></span>
+<span class="r-in"><span class="op">}</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

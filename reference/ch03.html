@@ -86,7 +86,8 @@ To run all the examples of <code>ch3()</code>, use <code>example(ch3)</code>.</p
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># Chapter 3 - The Fundamentals of R</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/interactive.html" class="external-link">interactive</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span class="r-in"><span class="co"># Chapter 3 - The Fundamentals of R</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Using the Full Power of Functions</span></span>
 <span class="r-in"></span>
@@ -94,28 +95,22 @@ To run all the examples of <code>ch3()</code>, use <code>example(ch3)</code>.</p
 <span class="r-in"></span>
 <span class="r-in"><span class="va">baskets.of.Granny</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">12</span>,<span class="fl">4</span>,<span class="fl">4</span>,<span class="fl">6</span>,<span class="fl">9</span>,<span class="fl">3</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">baskets.of.Granny</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 12  4  4  6  9  3</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="va">baskets.of.Granny</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 38</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">firstnames</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Joris"</span>, <span class="st">"Carolien"</span>, <span class="st">"Koen"</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">lastname</span> <span class="op">&lt;-</span> <span class="st">"Meys"</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="va">firstnames</span>,<span class="va">lastname</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Joris Meys"    "Carolien Meys" "Koen Meys"    </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="va">authors</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Andrie"</span>,<span class="st">"Joris"</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">lastnames</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"de Vries"</span>,<span class="st">"Meys"</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="va">authors</span>,<span class="va">lastnames</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Andrie de Vries" "Joris Meys"     </span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Putting the argument in a function</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># print() ### This line of code leads to deliberate error for illustration</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Isn't this fun?"</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Isn't this fun?"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span>digits<span class="op">=</span><span class="fl">4</span>, x <span class="op">=</span> <span class="fl">11</span><span class="op">/</span><span class="fl">7</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1.571</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Making history</span></span>
 <span class="r-in"></span>
@@ -124,7 +119,6 @@ To run all the examples of <code>ch3()</code>, use <code>example(ch3)</code>.</p
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/savehistory.html" class="external-link">savehistory</a></span><span class="op">(</span>file <span class="op">=</span> <span class="va">filename</span><span class="op">)</span></span>
 <span class="r-in"><span class="op">}</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/list.files.html" class="external-link">list.files</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span>, pattern <span class="op">=</span> <span class="st">".Rhistory"</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> character(0)</span>
 <span class="r-in"><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/savehistory.html" class="external-link">loadhistory</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/file.path.html" class="external-link">file.path</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span>, <span class="st">"Chapter3.Rhistory"</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"><span class="op">}</span></span>
@@ -137,9 +131,7 @@ To run all the examples of <code>ch3()</code>, use <code>example(ch3)</code>.</p
 <span class="r-in"></span>
 <span class="r-in"><span class="va">paste</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="st">"This gets"</span>,<span class="st">"confusing"</span><span class="op">)</span></span>
 <span class="r-in"><span class="va">paste</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "This gets confusing"</span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="st">"Don't"</span>,<span class="st">"you"</span>,<span class="st">"think?"</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Don't you think?"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Choosing a naming style</span></span>
 <span class="r-in"></span>
@@ -158,22 +150,16 @@ To run all the examples of <code>ch3()</code>, use <code>example(ch3)</code>.</p
 <span class="r-in">              <span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="va">Total.baskets</span><span class="op">)</span>,</span>
 <span class="r-in">              <span class="va">Outro</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="va">Text</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> It is amazing! The All Star Grannies scored</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> a total of 71 baskets in the last six games!</span>
 <span class="r-in"><span class="va">Text</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "It is amazing! The All Star Grannies scored\na total of 71 baskets in the last six games!"</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="st">'If you doubt whether it works,</span>
 <span class="r-in">+ just try it out.'</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> If you doubt whether it works,</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> + just try it out.</span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co">## Adding comments</span></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># The All Star Grannies do it again!</span></span>
 <span class="r-in"><span class="va">baskets.of.Granny</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">12</span>,<span class="fl">4</span>,<span class="fl">4</span>,<span class="fl">6</span>,<span class="fl">9</span>,<span class="fl">3</span><span class="op">)</span> <span class="co"># Granny rules</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/base/sum.html" class="external-link">sum</a></span><span class="op">(</span><span class="va">baskets.of.Granny</span><span class="op">)</span> <span class="co"># total number of points</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 38</span>
 <span class="r-in"></span>
 <span class="r-in"></span>
 <span class="r-in"><span class="co"># Getting from Base R to More</span></span>
@@ -188,25 +174,10 @@ To run all the examples of <code>ch3()</code>, use <code>example(ch3)</code>.</p
 <span class="r-in"></span>
 <span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="st">"fortunes"</span><span class="op">)</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/pkg/fortunes/man/fortunes.html" class="external-link">fortune</a></span><span class="op">(</span><span class="st">"This is R"</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Evelyn Hall: I would like to know how (if) I can extract some of the</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> information from the summary of my nlme.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Simon Blomberg: This is R. There is no if. Only how.</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    -- Evelyn Hall and Simon 'Yoda' Blomberg</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       R-help (April 2005)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/pkg/fortunes/man/fortunes.html" class="external-link">fortune</a></span><span class="op">(</span><span class="fl">161</span><span class="op">)</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> (3 times...rrrrgh...) and why do you think the mailing list is called</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> R-*packages* ???????????</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Please do</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   for(i in 1:20) cat("It's a package!\n")</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    -- Martin Maechler (after a newly released *package* has been called</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       *library* three times in its announcement on R-packages)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>       R-help (March 2006)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span class="kw"><a href="https://rdrr.io/r/base/detach.html" class="external-link">detach</a></span><span class="op">(</span><span class="va">package</span><span class="op">:</span><span class="va">fortunes</span><span class="op">)</span></span>
 <span class="r-in"></span>
+<span class="r-in"><span class="op">}</span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
