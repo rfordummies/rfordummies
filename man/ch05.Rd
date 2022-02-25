@@ -14,6 +14,7 @@ To print a listing of all examples of a chapter, use \code{ch5()}.
 To run all the examples of \code{ch5()}, use \code{example(ch5)}.
 }
 \examples{
+if (interactive()) {
 # Chapter 5 - Getting Started with Reading and Writing
 
 # Using Character Vectors for Text Data
@@ -187,6 +188,7 @@ table(status)
 table(ordered.status)
 
 
+}
 }
 \seealso{
 \code{\link{toc}}

@@ -37,7 +37,7 @@ devtools::run_examples(run_dontrun = FALSE, fresh = FALSE)
 warnings()
 devtools::check()
 covr::package_coverage()
-
+urlchecker::url_check()
 
 
 # help(package=rfordummies)

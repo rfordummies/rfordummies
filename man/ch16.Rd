@@ -11,6 +11,7 @@ To print a listing of all examples of a chapter, use \code{ch16()}.
 To run all the examples of \code{ch16()}, use \code{example(ch16)}.
 }
 \examples{
+if (interactive()) {
 # Chapter 16 - Using Base Graphics
 
 # Creating Different Types of Plots
@@ -123,6 +124,7 @@ plot(faithful)
 dev.off()
 }
 
+}
 }
 \seealso{
 \code{\link{toc}}

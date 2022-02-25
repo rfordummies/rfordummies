@@ -11,6 +11,7 @@ To print a listing of all examples of a chapter, use \code{ch15()}.
 To run all the examples of \code{ch15()}, use \code{example(ch15)}.
 }
 \examples{
+if (interactive()) {
 # Chapter 15
 # Testing Differences and Relations
 
@@ -155,6 +156,7 @@ predict(Model, newdata=new.cars, interval='confidence')
 predict(Model,newdata=new.cars, interval='prediction')
 
 
+}
 }
 \seealso{
 \code{\link{toc}}

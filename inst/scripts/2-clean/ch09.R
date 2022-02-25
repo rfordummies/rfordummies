@@ -1,3 +1,4 @@
+if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {
 # Chapter 9
 # Controlling the Logical Flow
 
@@ -239,3 +240,4 @@ sapply(clients, unique)
 sapply(clients[c(1,3), ], unique)
 
 lapply(clients[c(1,3), ], unique)
+}

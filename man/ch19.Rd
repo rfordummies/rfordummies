@@ -11,6 +11,7 @@ To print a listing of all examples of a chapter, use \code{ch19()}.
 To run all the examples of \code{ch19()}, use \code{example(ch19)}.
 }
 \examples{
+if (interactive()) {
 # Chapter 19 - Ten Things You Can Do in R That You Would've Done in Microsoft Excel
 
 # Adding Row and Column Totals
@@ -113,6 +114,7 @@ curve(revenue, from=50, to=150, xname="price", ylab="Revenue", main="Revenue")
 par(mfrow=c(1, 1))
 
 optimize(revenue, interval=c(50, 150), maximum=TRUE)
+}
 }
 \seealso{
 \code{\link{toc}}

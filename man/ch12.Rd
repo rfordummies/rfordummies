@@ -11,6 +11,7 @@ To print a listing of all examples of a chapter, use \code{ch12()}.
 To run all the examples of \code{ch12()}, use \code{example(ch12)}.
 }
 \examples{
+if (interactive()) {
 # Chapter 12
 # Getting Data into and out of R
 
@@ -105,6 +106,7 @@ file.remove(my.file)
 list.files(tempdir())
 
 
+}
 }
 \seealso{
 \code{\link{toc}}

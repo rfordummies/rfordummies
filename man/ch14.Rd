@@ -11,6 +11,7 @@ To print a listing of all examples of a chapter, use \code{ch14()}.
 To run all the examples of \code{ch14()}, use \code{example(ch14)}.
 }
 \examples{
+if (interactive()) {
 # Chapter 14
 # Summarizing Data
 
@@ -165,6 +166,7 @@ prop.table(trial.table)
 
 ### Calculating proportions over columns and rows
 prop.table(trial.table, margin=1)
+}
 }
 \seealso{
 \code{\link{toc}}

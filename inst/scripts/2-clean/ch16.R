@@ -1,3 +1,4 @@
+if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {
 # Chapter 16 - Using Base Graphics
 
 # Creating Different Types of Plots
@@ -110,3 +111,4 @@ plot(faithful)
 dev.off()
 }
 
+}

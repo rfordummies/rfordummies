@@ -11,6 +11,7 @@ To print a listing of all examples of a chapter, use \code{ch17()}.
 To run all the examples of \code{ch17()}, use \code{example(ch17)}.
 }
 \examples{
+if (interactive()) {
 # Chapter 17 - Creating Faceted Graphics with Lattice
 
 
@@ -157,6 +158,7 @@ print(my.plot)
 dev.off()
 }
 
+}
 }
 \seealso{
 \code{\link{toc}}

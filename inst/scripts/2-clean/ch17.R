@@ -1,3 +1,4 @@
+if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {
 # Chapter 17 - Creating Faceted Graphics with Lattice
 
 
@@ -144,3 +145,4 @@ print(my.plot)
 dev.off()
 }
 
+}

@@ -14,6 +14,7 @@ To print a listing of all examples of a chapter, use \code{ch6()}.
 To run all the examples of \code{ch6()}, use \code{example(ch6)}.
 }
 \examples{
+if (interactive()) {
 # Chapter 6 - Going on a Date with R
 
 # Working with Dates
@@ -85,6 +86,7 @@ unclass(xlt)
 
 
 
+}
 }
 \seealso{
 \code{\link{toc}}

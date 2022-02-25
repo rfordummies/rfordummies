@@ -1,3 +1,4 @@
+if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {
 # Chapter 1 - Introducing R: The Big Picture
 
 # Recognizing the Benefits of Using R
@@ -29,3 +30,4 @@ x + 6:10
 
 
 
+}

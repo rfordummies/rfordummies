@@ -11,6 +11,7 @@ To print a listing of all examples of a chapter, use \code{ch18()}.
 To run all the examples of \code{ch18()}, use \code{example(ch18)}.
 }
 \examples{
+if (interactive()) {
 # Chapter 18 - Looking At ggplot2 Graphics
 
 # Installing and Loading ggplot2
@@ -99,6 +100,7 @@ ggplot(mtcars, aes(x=hp, y=mpg)) + geom_point(color="red") +
    ylab("Fuel consumption (mpg)") +
    ggtitle("Motor car comparison")
 
+}
 }
 \seealso{
 \code{\link{toc}}

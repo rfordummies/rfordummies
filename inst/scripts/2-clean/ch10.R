@@ -1,3 +1,4 @@
+if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {
 # Chapter 10
 # Debugging Your Code
 
@@ -137,3 +138,4 @@ cyl.factor <- as.factor(mtcars$cyl)
 median(as.numeric(cyl.factor))
 
 as.numeric(levels(cyl.factor))[cyl.factor]
+}

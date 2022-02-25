@@ -1,3 +1,4 @@
+if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {
 # Chapter 12
 # Getting Data into and out of R
 
@@ -92,3 +93,4 @@ file.remove(my.file)
 list.files(tempdir())
 
 
+}

@@ -14,6 +14,7 @@ To print a listing of all examples of a chapter, use \code{ch8()}.
 To run all the examples of \code{ch8()}, use \code{example(ch8)}.
 }
 \examples{
+if (interactive()) {
 # Chapter 8
 # Putting the Fun in Functions
 
@@ -226,6 +227,7 @@ addPercent(letters[1:6])
 
 addPercent.default <- function(x){
   cat('You should try a numeric or character vector.\n')
+}
 }
 }
 \seealso{

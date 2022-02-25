@@ -1,3 +1,4 @@
+if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {
 # Chapter 11 - Getting Help
 
 
@@ -5,11 +6,11 @@
 
 ## When you know exactly what you're looking for
 
-?date
+#?date
 
 ## When you don't know exactly what you're looking for
 
-??date
+#??date
 
 
 # Searching the Web for Help with R
@@ -67,3 +68,4 @@ dput(cars[1:4, ])
 ## Providing the necessary information
 
 sessionInfo()
+}

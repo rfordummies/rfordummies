@@ -1,3 +1,4 @@
+if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {
 # Chapter 7
 # Working in More Dimensions
 
@@ -344,3 +345,4 @@ c(baskets.list, players)
 str(baskets.list)
 
 ## Seeing the forest through the trees
+}

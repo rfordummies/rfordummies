@@ -14,6 +14,7 @@ To print a listing of all examples of a chapter, use \code{ch9()}.
 To run all the examples of \code{ch9()}, use \code{example(ch9)}.
 }
 \examples{
+if (interactive()) {
 # Chapter 9
 # Controlling the Logical Flow
 
@@ -255,6 +256,7 @@ sapply(clients, unique)
 sapply(clients[c(1,3), ], unique)
 
 lapply(clients[c(1,3), ], unique)
+}
 }
 \seealso{
 \code{\link{toc}}

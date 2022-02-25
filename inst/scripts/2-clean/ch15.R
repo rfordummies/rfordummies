@@ -1,3 +1,4 @@
+if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {
 # Chapter 15
 # Testing Differences and Relations
 
@@ -142,3 +143,4 @@ predict(Model, newdata=new.cars, interval='confidence')
 predict(Model,newdata=new.cars, interval='prediction')
 
 
+}

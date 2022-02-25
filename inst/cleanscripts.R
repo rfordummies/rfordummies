@@ -89,6 +89,7 @@ clean_all_scripts <- function(scriptPath = here::here("inst/scripts/1-orig"),
     newFile <- file.path(outPath, basename(scripts[i]))
     if (message) message(newFile)
     txt <- paste(clean[[i]], collapse = "\n")
+    txt <- paste("if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {", txt, "}", sep = "\n")
     writeLines(txt, con = newFile)
     newFile
   })

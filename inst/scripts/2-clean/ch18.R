@@ -1,3 +1,4 @@
+if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {
 # Chapter 18 - Looking At ggplot2 Graphics
 
 # Installing and Loading ggplot2
@@ -86,3 +87,4 @@ ggplot(mtcars, aes(x=hp, y=mpg)) + geom_point(color="red") +
    ylab("Fuel consumption (mpg)") +
    ggtitle("Motor car comparison")
 
+}

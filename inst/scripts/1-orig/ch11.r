@@ -5,11 +5,11 @@
 
 ## When you know exactly what you’re looking for
 
-?date
+#?date
 
 ## When you don’t know exactly what you’re looking for
 
-??date
+#??date
 
 
 # Searching the Web for Help with R

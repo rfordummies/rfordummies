@@ -1,3 +1,4 @@
+if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {
 # Chapter 8
 # Putting the Fun in Functions
 
@@ -210,4 +211,5 @@ addPercent(letters[1:6])
 
 addPercent.default <- function(x){
   cat('You should try a numeric or character vector.\n')
+}
 }

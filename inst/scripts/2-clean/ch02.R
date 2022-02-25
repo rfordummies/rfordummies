@@ -1,3 +1,4 @@
+if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {
 # Chapter 2 - Exploring R
 
 # Working with a Code Editor
@@ -107,3 +108,4 @@ rm(yourname)
 load("yourname.rda")
 }
 
+}

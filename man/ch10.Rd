@@ -11,6 +11,7 @@ To print a listing of all examples of a chapter, use \code{ch10()}.
 To run all the examples of \code{ch10()}, use \code{example(ch10)}.
 }
 \examples{
+if (interactive()) {
 # Chapter 10
 # Debugging Your Code
 
@@ -150,6 +151,7 @@ cyl.factor <- as.factor(mtcars$cyl)
 median(as.numeric(cyl.factor))
 
 as.numeric(levels(cyl.factor))[cyl.factor]
+}
 }
 \seealso{
 \code{\link{toc}}

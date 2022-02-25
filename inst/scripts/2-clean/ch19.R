@@ -1,3 +1,4 @@
+if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {
 # Chapter 19 - Ten Things You Can Do in R That You Would've Done in Microsoft Excel
 
 # Adding Row and Column Totals
@@ -100,3 +101,4 @@ curve(revenue, from=50, to=150, xname="price", ylab="Revenue", main="Revenue")
 par(mfrow=c(1, 1))
 
 optimize(revenue, interval=c(50, 150), maximum=TRUE)
+}

@@ -14,6 +14,7 @@ To print a listing of all examples of a chapter, use \code{ch7()}.
 To run all the examples of \code{ch7()}, use \code{example(ch7)}.
 }
 \examples{
+if (interactive()) {
 # Chapter 7
 # Working in More Dimensions
 
@@ -360,6 +361,7 @@ c(baskets.list, players)
 str(baskets.list)
 
 ## Seeing the forest through the trees
+}
 }
 \seealso{
 \code{\link{toc}}

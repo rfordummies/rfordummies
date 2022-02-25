@@ -14,6 +14,7 @@ To print a listing of all examples of a chapter, use \code{ch3()}.
 To run all the examples of \code{ch3()}, use \code{example(ch3)}.
 }
 \examples{
+if (interactive()) {
 # Chapter 3 - The Fundamentals of R
 
 # Using the Full Power of Functions
@@ -104,6 +105,7 @@ fortune("This is R")
 fortune(161)
 detach(package:fortunes)
 
+}
 }
 \seealso{
 \code{\link{toc}}

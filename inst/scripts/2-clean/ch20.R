@@ -1,8 +1,9 @@
+if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {
 # Chapter 20 - Ten Tips on Working with Packages
 
 ## Poking Around the Nooks and Crannies of CRAN
 
-options("repos" = c(CRAN = "http://cran.ma.imperial.ac.uk/"))
+options("repos" = c(CRAN = "https://cran.ma.imperial.ac.uk/"))
 
 ## Finding Interesting Packages
 
@@ -37,14 +38,15 @@ detach(package:fortunes, unload=TRUE)
 ## Forging Ahead with R-Forge
 
 \dontrun{
-install.packages("data.table", repos="http://R-Forge.R-project.org")
+install.packages("data.table", repos="https://R-Forge.R-project.org")
 }
 
 ## Conducting Installations from BioConductor
 
 \dontrun{
-source("http://bioconductor.org/biocLite.R")
+source("https://bioconductor.org/biocLite.R")
 }
 
 ## Reading the R Manual
 
+}

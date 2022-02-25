@@ -1,3 +1,4 @@
+if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {
 # Chapter 6 - Going on a Date with R
 
 # Working with Dates
@@ -69,3 +70,4 @@ unclass(xlt)
 
 
 
+}

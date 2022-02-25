@@ -11,6 +11,7 @@ To print a listing of all examples of a chapter, use \code{ch11()}.
 To run all the examples of \code{ch11()}, use \code{example(ch11)}.
 }
 \examples{
+if (interactive()) {
 # Chapter 11 - Getting Help
 
 
@@ -18,11 +19,11 @@ To run all the examples of \code{ch11()}, use \code{example(ch11)}.
 
 ## When you know exactly what you're looking for
 
-?date
+#?date
 
 ## When you don't know exactly what you're looking for
 
-??date
+#??date
 
 
 # Searching the Web for Help with R
@@ -80,6 +81,7 @@ dput(cars[1:4, ])
 ## Providing the necessary information
 
 sessionInfo()
+}
 }
 \seealso{
 \code{\link{toc}}

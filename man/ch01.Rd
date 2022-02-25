@@ -14,6 +14,7 @@ To print a listing of all examples of a chapter, use \code{ch1()}.
 To run all the examples of \code{ch1()}, use \code{example(ch1)}.
 }
 \examples{
+if (interactive()) {
 # Chapter 1 - Introducing R: The Big Picture
 
 # Recognizing the Benefits of Using R
@@ -45,6 +46,7 @@ x + 6:10
 
 
 
+}
 }
 \seealso{
 \code{\link{toc}}

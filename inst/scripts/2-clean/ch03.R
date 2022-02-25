@@ -1,3 +1,4 @@
+if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {
 # Chapter 3 - The Fundamentals of R
 
 # Using the Full Power of Functions
@@ -88,3 +89,4 @@ fortune("This is R")
 fortune(161)
 detach(package:fortunes)
 
+}

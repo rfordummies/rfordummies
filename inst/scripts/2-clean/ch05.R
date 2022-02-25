@@ -1,3 +1,4 @@
+if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {
 # Chapter 5 - Getting Started with Reading and Writing
 
 # Using Character Vectors for Text Data
@@ -171,3 +172,4 @@ table(status)
 table(ordered.status)
 
 
+}

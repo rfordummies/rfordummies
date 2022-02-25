@@ -14,6 +14,7 @@ To print a listing of all examples of a chapter, use \code{ch2()}.
 To run all the examples of \code{ch2()}, use \code{example(ch2)}.
 }
 \examples{
+if (interactive()) {
 # Chapter 2 - Exploring R
 
 # Working with a Code Editor
@@ -123,6 +124,7 @@ rm(yourname)
 load("yourname.rda")
 }
 
+}
 }
 \seealso{
 \code{\link{toc}}

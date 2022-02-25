@@ -11,6 +11,7 @@ To print a listing of all examples of a chapter, use \code{ch13()}.
 To run all the examples of \code{ch13()}, use \code{example(ch13)}.
 }
 \examples{
+if (interactive()) {
 # C hapter 13 - Manipulating and Processing Data
 
 # Deciding on the Most Appropriate Data Structure
@@ -284,6 +285,7 @@ dcast(mgoals,  Venue + variable ~ Game , sum)
 
 library(ggplot2)
 ggplot(mgoals, aes(x=variable, y=value, fill=Game)) + geom_bar(stat="identity")
+}
 }
 \seealso{
 \code{\link{toc}}

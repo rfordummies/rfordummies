@@ -1,4 +1,5 @@
-# C hapter 13 - Manipulating and Processing Data
+if (interactive() || is.na(Sys.getenv('NOT_CRAN', unset = NA)) ) {
+# Chapter 13 - Manipulating and Processing Data
 
 # Deciding on the Most Appropriate Data Structure
 
@@ -271,3 +272,4 @@ dcast(mgoals,  Venue + variable ~ Game , sum)
 
 library(ggplot2)
 ggplot(mgoals, aes(x=variable, y=value, fill=Game)) + geom_bar(stat="identity")
+}
