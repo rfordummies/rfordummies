@@ -11,3 +11,4 @@ README.md
 ^\.Rproj\.user$
 .gitattribute
 ^\.github$
+^CRAN-SUBMISSION$
